@@ -77,6 +77,13 @@ relations:
   - {from: metric-store, to: semantic-engine, type: compiled-by}
   - {from: context-mining, to: context-unit, type: yields-candidate}
   - {from: verify-gate, to: trust-plane, type: promotes-to-verified}
+  # LLM-architecture loop edges drawn on the board (frame 3458764681720591847)
+  - {from: runtime-answer, to: consumers, type: answer}
+  - {from: runtime-clarify, to: consumers, type: clarification}
+  - {from: runtime-answer, to: online-evals, type: prod-answers-and-reactions}
+  - {from: human-error-review, to: offline-evals, type: cases-into-golden-set}
+  - {from: coverage-management, to: semantic-layer, type: modeling-queue,
+     note: "most frequent best-effort questions become the modeling backlog"}
 
 classic_themes:  # synthesized from 20_dg_program_guide frames, files in 11_dg_program_themes/
   - {id: getting-started,          file: 11_dg_program_themes/getting-started.md}
@@ -90,15 +97,78 @@ classic_themes:  # synthesized from 20_dg_program_guide frames, files in 11_dg_p
   - {id: data-literacy,            file: 11_dg_program_themes/data-literacy.md}
   - {id: dg-kitchen-research,      file: 11_dg_program_themes/dg-kitchen-research.md}
 
-templates:
-  file: 12_templates/templates.md   # workshop/working templates catalog
+templates:  # catalog: 12_templates/templates.md; each id below is a section there
+  - {id: pains-analysis,             serves: getting-started}
+  - {id: problems-solutions-canvas,  serves: getting-started}
+  - {id: healthcare-business-case,   serves: getting-started}
+  - {id: dg-vision-statement,        serves: dg-program-roadmap}
+  - {id: dg-goals-configurator,      serves: dg-program-roadmap}
+  - {id: dg-scope-configurator,      serves: dg-program-roadmap}
+  - {id: data-domain-classifier,     serves: domains-and-data-mesh}
+  - {id: domain-subdomain-map,       serves: domains-and-data-mesh}
+  - {id: data-mesh-canvas,           serves: domains-and-data-mesh}
+  - {id: data-products-register,     serves: domains-and-data-mesh}
+  - {id: data-catalog-requirements,  serves: data-catalog}
+  - {id: data-driven-index,          serves: maturity-and-metrics}
+  - {id: maturity-assessment-map,    serves: maturity-and-metrics}
+  - {id: platform-landscape-as-is,   serves: maturity-and-metrics}
+  - {id: data-teams-modeling,        serves: roles-and-operating-model}
 
-classic_to_ai_relations:
-  - {from: data-quality, to: certified-core-layer, type: foundation}
-  - {from: domains-and-data-mesh, to: domain-knowledge-base, type: domain-map}
-  - {from: data-catalog, to: context-governance, type: metadata-ssot}
-  - {from: getting-started, to: dg-program-roadmap, type: precedes}
-  - {from: dg-kitchen-research, to: getting-started, type: field-evidence}
+# Relations NOT drawn on the board — inferred by content logic. Kept separate
+# from `relations:` (board-drawn) so an agent can distinguish evidence levels.
+inferred_relations:
+  classic_internal:
+    - {from: getting-started, to: dg-program-roadmap, type: precedes,
+       note: "MVP outcomes seed the program roadmap"}
+    - {from: dg-frameworks, to: dg-program-roadmap, type: structures,
+       note: "the chosen framework names the roadmap streams"}
+    - {from: roles-and-operating-model, to: dg-program-roadmap, type: staffs,
+       note: "stages activate only when roles exist to own them"}
+    - {from: maturity-and-metrics, to: dg-program-roadmap, type: baselines,
+       note: "maturity/DDI give the AS-IS baseline and progress measure"}
+    - {from: maturity-and-metrics, to: getting-started, type: entry-gate,
+       note: "the 5-of-12 self-assessment decides whether DG is needed at all"}
+    - {from: data-catalog, to: data-quality, type: mutual,
+       note: "catalog surfaces DQ status; DQ checks need catalog metadata to bind to"}
+    - {from: domains-and-data-mesh, to: roles-and-operating-model, type: assigns-ownership,
+       note: "the domain map is where owners/stewards/custodians get attached"}
+    - {from: data-literacy, to: maturity-and-metrics, type: dimension-of,
+       note: "literacy is a scored dimension (L1–L4) inside the maturity/DDI model"}
+    - {from: dg-kitchen-research, to: getting-started, type: field-evidence,
+       note: "40% of companies run DG without a separate program"}
+    - {from: dg-kitchen-research, to: roles-and-operating-model, type: field-evidence,
+       note: "custodian model works (65%), steward model fails"}
+    - {from: dg-kitchen-research, to: data-catalog, type: field-evidence,
+       note: "~70% run DataHub-class catalogs; catalog as an organizational shield"}
+    - {from: dg-kitchen-research, to: data-quality, type: field-evidence,
+       note: "DQ tools without processes are the common failure"}
+  classic_to_ai:
+    - {from: data-quality, to: certified-core-layer, type: foundation,
+       note: "DQ checks + contracts are the certification substance"}
+    - {from: data-catalog, to: certified-core-layer, type: surfaces-status,
+       note: "certified status is visible where the object is consumed — in the catalog"}
+    - {from: data-catalog, to: context-governance, type: metadata-ssot,
+       note: "catalog is the SSOT that context units reference, never copy"}
+    - {from: domains-and-data-mesh, to: domain-knowledge-base, type: domain-map,
+       note: "one knowledge pack per mapped domain"}
+    - {from: domains-and-data-mesh, to: certified-core-layer, type: starting-point,
+       note: "the core layer starts from the most reused cross-domain entities"}
+    - {from: maturity-and-metrics, to: domain-knowledge-base, type: scoring-model,
+       note: "AI-ready score extends the maturity scoring to domains"}
+    - {from: data-literacy, to: skills-hub, type: evolves-into,
+       note: "literacy programs become agent-skill capability building"}
+    - {from: roles-and-operating-model, to: context-governance, type: provides-curators,
+       note: "domain curators for the verify gate come from the DG role model"}
+    - {from: dg-program-roadmap, to: llm-assistant-architecture, type: extends,
+       note: "the AI-era themes are the next stage of the same program map"}
+  ai_internal:
+    - {from: enterprise-ontology, to: semantic-layer, type: grounds,
+       note: "entities and allowed join paths feed the semantic model"}
+    - {from: bi-content-management, to: data-catalog, type: operates-in,
+       note: "archive/certify actions execute through the catalog"}
+    - {from: eval-loop, to: llm-assistant-architecture, type: same-mechanism,
+       note: "CG Eval Loop = loops A–C of the architecture frame"}
+    - {from: library, to: all-themes, type: reading-list}
 
 visual: 30_graph/graph.md   # Mermaid rendering of this graph
 
