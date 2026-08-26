@@ -6,7 +6,8 @@ Purpose: let an AI agent **consult on Data Governance and build DG strategies** 
 
 ## How to use this KB (instructions for the agent)
 
-1. **Answering a DG question** — find the theme in `30_graph/objects.yaml` (nodes + relations), read the matching file in `10_ai_era_themes/` (AI-era content) or `20_dg_program_guide/` (classic DG program guide v1.0). Quote definitions from "Key terms", defend positions with "Numbers for arguing with optimists", cite sources from `40_sources.md`.
+1. **Answering a DG question** — find the theme in `30_graph/objects.yaml` (nodes + relations; visual in `30_graph/graph.md`), read the matching file in `10_ai_era_themes/` (AI-era content) or `11_dg_program_themes/` (classic DG synthesis); drill into per-frame detail in `20_dg_program_guide/` when needed. Quote definitions from "Key terms", defend positions with "Numbers for arguing with optimists", cite sources from `40_sources.md`.
+1a. **Running a DG workshop or artifact session** — pick a template from `12_templates/templates.md` (pains analysis, vision statement, domain classifier, scope/goals configurators…), each with its board deep-link.
 2. **Building a DG strategy** — follow the dependency logic in `objects.yaml`:
    - Prerequisite triad, build in order: **Certified Core Layer → Semantic Layer → Domain Knowledge Base**. Do not start from the sickest marts; start from the most reused cross-domain entities.
    - Wrap the triad in **Context Governance** (status lifecycle, verify gate, freshness TTL, trust plane) — otherwise machine-generated knowledge poisons the layer.
@@ -22,9 +23,12 @@ Purpose: let an AI agent **consult on Data Governance and build DG strategies** 
 | Path | Content |
 |---|---|
 | `10_ai_era_themes/` | 5 AI-era themes (semantic-layer, context-governance, domain-knowledge-base, skills-hub, certified-core-layer) + supporting frames (llm-assistant-architecture, semantic-metric-layer-v2, bi-content-management, enterprise-ontology, library) |
-| `20_dg_program_guide/` | Frame-by-frame summaries of the classic DG Program Guide v1.0 (per-frame files + `_index-batch*.md`) |
+| `11_dg_program_themes/` | 10 classic-DG themes synthesized from the program guide: getting started, frameworks, roadmap, roles & operating model, data catalog, data quality, maturity & metrics, domains & Data Mesh, data literacy, DG Kitchen research |
+| `12_templates/templates.md` | Catalog of the board's workshop templates (pains analysis, domain classifier, vision statement, scope/goals configurators, Data Mesh canvas, DDI, business case…) |
+| `20_dg_program_guide/` | Frame-by-frame summaries of the classic DG Program Guide v1.0 (per-frame files + `_index-batch*.md`) — the raw layer behind `11_dg_program_themes/` |
 | `30_graph/objects.yaml` | Machine-readable graph: themes, components, relations, statuses, frame ids |
-| `40_sources.md` | All external links with verification dates |
+| `30_graph/graph.md` | Mermaid visual of the graph (renders on GitHub) |
+| `40_sources.md` | All external links with verification dates + the board's resource library |
 | `00_index.md` | Flat index of everything |
 
 ## Caveats

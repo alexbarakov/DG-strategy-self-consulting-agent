@@ -78,4 +78,28 @@ relations:
   - {from: context-mining, to: context-unit, type: yields-candidate}
   - {from: verify-gate, to: trust-plane, type: promotes-to-verified}
 
+classic_themes:  # synthesized from 20_dg_program_guide frames, files in 11_dg_program_themes/
+  - {id: getting-started,          file: 11_dg_program_themes/getting-started.md}
+  - {id: dg-frameworks,            file: 11_dg_program_themes/dg-frameworks.md}
+  - {id: dg-program-roadmap,       file: 11_dg_program_themes/dg-program-roadmap.md}
+  - {id: roles-and-operating-model, file: 11_dg_program_themes/roles-and-operating-model.md}
+  - {id: data-catalog,             file: 11_dg_program_themes/data-catalog.md}
+  - {id: data-quality,             file: 11_dg_program_themes/data-quality.md}
+  - {id: maturity-and-metrics,     file: 11_dg_program_themes/maturity-and-metrics.md}
+  - {id: domains-and-data-mesh,    file: 11_dg_program_themes/domains-and-data-mesh.md}
+  - {id: data-literacy,            file: 11_dg_program_themes/data-literacy.md}
+  - {id: dg-kitchen-research,      file: 11_dg_program_themes/dg-kitchen-research.md}
+
+templates:
+  file: 12_templates/templates.md   # workshop/working templates catalog
+
+classic_to_ai_relations:
+  - {from: data-quality, to: certified-core-layer, type: foundation}
+  - {from: domains-and-data-mesh, to: domain-knowledge-base, type: domain-map}
+  - {from: data-catalog, to: context-governance, type: metadata-ssot}
+  - {from: getting-started, to: dg-program-roadmap, type: precedes}
+  - {from: dg-kitchen-research, to: getting-started, type: field-evidence}
+
+visual: 30_graph/graph.md   # Mermaid rendering of this graph
+
 dependency_chain: "core → certified metrics → agent accuracy → self-service"

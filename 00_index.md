@@ -15,6 +15,14 @@
 | enterprise-ontology.md | 3458764681729142825 | accepted, author frame |
 | library.md | 3458764681744960974 | draft reading list |
 
+## Classic DG themes (`11_dg_program_themes/`)
+
+Synthesized across the v1.0 frames — see `_index.md` there. Ten themes: getting-started, dg-frameworks, dg-program-roadmap, roles-and-operating-model, data-catalog, data-quality, maturity-and-metrics, domains-and-data-mesh, data-literacy, dg-kitchen-research.
+
+## Templates (`12_templates/templates.md`)
+
+15 workshop/working templates: pains analysis, problems→solutions canvas, domain classifier, domain/subdomain map, Data Mesh canvas, DG vision statement, goals & scope configurators, data catalog requirements, DDI, healthcare business case, platform landscape AS-IS, maturity assessment map, data teams modeling, data products register.
+
 ## DG Program Guide v1.0 (`20_dg_program_guide/`)
 
 Per-frame summaries; navigate via batch indexes:

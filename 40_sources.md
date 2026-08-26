@@ -34,3 +34,36 @@ All external links used across the board, with verification status. Re-verify be
 | Gartner — 80% of D&A governance initiatives fail by 2027 | (press release, Feb 2024 — URL to be re-verified before public citation) | context-governance | ⚠️ not verified |
 | Author's channel | https://t.me/datanature | all themes | — |
 | Author's site | https://data-nature.com | skill sourcing list | — |
+
+## Board resource library (from Program Map 3.0 and template frames)
+
+Author's resources:
+
+| Resource | URL |
+|---|---|
+| Data Governance guide (RU) | https://datanature.ru/datagovernance |
+| BI Adoption Guide | https://barakov.gumroad.com/l/BIAdoptionGuide |
+| Data & Analytics Maturity Map | https://barakov.gumroad.com/l/dataanalyticsmaturitymap |
+| DG Vision Statement template (Sheets) | https://docs.google.com/spreadsheets/d/1ZNnuGQrdlYCN6QgYwWb4ISFtcKl8gV-PvfyCtV3cGJE/edit?usp=sharing |
+| 1:1 coaching | https://calendly.com/alexander-barakov/1-hour-coaching |
+| LinkedIn | https://www.linkedin.com/in/alexanderbarakov/ |
+
+Community, standards and reading:
+
+| Resource | URL |
+|---|---|
+| DAMA International | https://www.dama.org/cpages/home |
+| DAMA UK (LinkedIn) | https://www.linkedin.com/company/dama-uk-ltd/posts |
+| EDM Council | https://edmcouncil.org |
+| Data Management Wiki (DQMS source) | https://datamanagement.wiki/ |
+| Data Crossroads free resources | https://datacrossroads.nl/free-resources/ |
+| The Data Administration Newsletter (TDAN) | https://tdan.com/category/data-topics/data-governance-articles-blogs-education |
+| Dataversity DG blogs | https://www.dataversity.net/category/data-topics/data-governance/data-governance-blogs/ |
+| DataGovernance.com blog | https://datagovernance.com/blog-2/ |
+| Collibra blog | https://www.collibra.com/us/en/blog |
+| Informatica blogs | https://www.informatica.com/blogs.html |
+| Precisely DG category | https://www.precisely.com/category/datagovernance |
+| Atlan | https://atlan.com/ |
+| Data Mesh Learning | https://datameshlearning.com/ |
+| Data Mesh Architecture — canvas | https://www.datamesh-architecture.com/datamesh-canvas |
+| 360WorkX (LinkedIn) | https://www.linkedin.com/company/360workx/posts |
