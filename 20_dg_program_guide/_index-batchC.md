@@ -1,0 +1,44 @@
+# Batch C index — DG Program Guide board frames
+
+Extraction date: 2026-08-25. NOTE: extraction was interrupted mid-batch by the Miro AI credit limit ("Your organization has reached its Miro AI credit limit"). Frames marked NOT EXTRACTED need a re-run after credits renew.
+
+- 3458764611455329213 — Data-Driven Index (DDI) template: weighted composite score of 13 data-maturity components, example total 62.99
+- 3458764611455329214 — NOT EXTRACTED (connector errors, then Miro AI credit limit)
+- 3458764611487000941 — Data Products: definition, requirements (trust, quality, discoverability, interoperability), simple register as a starting point
+- 3458764611487471339 — SKIPPED (empty frame, no content)
+- 3458764611490231887 — SKIPPED (empty frame, no content)
+- 3458764611490292852 — "Your DG Framework" mind map: DG Vision + 10-branch framework + Funding and Executive Support
+- 3458764611490421980 — DQMS concept map [WIP]: Data Issues at center, 20 concepts, 33 labeled relations (per datamanagement.wiki)
+- 3458764611802674336 — DG Kitchen of the Tech Industry: research cover (Alex Barakov, 2024, 20 companies, data-nature.com)
+- 3458764611802674337 — DG Kitchen: table of contents (8 interview topics + conclusions)
+- 3458764611802674338 — DG Kitchen: disclaimer/methodology (20 companies, 5 countries, anonymity, critical-thinking caveat)
+- 3458764611802674339 — DG Kitchen 1. DG Start and Sponsorship: 40% no separate DG program, 45% CDO top-down, 30% infosec bottom-up
+- 3458764611802674340 — DG Kitchen 2. Pains and drivers: 7 ranked drivers, data discovery and TTM on top
+- 3458764611802674395 — DG Kitchen 3. Role model: data custodian 65%, object owner rare, steward hardest, committees absent
+- 3458764611802674396 — DG Kitchen 4. Data Catalog: DataHub ~70%, "catalog as a shield" criticism, chat-based alternative in isolated domains
+- 3458764611802674397 — DG Kitchen 5. Business Glossary: only 2/20 have a consolidated glossary + metrics tree; semantic layer as prerequisite
+- 3458764611802674398 — DG Kitchen 6. Data quality management: 3-level DQ model, tools without processes, 10% monitor SLAs
+- 3458764611802674399 — DG Kitchen 7. Efficiency: 20% Hadoop cost saving, catalog ROI method, 30% scaling DG back
+- 3458764611802674400 — DG Kitchen 8. Challenges / Plans: next-year initiatives (access-as-code, data contracts, dbt, ownership, courses)
+- 3458764611802674401 — DG Kitchen: how to start — Common Sense DG quick wins + DG MVP flow with stakeholder support
+- 3458764611802674402 — DG Kitchen: land-and-expand roadmap, Stages 1-3 (Essential Minimum / Reasonable Addition / Matured Focus), Budget Denial loop
+- 3458764611802674403 — DG Kitchen: my thoughts — DG as coordination layer; evolution from informal "DG common sense" to formal DG MVP
+- 3458764611802674404 — DG Kitchen: my thoughts — success factors (leader as respected internal veteran, Core BI team, custodian > steward)
+- 3458764611814706547 — DG challenges canvas: life without DG (starting barriers) vs life with DG (value barriers), with memes
+- 3458764611825791082 — NOT EXTRACTED (connector errors, then Miro AI credit limit)
+- 3458764611825791848 — NOT EXTRACTED (connector errors, then Miro AI credit limit)
+- 3458764611929480210 — NOT EXTRACTED (connector errors, then Miro AI credit limit)
+- 3458764611929480211 — SKIPPED (empty frame, no content)
+- 3458764611929480212 — D&A operating model capability matrix: org units x 10 capabilities, done/to-be/in-progress statuses
+- 3458764611929480213 — BI org model 5 "Hybrid + cross-functional analytics team": org chart + 13-criterion evaluation
+- 3458764611929480214 — NOT EXTRACTED (Miro AI credit limit)
+- 3458764611929480215 — NOT EXTRACTED (Miro AI credit limit)
+- 3458764611929480216 — NOT EXTRACTED (Miro AI credit limit)
+- 3458764611929480217 — NOT EXTRACTED (Miro AI credit limit)
+- 3458764612004479303 — NOT EXTRACTED (Miro AI credit limit)
+- 3458764612004792008 — NOT EXTRACTED (Miro AI credit limit)
+- 3458764612004792381 — NOT EXTRACTED (Miro AI credit limit)
+- 3458764612004884958 — NOT EXTRACTED (Miro AI credit limit)
+- 3458764612004885437 — NOT EXTRACTED (Miro AI credit limit)
+- 3458764612153156400 — NOT EXTRACTED (Miro AI credit limit)
+- 3458764612404098750 — NOT EXTRACTED (Miro AI credit limit)

@@ -1,0 +1,28 @@
+# Batch A index — DG Program Guide frames (extracted 2026-08-25)
+
+- 3458764611453525277 — "Basic Concepts of Data Governance" section header with the ironic "two big problems: data and governance" epigraph
+- 3458764611453525278 — Self-assessment test: 13 (12 unique) statements; 5+ relevant of 12 means a DG program is warranted
+- 3458764611453525282 — DG frameworks: definition (DGI), DGI 10-component framework, PwC 4-layer framework (embedded PDF), how to build your own
+- 3458764611453525283 — SKIPPED (decorative: single unlabeled image plus collapsed connectors, no standalone meaning)
+- 3458764611453525284 — SKIPPED (empty frame, no content)
+- 3458764611453525285 — SKIPPED (decorative: four collapsed connector lines, no text)
+- 3458764611453525286 — SKIPPED (empty frame, no content)
+- 3458764611453525287 — Template roadmap for a DG program: 12 streams x 4 half-year stages, 61 color-coded task cards, recurring refinement checkpoints
+- 3458764611453525288 — "Domain structure" slide: domain map + detailed breakdown images, takeaway that domain structure is key to modern DG practices
+- 3458764611453525290 — SKIPPED (context_get failed with "Unable to execute the tool" after 5 retries; content not retrievable in this run)
+- 3458764611453525293 — Taxonomy of data quality tools: open source DQ, proprietary DQ software, ETL tools with strong DQ
+- 3458764611453525294 — ROI classification fragment: "Not Measurable" ROI elements (valuable but hard to quantify); part of a larger ROI matrix
+- 3458764611453525295 — DG Role Structure: DG Office roles (CDO, DG Lead, Coordinating Steward, Tools Team) vs business roles (Executive Sponsor, Business Data Steward, Data Owner, Data Custodian) with responsibility lists
+- 3458764611453525296 — DG Maturity Models reference: DMM (CMMI, link 404), DCAM (EDM Council), model comparison and other models
+- 3458764611453525297 — SKIPPED (empty frame, no content)
+- 3458764611453525298 — Embedded healthcare DG business case guide (Jeff Fuller, Divurgent): definition, AI rationale, exec talking points, 3-phase plan, resourcing, cost-benefit template
+- 3458764611453525315 — Section header only: "Data Governance of Common Sense"
+- 3458764611453525317 — Organizational Model of DG: CDO Office + DG Operational Model, OCDO org chart (CDO -> tech team / DG officers -> roles)
+- 3458764611453525318 — Section header only: "Data Catalog Problems"
+- 3458764611453525319 — SKIPPED (empty frame, no content)
+- 3458764611453525320 — Evolution of Data Catalog Idea: 3 generations, 5 trends, Data Catalog 3.0 = active metadata + metadata lake + decentralized governance + AI features/bots
+- 3458764611453525321 — SKIPPED (empty frame, no content)
+- 3458764611453525322 — Curated list of 13 DG learning resources (community/consulting + vendor blogs) with a critical-consumption advisory
+- 3458764611453525323 — SKIPPED (empty frame, no content)
+- 3458764611453525324 — SKIPPED (empty frame, no content)
+- 3458764611453525325 — SKIPPED (empty frame, no content)

@@ -1,0 +1,81 @@
+# Machine-readable graph of the AI-era DG board content.
+# Node types: theme | component | architecture | funnel | reading-list
+# Statuses reflect the live board as of 2026-08-25.
+
+board:
+  url: "https://miro.com/app/board/uXjVMBRtQEA=/"
+  name: "Data Governance Program Guide (data nature, Alex Barakov)"
+  language: en
+  deep_link_pattern: "https://miro.com/app/board/uXjVMBRtQEA=/?moveToWidget=<frame_id>"
+
+themes:
+  - id: semantic-layer
+    frame: "3458764681721996210"
+    status: draft-v3
+    file: 10_ai_era_themes/semantic-layer.md
+    components: [metric-store, metric-tree, semantic-model, semantic-engine,
+                 text-to-semantic, sql-api, access-and-certification]
+  - id: context-governance
+    frame: "3458764681729481504"
+    status: draft
+    file: 10_ai_era_themes/context-governance.md
+    components: [context-unit, context-store, trust-plane, provenance-freshness,
+                 context-mining, verify-gate, serving-hook, eval-loop]
+  - id: domain-knowledge-base
+    frame: "3458764681729697250"
+    status: draft-hub-only   # child hexagons removed by author
+    file: 10_ai_era_themes/domain-knowledge-base.md
+  - id: skills-hub
+    frame: "3458764681730102016"
+    status: reframing        # author retitle on board: "Agents/skill governance"
+    file: 10_ai_era_themes/skills-hub.md
+  - id: certified-core-layer
+    frame: "3458764681730395308"
+    status: draft-panel-only
+    file: 10_ai_era_themes/certified-core-layer.md
+
+supporting:
+  - id: semantic-metric-layer-v2
+    frame: "3458764681745815982"
+    type: deep-dive
+    file: 10_ai_era_themes/semantic-metric-layer-v2.md
+  - id: llm-assistant-architecture
+    frame: "3458764681720591847"
+    type: architecture
+    file: 10_ai_era_themes/llm-assistant-architecture.md
+  - id: bi-content-management
+    frame: "3458764681721125845"
+    type: funnel
+    file: 10_ai_era_themes/bi-content-management.md
+  - id: enterprise-ontology
+    frame: "3458764681729142825"
+    type: concept
+    file: 10_ai_era_themes/enterprise-ontology.md
+  - id: library
+    frame: "3458764681744960974"
+    type: reading-list
+    file: 10_ai_era_themes/library.md
+
+relations:
+  # prerequisite triad (course module 07): build in this order
+  - {from: certified-core-layer, to: semantic-layer, type: prerequisite,
+     note: "semantic layer stands on the certified core"}
+  - {from: semantic-layer, to: domain-knowledge-base, type: prerequisite,
+     note: "the KB is layer 3 of the triad, on top of formulas"}
+  - {from: context-governance, to: domain-knowledge-base, type: governs,
+     note: "status lifecycle, verify gate and TTL keep packs trustworthy"}
+  - {from: skills-hub, to: domain-knowledge-base, type: distributes,
+     note: "domain packs are one asset class the hub versions and owns"}
+  - {from: bi-content-management, to: certified-core-layer, type: feeds,
+     note: "archive + certify funnel produces the trusted layer"}
+  - {from: enterprise-ontology, to: domain-knowledge-base, type: skeleton}
+  - {from: semantic-layer, to: llm-assistant-architecture, type: appears-in,
+     note: "meaning layer, column 3; governed route 5a"}
+  - {from: context-governance, to: llm-assistant-architecture, type: appears-in,
+     note: "loops A–E"}
+  # intra-theme component relations captured on the board
+  - {from: metric-store, to: semantic-engine, type: compiled-by}
+  - {from: context-mining, to: context-unit, type: yields-candidate}
+  - {from: verify-gate, to: trust-plane, type: promotes-to-verified}
+
+dependency_chain: "core → certified metrics → agent accuracy → self-service"
