@@ -33,6 +33,10 @@ themes:
     frame: "3458764681730395308"
     status: draft-panel-only
     file: 10_ai_era_themes/certified-core-layer.md
+  - id: ai-governance
+    frame: "3458764681744960974"   # section on the Library frame; no dedicated theme frame yet
+    status: library-only
+    file: 10_ai_era_themes/ai-governance.md
 
 supporting:
   - id: semantic-metric-layer-v2

@@ -26,14 +26,14 @@ In every scenario the skill invites your existing documents (pain/landscape anal
    - Stack-rank freeze order: governance & ownership → trusted data → AI readiness (the triad **Certified Core Layer → Semantic Layer → Domain Knowledge Base**, wrapped in **Context Governance**) → BI content funnel → self-service & agentic interfaces last.
    - Kill-gates block launches until prerequisites are met; dual track (old-DG sustaining + new-AI exploring, ring-fenced); operate via LLM-architecture loops A–E; defend budgets with the chain and the "Numbers for arguing with optimists" blocks.
    - Guardrails: AI drafts — humans validate; no numbers without a source — mark gaps `[requires clarification]`.
-3. **Recommending reading** — use `10_ai_era_themes/library.md` (canonical articles per theme) and `40_sources.md` (verification status).
+3. **Recommending reading** — use `10_ai_era_themes/library.md`: the full board link library (~50 links — canonical articles per AI-era theme, classic-DG standards and communities: DAMA, EDM Council, TDAN, Dataversity, Data Mesh Learning, vendor blogs, and the author's working resources). `40_sources.md` holds verification status per link.
 4. **Referencing the visual** — every file's frontmatter carries a `miro:` deep-link; give it when the user wants the picture.
 
 ## Map
 
 | Path | Content |
 |---|---|
-| `10_ai_era_themes/` | 5 AI-era themes (semantic-layer, context-governance, domain-knowledge-base, skills-hub, certified-core-layer) + supporting frames (llm-assistant-architecture, semantic-metric-layer-v2, bi-content-management, enterprise-ontology, library) |
+| `10_ai_era_themes/` | 6 AI-era themes (semantic-layer, context-governance, domain-knowledge-base, skills-hub, certified-core-layer, ai-governance) + 4 supporting frames (llm-assistant-architecture, semantic-metric-layer-v2, bi-content-management, enterprise-ontology) + library.md |
 | `11_dg_program_themes/` | 10 classic-DG themes synthesized from the program guide: getting started, frameworks, roadmap, roles & operating model, data catalog, data quality, maturity & metrics, domains & Data Mesh, data literacy, DG Kitchen research |
 | `12_templates/templates.md` | Catalog of the board's workshop templates (pains analysis, domain classifier, vision statement, scope/goals configurators, Data Mesh canvas, DDI, business case…) |
 | `20_dg_program_guide/` | Frame-by-frame summaries of the classic DG Program Guide v1.0 (per-frame files + `_index-batch*.md`) — the raw layer behind `11_dg_program_themes/` |

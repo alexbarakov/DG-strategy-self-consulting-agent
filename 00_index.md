@@ -9,6 +9,7 @@
 | domain-knowledge-base.md | 3458764681729697250 | draft, hub only |
 | skills-hub.md | 3458764681730102016 | reframing → "Agents/skill governance" |
 | certified-core-layer.md | 3458764681730395308 | draft, panel only |
+| ai-governance.md | (Library frame section) | library-only, no theme frame yet |
 | semantic-metric-layer-v2.md | 3458764681745815982 | draft-v2 deep-dive |
 | llm-assistant-architecture.md | 3458764681720591847 | accepted, author frame |
 | bi-content-management.md | 3458764681721125845 | accepted, author frame |
