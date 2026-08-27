@@ -60,7 +60,7 @@ Concepts: conformed dimensions · grain · certification · data contract · DQ 
 
 Concepts: risk tiering · model inventory · human-in-the-loop · audit trail · accountable owner
 
-## Classic DG — standards, communities and reading (board resource library)
+## Classic DG — standards and communities (board resource library)
 - DAMA International (DMBOK home): https://www.dama.org/cpages/home
 - DAMA UK — community feed: https://www.linkedin.com/company/dama-uk-ltd/posts
 - EDM Council (DCAM, CDMC): https://edmcouncil.org
@@ -79,9 +79,53 @@ Vendor blogs (tool-side view of DG):
 - Precisely: https://www.precisely.com/category/datagovernance
 - Atlan: https://atlan.com/
 
+## Classic DG — people to follow (from Program Map 3.0)
+- Nicola Askham — The Data Governance Coach: https://www.nicolaaskham.com/about
+- George Firican — Lights on Data: https://www.lightsondata.com/
+- Dave Wells — Eckerson blog: https://www.eckerson.com/blogs/data-management
+- Robert S. Seiner: https://www.linkedin.com/in/robert-s-seiner-445313/
+- Willem Koenders — Medium: https://medium.com/@willemkoenders
+- Charlotte Ledoux: https://www.linkedin.com/in/charlotte-ledoux-53b43253/ · ebook: https://www.charlotte-ledoux.xyz/ebook
+- Animesh Kumar — Modern Data 101: https://moderndata101.substack.com/
+- Chad Sanderson (data contracts): https://www.linkedin.com/in/chad-sanderson/
+- Piotr Czarnas (DQOps): https://www.linkedin.com/in/piotr-czarnas/
+- Peter van Nederpelt (data quality dimensions): https://www.linkedin.com/in/petervannederpelt/
+- Irina Steenbeek: https://www.linkedin.com/in/irina-steenbeek/
+
+## Classic DG — book shelf (from Program Map 3.0)
+- DAMA-DMBOK 2nd Edition: https://amzn.to/2R8NDEr
+- Seiner — Non-Invasive Data Governance: https://www.amazon.com/Non-Invasive-Data-Governance-Robert-Seiner/dp/1935504851
+- Ladley — Data Governance: How to Design, Deploy and Sustain: https://amzn.to/3xir6Zu
+- Madsen — Disrupting Data Governance: https://amzn.to/3K0Z7Vy
+- Eryurek et al. — Data Governance: The Definitive Guide: https://amzn.to/3jXlkcn
+- O'Neal — Data Governance: Perspectives and Practices: https://amzn.to/3YHNkzy
+- Cotrupe — Get Governed: https://amzn.to/3YLNw0Q
+- Plotkin — Data Stewardship: https://amzn.to/40Nrooy
+- Soares — The CDO Handbook for Data Governance: https://amzn.to/3ZqoyEm
+- Data Governance for Dummies: https://amzn.to/3ZSYm5J
+
+## Classic DG — article shelf (from Program Map 3.0)
+- Koenders — Intelligent Data Governance by Design: https://medium.com/@willemkoenders/intelligent-data-governance-by-design-a-practical-example-30f2bbf1bf91
+- Koenders — My Simple Data Strategy Framework: https://medium.com/@willemkoenders/my-simple-data-strategy-framework-c2cf90265d7a
+- Koenders — What's the big deal about Data Products: https://medium.com/@willemkoenders/whats-the-big-deal-about-data-products-26ac347b7d7a
+- Active Data Governance Methodology (Dataversity, PDF): https://content.dataversity.net/rs/656-WMW-918/images/Active-DG-Methodology_9.10.21.pdf
+- Establishing Data Governance as a Service (Dataversity): https://www.dataversity.net/establishing-data-governance-as-a-service/
+- Modern Data Governance: Strategies for Data Policies that Stick (TU Berlin, PDF): https://www.user.tu-berlin.de/komm/CD/paper/050141.pdf
+- ADDA — Data Catalog Implementation Guidelines (PDF): https://adda.gov.ae/-/media/Project/TAMM/ADDA/ICT-Publications/ADDA-DMP-Data-Catalog-Implementation-Guidelines.pdf
+- Data Product Manager: The Most Crucial Job of the 21st Century: https://medium.com/@seckindinc/data-product-manager-the-most-crucial-job-of-the-21st-century-3f2daa4f94ee
+- Why and How to Run Data Teams as Product Teams: https://medium.com/@seckindinc/why-and-how-to-run-data-teams-as-product-teams-3adc464c004f
+- The Modern Data Stack Through 'The Gervais Principle': https://medium.com/@laurengreerbalik/the-modern-data-stack-through-the-gervais-principle-bfd4b4e33ac7
+- Big Data is Dead (MotherDuck): https://motherduck.com/blog/big-data-is-dead/
+- Data product toolkit incl. Data Product Canvas (dataproductbusiness.com): https://www.dataproductbusiness.com/get-started
+- Gamified Data Governance Programs (YouTube): https://www.youtube.com/watch?v=__oSuavpGDA
+
+Full raw registry with labels as they appear on the board: `../20_dg_program_guide/frame-3458764611453577668.md` (note: frame extraction is capped at 500 items — the tail may hold more links).
+
 ## Author's resources (Alex Barakov / data nature)
 - Site: https://data-nature.com · DG guide (RU): https://datanature.ru/datagovernance
 - Channel: https://t.me/datanature · LinkedIn: https://www.linkedin.com/in/alexanderbarakov/
+- D&A Maturity Assessment model (Miro board): https://miro.com/app/board/o9J_lha8MnM=/
+- Lords of the Boards (Miro board): https://miro.com/app/board/uXjVOAch4J8=/
 - Data Governance Map — Excel version of this guide: https://barakov.gumroad.com/l/DataGovernanceMap · [view-only Sheets](https://docs.google.com/spreadsheets/d/17VvUlbZy6pV2KAmHRnKhheUUXheUsc3NpqFPq2WrxCI/edit?gid=1919735239)
 - Data & Analytics Maturity Map / Scorecard: https://barakov.gumroad.com/l/dataanalyticsmaturitymap · [Sheets](https://docs.google.com/spreadsheets/d/1KMz58b8uLopevzp04kh3rGF8YLW6HmsVFw-UegV1-Is/edit?gid=1568926272)
 - BI Adoption Guide: https://barakov.gumroad.com/l/BIAdoptionGuide
