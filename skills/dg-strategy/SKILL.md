@@ -18,11 +18,13 @@ Grounding map: `../../README.md` (repo entry point), `../../30_graph/objects.yam
 
 | Scenario | Trigger examples | Shape |
 |---|---|---|
-| **CONSULT** | "how should we…", "does it make sense to…", "we have this situation…", "у нас кейс…", "посоветуй…" — a concrete question or case, no document, no ask to build | Dialogue: case → grounded answers with options → converge on a decision |
-| **AUDIT** | "review our data strategy", "give feedback on our DG program", "проревьюй стратегию", or any strategy/roadmap document attached | 10-dimension scorecard → gaps → resequencing → quick wins |
-| **FORM** | "build a DG strategy", "help me draft our governance plan", "собери DG стратегию" | Interview → diagnostic scorecard (sign-off) → 7-block strategy → 6-pager |
+| **CONSULT** | "how should we…", "does it make sense to…", "we have this situation…", "у нас кейс…", "посоветуй…" — a concrete question or case, no document, no ask to build | Dialogue: case → grounded answers with options → **judge** → converge on a decision |
+| **AUDIT** | "review our data strategy", "give feedback on our DG program", "проревьюй стратегию", or any strategy/roadmap document attached | 10-dimension scorecard → gaps → resequencing → quick wins → **judge** |
+| **FORM** | "build a DG strategy", "help me draft our governance plan", "собери DG стратегию" | Interview → diagnostic scorecard (sign-off) → 7-block strategy → **judge → rework** → 6-pager |
 
 Routing: a document with the request → AUDIT by default; a question → CONSULT; an explicit ask to build → FORM. CONSULT escalates naturally — when the dialogue reveals the case is really a whole-program problem, offer to switch to AUDIT (if they have a strategy) or FORM (if they don't).
+
+**Every scenario ends with the same stage — the CDO judge (see below).** It is not an optional polish step: no artifact leaves the skill without passing it and showing what the pass changed.
 
 ## Universal conventions (apply in every scenario)
 
@@ -38,14 +40,47 @@ Routing: a document with the request → AUDIT by default; a question → CONSUL
 
 ---
 
+## The CDO judge — the closing stage of every scenario
+
+Never hand over a first draft. Between the draft and the final artifact — in FORM, AUDIT and CONSULT alike — run an adversarial review in the voice of a **sceptical CDO who has killed two DG programs and paid for a third** — someone who will be asked by the CFO "why does this cost that much" and by the verticals "why should we do your work". The judge's job is not to polish wording; it is to find where the strategy is unimplementable, unprioritized or hollow.
+
+**Judge stance.** Assume good faith and bad odds. Grade usefulness, not effort: "would I sign this, staff it, and defend it at a budget committee?" Prefer one killer question over ten fair ones. If a block is fine, say so briefly and move on — a review that criticizes everything gets discounted entirely.
+
+**Interrogation checklist** — go through all seven, produce a verdict per dimension (`ok` / `weak` / `blocking`):
+
+| # | Dimension | Questions the judge actually asks |
+|---|---|---|
+| 1 | **Priority** | If I fund only the top third of this portfolio, does anything of value still ship? Which single initiative, removed, breaks the rest? Why is the first thing first — evidence or comfort? |
+| 2 | **Order** | Does anything here depend on something scheduled later? Where do two initiatives compete for the same people, and who wins in writing? Does the sequence survive a two-month slip in one dependency? |
+| 3 | **Feasibility** | Who exactly does this work on Monday, by name or by role with hours? Is that time carved out or hoped for? What has this organization already failed to do that looks exactly like this? |
+| 4 | **Complexity** | Which initiative is under-estimated by an order of magnitude? What is the hidden migration/integration/political cost nobody wrote down? Is anything here a two-year program dressed as a quarter? |
+| 5 | **Concreteness** | Point at three sentences a team could start executing tomorrow. Which "outcomes" are actually activities? Which targets have no baseline and therefore no meaning? |
+| 6 | **Value and defensibility** | What does the business feel in 6 months, in their words? What do I say to the CFO in one sentence? If we do nothing, what actually breaks — and when? |
+| 7 | **Risk honesty** | What is the most likely way this fails, and is it in the register? Which risk is written softly because it is politically awkward? What is deliberately not being done, and is that written down? |
+
+**Output of the judge:** 5–8 findings, each with severity (`blocking` / `serious` / `worth fixing`), the exact quote or block it attacks, and what would make it pass. Plus one verdict line: *"In this shape I would / would not sign it, because…"*.
+
+**Scenario scaling.** FORM — the full seven dimensions against the whole document. AUDIT — the same lens turned on your own report (are findings prioritized, actionable, would the recipient know what to do on Monday). CONSULT — a short version on the recommended option only: is it feasible for this team, is the first step concrete, what breaks it.
+
+**Rework loop (this is the point of the stage).** Take the findings back into the draft before anything is finalized:
+1. Fix every `blocking` finding — or, if it cannot be fixed with available facts, convert it into an explicit `[не хватает данных]` marker and a decision the user must make. A blocking finding may not be silently dropped.
+2. Fix `serious` findings or record why they are accepted as-is.
+3. Show the user a short **before/after** of what changed after the review — this is the strongest evidence that the strategy was stress-tested, and it is also what the user will reuse when defending it.
+4. Only then produce the final artifact and the 6-pager.
+
+If the user is present, offer them the judge's findings first and let them answer the hard questions themselves — their answers are better material than your rework. If they are not, do the rework yourself and mark the assumptions you made.
+
+---
+
 ## CONSULT — case consulting dialogue
 
 1. **Take the case.** Ask for 3–5 sentences: what is being decided, who is involved, what has been tried, what constraint hurts. One clarifying batch max — this is a dialogue, not an interview.
 2. **Invite documents** (universal convention above).
 3. **Ground the answer.** Map the case to themes via `objects.yaml`; answer from the theme files' "What is it / Key terms"; defend positions with "Numbers for arguing with optimists"; check the case against kill-gates and the dependency chain — if the user is about to violate one (e.g., launching an AI assistant before semantic coverage), say so first.
 4. **Give options, not verdicts.** 2–3 courses of action with trade-offs, each citing its KB grounding; recommend one and say why.
-5. **Converge to a decision.** Fix the chosen option, name the first concrete step, and hand over the matching workshop template from `../../12_templates/templates.md` if one applies.
-6. Offer the HTML one-pager; offer AUDIT/FORM if the case turned out bigger than a question.
+5. **Judge the recommendation** (short version of the CDO-judge stage): is the chosen option feasible for *this* team with *its* resource, is the first step concrete enough to start tomorrow, what single thing breaks it? Fix what the judge finds before you present the option — a recommendation that dies on Monday is worse than no recommendation.
+6. **Converge to a decision.** Fix the chosen option, name the first concrete step, and hand over the matching workshop template from `../../12_templates/templates.md` if one applies.
+7. Offer the HTML one-pager; offer AUDIT/FORM if the case turned out bigger than a question.
 
 **Deadline-constrained case.** When the case carries a hard external commitment ("promised to the board this quarter"), do not answer with "you are not ready" — that advice is never taken and the launch happens anyway, unprepared. Instead:
 - Check the commitment against the kill-gates and say plainly which are not passed.
@@ -132,34 +167,6 @@ Hard ordering rules:
 - Operations: LLM-architecture loops A–E (`llm-assistant-architecture.md`); coverage loop feeds the semantic backlog.
 - Budget defense: `core → certified metrics → agent accuracy → self-service` + the "Numbers for arguing with optimists" blocks.
 
-### Phase 4 — CDO judge review (mandatory before finalization)
-
-Never hand over a first draft. Between the draft and the final artifact, run an adversarial review in the voice of a **sceptical CDO who has killed two DG programs and paid for a third** — someone who will be asked by the CFO "why does this cost that much" and by the verticals "why should we do your work". The judge's job is not to polish wording; it is to find where the strategy is unimplementable, unprioritized or hollow.
-
-**Judge stance.** Assume good faith and bad odds. Grade usefulness, not effort: "would I sign this, staff it, and defend it at a budget committee?" Prefer one killer question over ten fair ones. If a block is fine, say so briefly and move on — a review that criticizes everything gets discounted entirely.
-
-**Interrogation checklist** — go through all seven, produce a verdict per dimension (`ok` / `weak` / `blocking`):
-
-| # | Dimension | Questions the judge actually asks |
-|---|---|---|
-| 1 | **Priority** | If I fund only the top third of this portfolio, does anything of value still ship? Which single initiative, removed, breaks the rest? Why is the first thing first — evidence or comfort? |
-| 2 | **Order** | Does anything here depend on something scheduled later? Where do two initiatives compete for the same people, and who wins in writing? Does the sequence survive a two-month slip in one dependency? |
-| 3 | **Feasibility** | Who exactly does this work on Monday, by name or by role with hours? Is that time carved out or hoped for? What has this organization already failed to do that looks exactly like this? |
-| 4 | **Complexity** | Which initiative is under-estimated by an order of magnitude? What is the hidden migration/integration/political cost nobody wrote down? Is anything here a two-year program dressed as a quarter? |
-| 5 | **Concreteness** | Point at three sentences a team could start executing tomorrow. Which "outcomes" are actually activities? Which targets have no baseline and therefore no meaning? |
-| 6 | **Value and defensibility** | What does the business feel in 6 months, in their words? What do I say to the CFO in one sentence? If we do nothing, what actually breaks — and when? |
-| 7 | **Risk honesty** | What is the most likely way this fails, and is it in the register? Which risk is written softly because it is politically awkward? What is deliberately not being done, and is that written down? |
-
-**Output of the judge:** 5–8 findings, each with severity (`blocking` / `serious` / `worth fixing`), the exact quote or block it attacks, and what would make it pass. Plus one verdict line: *"In this shape I would / would not sign it, because…"*.
-
-**Rework loop (this is the point of the stage).** Take the findings back into the draft before anything is finalized:
-1. Fix every `blocking` finding — or, if it cannot be fixed with available facts, convert it into an explicit `[не хватает данных]` marker and a decision the user must make. A blocking finding may not be silently dropped.
-2. Fix `serious` findings or record why they are accepted as-is.
-3. Show the user a short **before/after** of what changed after the review — this is the strongest evidence that the strategy was stress-tested, and it is also what the user will reuse when defending it.
-4. Only then produce the final artifact and the 6-pager.
-
-If the user is present, offer them the judge's findings first and let them answer the hard questions themselves — their answers are better material than your rework. If they are not, do the rework yourself and mark the assumptions you made.
-
 Close with a **6-pager**: vision · diagnosis · stack-rank · block summaries · metrics · risks + first step. Then offer the HTML visualization (universal convention).
 
 ### Initiative playbooks — how to execute what the portfolio proposes
@@ -218,7 +225,7 @@ Output — **audit report**:
 3. Chain-break map: where their sequence violates the triad / kill-gates, and the resequenced order.
 4. Quick wins (Common-Sense DG list from `getting-started.md`).
 5. What to keep: explicitly name the strong parts — an audit that only criticizes gets ignored.
-6. **Self-review before handing over** — run the CDO-judge checklist (Phase 4) against your own report: are the findings prioritized, is each one actionable, would the recipient know what to do on Monday? Drop findings that survive as "true but useless".
+6. **Self-review before handing over** — run the CDO-judge stage against your own report: are the findings prioritized, is each one actionable, would the recipient know what to do on Monday? Drop findings that survive as "true but useless".
 7. Offer the HTML visualization of the report (universal convention).
 
 ---
