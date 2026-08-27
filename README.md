@@ -25,7 +25,8 @@ In every scenario the skill invites your existing documents (pain/landscape anal
    - Diagnose before prescribing: 0–4 maturity scorecard + AI-readiness overlay; name 2–3 breaks in the chain `core → semantic → context → AI accuracy → self-service` — the strategy is the repair plan for those breaks.
    - Stack-rank freeze order: governance & ownership → trusted data → AI readiness (the triad **Certified Core Layer → Semantic Layer → Domain Knowledge Base**, wrapped in **Context Governance**) → BI content funnel → self-service & agentic interfaces last.
    - Kill-gates block launches until prerequisites are met; dual track (old-DG sustaining + new-AI exploring, ring-fenced); operate via LLM-architecture loops A–E; defend budgets with the chain and the "Numbers for arguing with optimists" blocks.
-   - Guardrails: AI drafts — humans validate; no numbers without a source — mark gaps `[requires clarification]`.
+   - Rational target maturity: the target line is calibrated to the company (4 questions), not set at "best practice"; +1 level per year unless a funded reason says otherwise; every target discounted for dependency, capacity and adoption risk; what the strategy deliberately does not do is written down; the budget cut is rehearsed in advance into a published freeze list.
+   - Guardrails: AI drafts — humans validate; no numbers without a source — mark gaps `[requires clarification]`; no over-optimism — a plan where everything succeeds is a plan nobody stress-tested.
 3. **Recommending reading** — use `10_ai_era_themes/library.md`: the full board link library (~90 links — canonical articles per AI-era theme; classic-DG standards, communities, people to follow, book and article shelves from Program Map 3.0; vendor blogs; the author's working resources). `40_sources.md` holds verification status per link.
 4. **Referencing the visual** — every file's frontmatter carries a `miro:` deep-link; give it when the user wants the picture.
 

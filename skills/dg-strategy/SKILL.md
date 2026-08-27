@@ -40,6 +40,12 @@ Routing: a document with the request → AUDIT by default; a question → CONSUL
 5. **Converge to a decision.** Fix the chosen option, name the first concrete step, and hand over the matching workshop template from `../../12_templates/templates.md` if one applies.
 6. Offer the HTML one-pager; offer AUDIT/FORM if the case turned out bigger than a question.
 
+**Deadline-constrained case.** When the case carries a hard external commitment ("promised to the board this quarter"), do not answer with "you are not ready" — that advice is never taken and the launch happens anyway, unprepared. Instead:
+- Check the commitment against the kill-gates and say plainly which are not passed.
+- Find the **narrowest scope where the gates do pass** — one domain, one user group, one question type — and make that the primary bet. Depth over breadth is defensible to a board; a broken launch is not.
+- Add a **parallel fallback** that produces visible value on the same deadline without depending on the risky part (usually: absorbing the top repeating requests into ready-made content).
+- Give the user the reframing sentence for the commitment conversation, with the numbers behind it — the difference between ~40% and 85–95% accuracy, and the fact that lost trust in an assistant is not recoverable on a second attempt.
+
 ---
 
 ## FORM — build the strategy
@@ -75,9 +81,27 @@ Then the mandatory self-assessment, 0–4 scale ("no/almost none" → "optimized
 
 ### Phase 2 — diagnostic (sign-off checkpoint)
 Produce and confirm with the user before writing anything else:
-- Maturity scorecard (7 dimensions + AI-readiness).
+- Maturity scorecard (9 categories + AI-readiness) with the **calibrated target line** (see "Setting a rational target maturity" below).
 - **2–3 named breaks** in the chain `core → semantic → context → AI accuracy → self-service` — the strategy is the repair plan for these breaks.
 - Position on delivery channels: centralized / self-service / agentic, current vs realistic 12-month target.
+
+### Setting a rational target maturity — the anti-optimism pass
+
+The default failure of strategy work is a target line drawn at "best practice" and a roadmap that assumes everything lands. Run this pass **before** the target is agreed, and state its conclusions in the document, not just in your head.
+
+**1. The target is calibrated, never maximal.** Levels 3–4 across the board are not a goal, they are a symptom of an unread scorecard. The 4 calibration questions exist precisely to pull the green line down to what this company's size, data dependence and industry dynamics justify. A company whose business result only moderately depends on data has no business targeting "Mastering" in nine categories — and paying for it.
+
+**2. Name the ceiling and the "good enough" mark per category.** For each category say where the practical ceiling sits and where returns flatten: "~80% is the target; even critical data cannot be managed to 100%, and 100% is not needed." Where a category can simply stay at its current level for a year, say so explicitly — declining to improve something is a strategic decision worth writing down.
+
+**3. One-level-per-year is the honest default.** Moving a category by more than one level in a year requires a named reason: dedicated capacity, a platform change already funded, or a regulatory deadline. Without such a reason, plan +1 and say why. The base-rate evidence to quote: a 20% penetration target delivered 2% in a year when capacity was not carved out; roughly 80% of D&A governance initiatives are expected to fail by 2027 (Gartner); only a small minority of DG programs deliver high business value.
+
+**4. Discount the plan, not just the estimate.** Every target inherits the risk of its prerequisites. Before fixing numbers, apply three haircuts and show them: dependency risk (does this stand on a platform delivery you do not control?), capacity risk (is the work funded, or does it live on goodwill?), and adoption risk (does the result require people to change behavior?). A target that survives all three unchanged is usually a target nobody checked.
+
+**5. Say what the strategy will NOT do.** The document must carry an explicit non-goals section: which capabilities stay as-is, which initiatives are deliberately absent this horizon, and why. A stream that is consciously excluded — with the gate that would make it possible later — is a stronger artifact than a stream included "because it is the trend." This is also the honest answer to "and where is our AI?".
+
+**6. Prefer measurable modesty to inspiring vagueness.** "Raise the share of consumption on certified objects from 0% to 30%" beats "achieve data-driven culture". If a baseline is unknown, the target is `[requires clarification]` until measured — do not let an inspiring number into the document to fill the gap.
+
+**7. Rehearse the cut.** Ask directly: "if you lose a third of the resource mid-year, what dies?" The answer becomes the published freeze list. Strategies without a rehearsed cut do not survive the first budget review — they just fail silently and everywhere at once.
 
 ### Phase 3 — strategy document (v2 structure)
 
@@ -85,10 +109,10 @@ Produce and confirm with the user before writing anything else:
 |---|---|---|
 | **00 Context** | Company challenges (business focus, economics, mandates), industry pressure, 3–5 data/AI trends *relevant to this company* — each ending with "…and therefore we must". Company-level inputs: investments, constraints. | `library.md` trends, `dg-kitchen-research.md` field evidence |
 | **01 AS-IS Diagnostic** | 1.1 Scorecard calibration (4 questions → adjusted target). 1.2 Maturity scorecard: 9 categories, 0–4, normalized to target. 1.3 Second cut: 12 solution domains. 1.4 AI-readiness overlay. 1.5 Pain map & demand (segments, ad-hoc structure, supply–demand). 1.6 Platform landscape AS-IS (tools, flows, org model — where shared documents land). 1.7 Named breaks in the chain `core → semantic → context → AI accuracy → self-service`. | Maturity Scorecard sheet; Excel guide "Platform Landscape AS-IS" and "Pain Points" tabs; `maturity-and-metrics.md` |
-| **02 TO-BE Vision** | Beyond AI: 2.1 target capability level per the 9 categories (from calibration); 2.2 target channel mix centralized / self-service / agentic; 2.3 target operating model & roles; 2.4 target data architecture (core, semantic, context, catalog, security); 2.5 culture & literacy ambition; 2.6 AI ambition as part of the whole (governed contour). Closes with a Vision Statement. | `dg-program-roadmap.md`, vision-statement template |
-| **03 Strategic Streams** | 3–6 streams bridging AS-IS → TO-BE (typical: trusted data; governance & roles; meaning layer / AI foundation; content & self-service; people & culture; efficiency). Per stream: why now (from 00/01), outputs/outcomes per horizon. | theme files per stream |
+| **02 TO-BE Vision** | Beyond AI: 2.1 target capability level per the 9 categories — **calibrated, with the ceiling and the "good enough" mark stated per category, and categories deliberately left at today's level named as such**; 2.2 target channel mix centralized / self-service / agentic; 2.3 target operating model & roles; 2.4 target data architecture (core, semantic, context, catalog, security); 2.5 culture & literacy ambition; 2.6 AI ambition as part of the whole (governed contour). Closes with a Vision Statement. | `dg-program-roadmap.md`, vision-statement template, anti-optimism pass |
+| **03 Strategic Streams** | 3–6 streams bridging AS-IS → TO-BE (typical: trusted data; governance & roles; meaning layer / AI foundation; content & self-service; people & culture; efficiency). Per stream: why now (from 00/01), outputs/outcomes per horizon. **Plus a mandatory "What this strategy deliberately does not do"**: streams and capabilities consciously left out of this horizon, each with the reason and the gate that would open it later. Excluding an expected stream (most often AI) is a decision to defend explicitly — silence reads as an oversight and invites it back through the side door. | theme files per stream; anti-optimism pass |
 | **04 Initiatives Portfolio** | **Streams decompose into projects here** — every initiative belongs to exactly one stream. Registry per initiative: goal, stream, effect, effort, prerequisites (maturity gates from 1.2), risk, owner. Scoring and stack-rank with the freeze order; explicit freeze list; kill-gates per initiative; wave plan (H1 / H2 / years 2–3) with fallbacks. Each initiative links to its execution playbook (see "Initiative playbooks" below). | `objects.yaml` gates; playbooks section |
-| **05 Metrics & Goals** | Outcome metric tree per stream (P0/P1), baselines and yearly targets, honest "ceiling" marks, anti-metric rule; measurement plan for missing baselines (target without baseline = `[requires clarification]`). | `maturity-and-metrics.md`, `skills-hub.md` anti-metrics |
+| **05 Metrics & Goals** | Outcome metric tree per stream (P0/P1), baselines and yearly targets, honest "ceiling" marks, anti-metric rule; measurement plan for missing baselines (target without baseline = `[requires clarification]`). Targets carry the three haircuts from the anti-optimism pass (dependency / capacity / adoption risk) — an undiscounted year-one number is a red flag, not ambition. | `maturity-and-metrics.md`, `skills-hub.md` anti-metrics |
 | **06 Operating Model & Transformation** | Governance resourcing decision (domain quotas / central enablement pod / hybrid), role rollout, dual track (sustaining + exploring), operations via LLM-architecture loops A–E, comms & enablement. | `roles-and-operating-model.md`, `llm-assistant-architecture.md` |
 | **07 Risks & Kill-gates** | Risk register with mitigations (fragile chain, unfunded governance, agent content chaos / Jevons, Gartner 80% default), consolidated kill-gate list, quarterly review ritual. | `certified-core-layer.md`, `context-governance.md` |
 
@@ -138,6 +162,8 @@ Rule: a portfolio initiative without a playbook row is a red flag — either add
 
 Input: the user's strategy/roadmap/program doc, or an interview about the current program. Before scoring, run the mid-flow document invitation (universal convention) — pain analyses, landscape reviews and assessment exports often change scores by ±1. Score each dimension 0–2 (absent / partial / solid), citing evidence from their material and the KB file that defines "solid".
 
+**Scoring nuance — the "declared but unfunded" flag.** The most common real state is not "partial": it is *described well and backed by nothing* — roles named without time, targets set without capacity, policies written without an owner. Do not average that into a 1 silently. Score the substance and attach the flag `[declared, not resourced]` to the dimension, then carry every flagged dimension into the gaps list: unfunded governance is the single most reliable predictor of program failure in this KB's field evidence. Half-points are allowed when they genuinely help (1.5 = solid design, weak execution) — but the flag matters more than the decimal.
+
 | # | Audit dimension | KB yardstick |
 |---|---|---|
 | 1 | Entry justification: is DG needed at this scale, is there a business case? | `getting-started.md` (5-of-12 test, business-case template) |
@@ -165,6 +191,7 @@ Output — **audit report**:
 
 - No generic advice; every claim cites a KB file or participant data.
 - No invented numbers; missing data → `[requires clarification]`.
+- **No over-optimism.** Targets are calibrated, not maximal; +1 level per year is the default; every target is discounted for dependency, capacity and adoption risk; what the strategy will not do is written down. A plan where everything succeeds is a plan nobody stress-tested — see "Setting a rational target maturity".
 - Never write the full document before the Phase-2 scorecard (FORM) or the scorecard table (AUDIT) is confirmed.
 - When challenged on "why so slow / why not just launch the agent" — answer with the numbers blocks (Spider 2.0 6%, 21%→95%+, 40%→85–95%, Gartner 80%).
 
