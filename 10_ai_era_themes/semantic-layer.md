@@ -50,6 +50,24 @@ For an agent it is the difference between guessing business logic and resolving 
 - 21% → 95%+ — Anthropic's agent evals without vs with the governed route.
 - Real-company scale (thousands of tables, 15 000+ metrics) is beyond any academic benchmark.
 
+## From the course (Data Governance Fundamentals, 6 days)
+
+**Adoption reality**
+- The adoption paradox: "everyone already understands what it is, but very few have actually acquired one" — both the DWH and BI systems fight to keep business logic inside themselves, and wedging a separate system between layers of an already-running landscape is architecturally hard. (course day 1, transcript)
+- "It's fashionable to talk about semantic layers, but very few actually build them; people lived 15 years without them." Decision heuristic: count the BI devs/analysts hand-coding the same business logic — the pain is real only when dozens of independent teams reuse the same core data. (course day 5, transcript)
+- The layer is explicitly classed as a luxury, "reserved for the mature": "don't assume you must have it — it may simply not be affordable for you" at current maturity. Budget version for lower maturity: a metric tree bound to the glossary and catalog. (course day 6, slides p.100; course day 2, transcript)
+
+**Lineage of the idea**
+- The MDM fashion passed ~10 years ago but its problems remain; the semantic layer and data products now play the same unification role for "master" business logic. (course day 1, slides p.97, 101)
+- Airbnb Minerva as the legendary case: programmatic denormalization — a computation-DAG engine over certified normalized marts replacing the zoo of ever-wider denormalized tables; "define once — use everywhere". (course day 5, slides p.21)
+- A large tech company's metric UI grew out of the AB-testing platform — the same declarative metrics serve experiments and BI, which is what made the store trustworthy. (course day 5, transcript)
+
+**Design notes**
+- dbt distinction worth keeping: semantic layer (entities, measures, dimensions; automatic joins) vs metric layer (declarative metric definitions on top); a glossary is mapped alongside the metric store, not inside it. (course day 5, slides p.19-20)
+- Metric trees: "a strictly hierarchical tree is exactly what you won't get" — real metric graphs are overlapping clouds of metric groups with tangled links; a single global tree "carries nothing but beauty"; domain-level trees are the working unit. (course day 5, slides p.30; transcript)
+- Two-track BI that works at scale: dashboard-centric BI for monitoring/reporting plus metric-centric BI (metric store / constructor over the semantic layer) for ad-hoc metric analysis — deliberately coexisting, separated by use case. (course day 2, transcript)
+- Glossaries are the hardest adjacent component to launch — the only part requiring active business participation; the pitch "the whole company speaks one language" sells far worse than lineage. Memorable case: a company with two metrics, "sales" and "revenue", where nobody can say which is correct. (course day 4, transcript)
+
 ## Sources
 
 - Spider 2.0 — enterprise text-to-SQL benchmark: https://spider2-sql.github.io/

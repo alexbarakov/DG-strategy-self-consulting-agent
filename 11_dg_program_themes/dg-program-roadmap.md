@@ -35,6 +35,34 @@ The board's master artifact is the "Data / AI Governance Program Map 3.0": the w
 - [Basic Concepts of Data Governance (section header)](https://miro.com/app/board/uXjVMBRtQEA=/?moveToWidget=3458764611453525277)
 - [Template - DG Implementation Plan (cover)](https://miro.com/app/board/uXjVMBRtQEA=/?moveToWidget=3458764611453561782)
 
+## From the course (Data Governance Fundamentals, 6 days)
+
+### Selling the program to management
+- Alfa-Bank DQ practice (Andrey Zavarzin, 2011): nobody has ever seen the textbook loss-vs-cost optimum curve in real life; top managers care about exactly two numbers — an agreed estimate of possible losses and the cost of works preventing them. "A positive start decision is always made when minimal losses exceed maximal costs." (course day 1, slides p.44-45)
+- "Quality is free — what's expensive is poor-quality information": losses split into missed revenue and direct costs (fines, staff overload with unproductive work, idle equipment); most DQ costs are specialist salaries and tooling. (course day 1, slides p.44)
+- Going to business under the literal flag "Data Governance" fails in ~95% of cases — the word itself evokes "distant and secondary"; package it under something else. (course day 2, transcript)
+- Central thesis: "It is useless to explain DG to the business and wait for enthusiastic support... DG is a thing data/analytics leaders must arrive at themselves. The maturity of your own team in key positions decides." (course day 6, slides p.104)
+
+### Business-case mechanics
+- Map data & analytics use cases onto the company's value-adding process flows, score impact x feasibility; when ~20 cases each individually "doable without DG" accumulate, together they prove systemic problems worth a DG strategy. (course day 2, slides p.47-49)
+- Attribution honesty: the only truly direct DG economy is infrastructure savings (hardware freed by deleting redundant datamarts); everything else is indirect — accepted if the logic is sound and numbers adequate. (course day 2, transcript)
+- Read the company strategy and hang DG as the enabler under initiatives that already have money attached (e.g. a timber company's ~40% logistics-savings plan via route optimization, which needs many quality datamarts). (course day 2, transcript)
+- Rostelecom (RT.DataGovernance): >1000 source systems, 10+ local DWHs; data search/assessment cut from ~23 person-days (sometimes infinite) to ~3.5 hours via catalog + lineage + unified business-term module. (course day 2, slides p.25)
+- SOFTSWISS: a 2-FTE root-cause team investigated data & reports for one quarter; ISR invoice deltas ranged 100 EUR to >100k EUR, verification consumed 2-3 extra workdays of 11 finance employees monthly — a 3-person DG team was funded off an Excel of small monetized cases, with the Head of Internal Accounting as committee witness. (course day 2, slides p.41-43; day 6, slides p.108-110)
+
+### Vision, goals, documentation
+- DG Vision = a 4-6-page Amazon-style six-pager: problem analysis from drivers/pains, target framework concept, goals, metrics, projects, roadmap; refresh after each delivery cycle — "in the end it may be the only document you actually need." (course day 2, slides p.50; day 6, transcript)
+- Goals come in three tiers: program goals (abstract, slogan-ish), DG team goals (SMART, annual), data steward goals (e.g. ">=98% of new product records accurate at entry"). Don't write goals you can't measure ("data transparency", "trust") — use reuse rate, DQ metrics, search speed. (course day 2, slides p.56-57)
+- The framework's real function is focus retention "for boring but systematic movement over the course of a year", not control — "maybe a bit of bureaucracy won't hurt us now." (course day 5, slides p.64)
+
+### Launching without a budget
+- Packaging trick: relabel an existing stream of DQ projects as "DG working group + committee" and invite sponsors — "ordinary work, packaged so it can be tracked." (course day 5, slides p.64; transcript)
+- Without a DG office you assemble the program piecemeal — e.g. extend dashboard certification into mart certification with Head of DWH and split the project between teams; documentation then exists per-component, not per-program, and that's fine. (course day 5, transcript)
+- "Invisible / non-invasive DG": chain initiatives that pull each other (core layer pulls DQ checks, checks pull catalog, domains pull roles) — works, but "much slower than with a focused resource." (course day 6, transcript)
+- Run an MVP even when approval is easy: it "knocks ideas against reality" and builds scaling themes; a large marketplace shipped dashboard certification in 3 months plus a data-cleanup event — both moved metrics AND worked emotionally, buying license for more expensive initiatives. (course day 6, slides p.104; transcript)
+- Glossary heresy: the business glossary is "reserved for the mature" — there is never resource for it and physical/logical-level processes matter more; when you do reach it, it's a "nice suit", not the starting point. (course day 6, transcript)
+- Data Strategy appears organically after DG start ("since we've already analyzed data structure, pains and value drivers"), not as a prerequisite — it is wider than DG and needs more business/IT involvement. (course day 6, slides p.121)
+
 ## Links
 - https://docs.google.com/spreadsheets/d/1ZNnuGQrdlYCN6QgYwWb4ISFtcKl8gV-PvfyCtV3cGJE/edit?usp=sharing (Excel template of the guide)
 - https://miro.com/app/board/o9J_lha8MnM= (D&A Maturity Assessment Tool by Data Nature)

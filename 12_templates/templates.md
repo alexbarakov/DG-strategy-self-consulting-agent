@@ -109,3 +109,22 @@ Cover frames for the DG framework template (goal: structure relevant data manage
 A simple spreadsheet register of critical sources/data models, recommended as the practical starting point for data products.
 **Board link:** https://miro.com/app/board/uXjVMBRtQEA=/?moveToWidget=3458764611487000941
 **External file:** Google Sheets template linked on the frame (exact URL not extracted)
+
+---
+
+## Course artifacts
+
+Template-like artifacts introduced in the course "Data Governance Fundamentals" (6 days) that the board catalog above does not carry:
+
+- **DG Planner (multi-sheet Excel)** — the course's working homework file: data pain points with examples (sheet 3), domain/subdomain classifier with role columns, PII/sensitivity flags and level of detail, plus an access matrix (AD role groups x systems/domains, per-cell access level and last-review date), data catalog selection scoring (sheet 8), the three DG ROI approaches ready to fill (sheet 11 "Ekonomika" (Economics)), and DG Vision with business goals / KPIs / initiatives / risks (sheet 7). (course day 1, slides p.8; day 3, slides p.122; day 4, slides p.125; day 5, slides p.36; day 6, slides p.81-82)
+- **12-statement DG-need self-test** — if 5+ of 12 statements apply (many sources, cross-functional reporting, PII, quality blocks decisions, regulated market, duplication/misinterpretation, ...), a DG program will likely pay off. (course day 2, slides p.24)
+- **DG drivers constructor + catalog-efficiency calculator (Excel)** — driver selection and analyst-hours-saved math for the catalog business case. (course day 2, slides p.46; transcript)
+- **Business-case collection kit** — data & analytics use-case map over the company's value-adding process flows (DIY-retail worked example), impact x feasibility prioritization matrix, and a business-case base matrix (domain x subdomain x case x cost x interested management roles). (course day 2, slides p.46-49)
+- **Pain-map templates split by company archetype** — Bankers/fintech & digital techs vs Traditionalists (logistics, retail, manufacturing, pharma) — an archetype-specific variant of the board's Pains Analysis, plus a self-diagnostic questionnaire on whether to launch a DG program at all. (course day 1, slides p.120-122)
+- **10-component DG framework authoring template** — DG terms, program goals, data prioritization, operating model, cost-benefit model, processes + responsibility matrix, top-level policy, priority initiatives, tech stack, communication & marketing — capped by DG Vision, numbered in optimal thinking order. (course day 1, slides p.116)
+- **Eckerson "Data Governance Platform Evaluation Criteria" xlsx** + the author's adapted Russian-language Google Sheets comparison; recommended flow: weight criteria → LLM-assisted pre-scoring → shortlist of 2-3 → own pilot scores. (course day 4, slides p.33-34, 125)
+- **Real bank "Data Quality Assurance Policy"** — a reusable example of a DQ normative base (systems must be tested, issues reported to asset owner, all staff trained, decisions based on highest-quality information). (course day 4, slides p.133-134)
+- **Principles hierarchy + standards taxonomy** — guiding directives → core principles → domain DG principles, each documented with justification and realization conditions; standards cut by process (naming, DQ, CRUD, archiving) vs by data area (customer data, retail transactions). (course day 5, slides p.86-99)
+- **BI Strategy & Tactics Canvas** — 5 layers: AS-IS assessment → TO-BE design → technology basis → operational basis → change management, with the instruction "delete everything that doesn't fit your company's maturity." (course day 6, slides p.124)
+- **Maturity Map calibration sheet** — 4 questions (decision-maker headcount, power-user count, industry data dependency, likelihood of data-driven transformation) that shift the baselines of the board's existing maturity map per factor. (course day 6, slides p.46)
+- **AI-Ready Domain checklist** — domain boundary + owner in 1-3 phrases with escalation route, markup of certified datamarts/metrics/dashboards, short per-object meta with "don't use for..." limitations, typical "how do I...?" Q&A scenarios, adjacent-domain pointers, domain glossary; responsibility split Domain Owner / BI Partner / Metric Curator. (course day 6, slides p.95)

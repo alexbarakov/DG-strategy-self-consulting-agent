@@ -30,6 +30,39 @@ The catalog is treated as the flagship — and most over-sold — DG tool. One t
 - Implementation sequence: domain structure + metadata integration → critical-layer logic → lineage (DWH, key ETL) → limited metadata load → BI layer → ownership model → MVP to production → glossary terms → certification → launch for data pros → ML classification/sharing → second-priority lineage → adoption CustDev → launch for business
 - Full workshop template — see [templates.md](../12_templates/templates.md)
 
+## From the course (Data Governance Fundamentals, 6 days)
+
+### Economics and the buy trigger
+- The buy trigger is measurable: there is a point where cumulative power-user efficiency loss exceeds the cost of a catalog — track Time to Value (project delivery date minus committed date) and detect its increase via experiments. (course day 2, slides p.35; course day 4, slides p.27)
+- Real number: at a large tech company, search-and-understanding losses attributable to the catalog use case measured ~7M RUB/month — "not that much" at that scale; expect your numbers to be "average, not very sexy" because you multiply minutes by headcount. (course day 4, transcript)
+- Benchmark: an ad-hoc's data communication (find marts, find people, get caveats) averages ~3-4 hours; with a certified, documented catalog + assistant the target is ~15 minutes. Works as a business case from ~100+ analysts. (course day 2, transcript)
+- Pure "analyst efficiency" numbers are usually NOT enough to defend a catalog budget in big tech — hide the catalog under other initiatives (AI enablement, core layer, certification program). (course day 2, transcript)
+- Vendor ROI math to steal but discount: Collibra claims 23% analyst / 26% steward productivity; Forrester TEI for Alation $3.8M benefits vs $813K costs. "The evaluation logic is worth copying" but realistically expect 5-7% provable — and saved time doesn't convert to output: "people just go drink coffee more often." (course day 4, slides p.80-86; transcript — marketing numbers, use critically)
+
+### Build vs buy
+- "For 90% of companies the boxed solution is optimal." The open-source trap: a catalog has "the illusion of a very simple product" to data engineers, but success hides heavy UX investment — you can wire up DataHub and get an ugly catalog that stores metadata but never becomes the starting point of data work. (course day 4, transcript)
+- Open-source catalogs are doomed to be abandoned half-finished because competing initiatives always win the engineers; even funded catalog projects rarely justify a permanent team, so every catalog shows a "fading trend." (course day 2, transcript)
+- "All available vendor comparisons are corrupt" — made by vendors with dishonestly picked criteria. (course day 4, slides p.29)
+- RU pricing reality: base box with ~2 connectors, each extra connector ~1.5-2M RUB, per-steward licenses; tens of millions total, over 100M RUB with implementation. Vendor maturity test: do they bring methodology (glossary process, card templates) or just a bare box. (course day 4, transcript)
+- Confluence-as-catalog fails on six counts (no sync, certification, lineage, links, checks, search) — but if all data people sit in 1-2 tight central teams, a plain wiki may genuinely beat a catalog on cost. (course day 4, slides p.31; transcript)
+
+### Filling metadata — what works
+- A large fintech: "no description — no prod deploy" gate; table-description quality grew 49%→86% in a year across ~7000 tables. Softener: pair the hard gate with an AI "generate description" button so it doesn't feel like friction. (course day 4, slides p.48; transcript)
+- Anti-pattern "burnt desert": paying for a catalog and getting ghost towns of empty descriptions; trust drops and the tool degrades to a mere search box. (course day 4, slides p.40, 46)
+- Don't boil the ocean: curate the top 20% node objects (most queried / used in most-viewed reports); maximize automated filling, algorithmically pre-fill domain/stewards/tags, inherit descriptions up the lineage from contracts, enter docs in the flow of work via CI/CD gate. (course day 4, slides p.47)
+- The catalog, not Excel, must be the master system for domains and roles — with alerts on re-assignment, or people wash out silently: "we discovered nobody had been tending a domain for half a year." (course day 3, transcript)
+- Typical starting picture to show sponsors (Azure Purview audit): only 4-45% of assets had owners assigned, ~46-74% lacked classifications. (course day 3, slides p.24)
+
+### Product metrics and audience
+- Product metrics: WAU (not DAU/MAU — natural usage frequency is weekly), target penetration 80% of target persona; CSAT out-of-band every 3-6 months; metadata completeness per object tier; metadata age — after ~1 year mark descriptions stale and auto-task domain roles to re-review. (course day 4, slides p.53, 86)
+- "Data catalogs are not for casual users — that's a fact"; a report catalog inside the data catalog doesn't work for business either. Target model: data catalog for data-product teams + data marketplace/portal for consumers. (course day 4, slides p.51; transcript)
+- Lineage skepticism: "the phone-a-friend option is more reliable" than a hairball dependency graph — check your logs, you may find nobody uses it. Invest only against concrete jobs: incident impact analysis and pipeline/critical-path optimization. (course day 4, slides p.57; transcript)
+- A catalog becomes a DG tool only when the steward has an equipped workplace in it: a task inbox for their domain, policies to approve, DQ checks to review, documentation to fill, access rights to re-review. (course day 1, transcript)
+- Security as ally: bake infosec use cases (PII classification, access audit, sensitive-data scanning) into the catalog early — "solve their task and they'll meet you halfway on everything else." Extreme constraint to design for: strictest bank infosec allows metadata only — no samples, no profiling. (course day 4, transcript)
+
+### RU big-tech benchmark
+- Peer survey of large tech companies (see `dg-kitchen-research.md` for the full board): one bought a commercial catalog (open push API was decisive) and implemented it in under 6 months with 3 part-time people; one tested an open-source catalog and dropped it (docs live in the wiki and become tech debt); two run their own products; one custom build on Atlas has owners on only 30% of objects; another rejected vendor lock — custom catalog, MVP in one quarter with 3 engineers, growing to a team of 10 in year two. (course day 4, slides p.87)
+
 ## Frames on the board
 - [Evolution of Data Catalog Idea](https://miro.com/app/board/uXjVMBRtQEA=/?moveToWidget=3458764611453525320)
 - [Data Catalog Problems (section header)](https://miro.com/app/board/uXjVMBRtQEA=/?moveToWidget=3458764611453525318)

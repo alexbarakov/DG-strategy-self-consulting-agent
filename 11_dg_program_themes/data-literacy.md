@@ -21,5 +21,10 @@ The board's dedicated Data Literacy section is carried almost entirely by images
 - [Data Literacy (image-only section)](https://miro.com/app/board/uXjVMBRtQEA=/?moveToWidget=3458764611453525290)
 - [Company Data-Driven Index / Data Literacy scoring](https://miro.com/app/board/uXjVMBRtQEA=/?moveToWidget=3458764611455329214)
 
+## From the course (Data Governance Fundamentals, 6 days)
+
+- The author deliberately avoids DAMA/DMBOK/Kimball language with business: "not because they are wrong — but this language gets in the way of talking to business, and even data-analytics management is usually far from pure architecture." (course day 5, transcript)
+- Professional jargon itself is a misalignment source in large teams: one person says measures, another metrics, a third indicators — vocabulary divergence inside the data function is a literacy problem before any business training starts. (course day 5, transcript)
+
 ## Links
 none

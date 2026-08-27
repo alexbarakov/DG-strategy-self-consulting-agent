@@ -54,6 +54,21 @@ Three invariants keep it honest:
 - 80% of data and analytics governance initiatives will fail by 2027 — Gartner; shelfware catalogs are the default outcome.
 - Context routing on simple queries: 20k → 6k tokens, 13 → 4 steps, minutes → seconds.
 
+## From the course (Data Governance Fundamentals, 6 days)
+
+**Context engine anatomy**
+- Anatomy of an AI Analyst: chatbot → intent agent → agentic modules (table selection, config generator, query builder), all fed by a Context Engine; metadata layering: business context (ontology, hierarchy) → domain context → data context (object quality, descriptions) → user context. Context quality is the entry ticket: "the bigger the company, the more use cases to cover, the more expensive it all gets." (course day 6, slides p.94)
+- A few-shot Q&A base mined from support-chat history (typical question → which datamart/metric/report to use, with caveats and link) is the single strongest accuracy booster — "literally a base of hints." (course day 6, transcript)
+- Domain identity of the asker personalizes retrieval: the agent filters objects by the user's domain even unprompted; metric trees serve as the navigator for factor analysis. (course day 6, transcript)
+
+**Metric notes — context about events inside the data**
+- Metric Notes = human comments attached to metric anomalies ("drop Jan 25: buyers fell due to holidays"). Without them, an LLM asked "why did it fall?" either says nothing or worse — invents an answer you can't immediately distinguish from a real one. (course day 6, slides p.98)
+- Three modes run at once: patches per anomaly, bulk fuel for the model to generalize, and the model labeling anomalies itself for human validation — same mechanics as few-shot examples; expectation: eventually ~95% of deviations self-explained. (course day 6, transcript)
+
+**Cheap context wins**
+- Team-facing dashboards should carry their own context: a "What's new / FAQ" page inside a large shared report, listing newly added measures and fields per week, measurably cut repeat questions to the team. (course day 5, transcript)
+- Enterprise data ontology is getting a second life with LLMs: it is "a mix of domain structure and glossary" and a strong foundation for RAG in internal assistants — one more reason to invest in domain structure now. (course day 3, slides p.28-30)
+
 ## Sources
 
 - Anthropic — context and skills lift agent accuracy from 21% to 95%+: https://claude.com/blog/how-anthropic-enables-self-service-data-analytics-with-claude

@@ -23,6 +23,27 @@ A DG framework is defined (per the Data Governance Institute) as "a logical stru
 - Root chain: DG Vision → Your DG Framework → Funding and Executive Support
 - A dedicated DG framework workshop template exists — see [templates.md](../12_templates/templates.md)
 
+## From the course (Data Governance Fundamentals, 6 days)
+
+### Author's verdicts on the classics
+- The DAMA Wheel and Aiken Pyramid are both stamped "bad framework, explains nothing"; the pyramid's phase logic (can't build a layer without the previous one) is artificial — real companies do it in any order. (course day 1, slides p.107-108)
+- PwC's framework = "same eggs, side view" — but the added organizational layer usefully grounds the abstraction. (course day 1, slides p.110)
+- "As many companies as I see, that many different DG frameworks" — even unformalized ones can be drawn. (course day 1, transcript)
+- Demystification: "Data Governance is just an organizational overlay and tooling that focuses and coordinates resources so the work actually gets done and survives — instead of floating forever in individual teams' roadmaps." (course day 2, slides p.65)
+- Data classification by business value ("how much would we lose if this data were deleted?"): strategic / critical / cross-functional (used in 2+ processes, definitions must be synchronized) / local — the last deliberately ungoverned. (course day 3, slides p.10)
+
+### Lean Data Governance (Marcel Dybalski)
+- "Of LinkedIn bullshit, this one is good": pick 1 problem statable in one sentence; 1 domain, 3-10 datasets, 1 source of truth per thing; 3 minimum roles (one person may wear many hats); least-access defaults; start with 3 automated checks; one-page docs; weekly 30-min data office hours; quarterly expand to next 3 datasets. Success = fewer "which number is right?" debates, faster access, less dashboard breakage. (course day 1, slides p.56, 119)
+
+### Governing bodies without the bureaucracy
+- Committees/councils/offices are "not a mismatch — it is the standard management system of any enterprise program", nothing DG-specific. DAMA's full body stack is "a maximum program" — small orgs should explicitly avoid local councils. (course day 5, slides p.56, 68)
+- Real committees only emerge at transnational / Sber-Gazprom scale — "maybe two dozen companies max" in Russia. Don't call them committees: "data management sync" sounds less bureaucratic and works the same. (course day 5, transcript)
+
+### Curate, don't govern (the shift)
+- The label stayed "Data Governance" but the meaning shifted from governing to curating: observing data use instead of controlling it, agility and time-to-value instead of compliance, quality per use-case instead of enterprise-wide, maximizing reuse instead of authorized use. "Don't boil the ocean." (course day 6, slides p.113-115)
+- Policy enforcement inversion: facilitate policy writing → prevention/warning → intervention → enforcement as rare last resort (only truly critical things like personal data). Guides / Guardrails / Gates triad; "govern with the belief that most people want to do the right thing." (course day 6, slides p.116-117)
+- Policy minimalism against the standards spiral: new policies only when needed, archive when stale, and push policy into tools "so the policy itself becomes unnecessary." (course day 6, slides p.118-119)
+
 ## Frames on the board
 - [DG Frameworks (DGI, PwC, and building your own)](https://miro.com/app/board/uXjVMBRtQEA=/?moveToWidget=3458764611453525282)
 - [DG frameworks — overview of 7 reference models](https://miro.com/app/board/uXjVMBRtQEA=/?moveToWidget=3458764611453561751)

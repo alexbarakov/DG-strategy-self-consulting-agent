@@ -72,3 +72,16 @@ Loop connections: answer → user; clarification → user; prod answers and reac
 - **Best-effort** — an answer mode without guarantees; the opposite is governed: built on a verified definition.
 - **Grain** — what one row means: a deal, a day per category, a stock snapshot. Determines what can be summed.
 - **Provenance** — the answer origin chain: which metric, which query, data as of which date.
+
+## From the course (Data Governance Fundamentals, 6 days)
+
+**Context the meaning layer alone doesn't give**
+- Column-level lineage is the enabler for SQL-writing agents: it lets an agent construct correct joins across marts; add a base of proven successful joins as companion context. "Without column-level lineage everything is rather sad." (course day 4, transcript)
+- The certified semantic layer is the foundation but not enough: the assistant additionally needs metric notes, Confluence context, and parsed chat discussions to explain causes and factors, not just values. (course day 5, transcript)
+- Knowledge graphs / domain knowledge bases with explicit relations are regaining importance precisely as the context substrate passed to agents. (course day 4, transcript)
+
+**Runtime and wiring patterns**
+- MCP is the wiring between the assistant and the metadata backbone (a self-written catalog / meta-DWH in a large tech company). Useful behavior pattern: when a chat answer about a metric is insufficient, the assistant redirects the user to the certified dashboard where the metric lives — metric↔dashboard links pay off in the assistant, not just in the UI. (course day 5, transcript)
+
+**Direction bet**
+- BI evolves from making marts and dashboards to supporting decision processes — building explicit decision trees with business and automation around them, replacing dashboards; only then does "time to insight cost" become measurable. (course day 4, transcript)

@@ -48,6 +48,7 @@ In every scenario the skill invites your existing documents (pain/landscape anal
 - Statuses in `objects.yaml` mirror the live board as of 2026-08-25; the board evolves (e.g., Skills Hub is being reframed as "Agents/skill governance"; DKB and Core Layer child hexagons were removed).
 - The board is public: content is English, no company names for internal practices ("a large tech company"), numbers keep their public sources.
 - Legacy v1.0 summaries in `20_dg_program_guide/` are lossy (generated from API summaries, images not extracted); for exact wording open the `miro:` deep-link.
+- Most theme files carry a **"From the course"** section — material distilled from the author's 6-day «Data Governance Fundamentals» program (slides + session transcripts): war stories, thresholds, anti-patterns and numbers that the board alone does not show. Source tags name the day and slide. Employers in war stories are anonymized ("a large tech company / telecom / fintech"); named companies appear only where the course cited them as public practice. Benchmarks the author himself flagged as "industry mythology / vendor marketing" keep that flag — do not quote them as facts.
 - Origin: built 2026-08-25/26 from the live board; maintained by Alex Barakov ([data-nature.com](https://data-nature.com), [t.me/datanature](https://t.me/datanature)). Course backing: the author's «BI+AI Strategy 2026».
 
 ## Plugging into an agent

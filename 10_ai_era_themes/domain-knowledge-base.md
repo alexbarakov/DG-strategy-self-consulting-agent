@@ -38,6 +38,15 @@ Filling ≠ trust ≠ effect: coverage can be gamed by weakening the gate, so co
 - Score thresholds that worked: ≥50% of domain metrics healthy, ≥45% of dashboard views and ≥30% of mart hits landing on certified objects.
 - 100% of machine-generated knowledge starts as needs_review — no exceptions, or the layer poisons itself.
 
+## From the course (Data Governance Fundamentals, 6 days)
+
+**AI-Ready Domain checklist — the operational form of the pack**
+- Prerequisites per domain for the AI Analyst: domain boundary + owner stated in 1-3 phrases with an escalation route; markup of certified datamarts/metrics/dashboards; short meta per key object including "don't use for..." limitations; typical "how do I...?" Q&A scenarios with answer + example link; pointers to adjacent domains ("for X ask domain Y"); a domain glossary. (course day 6, slides p.95)
+- Responsibility split that staffs the pack: Domain Owner (Head of Analytics) / BI Partner (datamarts + dashboards) / Metric Curator (metrics). (course day 6, slides p.95)
+
+**Bottom-up assembly**
+- Domain glossaries are assembled bottom-up from tagged Confluence pages where teams already describe their specifics and methodology — no company-wide glossary needed first. (course day 6, transcript)
+
 ## Sources
 
 - Anthropic — skills as packaged domain knowledge lift agent accuracy from 21% to 95%+: https://claude.com/blog/how-anthropic-enables-self-service-data-analytics-with-claude
