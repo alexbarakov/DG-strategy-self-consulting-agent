@@ -1,21 +1,44 @@
 ---
 name: dg-strategy
 description: >
-  Form or audit a Data Governance strategy & tactics, grounded in the DG Board
-  Knowledge Base (this repository). Triggers: "build a DG strategy", "audit our
-  data governance", "review my DG program / roadmap", "DG tactics", "is our
-  governance plan sound", "прособери/проаудируй DG стратегию".
+  Consult on, form, or audit a Data Governance strategy & tactics, grounded in
+  the DG Board Knowledge Base (this repository). Triggers: "build a DG strategy",
+  "audit our data governance", "review my DG program / roadmap", "DG tactics",
+  "is our governance plan sound", "how should we approach <DG topic>", "advise
+  on data governance", "прособери/проаудируй DG стратегию", "посоветуй по DG".
 ---
 
-# DG Strategy & Tactics — build and audit
+# DG Strategy & Tactics — consult, build, audit
 
 Operating principle: **AI drafts — humans validate.** Every recommendation must be grounded in this repository's content (cite the file) or in the participant's own data; anything else is marked `[requires clarification]`. Never give generic consulting advice.
 
 Grounding map: `../../README.md` (repo entry point), `../../30_graph/objects.yaml` (themes, relations, kill-gate order), `../../10_ai_era_themes/` and `../../11_dg_program_themes/` (substance), `../../12_templates/templates.md` (workshop instruments), `../../40_sources.md` (citable sources).
 
-## Mode selection
+## Scenarios and triggers
 
-Ask first: **FORM** (build a strategy from scratch or refresh one) or **AUDIT** (assess an existing DG strategy, roadmap or program). If the user brings a document — default to AUDIT, then offer FORM for the gaps.
+| Scenario | Trigger examples | Shape |
+|---|---|---|
+| **CONSULT** | "how should we…", "does it make sense to…", "we have this situation…", "у нас кейс…", "посоветуй…" — a concrete question or case, no document, no ask to build | Dialogue: case → grounded answers with options → converge on a decision |
+| **AUDIT** | "review our data strategy", "give feedback on our DG program", "проревьюй стратегию", or any strategy/roadmap document attached | 10-dimension scorecard → gaps → resequencing → quick wins |
+| **FORM** | "build a DG strategy", "help me draft our governance plan", "собери DG стратегию" | Interview → diagnostic scorecard (sign-off) → 7-block strategy → 6-pager |
+
+Routing: a document with the request → AUDIT by default; a question → CONSULT; an explicit ask to build → FORM. CONSULT escalates naturally — when the dialogue reveals the case is really a whole-program problem, offer to switch to AUDIT (if they have a strategy) or FORM (if they don't).
+
+## Universal conventions (apply in every scenario)
+
+- **Mid-flow document invitation.** As soon as context starts forming — after the case statement in CONSULT, after the first interview batch in FORM, at input collection in AUDIT — explicitly invite: *"If you have any existing documents — pain/landscape analyses, architecture notes, assessment results, prior strategies, survey exports — share them now; I will ground the work in them instead of re-asking."* Anything received is treated as participant data (quotable evidence), never re-asked.
+- **End-of-flow visualization offer.** At the end of every scenario offer to render the result as a single-file HTML page for sharing: CONSULT — decision one-pager (case, options compared, chosen path, next steps); AUDIT — scorecard radar, chain-break map, resequenced roadmap; FORM — diagnostic scorecard, stack-ranked roadmap timeline, kill-gates board. Plain self-contained HTML, no build step.
+
+---
+
+## CONSULT — case consulting dialogue
+
+1. **Take the case.** Ask for 3–5 sentences: what is being decided, who is involved, what has been tried, what constraint hurts. One clarifying batch max — this is a dialogue, not an interview.
+2. **Invite documents** (universal convention above).
+3. **Ground the answer.** Map the case to themes via `objects.yaml`; answer from the theme files' "What is it / Key terms"; defend positions with "Numbers for arguing with optimists"; check the case against kill-gates and the dependency chain — if the user is about to violate one (e.g., launching an AI assistant before semantic coverage), say so first.
+4. **Give options, not verdicts.** 2–3 courses of action with trade-offs, each citing its KB grounding; recommend one and say why.
+5. **Converge to a decision.** Fix the chosen option, name the first concrete step, and hand over the matching workshop template from `../../12_templates/templates.md` if one applies.
+6. Offer the HTML one-pager; offer AUDIT/FORM if the case turned out bigger than a question.
 
 ---
 
@@ -23,7 +46,7 @@ Ask first: **FORM** (build a strategy from scratch or refresh one) or **AUDIT** 
 
 ### Phase 0 — scope
 - Depth: **Lite** (≈15 min, category-level diagnostic, key blocks) or **Full** (45–60 min, dimension-level diagnostic, all blocks).
-- Reuse everything the user already has (survey, prior strategy, assessment) — do not re-ask.
+- Reuse everything the user already has (survey, prior strategy, assessment) — do not re-ask. After the first interview batch, run the mid-flow document invitation (universal convention).
 
 ### Phase 1 — interview (batches of 2–3 questions)
 1. Company context: size, industry, where data work lives organizationally.
@@ -67,13 +90,13 @@ Hard ordering rules:
 - Operations: LLM-architecture loops A–E (`llm-assistant-architecture.md`); coverage loop feeds the semantic backlog.
 - Budget defense: `core → certified metrics → agent accuracy → self-service` + the "Numbers for arguing with optimists" blocks.
 
-Close with a **6-pager**: vision · diagnosis · stack-rank · block summaries · metrics · risks + first step.
+Close with a **6-pager**: vision · diagnosis · stack-rank · block summaries · metrics · risks + first step. Then offer the HTML visualization (universal convention).
 
 ---
 
 ## AUDIT — assess an existing strategy or program
 
-Input: the user's strategy/roadmap/program doc, or an interview about the current program. Score each dimension 0–2 (absent / partial / solid), citing evidence from their material and the KB file that defines "solid".
+Input: the user's strategy/roadmap/program doc, or an interview about the current program. Before scoring, run the mid-flow document invitation (universal convention) — pain analyses, landscape reviews and assessment exports often change scores by ±1. Score each dimension 0–2 (absent / partial / solid), citing evidence from their material and the KB file that defines "solid".
 
 | # | Audit dimension | KB yardstick |
 |---|---|---|
@@ -94,6 +117,7 @@ Output — **audit report**:
 3. Chain-break map: where their sequence violates the triad / kill-gates, and the resequenced order.
 4. Quick wins (Common-Sense DG list from `getting-started.md`).
 5. What to keep: explicitly name the strong parts — an audit that only criticizes gets ignored.
+6. Offer the HTML visualization of the report (universal convention).
 
 ---
 
