@@ -45,8 +45,17 @@ Routing: a document with the request → AUDIT by default; a question → CONSUL
 ## FORM — build the strategy
 
 ### Phase 0 — scope
-- Depth: **Lite** (≈15 min, category-level diagnostic, key blocks) or **Full** (45–60 min, dimension-level diagnostic, all blocks).
-- Reuse everything the user already has (survey, prior strategy, assessment) — do not re-ask. After the first interview batch, run the mid-flow document invitation (universal convention).
+
+Three opening questions, in order:
+
+1. **Which strategy are we building?** — **DG** (data governance) / **BI** / **D&A** (data & analytics, umbrella) / **AI** / **mix**. Routing of knowledge sources:
+   - DG → this repository alone.
+   - BI or AI → pair with the companion [BI+AI Strategy Builder](https://github.com/alexbarakov/bi-ai-strategy-builder) (its skill leads, this KB grounds the governance blocks).
+   - D&A or mix → both repositories; this skill leads, the builder supplies BI/AI stream substance. Shared invariants (stack-rank, kill-gates, "AI drafts — humans validate") are identical in both by design — if they ever diverge, this KB wins for governance questions.
+2. **Confirm the content structure.** Show the v2 block list (00 Context → 07 Risks & Kill-gates) and let the user trim or reorder before any interviewing — a strategy for a 200-person company may not need all eight blocks.
+3. **Volume.** Default — **6-pager** (one-page synthesis per the agreed structure); options: full 7-block wiki, or per-block delivery with review after each. Depth of diagnostic: **Lite** (≈15 min, category-level) or **Full** (45–60 min, factor-level).
+
+Reuse everything the user already has (survey, prior strategy, assessment) — do not re-ask. After the first interview batch, run the mid-flow document invitation (universal convention).
 
 ### Phase 1 — interview (batches of 2–3 questions)
 1. Company context: size, industry, where data work lives organizationally.
