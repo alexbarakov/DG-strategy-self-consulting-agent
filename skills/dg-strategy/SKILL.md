@@ -57,10 +57,12 @@ Routing: a document with the request → AUDIT by default; a question → CONSUL
 6. Constraints: budget, risk appetite, governance capacity.
 7. 12-month ambition.
 
-Then the mandatory self-assessment, 0–4 scale ("no/almost none" → "optimized"):
+Then the mandatory self-assessment, 0–4 scale ("no/almost none" → "optimized"), based on the **Data & Analytics Maturity Scorecard** ([Google Sheets](https://docs.google.com/spreadsheets/d/1KMz58b8uLopevzp04kh3rGF8YLW6HmsVFw-UegV1-Is/edit?gid=1568926272), [copyable version](https://barakov.gumroad.com/l/dataanalyticsmaturitymap)):
+- **Calibration first** — 4 questions (management headcount, power-users headcount, business dependence on data, likelihood of industry data transformation) that adjust the *target* maturity level so the green line is achievable, not an abstract 4/4.
 - Entry gate: the **5-of-12 test** from `../../11_dg_program_themes/getting-started.md` — if fewer than 5 hit, recommend Common-Sense DG instead of a program.
-- Maturity: the 7 dimensions of `../../11_dg_program_themes/maturity-and-metrics.md` (Data informed → Driven → Led).
+- Maturity: **Lite** — self-rating on the Scorecard's 9 categories (Knowing data & users, Getting value, People engagement, Analytics governance, Data governance, DQ management, Data security, Data architecture, Strategic leadership); **Full** — the factor-level pass (~72 factors) via the Scorecard sheet, which also yields the second cut by 12 solution domains (Processes & Standards … Planning).
 - AI-readiness overlay: semantic coverage, certified-data share, domain-context completeness, verify-gate capacity, eval practice (`../../10_ai_era_themes/`).
+- Interactive-survey note: when running the assessment through UI option buttons, a compressed scale is allowed (0 / 1 / 2 / 3–4 with a free-text refinement); do not re-ask ratings that already follow from interview facts (e.g., certified share <10% ⇒ trusted-data ≈ 1) — state the derived score and let the user correct it.
 
 ### Phase 2 — diagnostic (sign-off checkpoint)
 Produce and confirm with the user before writing anything else:
@@ -68,20 +70,20 @@ Produce and confirm with the user before writing anything else:
 - **2–3 named breaks** in the chain `core → semantic → context → AI accuracy → self-service` — the strategy is the repair plan for these breaks.
 - Position on delivery channels: centralized / self-service / agentic, current vs realistic 12-month target.
 
-### Phase 3 — strategy document (7 blocks)
+### Phase 3 — strategy document (v2 structure)
 
-| Block | KB substance |
-|---|---|
-| 00 Diagnostics | scorecard from Phase 2 |
-| 01 AS-IS | pain map, `getting-started.md` challenges canvas |
-| 02 TO-BE vision | `dg-program-roadmap.md` (Program Map 3.0 stages), vision-statement template |
-| 03 AI foundation | triad `certified-core-layer.md` → `semantic-layer.md` → `domain-knowledge-base.md`, wrapped in `context-governance.md` |
-| 04 Trusted data | `data-quality.md`, `data-catalog.md`, certification |
-| 05 Content & self-service | `bi-content-management.md` funnel, `library.md` |
-| 06 Operations & people | `roles-and-operating-model.md`, `skills-hub.md` |
-| 07 Transformation plan | stack-rank, timeline, metrics, kill-gates |
+| Block | Content | KB substance |
+|---|---|---|
+| **00 Context** | Company challenges (business focus, economics, mandates), industry pressure, 3–5 data/AI trends *relevant to this company* — each ending with "…and therefore we must". Company-level inputs: investments, constraints. | `library.md` trends, `dg-kitchen-research.md` field evidence |
+| **01 AS-IS Diagnostic** | 1.1 Scorecard calibration (4 questions → adjusted target). 1.2 Maturity scorecard: 9 categories, 0–4, normalized to target. 1.3 Second cut: 12 solution domains. 1.4 AI-readiness overlay. 1.5 Pain map & demand (segments, ad-hoc structure, supply–demand). 1.6 Platform landscape AS-IS (tools, flows, org model — where shared documents land). 1.7 Named breaks in the chain `core → semantic → context → AI accuracy → self-service`. | Maturity Scorecard sheet; Excel guide "Platform Landscape AS-IS" and "Pain Points" tabs; `maturity-and-metrics.md` |
+| **02 TO-BE Vision** | Beyond AI: 2.1 target capability level per the 9 categories (from calibration); 2.2 target channel mix centralized / self-service / agentic; 2.3 target operating model & roles; 2.4 target data architecture (core, semantic, context, catalog, security); 2.5 culture & literacy ambition; 2.6 AI ambition as part of the whole (governed contour). Closes with a Vision Statement. | `dg-program-roadmap.md`, vision-statement template |
+| **03 Strategic Streams** | 3–6 streams bridging AS-IS → TO-BE (typical: trusted data; governance & roles; meaning layer / AI foundation; content & self-service; people & culture; efficiency). Per stream: why now (from 00/01), outputs/outcomes per horizon. | theme files per stream |
+| **04 Initiatives Portfolio** | **Streams decompose into projects here** — every initiative belongs to exactly one stream. Registry per initiative: goal, stream, effect, effort, prerequisites (maturity gates from 1.2), risk, owner. Scoring and stack-rank with the freeze order; explicit freeze list; kill-gates per initiative; wave plan (H1 / H2 / years 2–3) with fallbacks. Each initiative links to its execution playbook (see "Initiative playbooks" below). | `objects.yaml` gates; playbooks section |
+| **05 Metrics & Goals** | Outcome metric tree per stream (P0/P1), baselines and yearly targets, honest "ceiling" marks, anti-metric rule; measurement plan for missing baselines (target without baseline = `[requires clarification]`). | `maturity-and-metrics.md`, `skills-hub.md` anti-metrics |
+| **06 Operating Model & Transformation** | Governance resourcing decision (domain quotas / central enablement pod / hybrid), role rollout, dual track (sustaining + exploring), operations via LLM-architecture loops A–E, comms & enablement. | `roles-and-operating-model.md`, `llm-assistant-architecture.md` |
+| **07 Risks & Kill-gates** | Risk register with mitigations (fragile chain, unfunded governance, agent content chaos / Jevons, Gartner 80% default), consolidated kill-gate list, quarterly review ritual. | `certified-core-layer.md`, `context-governance.md` |
 
-Per block: essence (2–4 sentences) → recommendation (DRAFT, grounded in participant data) → workstreams → maturity gates → templates from `../../12_templates/templates.md`.
+Per block: essence (2–4 sentences) → recommendation (DRAFT, grounded in participant data) → composition → maturity gates → templates from `../../12_templates/templates.md`.
 
 Hard ordering rules:
 - **Stack-rank freeze order** (freeze from the bottom, never the top): governance & ownership → trusted data → AI readiness (the triad) → BI content → self-service & agentic interfaces.
@@ -91,6 +93,35 @@ Hard ordering rules:
 - Budget defense: `core → certified metrics → agent accuracy → self-service` + the "Numbers for arguing with optimists" blocks.
 
 Close with a **6-pager**: vision · diagnosis · stack-rank · block summaries · metrics · risks + first step. Then offer the HTML visualization (universal convention).
+
+### Initiative playbooks — how to execute what the portfolio proposes
+
+Every initiative recommended in block 04 must ship with a "how": method (KB file) + working template (Miro / Excel) + canonical reading. Master sources:
+
+- **Miro templates** — deep-links per template in `../../12_templates/templates.md`; the standalone public guide board: https://miro.com/app/board/uXjVLyfCyCc=/
+- **Excel guide** (working tabs for most initiatives): [view-only Google Sheets](https://docs.google.com/spreadsheets/d/17VvUlbZy6pV2KAmHRnKhheUUXheUsc3NpqFPq2WrxCI/edit?gid=1919735239) · [copyable version](https://barakov.gumroad.com/l/DataGovernanceMap)
+- **Maturity Scorecard**: [Google Sheets](https://docs.google.com/spreadsheets/d/1KMz58b8uLopevzp04kh3rGF8YLW6HmsVFw-UegV1-Is/edit?gid=1568926272) · [copyable](https://barakov.gumroad.com/l/dataanalyticsmaturitymap)
+- **Articles** — per-theme canon in `../../10_ai_era_themes/library.md`, verification status in `../../40_sources.md`
+
+| Initiative type | Method (KB) | Template | Reading |
+|---|---|---|---|
+| Maturity assessment / AS-IS baseline | `maturity-and-metrics.md` | Maturity Scorecard sheet (calibration + 72 factors) | maturity map (gumroad) |
+| Platform landscape AS-IS | `11_dg_program_themes/` overview | Excel tab "Platform Landscape — AS IS" (Analytics + Data platform components) | — |
+| Entry decision & business case | `getting-started.md` | Excel tabs "Test for Determining the Need", "DG Business case", "Matrix of DG Business Cases"; Miro business-case template | `dg-kitchen-research.md` |
+| Pain-points discovery | `getting-started.md` | Excel tab "Searching for Data Pain Points" (4 perspectives) or Miro pains-analysis canvas | — |
+| Vision statement | `dg-program-roadmap.md` | Miro vision template + [Sheets version](https://docs.google.com/spreadsheets/d/1ZNnuGQrdlYCN6QgYwWb4ISFtcKl8gV-PvfyCtV3cGJE/edit?usp=sharing) + Excel tab "DG Vision Statement" | — |
+| Domain classification & ownership | `domains-and-data-mesh.md`, `roles-and-operating-model.md` | Miro domain classifier + domain/subdomain map; Excel tab "Data Classification and Ownership" | Kitchen: custodian vs steward |
+| Data catalog selection & rollout | `data-catalog.md` | Excel tabs "Data Catalog — Template for Comparing Systems" (object card, glossary, policy, risk, reporting, collaboration, relationships, automation, ops, time-to-value, integration, vendor viability, security); Miro catalog-requirements workshop | library.md → Knowledge Graph |
+| DQ program / critical sources | `data-quality.md` | Excel tabs "Evaluation of DQ by Domains", "Register of Critical Sources", "Tracking DQ Issues" | DQMS concept map frame |
+| Core certification | `certified-core-layer.md` | health-score approach from `bi-content-management.md` | Kimball, dbt best practices |
+| Semantic / metric layer | `semantic-layer.md`, `semantic-metric-layer-v2.md` | metric-tree diagrams on the board | Spider 2.0, dbt SL vs text-to-SQL, OSI, Minerva |
+| Domain knowledge base & context | `domain-knowledge-base.md`, `context-governance.md` | knowledge-pack structure (manifest / knowledge / eval) | Anthropic self-service analytics, context engineering |
+| AI channel launch & evals | `llm-assistant-architecture.md` | loops A–E as the operating template | LangChain evals, Arize harness, clarify-before-answering |
+| Content hygiene wave | `bi-content-management.md` | funnel frame (archive → certify → promote) | — |
+| Skills & enablement | `skills-hub.md` | contribution flow + points scheme from the theme file | Agent Skills, MCP |
+| Program tracking | `dg-program-roadmap.md` | Excel tabs "Track Status of DG Program", "Program Mgmt" | Program Map 3.0 frame |
+
+Rule: a portfolio initiative without a playbook row is a red flag — either add the method or mark the initiative `[requires clarification]`.
 
 ---
 
