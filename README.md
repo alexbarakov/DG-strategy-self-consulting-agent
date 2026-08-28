@@ -19,6 +19,7 @@ In every scenario the skill invites your existing documents (pain/landscape anal
 
 ## How to use this KB (instructions for the agent)
 
+0. **Something is going wrong / diagnosing a program** — start at `50_failure_catalog.md` (symptom triage), pull arguments from `51_numbers.md` (with reliability tags — never quote a `vendor` or `disputed` number as fact), probe with `52_questions.md`.
 1. **Answering a DG question** — find the theme in `30_graph/objects.yaml` (nodes + relations; visual in `30_graph/graph.md`), read the matching file in `10_ai_era_themes/` (AI-era content) or `11_dg_program_themes/` (classic DG synthesis); drill into per-frame detail in `20_dg_program_guide/` when needed. Quote definitions from "Key terms", defend positions with "Numbers for arguing with optimists", cite sources from `40_sources.md`.
 1a. **Running a DG workshop or artifact session** — pick a template from `12_templates/templates.md` (pains analysis, vision statement, domain classifier, scope/goals configurators…), each with its board deep-link.
 2. **Building or auditing a DG strategy** — run the full procedure in [`skills/dg-strategy/SKILL.md`](skills/dg-strategy/SKILL.md) (method adapted from the author's [BI+AI Strategy Builder](https://github.com/alexbarakov/bi-ai-strategy-builder/blob/main/skills/barakov-bi-ai-strategy/SKILL.md)). The invariants, in short:
@@ -27,7 +28,7 @@ In every scenario the skill invites your existing documents (pain/landscape anal
    - Kill-gates block launches until prerequisites are met; dual track (old-DG sustaining + new-AI exploring, ring-fenced); operate via LLM-architecture loops A–E; defend budgets with the chain and the "Numbers for arguing with optimists" blocks.
    - Rational target maturity: the target line is calibrated to the company (4 questions), not set at "best practice"; +1 level per year unless a funded reason says otherwise; every target discounted for dependency, capacity and adoption risk; what the strategy deliberately does not do is written down; the budget cut is rehearsed in advance into a published freeze list.
    - **CDO-judge pass before finalization**: an adversarial review in the voice of a sceptical CDO — priority, order, feasibility, complexity, concreteness, defensibility, risk honesty — whose blocking findings must be fixed or turned into named decisions, with a visible before/after of the rework.
-   - Deliverables are produced **in the user's language** (this KB is the source, not the output template); missing facts become explicit `[не хватает данных]` markers with the source that would close them, never invented numbers.
+   - Deliverables are produced **in the user's language** (this KB is the source, not the output template); missing facts become explicit `[missing data]` markers (localized to the output language) naming the source that would close them, never invented numbers.
    - Guardrails: AI drafts — humans validate; no numbers without a source — mark gaps `[requires clarification]`; no over-optimism — a plan where everything succeeds is a plan nobody stress-tested.
 3. **Recommending reading** — use `10_ai_era_themes/library.md`: the full board link library (~90 links — canonical articles per AI-era theme; classic-DG standards, communities, people to follow, book and article shelves from Program Map 3.0; vendor blogs; the author's working resources). `40_sources.md` holds verification status per link.
 4. **Referencing the visual** — every file's frontmatter carries a `miro:` deep-link; give it when the user wants the picture.
@@ -43,6 +44,9 @@ In every scenario the skill invites your existing documents (pain/landscape anal
 | `30_graph/objects.yaml` | Machine-readable graph: themes, components, relations, statuses, frame ids |
 | `30_graph/graph.md` | Mermaid visual of the graph (renders on GitHub) |
 | `40_sources.md` | All external links with verification dates + the board's resource library |
+| `50_failure_catalog.md` | How DG programs actually die: 45 named failures in 7 families, with a symptom-triage table — start here when something feels wrong |
+| `51_numbers.md` | Every number in the KB (175 rows) with a reliability tag: `measured` / `benchmark` / `vendor` / `author-estimate` / `disputed` |
+| `52_questions.md` | Diagnostic question bank (81 questions) with what different answers mean — powers the CONSULT scenario |
 | `skills/dg-strategy/SKILL.md` | The strategy skill: FORM (build) and AUDIT (assess) modes |
 | `00_index.md` | Flat index of everything |
 
