@@ -1,7 +1,7 @@
 ---
 type: plan
 purpose: Build and operate the A+B evaluation harness for the dg-strategy and dg-econ-effect skills
-status: phases 0-1 built and passing; phase 2 scaffolded (baseline frozen, protocol written, judge not yet run); phase 3 open
+status: phases 0-2 built and run (first loop B run rejected its candidate, as designed); phase 3 open; blind cross-model judging still owed
 owner: aabarakov
 ---
 
@@ -120,6 +120,8 @@ Win / loss / tie against baseline, broken out by tier and by company, plus two r
 - **False refusal rate** — refused where the KB does have material (measured on the near-traps from Phase 3)
 
 Both are needed. The current set measures only the first, which pushes the skill toward cowardice over time.
+
+**Run.** `run-002-terse` compared 2-3 sentence answers against the baseline's 4-6. Rejected on all four tiers, but the shape was the payload: 16 ties on L1 against 5 on L3 — compression is nearly free on definitions and expensive on judgement. See `runs/RESULTS.md`.
 
 ### B5. Promotion rule
 

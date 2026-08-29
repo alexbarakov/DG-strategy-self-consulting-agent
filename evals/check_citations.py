@@ -65,6 +65,7 @@ def check_source_line(text, item_id, report, counters):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--golden", action="store_true")
+    ap.add_argument("--run", help="a candidate run jsonl with id/answer/source_text")
     ap.add_argument("--input")
     args = ap.parse_args()
 
@@ -75,13 +76,18 @@ def main():
         keys = load_jsonl(os.path.join(GOLDEN, "keys.jsonl"))
         for k in keys:
             check_source_line(k["source_text"], k["id"], report, counters)
+    elif args.run:
+        for r in load_jsonl(args.run):
+            if "id" not in r:
+                continue  # first line is the run header
+            check_source_line(r.get("source_text", ""), r["id"], report, counters)
     elif args.input:
         with open(args.input, encoding="utf-8") as fh:
             for n, line in enumerate(fh, 1):
                 if PATH_RE.search(line):
                     check_source_line(line, "line %d" % n, report, counters)
     else:
-        ap.error("pass --golden or --input")
+        ap.error("pass --golden, --run or --input")
 
     print(report.render())
     t = counters["total"] or 1
