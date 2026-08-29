@@ -18,10 +18,10 @@ It is deliberately built to under-promise. The base material behind it is unusua
 | Trigger | Mode |
 |---|---|
 | "посчитай экономический эффект", "сколько это принесёт денег", "build the business case", "what's the ROI" | **STANDALONE** — full run, own deliverable |
-| Invoked by `dg-strategy` FORM after the section 03 metric table is agreed | **EMBEDDED** — produces the `03.x Effect of the strategy` subsection only |
+| Invoked by `dg-strategy` FORM after the portfolio and the operating model are drafted | **EMBEDDED** — produces the **section 06 — Effect of the strategy** only |
 | "проверь их бизнес-кейс", "is this ROI model defensible" | **CHALLENGE** — audit an existing model against the guards below |
 
-In EMBEDDED mode do not re-interview: the metrics, initiatives, owners and constraints are already established. Ask only for the economic inputs that section 03 does not carry.
+In EMBEDDED mode do not re-interview: the metrics, initiatives, owners and constraints are already established. Ask only for the economic inputs the strategy does not already carry.
 
 ## Step 0 — the disqualifying questions
 
@@ -155,9 +155,9 @@ Immediately after the model, a **precision list**: each unmeasured input, the me
 
 Two formats, as everywhere in this repo: HTML for reading, Markdown for editing.
 
-### Embedded in a strategy (`03.x`)
+### Embedded in a strategy (section 06)
 
-A compact subsection under the metrics, before the portfolio, containing:
+A compact section after the operating model and before the risks, containing:
 
 | Element | Content |
 |---|---|
@@ -169,7 +169,7 @@ A compact subsection under the metrics, before the portfolio, containing:
 | Precision list | what to measure, who owns it, how long |
 | Refused | the air lines, named |
 
-**Placement rule:** the effect subsection sits inside section 03, after the metric table and before the portfolio. It is an argument about the metrics, not a separate document — and it must not appear in the Summary as a headline number unless the number is `calculated`. An estimate promoted to the Summary becomes a promise by the time it reaches the third reader.
+**Placement rule:** the effect section sits after the operating model and before the risks. It is argued last because it depends on the initiatives, the roles and the resourcing arithmetic already being on the page — an effect model written before the portfolio is a model of a plan that does not exist yet. It must not appear in the Summary as a headline number unless the number is `calculated`; the Summary carries the shape of the effect, not the total. An estimate promoted to the Summary becomes a promise by the time it reaches the third reader.
 
 ## CHALLENGE mode — auditing someone else's model
 

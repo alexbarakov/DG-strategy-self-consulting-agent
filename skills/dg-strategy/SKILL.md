@@ -20,7 +20,7 @@ Grounding map: `../../README.md` (repo entry point), `../../30_graph/objects.yam
 |---|---|---|
 | **CONSULT** | "how should we…", "does it make sense to…", "we have this situation…", "у нас кейс…", "посоветуй…" — a concrete question or case, no document, no ask to build | Dialogue: case → grounded answers with options → **judge pass** → converge on a decision |
 | **AUDIT** | "review our data strategy", "give feedback on our DG program", "проревьюй стратегию", or any strategy/roadmap document attached | 10-dimension scorecard → gaps → resequencing → quick wins → **judge pass** |
-| **FORM** | "build a DG strategy", "help me draft our governance plan", "собери DG стратегию" | Interview → diagnostic scorecard (sign-off) → Summary + sections 00–06 → **CDO-judge loop → bullshit pass** → corrected result (HTML + MD) + rework log |
+| **FORM** | "build a DG strategy", "help me draft our governance plan", "собери DG стратегию" | Interview → diagnostic scorecard (sign-off) → Summary + sections 00–07 → **CDO-judge loop → bullshit pass** → corrected result (HTML + MD) + rework log |
 
 Routing: a document with the request → AUDIT by default; a question → CONSULT; an explicit ask to build → FORM. CONSULT escalates naturally — when the dialogue reveals the case is really a whole-program problem, offer to switch to AUDIT (if they have a strategy) or FORM (if they don't).
 
@@ -140,7 +140,7 @@ Three opening questions, in order:
    - DG → this repository alone.
    - BI or AI → pair with the companion [BI+AI Strategy Builder](https://github.com/alexbarakov/bi-ai-strategy-builder) (its skill leads, this KB grounds the governance blocks).
    - D&A or mix → both repositories; this skill leads, the builder supplies BI/AI stream substance. Shared invariants (stack-rank, kill-gates, "AI drafts — humans validate") are identical in both by design — if they ever diverge, this KB wins for governance questions.
-2. **Confirm the content structure.** Show the section list (Summary, then 00 Context → 06 Risks & Kill-gates, then appendices) and let the user trim or reorder before any interviewing — a strategy for a 200-person company may not need all eight sections. The Summary is not optional: it is the only part some readers will see.
+2. **Confirm the content structure.** Show the section list (Summary, then 00 Context → 07 Risks & Kill-gates, then appendices) and let the user trim or reorder before any interviewing — a strategy for a 200-person company may not need all eight sections. The Summary is not optional: it is the only part some readers will see.
 3. **Volume.** Default — **compact**: a Summary plus roughly a page per section (≈6–8 pages of substance); options: a full wiki with every section expanded, or per-section delivery with review after each. Depth of diagnostic: **Lite** (≈15 min, category-level) or **Full** (45–60 min, factor-level).
 
 Reuse everything the user already has (survey, prior strategy, assessment) — do not re-ask. After the first interview batch, run the mid-flow document invitation (universal convention).
@@ -192,17 +192,20 @@ The default failure of strategy work is a target line drawn at "best practice" a
 | Part | Length | Who it serves |
 |---|---|---|
 | **Summary** | 1–2 pages, opens the document | Board, CFO, sponsor — often the only thing they read |
-| **Sections 00–06** | full length | Everyone working on or reviewing the strategy |
+| **Sections 00–07** | full length | Everyone working on or reviewing the strategy |
 | **Appendices** | as needed | Reviewers, auditors, successors |
 
-**Summary** — briefly but completely, so that a reader who stops here still knows the whole strategy:
+**Summary** — briefly but completely, so that a reader who stops here still knows the whole strategy. **Plain prose and bullets only — no tables.** A table in the opening page reads as a report; the Summary is an argument, and an argument that has to be assembled from cells does not survive being skimmed. Anything that genuinely needs columns belongs to the sections below, where the reader has already agreed to work. Compress a would-be table row into one bullet: `current → year 1 → year 3` on a single line beats a six-column grid.
+
+Contents, in order:
 1. **Vision** — where we are going, in two or three sentences.
 2. **Problems** — the named breaks the strategy repairs, one line each.
 3. **Solutions by stream** — every stream with its projects, compressed to a line per stream. Nothing may appear later that is absent here.
 4. **Goals** — the target metrics with current values and horizons.
 5. **What we deliberately do not do** — with the gate that would open each later.
-6. **What we need from you** — the specific decision, the role that must make it, the deadline. If the strategy has an entry condition, it lives here.
-7. **First step** and **the cost of doing nothing**.
+6. **Effect** — the leading zone, what is committed and what stays an estimate, in two or three sentences pointing at the effect section. Never a headline figure unless it is `calculated`.
+7. **What we need from you** — the specific decision, the role that must make it, the deadline. If the strategy has an entry condition, it lives here.
+8. **First step** and **the cost of doing nothing**.
 
 **Sections** (numbering kept for cross-references):
 
@@ -211,24 +214,25 @@ The default failure of strategy work is a target line drawn at "best practice" a
 | 00 | **Context** | The company's key challenges, the industry's, and the trends that change what is worth doing. Written so that every later decision can be traced back to a line here — context that justifies nothing is decoration. | `10_ai_era_themes/`, `40_sources.md` |
 | 01 | **AS-IS** | Calibration (what maturity level this company is actually entitled to, given decision-maker count, power users, data dependency and industry transformation risk), the maturity scorecard with confidence per score, the demand map by audience, and the named breaks in the dependency chain. | `20_dg_program_guide/maturity-*`, `52_questions.md`, `30_graph/objects.yaml` |
 | 02 | **TO-BE** | The bet stated in one paragraph, the ceiling for the year per moving category, which categories deliberately do not move and why, and the minimally sufficient target architecture. Not an AI vision unless the company has an AI ambition. Closes with **the streams of change** — three to six, each with why-now and the outcome of the year. Streams are not a separate section: they are how the target state is reached, so they belong to the description of that state. A stream is a direction of change with its own outcome, not a project; projects live inside it and appear in the portfolio. | `30_graph/objects.yaml`, `11_dg_program_themes/`, `20_dg_program_guide/dg-program-roadmap.md` |
-| 03 | **Metrics & Goals** | Target metrics with baseline, year 1 / 2 / 3 values, the owning stream, and the downward adjustment applied for risk (dependency, capacity, adoption). Anti-metrics listed explicitly. Unmeasured baselines marked and excluded from commitments. **Metrics come before the portfolio**: an initiative earns its place by moving a named metric. Closes with **03.x — the effect of the strategy** (see below). | `51_numbers.md`, `20_dg_program_guide/metrics-*`, `skills/dg-econ-effect/` |
+| 03 | **Metrics & Goals** | Target metrics with baseline, year 1 / 2 / 3 values, the owning stream, and the downward adjustment applied for risk (dependency, capacity, adoption). Anti-metrics listed explicitly. Unmeasured baselines marked and excluded from commitments. **Metrics come before the portfolio**: an initiative earns its place by moving a named metric. | `51_numbers.md`, `20_dg_program_guide/metrics-*`, `skills/dg-econ-effect/` |
 | 04 | **Initiatives Portfolio** | Streams break into projects. Each initiative is described in full, not as a table row: **goal**, **output** (what physically exists when it is done), **outcome** (which metric from section 03 it moves, from what to what, by when — tracked by year across the horizon), **owner role**, **prerequisites**, **effort**, **risk with its mitigation**, **wave**. Plus the published freeze order and the kill-gates. | `50_failure_catalog.md`, `12_templates/`, initiative playbooks |
 | 05 | **Operating Model** | The section the execution actually depends on. **Roles**: who, what they do, how much time, and *where that time is recorded* — a role without a line in someone's objectives is a wish. **Bodies**: composition, cadence, mandate, and explicitly what the body does *not* do. **Decision protocol**: how a dispute is raised, prepared, decided, recorded, and whether decisions are retroactive. **Interfaces** with existing structures (architecture boards, legal, functions that do not report to governance). **Resourcing arithmetic**: quotas versus new headcount, stated as numbers. **Degradation path**: what remains if the entry condition is not met. | `20_dg_program_guide/roles-and-operating-model.md`, `11_dg_program_themes/` |
-| 06 | **Risks & Kill-gates** | Risks that are specific to this company, each with the move that manages it. Generic risk registers ("lack of buy-in") are deleted by the bullshit judge. | `50_failure_catalog.md` |
+| 06 | **Effect of the strategy** | The money model, produced by the **`dg-econ-effect`** skill. Which of the three real ROI zones this strategy is in; the mechanism per stream; a pessimistic and a base range (never an optimistic one); the attribution share and whether it was agreed with the metric owner; the fraction you are willing to commit; the list of what must be measured to replace the estimate with a calculation; and the air benefits refused by name. Sits **after the operating model and before the risks**: it is the last thing you argue, because it depends on the initiatives, the roles and the resourcing being on the page already. | `11_dg_program_themes/maturity-and-metrics.md`, `50_failure_catalog.md`, `51_numbers.md`, `skills/dg-econ-effect/` |
+| 07 | **Risks & Kill-gates** | Risks that are specific to this company, each with the move that manages it. Generic risk registers ("lack of buy-in") are deleted by the bullshit judge. | `50_failure_catalog.md` |
 
-#### 03.x — Effect of the strategy
+#### Section 06 — Effect of the strategy
 
-A required closing subsection of section 03, produced by the **`dg-econ-effect`** skill in EMBEDDED mode. Do not write it freehand: it is the part of the document most likely to be attacked, and the skill exists because the honest version of it is counter-intuitive.
+A required section, produced by the **`dg-econ-effect`** skill in EMBEDDED mode. Do not write it freehand: it is the part of the document most likely to be attacked, and the skill exists because the honest version of it is counter-intuitive.
 
 It answers "how much money is this?" in the only shape a top manager reads — an agreed estimate of possible losses against the cost of preventing them, with the positive decision taken when the *minimal* losses exceed the *maximal* costs. It carries the mechanism per stream, a pessimistic and a base range (never an optimistic one), the attribution share and whether it was agreed with the metric owner, the fraction you are willing to commit, and the list of what must be measured to replace the estimate with a calculation.
 
 Three rules that override the general document conventions:
 
 - **Default confidence is `expert estimate`, and it is labelled as such at the top of the subsection** — not hedged in a footnote. The precision list that follows is the actionable part.
-- **An estimate never gets promoted into the Summary as a headline number.** Only a `calculated` figure may appear there. By the third reader an estimate in a summary has become a promise.
+- **An estimate never gets promoted into the Summary as a headline number.** The Summary carries the shape of the effect — leading zone, what is committed, what stays an estimate — and not the total. Only a `calculated` figure may appear as a number there. By the third reader an estimate in a summary has become a promise.
 - **The air benefits are refused by name in the document itself** — operational efficiency, innovation, accelerated decision-making, the whole indirect list — so that nobody adds them back between drafts. Time-to-insight stays a goal in the metric table and stays out of the money model.
 
-If the company does not decide in money at all (public sector, some regulated bodies), the subsection says so and the lever moves to compliance and the management vertical. That is a legitimate output, not a gap.
+If the company does not decide in money at all (public sector, some regulated bodies), the section says so and the lever moves to compliance and the management vertical. That is a legitimate output, not a gap.
 
 ### Charts, confidence and formats
 
@@ -256,7 +260,7 @@ Low-confidence scores are visually distinct in the chart (hatched, outlined or g
 
 Assembly note: write the sections first (that is where the thinking happens), then compress upward. The Summary is written last and is the hardest page — if you cannot write it, the strategy is not yet a strategy. Never ship a document whose first page is a table of contents or a context section: the reader must meet the ask before the background.
 
-Run **`dg-econ-effect`** in EMBEDDED mode once the metric table in section 03 is agreed, and before writing the portfolio — the effect model sometimes reorders the portfolio, and it is cheaper to learn that before the initiatives are written out in full.
+Run **`dg-econ-effect`** in EMBEDDED mode after the portfolio and the operating model are drafted — the effect model needs the initiatives, the roles and the resourcing arithmetic on the page. If it changes the ordering of the portfolio, go back and change the portfolio; that is the point of running it before the risks rather than after everything.
 
 Then offer the HTML visualization (universal convention).
 
