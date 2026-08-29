@@ -44,11 +44,11 @@ Routing: a document with the request → AUDIT by default; a question → CONSUL
 
 ## The CDO judge — the closing stage of every scenario
 
-Never hand over a first draft. Between the draft and the final artifact — in FORM, AUDIT and CONSULT alike — run an adversarial review in the voice of a **sceptical CDO who has killed two DG programs and paid for a third** — someone who will be asked by the CFO "why does this cost that much" and by the verticals "why should we do your work". The judge's job is not to polish wording; it is to find where the strategy is unimplementable, unprioritized or hollow.
+Never hand over a first draft. Between the draft and the final artifact — in FORM, AUDIT and CONSULT alike — run an adversarial review in the voice of a **sceptical CDO who has killed two DG programs and paid for a third** — someone who will be asked by the CFO "why does this cost that much", by the verticals "why should we do your work", and by their own engineers "why are we filling in another form". The judge's job is not to polish wording; it is to find where the strategy is unimplementable, unprioritized, hollow — or bureaucratic, which is the failure mode this discipline produces by default.
 
 **Judge stance.** Assume good faith and bad odds. Grade usefulness, not effort: "would I sign this, staff it, and defend it at a budget committee?" Prefer one killer question over ten fair ones. If a block is fine, say so briefly and move on — a review that criticizes everything gets discounted entirely.
 
-**Interrogation checklist** — go through all seven, produce a verdict per dimension (`ok` / `weak` / `blocking`):
+**Interrogation checklist** — go through all eight, produce a verdict per dimension (`ok` / `weak` / `blocking`):
 
 | # | Dimension | Questions the judge actually asks |
 |---|---|---|
@@ -59,12 +59,31 @@ Never hand over a first draft. Between the draft and the final artifact — in F
 | 5 | **Concreteness** | Point at three sentences a team could start executing tomorrow. Which "outcomes" are actually activities? Which targets have no baseline and therefore no meaning? |
 | 6 | **Value and defensibility** | What does the business feel in 6 months, in their words? What do I say to the CFO in one sentence? If we do nothing, what actually breaks — and when? |
 | 7 | **Risk honesty** | What is the most likely way this fails, and is it in the register? Which risk is written softly because it is politically awkward? What is deliberately not being done, and is that written down? |
+| 8 | **Rationality and proportion** | List every artefact this strategy creates that exists only to be produced — policies, registers, matrices, statuses, councils, reports, reviews. For each: **who reads it, and what decision changes if it does not exist?** How many meetings does this create per decision it produces? Which new rule lives in a document instead of in a tool? Does any role exist without hours recorded in someone's objectives? Would an engineer in this company read this and call it imposed rules and routine rituals — because that objection is the same sentence in every company? |
+
+### The rationality dimension in detail — how the judge attacks bureaucracy
+
+This is the dimension most likely to be skipped, because everything it deletes looks responsible. Four tests, applied literally. (The bullshit judge later runs a *deletion test* on sentences; this one runs on artefacts and bodies, and it runs first — there is no point polishing the wording of a register that should not exist.)
+
+**1. The subtraction test.** A strategy that imported a reference framework without an explicit removal step photocopied it rather than designed it. The judge asks: *what did you take out of the model you started from, and why?* If the author cannot say aloud what was removed, the answer is nothing, and the document is a bill for every petal that was printed. Read literally, a canonical eleven-petal wheel commits the company to eleven programs.
+
+**2. The reader test.** Producing governance documentation now costs nothing — writing and updating policies collapsed to a prompt. The scarce thing is readers. For every artefact the strategy creates, the judge demands a named reader and a decision that changes without it. "Compliance will need it" is not a reader. If the honest answer is nobody, the artefact is deleted, not justified — and the **standards spiral** is already running: more policies → worse navigation → lower understanding → lower compliance.
+
+**3. The net-artefact test.** Count what the strategy creates against what it retires. A governance program that adds policies, registers and statuses without archiving any is growing the surface it will later have to maintain with the same people. Policy minimalism is the rule: new policy only when needed, archive when stale, and wherever possible **push the rule into the tool so the policy itself becomes unnecessary** — a validation in the pipeline outperforms a paragraph nobody opens.
+
+**4. The ceremony test.** Count meetings, reviews and rituals per decision produced. A body that meets and does not decide is the most expensive artefact in the document, because it also occupies the political space where a working body would go. Two supporting checks: real standing committees exist in perhaps two dozen companies in the country — if yours is not one, the honest shape is a recurring working sync, and it works identically under a name that does not say "committee". And a maturity model presented but never wired into anyone's annual goals is bureaucracy, at which point the sceptics in the room are right.
+
+**Metric corollary.** If no headline number in the strategy can legitimately go *down* for a good reason, the strategy is counting activity — standards, glossary terms, owners, stewards, policies. That is metric theatre and the judge marks it `blocking`, not `weak`.
+
+**Naming corollary.** The judge checks the vocabulary against the audience. "Governance", "committee", even "certification" smell of bureaucracy to some organisations and can cost the buy-in before the content is heard. If the author cannot restate the whole program without the discipline's name, they have not found the pain it attaches to.
+
+**The fallback the judge offers instead of a verdict.** When a strategy fails this dimension badly, the fix is not trimming — it is the lean shape: one problem stated in one sentence, one domain, three to ten datasets, three roles, three automated checks, one-page documents, a weekly thirty-minute data office hour, and quarterly expansion to the next three datasets. A judge that only deletes is a judge nobody invites back; offer this as the replacement.
 
 **Output of the judge:** 5–8 findings, each with severity (`blocking` / `serious` / `worth fixing`), the exact quote or block it attacks, and what would make it pass. Plus one verdict line: *"In this shape I would / would not sign it, because…"*.
 
 **The loop (this is the point of the stage).** The judge runs *iteratively*, not once. The user sees the corrected result, not the first draft plus a list of complaints — a draft with known defects should never leave your hands.
 
-1. **Pass 1** — full seven-dimension review of the draft.
+1. **Pass 1** — full eight-dimension review of the draft.
 2. **Fix** — every `blocking` finding is resolved, or converted into an explicit `[missing data]` marker plus a named decision the user must make. A blocking finding may never be silently dropped. `serious` findings are fixed or explicitly accepted with a reason recorded.
 3. **Pass 2** — re-review, with two jobs: verify the fixes actually hold, and catch defects *introduced by the fixes* (narrowing a scope often orphans a dependency; adding a fallback often breaks the metric).
 4. **Repeat** until a pass produces no `blocking` findings and no new `serious` ones, or until **three passes** — whichever comes first. Three is a deliberate cap: past that the judge starts polishing prose, which is not what it is for.
@@ -72,7 +91,7 @@ Never hand over a first draft. Between the draft and the final artifact — in F
 
 **What the user receives:** the corrected artifact, plus a compact **rework log** — a "was → became → what it closes" table covering the whole loop, not the raw findings of each pass. The log is evidence the work was stress-tested and doubles as the answer to "did you consider…". Keep the full per-pass findings only if the user asks for them.
 
-**Scenario scaling.** FORM — the full seven dimensions against the whole document, up to three passes. AUDIT — the same lens turned on your own report, usually one pass plus fixes (are findings prioritized, actionable, would the recipient know what to do on Monday). CONSULT — a single short pass on the recommended option only: is it feasible for this team, is the first step concrete, what breaks it.
+**Scenario scaling.** FORM — the full eight dimensions against the whole document, up to three passes. AUDIT — the same lens turned on your own report, usually one pass plus fixes (are findings prioritized, actionable, would the recipient know what to do on Monday, and does the remediation plan create more paperwork than it removes). CONSULT — a single short pass on the recommended option only: is it feasible for this team, is the first step concrete, what breaks it, and does the advice create an artefact nobody will read.
 
 If the user is present, offer them the judge's findings first and let them answer the hard questions themselves — their answers are better material than your rework. If they are not, do the rework yourself and mark the assumptions you made.
 
@@ -80,7 +99,7 @@ If the user is present, offer them the judge's findings first and let them answe
 
 ## The bullshit judge — the language pass
 
-The CDO judge fixes what the strategy *says*. This one fixes how it says it. Run it last, on the corrected text, in a single pass. It does not produce a critique — **it produces rewritten text**.
+The CDO judge fixes what the strategy *says* — including how much of it should not exist at all. This one fixes how it says it. Run it last, on the corrected text, in a single pass. It does not produce a critique — **it produces rewritten text**.
 
 Its job is to remove the consulting film: the layer of language that makes a document sound authoritative while committing to nothing. That film is not a style problem. It is where accountability goes to hide — every vague sentence is a decision someone avoided making.
 
