@@ -18,17 +18,17 @@ Grounding map: `../../README.md` (repo entry point), `../../30_graph/objects.yam
 
 | Scenario | Trigger examples | Shape |
 |---|---|---|
-| **CONSULT** | "how should we…", "does it make sense to…", "we have this situation…", "у нас кейс…", "посоветуй…" — a concrete question or case, no document, no ask to build | Dialogue: case → grounded answers with options → **judge** → converge on a decision |
-| **AUDIT** | "review our data strategy", "give feedback on our DG program", "проревьюй стратегию", or any strategy/roadmap document attached | 10-dimension scorecard → gaps → resequencing → quick wins → **judge** |
-| **FORM** | "build a DG strategy", "help me draft our governance plan", "собери DG стратегию" | Interview → diagnostic scorecard (sign-off) → 7-block strategy → **judge → rework** → 6-pager |
+| **CONSULT** | "how should we…", "does it make sense to…", "we have this situation…", "у нас кейс…", "посоветуй…" — a concrete question or case, no document, no ask to build | Dialogue: case → grounded answers with options → **judge pass** → converge on a decision |
+| **AUDIT** | "review our data strategy", "give feedback on our DG program", "проревьюй стратегию", or any strategy/roadmap document attached | 10-dimension scorecard → gaps → resequencing → quick wins → **judge pass** |
+| **FORM** | "build a DG strategy", "help me draft our governance plan", "собери DG стратегию" | Interview → diagnostic scorecard (sign-off) → Summary + sections 00–07 → **CDO-judge loop → bullshit pass** → corrected result (HTML + MD) + rework log |
 
 Routing: a document with the request → AUDIT by default; a question → CONSULT; an explicit ask to build → FORM. CONSULT escalates naturally — when the dialogue reveals the case is really a whole-program problem, offer to switch to AUDIT (if they have a strategy) or FORM (if they don't).
 
-**Every scenario ends with the same stage — the CDO judge (see below).** It is not an optional polish step: no artifact leaves the skill without passing it and showing what the pass changed.
+**Every scenario ends with the same two stages — the CDO judge, then the bullshit judge (both below).** The CDO judge runs as a loop and fixes substance; the bullshit judge runs once at the end and fixes language. The user receives the already-corrected artifact plus a compact rework log, never a first draft with a list of complaints attached.
 
 ## Universal conventions (apply in every scenario)
 
-- **Output language = the user's language.** This KB is written in English, but the deliverable is not. Produce every artifact — diagnostics, strategy blocks, audit report, 6-pager, HTML — in the language the user is writing to you in. If the request is in Russian, the strategy is in Russian; the KB stays your source, not your output template. Two cases need an explicit question before you start writing: (a) the user's language is ambiguous or mixed, (b) the artifact has a different audience than the requester (a board deck for an international company, a document for a regional team). Ask plainly: "In which language should the deliverable be — Russian, English, or another?" Keep established domain terms in their conventional form (data governance, kill-gate, stack-rank, self-service) rather than forcing awkward translations, and state that convention once at the top of the document.
+- **Output language = the user's language.** This KB is written in English, but the deliverable is not. Produce every artifact — diagnostics, strategy blocks, audit report, summary, HTML — in the language the user is writing to you in. If the request is in Russian, the strategy is in Russian; the KB stays your source, not your output template. Two cases need an explicit question before you start writing: (a) the user's language is ambiguous or mixed, (b) the artifact has a different audience than the requester (a board deck for an international company, a document for a regional team). Ask plainly: "In which language should the deliverable be — Russian, English, or another?" Keep established domain terms in their conventional form (data governance, kill-gate, stack-rank, self-service) rather than forcing awkward translations, and state that convention once at the top of the document.
 
 - **Missing information is stated, never invented.** When you lack the facts to make a concrete proposal, say so in place of the proposal — not around it. Write what the recommendation would be conditional on, name exactly which fact is missing, and say who or what would supply it. Format inside any artifact:
   > `[missing data]` — to set a target for certification coverage, the current certified share of key objects per domain is required. Source: catalog export by status. Until then the target stays a range, not a number.
@@ -62,15 +62,53 @@ Never hand over a first draft. Between the draft and the final artifact — in F
 
 **Output of the judge:** 5–8 findings, each with severity (`blocking` / `serious` / `worth fixing`), the exact quote or block it attacks, and what would make it pass. Plus one verdict line: *"In this shape I would / would not sign it, because…"*.
 
-**Scenario scaling.** FORM — the full seven dimensions against the whole document. AUDIT — the same lens turned on your own report (are findings prioritized, actionable, would the recipient know what to do on Monday). CONSULT — a short version on the recommended option only: is it feasible for this team, is the first step concrete, what breaks it.
+**The loop (this is the point of the stage).** The judge runs *iteratively*, not once. The user sees the corrected result, not the first draft plus a list of complaints — a draft with known defects should never leave your hands.
 
-**Rework loop (this is the point of the stage).** Take the findings back into the draft before anything is finalized:
-1. Fix every `blocking` finding — or, if it cannot be fixed with available facts, convert it into an explicit `[missing data]` marker and a decision the user must make. A blocking finding may not be silently dropped.
-2. Fix `serious` findings or record why they are accepted as-is.
-3. Show the user a short **before/after** of what changed after the review — this is the strongest evidence that the strategy was stress-tested, and it is also what the user will reuse when defending it.
-4. Only then produce the final artifact and the 6-pager.
+1. **Pass 1** — full seven-dimension review of the draft.
+2. **Fix** — every `blocking` finding is resolved, or converted into an explicit `[missing data]` marker plus a named decision the user must make. A blocking finding may never be silently dropped. `serious` findings are fixed or explicitly accepted with a reason recorded.
+3. **Pass 2** — re-review, with two jobs: verify the fixes actually hold, and catch defects *introduced by the fixes* (narrowing a scope often orphans a dependency; adding a fallback often breaks the metric).
+4. **Repeat** until a pass produces no `blocking` findings and no new `serious` ones, or until **three passes** — whichever comes first. Three is a deliberate cap: past that the judge starts polishing prose, which is not what it is for.
+5. If a `blocking` finding survives three passes, it is not a defect of the draft — it is a real constraint of the situation. Promote it from the judge's list to the document's risk register or entry conditions, and say so plainly.
+
+**What the user receives:** the corrected artifact, plus a compact **rework log** — a "was → became → what it closes" table covering the whole loop, not the raw findings of each pass. The log is evidence the work was stress-tested and doubles as the answer to "did you consider…". Keep the full per-pass findings only if the user asks for them.
+
+**Scenario scaling.** FORM — the full seven dimensions against the whole document, up to three passes. AUDIT — the same lens turned on your own report, usually one pass plus fixes (are findings prioritized, actionable, would the recipient know what to do on Monday). CONSULT — a single short pass on the recommended option only: is it feasible for this team, is the first step concrete, what breaks it.
 
 If the user is present, offer them the judge's findings first and let them answer the hard questions themselves — their answers are better material than your rework. If they are not, do the rework yourself and mark the assumptions you made.
+
+---
+
+## The bullshit judge — the language pass
+
+The CDO judge fixes what the strategy *says*. This one fixes how it says it. Run it last, on the corrected text, in a single pass. It does not produce a critique — **it produces rewritten text**.
+
+Its job is to remove the consulting film: the layer of language that makes a document sound authoritative while committing to nothing. That film is not a style problem. It is where accountability goes to hide — every vague sentence is a decision someone avoided making.
+
+**The deletion test, applied sentence by sentence.** *What would change if this sentence were deleted?* If the answer is "nothing", delete it. Run it on paragraphs too: whole sections of strategy documents exist because the template had a heading.
+
+**What gets cut, always:**
+
+| Pattern | Example | What to do |
+|---|---|---|
+| **Actorless claims** | "будет обеспечено повышение качества" | Name who does what. If you cannot, you have no plan — flag it. |
+| **Nominalizations** | "осуществление внедрения процесса управления" | Verbs: "внедряем процесс", or better, "делаем X" |
+| **Empty intensifiers** | "существенно повысить", "значительно ускорить", "кардинально" | Delete, or replace with the number. If there is no number, the intensifier is a lie with better manners. |
+| **Buzzword pairs** | "синергия и масштабирование", "прозрачность и эффективность" | Pick the one you mean; delete the other. Paired abstractions are one abstraction hiding behind another. |
+| **Aspiration as action** | "стремимся к", "нацелены на", "фокусируемся на" | Either it is an initiative with an owner and a date, or it is not in the document. |
+| **Undefined comparatives** | "более зрелый подход", "лучшие практики" | More mature than what, measured how? "Best practice" means "someone else's context". |
+| **Weasel hedges** | "как правило", "в определённой степени", "рекомендуется рассмотреть" | Commit or omit. A recommendation nobody can refuse is not a recommendation. |
+| **Consulting throat-clearing** | "в современных условиях", "в контексте цифровой трансформации", "не секрет, что" | Delete the opener; the sentence starts at the verb. |
+| **Value-free value words** | "инновационный", "комплексный", "холистический", "проактивный" | Delete. None of them survive the deletion test. |
+
+**What it must NOT do:**
+- Do not touch numbers, source tags, `[missing data]` markers or direct quotes — brevity is not worth accuracy.
+- Do not flatten a sharp claim into a polite one. This pass makes text blunter, never softer.
+- Do not shorten by dropping content. Cutting a real trade-off because it reads long is the opposite of the job.
+- Do not rewrite the author's own phrasing where it is deliberately vivid.
+
+**A good sentence after this pass** names an actor, a verb and an object; carries a number or an explicit gap marker where one is due; and would be embarrassing to write if it were untrue. **Two tests before shipping:** could a competitor's strategy contain this exact sentence? (then it is empty) — and would anyone in the room disagree with it? (if nobody could, it says nothing).
+
+**Output:** the cleaned document plus a two-line note on what class of language was removed. No before/after inventory — the CDO judge's rework log is the record of substance; this pass is hygiene.
 
 ---
 
@@ -102,8 +140,8 @@ Three opening questions, in order:
    - DG → this repository alone.
    - BI or AI → pair with the companion [BI+AI Strategy Builder](https://github.com/alexbarakov/bi-ai-strategy-builder) (its skill leads, this KB grounds the governance blocks).
    - D&A or mix → both repositories; this skill leads, the builder supplies BI/AI stream substance. Shared invariants (stack-rank, kill-gates, "AI drafts — humans validate") are identical in both by design — if they ever diverge, this KB wins for governance questions.
-2. **Confirm the content structure.** Show the v2 block list (00 Context → 07 Risks & Kill-gates) and let the user trim or reorder before any interviewing — a strategy for a 200-person company may not need all eight blocks.
-3. **Volume.** Default — **6-pager** (one-page synthesis per the agreed structure); options: full 7-block wiki, or per-block delivery with review after each. Depth of diagnostic: **Lite** (≈15 min, category-level) or **Full** (45–60 min, factor-level).
+2. **Confirm the content structure.** Show the section list (Summary, then 00 Context → 07 Risks & Kill-gates, then appendices) and let the user trim or reorder before any interviewing — a strategy for a 200-person company may not need all eight sections. The Summary is not optional: it is the only part some readers will see.
+3. **Volume.** Default — **compact**: a Summary plus roughly a page per section (≈6–8 pages of substance); options: a full wiki with every section expanded, or per-section delivery with review after each. Depth of diagnostic: **Lite** (≈15 min, category-level) or **Full** (45–60 min, factor-level).
 
 Reuse everything the user already has (survey, prior strategy, assessment) — do not re-ask. After the first interview batch, run the mid-flow document invitation (universal convention).
 
@@ -147,29 +185,65 @@ The default failure of strategy work is a target line drawn at "best practice" a
 
 **7. Rehearse the cut.** Ask directly: "if you lose a third of the resource mid-year, what dies?" The answer becomes the published freeze list. Strategies without a rehearsed cut do not survive the first budget review — they just fail silently and everywhere at once.
 
-### Phase 3 — strategy document (v2 structure)
+### Phase 3 — strategy document (v4)
 
-| Block | Content | KB substance |
+**Two parts, not four layers.** A **Summary** that opens the document and can be read alone, then the **strategy sections** — a flat numbered list, no artificial split between "reasoning" and "working blocks": both are the strategy. Appendices at the end hold evidence rather than argument.
+
+| Part | Length | Who it serves |
 |---|---|---|
-| **00 Context** | Company challenges (business focus, economics, mandates), industry pressure, 3–5 data/AI trends *relevant to this company* — each ending with "…and therefore we must". Company-level inputs: investments, constraints. | `library.md` trends, `dg-kitchen-research.md` field evidence |
-| **01 AS-IS Diagnostic** | 1.1 Scorecard calibration (4 questions → adjusted target). 1.2 Maturity scorecard: 9 categories, 0–4, normalized to target. 1.3 Second cut: 12 solution domains. 1.4 AI-readiness overlay. 1.5 Pain map & demand (segments, ad-hoc structure, supply–demand). 1.6 Platform landscape AS-IS (tools, flows, org model — where shared documents land). 1.7 Named breaks in the chain `core → semantic → context → AI accuracy → self-service`. | Maturity Scorecard sheet; Excel guide "Platform Landscape AS-IS" and "Pain Points" tabs; `maturity-and-metrics.md` |
-| **02 TO-BE Vision** | Beyond AI: 2.1 target capability level per the 9 categories — **calibrated, with the ceiling and the "good enough" mark stated per category, and categories deliberately left at today's level named as such**; 2.2 target channel mix centralized / self-service / agentic; 2.3 target operating model & roles; 2.4 target data architecture (core, semantic, context, catalog, security); 2.5 culture & literacy ambition; 2.6 AI ambition as part of the whole (governed contour). Closes with a Vision Statement. | `dg-program-roadmap.md`, vision-statement template, anti-optimism pass |
-| **03 Strategic Streams** | 3–6 streams bridging AS-IS → TO-BE (typical: trusted data; governance & roles; meaning layer / AI foundation; content & self-service; people & culture; efficiency). Per stream: why now (from 00/01), outputs/outcomes per horizon. **Plus a mandatory "What this strategy deliberately does not do"**: streams and capabilities consciously left out of this horizon, each with the reason and the gate that would open it later. Excluding an expected stream (most often AI) is a decision to defend explicitly — silence reads as an oversight and invites it back through the side door. | theme files per stream; anti-optimism pass |
-| **04 Initiatives Portfolio** | **Streams decompose into projects here** — every initiative belongs to exactly one stream. Registry per initiative: goal, stream, effect, effort, prerequisites (maturity gates from 1.2), risk, owner. Scoring and stack-rank with the freeze order; explicit freeze list; kill-gates per initiative; wave plan (H1 / H2 / years 2–3) with fallbacks. Each initiative links to its execution playbook (see "Initiative playbooks" below). | `objects.yaml` gates; playbooks section |
-| **05 Metrics & Goals** | Outcome metric tree per stream (P0/P1), baselines and yearly targets, honest "ceiling" marks, anti-metric rule; measurement plan for missing baselines (target without baseline = `[requires clarification]`). Targets carry the three haircuts from the anti-optimism pass (dependency / capacity / adoption risk) — an undiscounted year-one number is a red flag, not ambition. | `maturity-and-metrics.md`, `skills-hub.md` anti-metrics |
-| **06 Operating Model & Transformation** | Governance resourcing decision (domain quotas / central enablement pod / hybrid), role rollout, dual track (sustaining + exploring), operations via LLM-architecture loops A–E, comms & enablement. | `roles-and-operating-model.md`, `llm-assistant-architecture.md` |
-| **07 Risks & Kill-gates** | Risk register with mitigations (fragile chain, unfunded governance, agent content chaos / Jevons, Gartner 80% default), consolidated kill-gate list, quarterly review ritual. | `certified-core-layer.md`, `context-governance.md` |
+| **Summary** | 1–2 pages, opens the document | Board, CFO, sponsor — often the only thing they read |
+| **Sections 00–07** | full length | Everyone working on or reviewing the strategy |
+| **Appendices** | as needed | Reviewers, auditors, successors |
 
-Per block: essence (2–4 sentences) → recommendation (DRAFT, grounded in participant data) → composition → maturity gates → templates from `../../12_templates/templates.md`.
+**Summary** — briefly but completely, so that a reader who stops here still knows the whole strategy:
+1. **Vision** — where we are going, in two or three sentences.
+2. **Problems** — the named breaks the strategy repairs, one line each.
+3. **Solutions by stream** — every stream with its projects, compressed to a line per stream. Nothing may appear later that is absent here.
+4. **Goals** — the target metrics with current values and horizons.
+5. **What we deliberately do not do** — with the gate that would open each later.
+6. **What we need from you** — the specific decision, the role that must make it, the deadline. If the strategy has an entry condition, it lives here.
+7. **First step** and **the cost of doing nothing**.
 
-Hard ordering rules:
-- **Stack-rank freeze order** (freeze from the bottom, never the top): governance & ownership → trusted data → AI readiness (the triad) → BI content → self-service & agentic interfaces.
-- **Kill-gates**: no AI assistant without semantic coverage of target domains + certified baseline; no self-service scaling without governance gatekeeping + DQ monitoring; no semantic layer without core foundation.
-- **Dual track**: old-DG sustaining + new-AI exploring, ring-fenced to low-risk domains, measured by AI accuracy and human-validation overhead.
-- Operations: LLM-architecture loops A–E (`llm-assistant-architecture.md`); coverage loop feeds the semantic backlog.
-- Budget defense: `core → certified metrics → agent accuracy → self-service` + the "Numbers for arguing with optimists" blocks.
+**Sections** (numbering kept for cross-references):
 
-Close with a **6-pager**: vision · diagnosis · stack-rank · block summaries · metrics · risks + first step. Then offer the HTML visualization (universal convention).
+| # | Section | Content | KB substance |
+|---|---|---|---|
+| 00 | **Context** | The company's key challenges, the industry's, and the trends that change what is worth doing. Written so that every later decision can be traced back to a line here — context that justifies nothing is decoration. | `10_ai_era_themes/`, `40_sources.md` |
+| 01 | **AS-IS** | Calibration (what maturity level this company is actually entitled to, given decision-maker count, power users, data dependency and industry transformation risk), the maturity scorecard with confidence per score, the demand map by audience, and the named breaks in the dependency chain. | `20_dg_program_guide/maturity-*`, `52_questions.md`, `30_graph/objects.yaml` |
+| 02 | **TO-BE** | The bet stated in one paragraph, the ceiling for the year per moving category, which categories deliberately do not move and why, and the minimally sufficient target architecture. Not an AI vision unless the company has an AI ambition. | `30_graph/objects.yaml`, `11_dg_program_themes/` |
+| 03 | **Streams** | Three to six streams, each with why-now and the outcome of the year. A stream that cannot state its outcome is a wish. | `20_dg_program_guide/dg-program-roadmap.md` |
+| 04 | **Metrics & Goals** | Target metrics with baseline, year 1 / 2 / 3 values, the owning stream, and the risk haircut applied (dependency, capacity, adoption). Anti-metrics listed explicitly. Unmeasured baselines marked and excluded from commitments. **Metrics come before the portfolio**: an initiative earns its place by moving a named metric. | `51_numbers.md`, `20_dg_program_guide/metrics-*` |
+| 05 | **Initiatives Portfolio** | Streams break into projects. Each initiative is described in full, not as a table row: **goal**, **output** (what physically exists when it is done), **outcome** (which metric from section 04 it moves, from what to what, by when — tracked by year across the horizon), **owner role**, **prerequisites**, **effort**, **risk with its mitigation**, **wave**. Plus the published freeze order and the kill-gates. | `50_failure_catalog.md`, `12_templates/`, initiative playbooks |
+| 06 | **Operating Model** | The section the execution actually depends on. **Roles**: who, what they do, how much time, and *where that time is recorded* — a role without a line in someone's objectives is a wish. **Bodies**: composition, cadence, mandate, and explicitly what the body does *not* do. **Decision protocol**: how a dispute is raised, prepared, decided, recorded, and whether decisions are retroactive. **Interfaces** with existing structures (architecture boards, legal, functions that do not report to governance). **Resourcing arithmetic**: quotas versus new headcount, stated as numbers. **Degradation path**: what remains if the entry condition is not met. | `20_dg_program_guide/roles-and-operating-model.md`, `11_dg_program_themes/` |
+| 07 | **Risks & Kill-gates** | Risks that are specific to this company, each with the move that manages it. Generic risk registers ("lack of buy-in") are deleted by the bullshit judge. | `50_failure_catalog.md` |
+
+### Charts, confidence and formats
+
+**Confidence on every maturity score.** A score without a confidence level invites false precision. Tag each one:
+
+| Level | Meaning | Consequence |
+|---|---|---|
+| `высокая` / high | measured — there is an export, a count, a log | usable as a baseline for a target |
+| `средняя` / medium | stated by the participant from their own knowledge | usable, but say whose word it is |
+| `низкая` / low | inferred by you from adjacent facts | may not carry a target; goes straight into "what needs measuring" |
+
+Low-confidence scores are visually distinct in the chart (hatched, outlined or greyed) and every one of them must appear in the `[missing data]` list. A diagnosis where half the scores are low-confidence is not a diagnosis — say so and propose the measurement instead of the strategy.
+
+**One required chart — AS-IS.** Current level vs calibrated target per category, with confidence encoding. The reader must see at a glance where the company stands, how far the year moves it, and which of those numbers are guesses. Do not add a second chart for TO-BE: the target is already visible in this one, and the year's shape belongs in the metrics and the portfolio, where it carries numbers rather than bar lengths.
+
+**Rendering, per format.** No external libraries, no build step, ever.
+- HTML — inline SVG or CSS bars; must survive being pasted into a wiki and printed.
+- Markdown — text bars (`████████░░`) with the numeric value alongside, plus the confidence tag. A table with a bar column reads fine in every wiki and in a terminal.
+
+**Light theme is the default.** Strategy documents get printed, projected and pasted into Confluence, where dark backgrounds fail. White background, dark text, restrained accents; reserve colour for meaning (target vs current, frozen vs moving, low confidence) rather than decoration.
+
+**Every deliverable ships in two formats:** HTML for reading and sharing, Markdown for editing, diffing and pasting into a wiki. Same content, charts degraded to text bars in Markdown. Produce both without being asked.
+
+**Appendices**: the company portrait and the filled interview questionnaire (evidence of how the diagnosis was reached — the executing team does not need it on Monday, the reviewer checking your reasoning does); what needs measuring (the `[missing data]` list); the rework log from both judges; sources and method; the full scorecard if section 01 carried only its summary; and — when the run exposed them — the places where this knowledge base had no material, which is a deliverable in its own right.
+
+Assembly note: write the sections first (that is where the thinking happens), then compress upward. The Summary is written last and is the hardest page — if you cannot write it, the strategy is not yet a strategy. Never ship a document whose first page is a table of contents or a context section: the reader must meet the ask before the background.
+
+Then offer the HTML visualization (universal convention).
 
 ### Initiative playbooks — how to execute what the portfolio proposes
 
@@ -237,7 +311,7 @@ Output — **audit report**:
 - **Deliverables are written in the user's language** (the KB is the source, not the output template); ask when it is ambiguous or the audience differs from the requester.
 - No generic advice; every claim cites a KB file or participant data.
 - No invented numbers; missing data → an explicit `[missing data]` marker naming the missing fact and its source, collected into a "what needs measuring" list — never a plausible substitute, never a vague phrase hiding the gap.
-- **Nothing is finalized without the CDO-judge pass** and a visible rework: blocking findings are fixed or converted into named decisions for the user.
+- **Nothing is finalized without both judges**: the CDO-judge loop (substance, up to three passes, visible rework log) and the bullshit pass (language, once, rewrites rather than critiques).
 - **No over-optimism.** Targets are calibrated, not maximal; +1 level per year is the default; every target is discounted for dependency, capacity and adoption risk; what the strategy will not do is written down. A plan where everything succeeds is a plan nobody stress-tested — see "Setting a rational target maturity".
 - Never write the full document before the Phase-2 scorecard (FORM) or the scorecard table (AUDIT) is confirmed.
 - When challenged on "why so slow / why not just launch the agent" — answer with the numbers blocks (Spider 2.0 6%, 21%→95%+, 40%→85–95%, Gartner 80%).
