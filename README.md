@@ -84,7 +84,7 @@ For any other agent: paste the `SKILL.md` as instructions and give the repositor
 | `40_sources.md` | All external links with verification dates + the board's resource library |
 | `60_roadmap.md` | What the KB is still missing and in what order to fix it — written from stress-test findings, not aspiration |
 | `70_golden_set/` | 100 grounded questions from five invented companies, with keys, traps and judge scores. A regression eval and a KB-coverage diagnostic — the low scores are a map of what the base is missing |
-| `evals/` | Deterministic checks: citations, completeness, structure, invariants (`invariants.json`), content rot. One command, non-zero exit on any blocking finding |
+| `evals/` | Deterministic checks: citations, completeness, **forbidden claims (hard rule)**, structure, invariants (`invariants.json`), content rot. One command, non-zero exit on any blocking finding |
 | `skills/dg-strategy/SKILL.md` | The strategy skill: CONSULT, FORM and AUDIT |
 | `skills/dg-econ-effect/SKILL.md` | The economic effect skill: three real ROI zones, three methods, the discount ladder, and a precision list |
 | `00_index.md` | Flat index of everything |
@@ -123,6 +123,8 @@ Quality is measured, not asserted, on two loops:
 
 - **Loop A — deterministic (`evals/`).** Citation validity, completeness, structure, invariant violations (`invariants.json`) and content rot. One command, non-zero exit on any blocking finding, no model required.
 - **Loop B — the golden set (`70_golden_set/`).** 109 grounded questions across five invented companies, with keys and deliberate traps. The first run used a holistic 0–10 judge and averaged 8.78; **that method has been retired** — an absolute model score drifts, so it stands as a historical record rather than a number to reproduce. The running measures are claim-level completeness, a binary contradiction check, and pairwise comparison on the items those two cannot separate.
+
+On top of both loops sits a **hard rule**: `evals/check_forbidden.py` turns each item's `trap` into machine-checkable probes and fails any answer that commits it — whatever its completeness score, whatever a judge preferred. Only hand-confirmed probes block; auto-derived ones are advisory, because a false positive in a hard rule destroys the rule.
 
 The important part is how the low scores were read: nine items scored 7 or below, and in eight of those the answer was as good as the base allows. **The score measured the knowledge base, not the answering** — and those nine became entries in `60_roadmap.md`.
 

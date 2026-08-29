@@ -27,6 +27,22 @@ python3 evals/run.py --golden
 
 A candidate with a blocking invariant violation does not proceed to judging. A better-written answer that contradicts the base is not a better answer, and letting the judge weigh the two against each other is how that gets lost.
 
+## 2a. Apply the forbidden-claim hard rule
+
+```bash
+python3 evals/check_forbidden.py --run 70_golden_set/runs/<run>.jsonl
+```
+
+Completeness asks whether the required claims are there. This asks whether the answer said something the base explicitly refutes — the `trap` field of each key, turned into machine-checkable probes in `forbidden.jsonl`.
+
+The two questions are not symmetric, and that is the whole point: **an answer can cover every required claim and still repeat the trap the item was built to catch.** Completeness scores that answer well. A blocked item is failed regardless of its completeness score and does not go to judging.
+
+Only hand-confirmed probes block. Auto-derived ones are reported with `--include-proposed` and never block, because a false positive in a hard rule destroys the rule. `--coverage` shows how much of the set has been confirmed.
+
+The matcher is deliberately strict: every content word of the probe, numerals included, inside one sentence, and that sentence must not carry a refutation marker. The last condition exists because the frozen baseline tripped without it — it names traps in order to reject them, which is the behaviour the set wants.
+
+Ported from the companion repository's tier-2 golden set: https://github.com/alexbarakov/bi-ai-strategy-builder
+
 ## 3. Measure first, judge only what is left
 
 Run the automated metrics before any judging:

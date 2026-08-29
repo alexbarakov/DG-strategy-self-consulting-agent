@@ -3,6 +3,7 @@
 
   python3 evals/run.py --input <deliverable>        # check one document
   python3 evals/run.py --golden                     # citation validity across the golden set
+  python3 evals/run.py --run <candidate.jsonl>      # forbidden-claim hard rule on a candidate run
   python3 evals/run.py --all --since HEAD~1         # everything, including rot
 
 Loop B (pairwise comparison against the frozen baseline) is not run from here:
@@ -28,12 +29,13 @@ def main():
     ap.add_argument("--input", help="a deliverable to check")
     ap.add_argument("--profile", default="deliverable", choices=["deliverable", "skill", "kb"])
     ap.add_argument("--golden", action="store_true", help="citation validity across the golden set")
+    ap.add_argument("--run", help="candidate run file: apply the forbidden-claim hard rule before judging")
     ap.add_argument("--since", help="git ref for rot detection")
     ap.add_argument("--all", action="store_true")
     args = ap.parse_args()
 
-    if not any([args.input, args.golden, args.since, args.all]):
-        ap.error("nothing to do — pass --input, --golden, --since or --all")
+    if not any([args.input, args.golden, args.since, args.all, args.run]):
+        ap.error("nothing to do — pass --input, --golden, --run, --since or --all")
 
     codes = []
 
@@ -47,6 +49,9 @@ def main():
         codes.append(run("build_index.py", "--check"))
         codes.append(run("check_citations.py", "--golden"))
         codes.append(run("check_rot.py", "--orphans"))
+
+    if args.run:
+        codes.append(run("check_forbidden.py", "--run", args.run))
 
     if args.since:
         codes.append(run("check_rot.py", "--since", args.since))
