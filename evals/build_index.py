@@ -26,7 +26,8 @@ TAG_RE = re.compile(r"`([^`]+)`")
 FIELD_RE = re.compile(r"^\*\*(Answer|Source|Trap)\.\*\*\s*(.*)$", re.M | re.S)
 PATH_RE = re.compile(r"`([\w./-]+\.(?:md|yaml|yml|json))`")
 
-COMPANY_RE = re.compile(r"qa-(\d+)-(\w+)\.md$")
+COMPANY_RE = re.compile(r"qa-(\d+)-([\w-]+)\.md$")
+DRAFT_RE = re.compile(r"^status:\s*DRAFT", re.M)
 
 
 def split_fields(block):
@@ -48,8 +49,13 @@ def expected_behaviour(tags):
 
 
 def parse_file(path):
+    """Returns [] for files whose frontmatter marks them DRAFT — an unreviewed
+    file must not silently enter the set just because it matches the glob."""
     with open(path, encoding="utf-8") as fh:
         text = fh.read()
+    if DRAFT_RE.search(text[:600]):
+        print("  skipping DRAFT: %s" % os.path.basename(path))
+        return []
     m = COMPANY_RE.search(path)
     order, company = m.group(1), m.group(2)
 
