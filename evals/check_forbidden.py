@@ -10,7 +10,7 @@ that answer well.
   HARD RULE  — a confirmed forbidden probe that fires marks the item failed,
                whatever its completeness score and whatever a judge preferred.
                Ported from the companion repository's tier-2 golden set:
-               https://github.com/alexbarakov/bi-ai-strategy-builder
+               https://github.com/alexbarakov/BI-strategy-self-consulting-agent
 
 Probes live in `70_golden_set/forbidden.jsonl`, derived from the `trap` field of
 each key. Two states, and the difference matters:

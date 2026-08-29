@@ -41,7 +41,7 @@ Only hand-confirmed probes block. Auto-derived ones are reported with `--include
 
 The matcher is deliberately strict: every content word of the probe, numerals included, inside one sentence, and that sentence must not carry a refutation marker. The last condition exists because the frozen baseline tripped without it — it names traps in order to reject them, which is the behaviour the set wants.
 
-Ported from the companion repository's tier-2 golden set: https://github.com/alexbarakov/bi-ai-strategy-builder
+Ported from the companion repository's tier-2 golden set: https://github.com/alexbarakov/BI-strategy-self-consulting-agent
 
 ## 3. Measure first, judge only what is left
 

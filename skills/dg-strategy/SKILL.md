@@ -166,7 +166,7 @@ Three opening questions, in order:
 
 1. **Which strategy are we building?** — **DG** (data governance) / **BI** / **D&A** (data & analytics, umbrella) / **AI** / **mix**. Routing of knowledge sources:
    - DG → this repository alone.
-   - BI or AI → pair with the companion [BI+AI Strategy Builder](https://github.com/alexbarakov/bi-ai-strategy-builder) (its skill leads, this KB grounds the governance blocks).
+   - BI or AI → pair with the companion [BI+AI Strategy Builder](https://github.com/alexbarakov/BI-strategy-self-consulting-agent) (its skill leads, this KB grounds the governance blocks).
    - D&A or mix → both repositories; this skill leads, the builder supplies BI/AI stream substance. Shared invariants (stack-rank, kill-gates, "AI drafts — humans validate") are identical in both by design — if they ever diverge, this KB wins for governance questions.
 2. **Confirm the content structure.** Show the section list (Summary, then 00 Context → 07 Risks & Kill-gates, then appendices) and let the user trim or reorder before any interviewing — a strategy for a 200-person company may not need all eight sections. The Summary is not optional: it is the only part some readers will see.
 3. **Volume.** Default — **compact**: a Summary of 1–2 pages plus roughly a page per section — about 9–10 pages with eight sections, fewer if the user trims the list in question 2; options: a full wiki with every section expanded, or per-section delivery with review after each. Depth of diagnostic: **Lite** (≈15 min, category-level) or **Full** (45–60 min, factor-level).

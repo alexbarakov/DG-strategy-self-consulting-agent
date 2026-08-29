@@ -1,4 +1,4 @@
-# DG Board Knowledge Base — agent entry point
+# DG Strategy — self-consulting agent
 
 Textual projection of the public Miro board **«Data Governance Program Guide»** (data nature / Alex Barakov): https://miro.com/app/board/uXjVMBRtQEA=/
 
@@ -6,7 +6,7 @@ Purpose: let an AI agent **consult on Data Governance and build DG strategies** 
 
 Working principle: **AI drafts — humans validate.** An honest gap beats a padded chapter — nothing here is closed by generating plausible textbook content.
 
-**Companion:** [BI+AI Strategy Builder](https://github.com/alexbarakov/bi-ai-strategy-builder) — the BI/AI half of the same method. The two repositories are designed as a pair and share the same invariants.
+**Companion:** [BI+AI Strategy Builder](https://github.com/alexbarakov/BI-strategy-self-consulting-agent) — the BI/AI half of the same method. The two repositories are designed as a pair and share the same invariants.
 
 ## At a glance
 
@@ -50,8 +50,8 @@ In every scenario the skill invites your existing documents (pain/landscape anal
 
 ```bash
 # Claude Code: clone alongside your workspace and symlink the skill
-git clone https://github.com/alexbarakov/dg-board-kb.git
-ln -s "$PWD/dg-board-kb/skills/dg-strategy" ~/.claude/skills/dg-strategy
+git clone https://github.com/alexbarakov/DG-strategy-self-consulting-agent.git
+ln -s "$PWD/DG-strategy-self-consulting-agent/skills/dg-strategy" ~/.claude/skills/dg-strategy
 ```
 
 For any other agent: paste the `SKILL.md` as instructions and give the repository as a knowledge source. Plain Markdown plus one YAML graph — no build step, RAG-friendly chunking by design (one frame or theme per file).
@@ -62,7 +62,7 @@ For any other agent: paste the `SKILL.md` as instructions and give the repositor
 1. **Answering a DG question** — find the theme in `30_graph/objects.yaml` (nodes and relations; visual in `30_graph/graph.md`), read the matching file in `10_ai_era_themes/` or `11_dg_program_themes/`; drill into per-frame detail in `20_dg_program_guide/` when needed. Quote definitions from "Key terms", defend positions with "Numbers for arguing with optimists", cite sources from `40_sources.md`.
 2. **Running a workshop or artifact session** — pick a template from `12_templates/templates.md` (pains analysis, vision statement, domain classifier, scope/goals configurators, Data Mesh canvas, DDI, business case…), each with its board deep-link.
 3. **Building or auditing a strategy** — run the full procedure in [`skills/dg-strategy/SKILL.md`](skills/dg-strategy/SKILL.md); the money model behind it is [`skills/dg-econ-effect/SKILL.md`](skills/dg-econ-effect/SKILL.md).
-4. **Grounding BI/AI streams** — pull from the companion [BI+AI Strategy Builder](https://github.com/alexbarakov/bi-ai-strategy-builder); its machine-readable map is `references/knowledge-map.yaml` inside that repository.
+4. **Grounding BI/AI streams** — pull from the companion [BI+AI Strategy Builder](https://github.com/alexbarakov/BI-strategy-self-consulting-agent); its machine-readable map is `references/knowledge-map.yaml` inside that repository.
 5. **Quoting a number** — take it from `51_numbers.md` and **carry its reliability tag with it**.
 6. **Recommending reading** — use `10_ai_era_themes/library.md`; `40_sources.md` holds verification status per link.
 7. **Referencing the visual** — every file's frontmatter carries a `miro:` deep-link; give it when the user wants the picture.
@@ -139,7 +139,7 @@ The important part is how the low scores were read: nine items scored 7 or below
 
 ## Companion repository
 
-[**BI+AI Strategy Builder**](https://github.com/alexbarakov/bi-ai-strategy-builder) builds a BI+AI strategy for a specific company: a 66-atom knowledge base, a 101-question participant FAQ, a three-tier golden set, the Health Check diagnostic and the D&A Planner structure.
+[**BI+AI Strategy Builder**](https://github.com/alexbarakov/BI-strategy-self-consulting-agent) builds a BI+AI strategy for a specific company: a 66-atom knowledge base, a 101-question participant FAQ, a three-tier golden set, the Health Check diagnostic and the D&A Planner structure.
 
 | What you are building | Who leads | Role of the other |
 |---|---|---|

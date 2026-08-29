@@ -202,8 +202,8 @@ Whether the strategies are any good. Loop A measures self-consistency, loop B me
 
 ## Cross-product note
 
-None of Phases 0–2 is DG-specific. Citation validity, an invariant list, rot detection and pairwise comparison against a frozen baseline are the same shape for any skill grounded in a knowledge source — the `ai-analyst` skills, SQL Copilot, the Redash reporting agent. Building it as `dg-board-kb/evals/` means it will be rebuilt three more times.
+None of Phases 0–2 is DG-specific. Citation validity, an invariant list, rot detection and pairwise comparison against a frozen baseline are the same shape for any skill grounded in a knowledge source — the `ai-analyst` skills, SQL Copilot, the Redash reporting agent. Building it as `DG-strategy-self-consulting-agent/evals/` means it will be rebuilt three more times.
 
-`[⚠️ Overlap: skill evaluation harness — dg-board-kb & ai-analyst & sql-copilot]`
+`[⚠️ Overlap: skill evaluation harness — DG-agent & ai-analyst & sql-copilot]`
 
 The decision to make before Phase 1 starts: build it here and extract later, or build it generic from the start. Building generic first costs roughly a day more and needs a home repository that does not currently exist.
