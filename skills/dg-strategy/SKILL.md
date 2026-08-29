@@ -166,10 +166,12 @@ Three opening questions, in order:
 
 1. **Which strategy are we building?** — **DG** (data governance) / **BI** / **D&A** (data & analytics, umbrella) / **AI** / **mix**. Routing of knowledge sources:
    - DG → this repository alone.
-   - BI or AI → pair with the companion [BI+AI Strategy Builder](https://github.com/alexbarakov/BI-strategy-self-consulting-agent) (its skill leads, this KB grounds the governance blocks).
+   - BI or AI → pair with the companion [BI+AI Strategy Builder](https://github.com/alexbarakov/bi-ai-strategy-builder) (its skill leads, this KB grounds the governance blocks).
    - D&A or mix → both repositories; this skill leads, the builder supplies BI/AI stream substance. Shared invariants (stack-rank, kill-gates, "AI drafts — humans validate") are identical in both by design — if they ever diverge, this KB wins for governance questions.
 2. **Confirm the content structure.** Show the section list (Summary, then 00 Context → 07 Risks & Kill-gates, then appendices) and let the user trim or reorder before any interviewing — a strategy for a 200-person company may not need all eight sections. The Summary is not optional: it is the only part some readers will see.
-3. **Volume.** Default — **compact**: a Summary of 1–2 pages plus roughly a page per section — about 9–10 pages with eight sections, fewer if the user trims the list in question 2; options: a full wiki with every section expanded, or per-section delivery with review after each. Depth of diagnostic: **Lite** (≈15 min, category-level) or **Full** (45–60 min, factor-level).
+3. **Volume.** Default — **6–8 pages excluding appendices.** That is the format, not a guideline: it is what a board reads and what a programme team can hold in view at once. Appendices carry the evidence and are not counted against it.
+
+**Where the constraint bites, and what to do about it.** In practice the portfolio breaks the budget first: eight initiatives, each carrying output, outcome by year, owner, prerequisites, effort, risk and wave, is roughly 850 words on its own. The wrong response is to write them thinner — that removes the justification, which is the half that persuades, and the compression experiment measured exactly what it costs. **The right response is fewer initiatives.** A portfolio that does not fit in the format is usually a portfolio that has not been prioritised, and the freeze order already names which ones go.; options: a full wiki with every section expanded, or per-section delivery with review after each. Depth of diagnostic: **Lite** (≈15 min, category-level) or **Full** (45–60 min, factor-level).
 
 Reuse everything the user already has (survey, prior strategy, assessment) — do not re-ask. After the first interview batch, run the mid-flow document invitation (universal convention).
 
@@ -235,13 +237,15 @@ Contents, in order:
 7. **What we need from you** — the specific decision, the role that must make it, the deadline. If the strategy has an entry condition, it lives here.
 8. **First step** and **the cost of doing nothing**.
 
+**The required minimum.** Six things must be in the document whatever else is trimmed: **context** — external trends and internal problems; **vision**, as the Summary; **streams of change**, described and justified; **initiatives** tagged to their streams, with output and outcome by year; **goals expressed through metrics**; and **risks**. Everything else in the table below is a working convention of this method — the operating model, the AS-IS scorecard with confidence, the non-goals, the cost of doing nothing, the effect model. Those are not optional by default; they are the parts a user may trim in Phase 0 while the six above may not be.
+
 **Sections** (numbering kept for cross-references):
 
 | # | Section | Content | KB substance |
 |---|---|---|---|
-| 00 | **Context** | The company's key challenges, the industry's, and the trends that change what is worth doing. Written so that every later decision can be traced back to a line here — context that justifies nothing is decoration. | `../../10_ai_era_themes/`, `../../40_sources.md` |
+| 00 | **Context** | Two halves, both required. **External** — the industry's position and the trends that change what is worth doing. **Internal** — the company's actual problems, named as problems rather than as gaps in a framework: what breaks, for whom, how often. Written so that every later decision traces back to a line here; context that justifies nothing is decoration. | `../../10_ai_era_themes/`, `../../40_sources.md` |
 | 01 | **AS-IS** | Calibration (what maturity level this company is actually entitled to, given decision-maker count, power users, data dependency and industry transformation risk), the maturity scorecard with confidence per score, the demand map by audience, and the named breaks in the dependency chain. | `../../11_dg_program_themes/maturity-and-metrics.md`, `../../52_questions.md`, `../../30_graph/objects.yaml` |
-| 02 | **TO-BE** | The bet stated in one paragraph, the ceiling for the year per moving category, which categories deliberately do not move and why, and the minimally sufficient target architecture. Not an AI vision unless the company has an AI ambition. Closes with **the streams of change** — three to six, each with why-now and the outcome of the year. Streams are not a separate section: they are how the target state is reached, so they belong to the description of that state. A stream is a direction of change with its own outcome, not a project; projects live inside it and appear in the portfolio. | `../../30_graph/objects.yaml`, `../../11_dg_program_themes/`, `../../11_dg_program_themes/dg-program-roadmap.md` |
+| 02 | **TO-BE** | The bet stated in one paragraph, the ceiling for the year per moving category, which categories deliberately do not move and why, and the minimally sufficient target architecture. Not an AI vision unless the company has an AI ambition. Closes with **the streams of change** — three to six, each with a description of what the stream actually changes, an explicit justification for why it exists and why now, and the outcome of the year. Description and justification are separate obligations: a stream that describes itself without justifying itself is a heading. Streams are not a separate section: they are how the target state is reached, so they belong to the description of that state. A stream is a direction of change with its own outcome, not a project; projects live inside it and appear in the portfolio. | `../../30_graph/objects.yaml`, `../../11_dg_program_themes/`, `../../11_dg_program_themes/dg-program-roadmap.md` |
 | 03 | **Metrics & Goals** | Target metrics with baseline, year 1 / 2 / 3 values, the owning stream, and the downward adjustment applied for risk (dependency, capacity, adoption). Anti-metrics listed explicitly. Unmeasured baselines marked and excluded from commitments. **Metrics come before the portfolio**: an initiative earns its place by moving a named metric. | `../../51_numbers.md`, `../../11_dg_program_themes/maturity-and-metrics.md`, `../dg-econ-effect/` |
 | 04 | **Initiatives Portfolio** | Streams break into projects. Each initiative is described in full, not as a table row: **goal**, **output** (what physically exists when it is done), **outcome** (which metric from section 03 it moves, from what to what, by when — tracked by year across the horizon), **owner role**, **prerequisites**, **effort**, **risk with its mitigation**, **wave**. Plus the published freeze order and the kill-gates. | `../../50_failure_catalog.md`, `../../12_templates/`, initiative playbooks below |
 | 05 | **Operating Model** | The section the execution actually depends on. **Roles**: who, what they do, how much time, and *where that time is recorded* — a role without a line in someone's objectives is a wish. **Bodies**: composition, cadence, mandate, and explicitly what the body does *not* do. **Decision protocol**: how a dispute is raised, prepared, decided, recorded, and whether decisions are retroactive. **Interfaces** with existing structures (architecture boards, legal, functions that do not report to governance). **Resourcing arithmetic**: quotas versus new headcount, stated as numbers. **Degradation path**: what remains if the entry condition is not met. | `../../11_dg_program_themes/roles-and-operating-model.md`, `../../11_dg_program_themes/` |
@@ -281,6 +285,31 @@ Three rules that override the general document conventions:
 
 If the company does not decide in money at all (public sector, some regulated bodies), the section says so and the lever moves to compliance and the management vertical. That is a legitimate output, not a gap.
 
+### Word precision
+
+Stated as a requirement of the document, not only as a cleanup pass. The bullshit judge enforces it at the end; the requirement exists so that the text is written that way in the first place, because a pass that has to rewrite everything is a pass that also loses things.
+
+- **Every sentence names an actor, a verb and an object.** "Будет обеспечено повышение качества" has none of the three.
+- **Every intensifier carries a number or is deleted.** "Существенно", "значительно", "кардинально" without a figure is a claim with better manners.
+- **Paired abstractions are one abstraction hiding behind another.** Pick the one you mean.
+- **An aspiration is not an initiative.** "Стремимся к", "нацелены на" either becomes something with an owner and a date, or leaves the document.
+- **A sentence that would sit unchanged in a competitor's strategy is empty.** So is one nobody in the room could disagree with.
+
+The practical test while writing: delete the sentence and ask what changed. If nothing, it was never load-bearing — and whole sections of strategy documents exist because a template had a heading.
+
+### Minimum tables
+
+Prose and bullets are the default in **every** section, not only the Summary. A table earns its place under one condition: **the same fields repeat across rows and the reader genuinely compares across rows.** Two cases pass that test in practice — the metric table, where years are compared, and the scorecard. Almost nothing else does.
+
+What looks like a table and should not be one:
+
+- **Risks.** Each risk with its mitigation is a paragraph. As a table it becomes a register, and a register invites the generic entries the bullshit judge deletes.
+- **Streams.** Three to six streams with a justification each are three to six short paragraphs. In a table the justification column shrinks to a phrase, which is exactly the part that must not shrink.
+- **Roles.** Borderline. If every role genuinely has the same four fields and the reader compares them, a table is defensible; if the roles differ in kind, prose keeps the difference visible.
+- **Anything with one row.** A one-row table is a sentence with borders.
+
+The reason is not aesthetic. A table compresses justification out of a document — the cell is narrow, so the argument gets cut to fit, and what survives is the claim without the reason. That is the same failure the compression experiment measured: required content survives, the persuading half does not.
+
 ### Charts, confidence and formats
 
 **Confidence on every maturity score.** A score without a confidence level invites false precision. Tag each one:
@@ -304,6 +333,8 @@ Low-confidence scores are visually distinct in the chart (hatched, outlined or g
 **Every deliverable ships in two formats:** HTML for reading and sharing, Markdown for editing, diffing and pasting into a wiki. Same content, charts degraded to text bars in Markdown. Produce both without being asked.
 
 **Appendices**: the company portrait and the filled interview questionnaire (evidence of how the diagnosis was reached — the executing team does not need it on Monday, the reviewer checking your reasoning does); what needs measuring (the `[missing data]` list); the rework log from both judges; sources and method; the full scorecard if section 01 carried only its summary; and — when the run exposed them — the places where this knowledge base had no material, which is a deliverable in its own right.
+
+**The document has a life.** State the refresh cadence in it: the strategy is revisited after each delivery cycle, not filed. A strategy with no stated next revision is a document that will be quietly replaced rather than updated.
 
 Assembly note: write the sections first (that is where the thinking happens), then compress upward. The Summary is written last and is the hardest page — if you cannot write it, the strategy is not yet a strategy. Never ship a document whose first page is a table of contents or a context section: the reader must meet the ask before the background.
 
