@@ -342,6 +342,8 @@ Low-confidence scores are visually distinct in the chart (hatched, outlined or g
 
 **The document has a life.** State the refresh cadence in it: the strategy is revisited after each delivery cycle, not filed. A strategy with no stated next revision is a document that will be quietly replaced rather than updated.
 
+**Two worked runs live in `../../80_examples/`** — a company portrait and the strategy it produced, for a capacity-constrained delivery operator and for a regulated insurer. Read one before writing your first document; the structure is easier to copy than to reconstruct from this table.
+
 Assembly note: write the sections first (that is where the thinking happens), then compress upward. The Summary is written last and is the hardest page — if you cannot write it, the strategy is not yet a strategy. Never ship a document whose first page is a table of contents or a context section: the reader must meet the ask before the background.
 
 Run **`dg-econ-effect`** in EMBEDDED mode after the portfolio and the operating model are drafted — the effect model needs the initiatives, the roles and the resourcing arithmetic on the page. If it changes the ordering of the portfolio, go back and change the portfolio; that is the point of running it before the risks rather than after everything.

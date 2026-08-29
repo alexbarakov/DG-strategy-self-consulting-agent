@@ -84,6 +84,7 @@ For any other agent: paste the `SKILL.md` as instructions and give the repositor
 | `40_sources.md` | All external links with verification dates + the board's resource library |
 | `60_roadmap.md` | What the KB is still missing and in what order to fix it — written from stress-test findings, not aspiration |
 | `70_golden_set/` | 100 grounded questions from five invented companies, with keys, traps and judge scores. A regression eval and a KB-coverage diagnostic — the low scores are a map of what the base is missing |
+| `80_examples/` | Two complete FORM runs — the company portrait that went in and the strategy that came out. Invented companies, real positions. They exist because a method is easier to disbelieve than a document |
 | `evals/` | Deterministic checks: citations, completeness, **forbidden claims (hard rule)**, structure, invariants (`invariants.json`), content rot. One command, non-zero exit on any blocking finding |
 | `skills/dg-strategy/SKILL.md` | The strategy skill: CONSULT, FORM and AUDIT |
 | `skills/dg-econ-effect/SKILL.md` | The economic effect skill: three real ROI zones, three methods, the discount ladder, and a precision list |
