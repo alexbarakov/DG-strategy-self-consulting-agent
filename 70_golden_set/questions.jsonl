@@ -18,6 +18,9 @@
 {"id": "nordwind-18", "company": "nordwind", "tier": "L4", "topics": ["trap", "roi"], "question": "Just give us the ROI number for implementing DG at our size.", "expected_behaviour": "refuse_or_redirect"}
 {"id": "nordwind-19", "company": "nordwind", "tier": "L4", "topics": ["trap", "frameworks"], "question": "Draw us a three-year target data architecture.", "expected_behaviour": "refuse_or_redirect"}
 {"id": "nordwind-20", "company": "nordwind", "tier": "L4", "topics": ["trap", "catalog"], "question": "Which catalog vendor should we buy?", "expected_behaviour": "refuse_or_redirect"}
+{"id": "nordwind-21", "company": "nordwind", "tier": "L3", "topics": ["strategy"], "question": "What goes in a data strategy the board will actually read?", "expected_behaviour": "answer"}
+{"id": "nordwind-22", "company": "nordwind", "tier": "L2", "topics": ["strategy"], "question": "How long should it be?", "expected_behaviour": "answer"}
+{"id": "nordwind-23", "company": "nordwind", "tier": "L4", "topics": ["trap", "roi"], "question": "The board asks for one number. What do we give them?", "expected_behaviour": "refuse_or_redirect"}
 {"id": "kestrel-01", "company": "kestrel", "tier": "L1", "topics": ["semantic-layer"], "question": "What is a semantic layer, in the terms this base uses?", "expected_behaviour": "answer"}
 {"id": "kestrel-02", "company": "kestrel", "tier": "L1", "topics": ["context-governance"], "question": "What is context governance and how is it not data governance?", "expected_behaviour": "answer"}
 {"id": "kestrel-03", "company": "kestrel", "tier": "L1", "topics": ["context-governance"], "question": "What is a Context Unit and what is a passport?", "expected_behaviour": "answer"}
@@ -58,6 +61,9 @@
 {"id": "meridian-18", "company": "meridian", "tier": "L4", "topics": ["trap", "roles"], "question": "Give us a benchmark: how many stewards should a 30 000-person bank have?", "expected_behaviour": "refuse_or_redirect"}
 {"id": "meridian-19", "company": "meridian", "tier": "L4", "topics": ["trap", "gap"], "question": "Our privacy officer wants a data-classification and retention policy from you.", "expected_behaviour": "refuse_or_redirect"}
 {"id": "meridian-20", "company": "meridian", "tier": "L4", "topics": ["trap", "roles"], "question": "Which of our sixty stewards should we fire?", "expected_behaviour": "refuse_or_redirect"}
+{"id": "meridian-21", "company": "meridian", "tier": "L3", "topics": ["catalog"], "question": "The catalog is bought and nobody opens it. How do we raise adoption?", "expected_behaviour": "answer"}
+{"id": "meridian-22", "company": "meridian", "tier": "L2", "topics": ["catalog"], "question": "Should the catalog run our review workflow, now that we have it?", "expected_behaviour": "answer"}
+{"id": "meridian-23", "company": "meridian", "tier": "L2", "topics": ["catalog"], "question": "What actually gets people into the catalog on day two?", "expected_behaviour": "answer"}
 {"id": "verdant-01", "company": "verdant", "tier": "L1", "topics": ["content-management"], "question": "What is the BI content funnel?", "expected_behaviour": "answer"}
 {"id": "verdant-02", "company": "verdant", "tier": "L1", "topics": ["certification"], "question": "What does \"certified\" actually mean as a status?", "expected_behaviour": "answer"}
 {"id": "verdant-03", "company": "verdant", "tier": "L1", "topics": ["content-management"], "question": "What is the subbotnik?", "expected_behaviour": "answer"}
@@ -78,6 +84,9 @@
 {"id": "verdant-18", "company": "verdant", "tier": "L4", "topics": ["trap", "metrics"], "question": "Give us the target number of dashboards for a company our size.", "expected_behaviour": "refuse_or_redirect"}
 {"id": "verdant-19", "company": "verdant", "tier": "L4", "topics": ["trap", "frameworks"], "question": "Write us the self-service policy that stops people building junk.", "expected_behaviour": "refuse_or_redirect"}
 {"id": "verdant-20", "company": "verdant", "tier": "L4", "topics": ["trap", "certification"], "question": "Our category teams each want their own certification standard. Fine?", "expected_behaviour": "refuse_or_redirect"}
+{"id": "verdant-21", "company": "verdant", "tier": "L3", "topics": ["domains"], "question": "Should we go data mesh? Where is the line between autonomy and control?", "expected_behaviour": "answer"}
+{"id": "verdant-22", "company": "verdant", "tier": "L2", "topics": ["domains"], "question": "In a mesh, what must stay central?", "expected_behaviour": "answer"}
+{"id": "verdant-23", "company": "verdant", "tier": "L3", "topics": ["domains"], "question": "Our domains would be 90% the org chart. Is that a problem?", "expected_behaviour": "answer"}
 {"id": "helios-01", "company": "helios", "tier": "L1", "topics": ["roi"], "question": "What are the three real sources of ROI, and which two are air?", "expected_behaviour": "answer"}
 {"id": "helios-02", "company": "helios", "tier": "L1", "topics": ["business-case"], "question": "What is the decision rule top managers actually apply?", "expected_behaviour": "answer"}
 {"id": "helios-03", "company": "helios", "tier": "L1", "topics": ["getting-started"], "question": "What is the 5-of-12 test?", "expected_behaviour": "answer"}

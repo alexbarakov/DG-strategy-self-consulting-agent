@@ -48,7 +48,7 @@ Never hand over a first draft. Between the draft and the final artifact — in F
 
 **Judge stance.** Assume good faith and bad odds. Grade usefulness, not effort: "would I sign this, staff it, and defend it at a budget committee?" Prefer one killer question over ten fair ones. If a block is fine, say so briefly and move on — a review that criticizes everything gets discounted entirely.
 
-**Interrogation checklist** — go through all eight, produce a verdict per dimension (`ok` / `weak` / `blocking`):
+**Interrogation checklist** — go through all nine, produce a verdict per dimension (`ok` / `weak` / `blocking`):
 
 | # | Dimension | Questions the judge actually asks |
 |---|---|---|
@@ -59,7 +59,8 @@ Never hand over a first draft. Between the draft and the final artifact — in F
 | 5 | **Concreteness** | Point at three sentences a team could start executing tomorrow. Which "outcomes" are actually activities? Which targets have no baseline and therefore no meaning? |
 | 6 | **Value and defensibility** | What does the business feel in 6 months, in their words? What do I say to the CFO in one sentence? If we do nothing, what actually breaks — and when? |
 | 7 | **Risk honesty** | What is the most likely way this fails, and is it in the register? Which risk is written softly because it is politically awkward? What is deliberately not being done, and is that written down? |
-| 8 | **Rationality and proportion** | List every artefact this strategy creates that exists only to be produced — policies, registers, matrices, statuses, councils, reports, reviews. For each: **who reads it, and what decision changes if it does not exist?** How many meetings does this create per decision it produces? Which new rule lives in a document instead of in a tool? Does any role exist without hours recorded in someone's objectives? Would an engineer in this company read this and call it imposed rules and routine rituals — because that objection is the same sentence in every company? |
+| 8 | **Position** | Read each section and name the claim it makes that someone in the room could disagree with. Which sections covered their topic and took no side? Which state what they refuse to do? A document where every section is defensible because none of them commits is the most common shape of a strategy nobody executes. |
+| 9 | **Rationality and proportion** | List every artefact this strategy creates that exists only to be produced — policies, registers, matrices, statuses, councils, reports, reviews. For each: **who reads it, and what decision changes if it does not exist?** How many meetings does this create per decision it produces? Which new rule lives in a document instead of in a tool? Does any role exist without hours recorded in someone's objectives? Would an engineer in this company read this and call it imposed rules and routine rituals — because that objection is the same sentence in every company? |
 
 ### The rationality dimension in detail — how the judge attacks bureaucracy
 
@@ -89,7 +90,7 @@ The two severity scales connect as follows: a dimension scored `blocking` must p
 
 **The loop (this is the point of the stage).** The judge runs *iteratively*, not once. The user sees the corrected result, not the first draft plus a list of complaints — a draft with known defects should never leave your hands.
 
-1. **Pass 1** — full eight-dimension review of the draft.
+1. **Pass 1** — full nine-dimension review of the draft.
 2. **Fix** — every `blocking` finding is resolved, or converted into an explicit `[missing data]` marker plus a named decision the user must make. A blocking finding may never be silently dropped. `serious` findings are fixed or explicitly accepted with a reason recorded.
 3. **Pass 2** — re-review, with two jobs: verify the fixes actually hold, and catch defects *introduced by the fixes* (narrowing a scope often orphans a dependency; adding a fallback often breaks the metric).
 4. **Repeat** until a pass produces no `blocking` findings and no new `serious` ones, or until **three passes** — whichever comes first. Three is a deliberate cap: past that the judge starts polishing prose, which is not what it is for.
@@ -99,7 +100,7 @@ The two severity scales connect as follows: a dimension scored `blocking` must p
 
 **What the user receives:** the corrected artifact, plus a compact **rework log** — a "was → became → what it closes" table covering the whole loop, not the raw findings of each pass. The log is evidence the work was stress-tested and doubles as the answer to "did you consider…". Keep the full per-pass findings only if the user asks for them.
 
-**Scenario scaling.** FORM — the full eight dimensions against the whole document, up to three passes. AUDIT — the same lens turned on your own report, usually one pass plus fixes (are findings prioritized, actionable, would the recipient know what to do on Monday, and does the remediation plan create more paperwork than it removes). CONSULT — a single short pass on the recommended option only: is it feasible for this team, is the first step concrete, what breaks it, and does the advice create an artefact nobody will read. The bullshit pass applies to the written one-pager if one is produced, not to the dialogue itself.
+**Scenario scaling.** FORM — the full nine dimensions against the whole document, up to three passes. AUDIT — the same lens turned on your own report, usually one pass plus fixes (are findings prioritized, actionable, would the recipient know what to do on Monday, and does the remediation plan create more paperwork than it removes). CONSULT — a single short pass on the recommended option only: is it feasible for this team, is the first step concrete, what breaks it, and does the advice create an artefact nobody will read. The bullshit pass applies to the written one-pager if one is produced, not to the dialogue itself.
 
 If the user is present, offer them the judge's findings first and let them answer the hard questions themselves — their answers are better material than your rework. If they are not, do the rework yourself and mark the assumptions you made.
 
@@ -247,9 +248,28 @@ Contents, in order:
 | 06 | **Effect of the strategy** | The money model, produced by the **`dg-econ-effect`** skill. Which of the three real ROI zones this strategy is in; the mechanism per stream; a pessimistic and a base range (never an optimistic one); the attribution share and whether it was agreed with the metric owner; the fraction you are willing to commit; the list of what must be measured to replace the estimate with a calculation; and the air benefits refused by name. Sits **after the operating model and before the risks**: it is the last thing you argue, because it depends on the initiatives, the roles and the resourcing being on the page already. | `../../11_dg_program_themes/maturity-and-metrics.md`, `../../50_failure_catalog.md`, `../../51_numbers.md`, `../dg-econ-effect/` |
 | 07 | **Risks & Kill-gates** | Risks that are specific to this company, each with the move that manages it. Generic risk registers ("lack of buy-in") are deleted by the bullshit judge. | `../../50_failure_catalog.md` |
 
+#### Each section takes a side
+
+The table above says what goes in each section. That is a coverage specification, and a document written to it comes out complete and unsignable. **Each section also has to take a position** — a claim someone in the room could disagree with — and state what it refuses to do. A section that covered its topic and took no side is `weak` in the judge's terms, not `ok`.
+
+| # | The position the section must take | What it refuses |
+|---|---|---|
+| 00 | Which two or three facts about this company and this industry make the rest of the document necessary — and which fashionable trend is *not* one of them | Context that justifies nothing. If no later decision traces back to a line here, the section is decoration |
+| 01 | What level this company is actually entitled to, and which of your own scores you do not trust | A flattering diagnosis. Half the scores at low confidence is not a diagnosis — it is a proposal to measure |
+| 02 | The bet, in one paragraph: narrow and finished beats broad and half-done, or the reverse — but one of them, argued | An AI vision the company has no ambition for; a target level "everywhere" |
+| 03 | Which metric you would resign over, and which of your numbers are counters that can only rise | A metric set where nothing can legitimately fall |
+| 04 | Which single initiative, removed, breaks the rest — and the published order in which the others die under a cut | A portfolio where everything is important |
+| 05 | Whose time this costs, recorded where, and what the body will **not** do | Roles without hours; a body that receives status reports |
+| 06 | Which of the three real zones this is in, and the fraction you will commit to being held to | An optimistic scenario; an estimate promoted to a headline |
+| 07 | The most likely way this fails, including the way that is politically awkward to write | A generic register: "lack of buy-in", "insufficient resources" |
+
+The refusal column is not decoration either. Section 05 became usable in the demonstration only when it acquired an explicit anti-mandate — what the council does not do — and the same move is available to every other section.
+
 #### Section 06 — Effect of the strategy
 
-A required section, produced by the **`dg-econ-effect`** skill in EMBEDDED mode. Do not write it freehand: it is the part of the document most likely to be attacked, and the skill exists because the honest version of it is counter-intuitive.
+A required section, produced by the **`dg-econ-effect`** skill in EMBEDDED mode.
+
+**Dependency, declared.** This skill does not work alone. If `dg-econ-effect` is not installed, FORM must **say so in the document** — a line in place of section 06 reading that the effect model was not produced because the skill is unavailable, and that the strategy is therefore incomplete on the question a CFO asks first. Silently omitting the section is the failure mode: the document looks finished and is not, and nobody downstream can tell. The same rule applies in reverse — `dg-econ-effect` run standalone on a strategy that has no portfolio and no operating model says so rather than modelling a plan that does not exist yet. Do not write it freehand: it is the part of the document most likely to be attacked, and the skill exists because the honest version of it is counter-intuitive.
 
 It answers "how much money is this?" in the only shape a top manager reads — an agreed estimate of possible losses against the cost of preventing them, with the positive decision taken when the *minimal* losses exceed the *maximal* costs. It carries the mechanism per stream, a pessimistic and a base range (never an optimistic one), the attribution share and whether it was agreed with the metric owner, the fraction you are willing to commit, and the list of what must be measured to replace the estimate with a calculation.
 

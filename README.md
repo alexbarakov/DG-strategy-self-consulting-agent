@@ -122,7 +122,7 @@ The companion uses a coarser three-level scale (verifiable / vendor-measured / n
 Quality is measured, not asserted, on two loops:
 
 - **Loop A — deterministic (`evals/`).** Citation validity, completeness, structure, invariant violations (`invariants.json`) and content rot. One command, non-zero exit on any blocking finding, no model required.
-- **Loop B — the golden set (`70_golden_set/`).** 100 grounded questions across five invented companies, with keys and deliberate traps. The first run used a holistic 0–10 judge and averaged 8.78; **that method has been retired** — an absolute model score drifts, so it stands as a historical record rather than a number to reproduce. The running measures are claim-level completeness, a binary contradiction check, and pairwise comparison on the items those two cannot separate.
+- **Loop B — the golden set (`70_golden_set/`).** 109 grounded questions across five invented companies, with keys and deliberate traps. The first run used a holistic 0–10 judge and averaged 8.78; **that method has been retired** — an absolute model score drifts, so it stands as a historical record rather than a number to reproduce. The running measures are claim-level completeness, a binary contradiction check, and pairwise comparison on the items those two cannot separate.
 
 The important part is how the low scores were read: nine items scored 7 or below, and in eight of those the answer was as good as the base allows. **The score measured the knowledge base, not the answering** — and those nine became entries in `60_roadmap.md`.
 
@@ -132,6 +132,7 @@ The important part is how the low scores were read: nine items scored 7 or below
 - **The board is public**, so content is English, internal practices are unattributed ("a large tech company"), and numbers keep their public sources.
 - **Legacy v1.0 summaries in `20_dg_program_guide/` are lossy** — generated from API summaries, images not extracted. For exact wording, open the `miro:` deep-link.
 - **Most theme files carry a "From the course" section** — material distilled from the author's 6-day «Data Governance Fundamentals» program (slides and session transcripts): war stories, thresholds, anti-patterns and numbers the board alone does not show. Source tags name the day and slide; employers in war stories are anonymized; named companies appear only where the course cited them as public practice.
+- **Material given in confidence does not live here.** Course feedback, participant interviews and anything carrying other people's names or employers is kept outside the synced tree — a sibling directory, not a status flag inside this one, because a path cannot be forgotten and a flag can. The rule that decides placement is the type of the claim: *"two participants asked for a worked catalog example"* is about people and stays internal; *"this base contains no worked catalog example"* is about this repository, is checkable by any reader, and is published in full with no provenance attached.
 - Origin: built 2026-08-25/26 from the live board; maintained by Alex Barakov. Course backing: the author's «BI+AI Strategy 2026».
 
 ## Companion repository

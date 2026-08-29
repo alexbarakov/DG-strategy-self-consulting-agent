@@ -208,3 +208,33 @@ Grocery chain, 45 000 people, 210 stores. 3 100 dashboards and 400 opened. Fourt
 **Source.** `52_questions.md` — "does the same status appear on the mart, the dashboard and the metric"; `10_ai_era_themes/certified-core-layer.md`.
 
 **Trap.** Accepting eleven standards as a pragmatic compromise with powerful teams. It reproduces the fourteen-margins problem in the trust layer.
+
+---
+
+### 21. Should we go data mesh? Where is the line between autonomy and control? `L3` `domains`
+
+**Answer.** Decentralisation is a response to a platform complex enough that centralisation became the bottleneck — it is not a maturity level, and "there is no single maturity ladder". A simpler centralised platform can be perfectly mature for a retail company. The real decision is where you sit on the centralisation–decentralisation slider, and that position — not the fashion — determines your role model, your RACI, and what analysts and engineers are allowed to do. Answer that before naming the model.
+
+**Source.** `11_dg_program_themes/domains-and-data-mesh.md` — the slider as the key strategic decision, and maturity ≠ complexity.
+
+**Trap.** Announcing a mesh. Distributing people into domains changes the org chart, not the behaviour.
+
+---
+
+### 22. In a mesh, what must stay central? `L2` `domains`
+
+**Answer.** Base checker coverage and incident generation, without exception — "delegating that to the domains is a risky story: it simply won't start." Everything else is negotiable by the slider position. The companion decision is environment design: separate archive, sandbox and production, where sandboxes carry lower documentation requirements but hard restrictions — no sharing objects outside the team, no schedules.
+
+**Source.** `11_dg_program_themes/domains-and-data-mesh.md` — what stays central, and environment design (day 3–4, transcript).
+
+**Trap.** A percentage split of responsibilities. The answer is a named list of what never leaves the centre.
+
+---
+
+### 23. Our domains would be 90% the org chart. Is that a problem? `L3` `domains`
+
+**Answer.** It is the standard temptation and the base names it: domains are very often 90–95% close to the org-structure split, and the pull is to not define domains at all — just map object owners onto departments. That works until the org chart changes, which it does faster than the data does. The practical test is the spreadsheet trick: three columns — domain, subdomain, responsible person — because "when you start filling in the responsible people, that is when you understand what the structure is". Where the person is obvious, the org chart was fine; where you stall, you found a real domain boundary.
+
+**Source.** `11_dg_program_themes/domains-and-data-mesh.md` — the org-chart shortcut and the spreadsheet trick (day 3, transcript).
+
+**Trap.** Designing domains from a reference model. The base's own answer is that an LLM drafts a typical domain structure better than a consultant does — the value is in the ownership column, not the taxonomy.

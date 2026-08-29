@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "note": "Invariants the skills must never violate. Split into a reusable core pack and a DG-specific pack so the harness can be extracted to other skills without rewriting. Detectors: regex_forbid (pattern must not appear on a line unless an exemption word is on the same line), regex_require (pattern must appear somewhere), structural (handled by check_structure.py), llm (fixed binary classifier, not auto-run — reported as unchecked so it is never silently skipped). Two invariants were removed after a pruning pass: CORE-BUR-01 (every artefact has a named reader) and CORE-BUR-02 (retires as much as it creates). Both duplicate dimension 8 of the CDO judge in skills/dg-strategy/SKILL.md, which runs on every deliverable anyway. Checking the same thing twice does not make it truer.",
+  "note": "Invariants the skills must never violate. Split into a reusable core pack and a DG-specific pack so the harness can be extracted to other skills without rewriting. Detectors: regex_forbid (pattern must not appear on a line unless an exemption word is on the same line), regex_require (pattern must appear somewhere), structural (handled by check_structure.py), llm (fixed binary classifier, not auto-run — reported as unchecked so it is never silently skipped). Two invariants were removed after a pruning pass: CORE-BUR-01 (every artefact has a named reader) and CORE-BUR-02 (retires as much as it creates). Both duplicate dimension 8 of the CDO judge in skills/dg-strategy/SKILL.md, which runs on every deliverable anyway. Checking the same thing twice does not make it truer. Triage pass on the llm detectors: DG-ROLE-01 and CORE-NUM-02 were mechanised; DG-NAME-01 (does it go to business under the DG flag) and DG-ROI-04 (data quality as its own ROI category) were cut — the first is a judgement the CDO judge's naming corollary already makes, the second fires so rarely that an unchecked entry cost more attention than the risk it covered.",
   "packs": {
     "core": [
       {
@@ -48,9 +48,10 @@
         "id": "CORE-NUM-02",
         "statement": "A numeric target is never stated where the baseline is unmeasured; the gap marker stands in its place",
         "severity": "blocking",
-        "detector": "llm",
+        "detector": "structural",
         "source": "skills/dg-strategy/SKILL.md",
-        "prompt": "Does this document state a numeric target for any metric whose current value it also says is unknown or unmeasured? Answer yes or no."
+        "prompt": "Does this document state a numeric target for any metric whose current value it also says is unknown or unmeasured? Answer yes or no.",
+        "note": "Mechanised as a structural check: a gap marker must exist wherever a baseline is declared unknown, and check_structure.py already enforces that markers are present and collected."
       },
       {
         "id": "CORE-GAP-01",
@@ -149,14 +150,6 @@
         "source": "skills/dg-econ-effect/SKILL.md"
       },
       {
-        "id": "DG-ROI-04",
-        "statement": "Data quality never appears as its own ROI category; it resolves into revenue or cost",
-        "severity": "serious",
-        "detector": "llm",
-        "source": "11_dg_program_themes/maturity-and-metrics.md",
-        "prompt": "Does this document present data quality as an independent source of economic effect, rather than resolving it into revenue or cost? Answer yes or no."
-      },
-      {
         "id": "DG-SEQ-01",
         "statement": "Reports are never certified before marts",
         "severity": "blocking",
@@ -184,9 +177,31 @@
         "id": "DG-ROLE-01",
         "statement": "No role is proposed without stated time and where that time is recorded",
         "severity": "blocking",
-        "detector": "llm",
+        "detector": "regex_require_if",
         "source": "11_dg_program_themes/roles-and-operating-model.md",
-        "prompt": "For every role this document proposes, does it state how much time and in whose objectives that time is recorded? Answer with the count of roles failing that test."
+        "prompt": "For every role this document proposes, does it state how much time and in whose objectives that time is recorded? Answer with the count of roles failing that test.",
+        "condition": [
+          "роль",
+          "владелец объекта",
+          "куратор",
+          "стюард",
+          "steward",
+          "custodian",
+          "owner of the object"
+        ],
+        "require": [
+          "% времени",
+          "ч/мес",
+          "ч/нед",
+          "FTE FTE",
+          "\\bFTE\\b",
+          "часов",
+          "hours",
+          "% of time",
+          "в целях",
+          "in .{0,20}objectives"
+        ],
+        "note": "Mechanised in the triage pass: if roles are proposed anywhere, a time quantity must appear somewhere. Coarse — it cannot tell which role lacks the time — but it catches the document that names roles and never mentions hours at all, which is the common case."
       },
       {
         "id": "DG-ROLE-02",
@@ -242,14 +257,6 @@
           "провал",
           "failure"
         ]
-      },
-      {
-        "id": "DG-NAME-01",
-        "statement": "The programme does not go to the business under the literal flag of data governance",
-        "severity": "serious",
-        "detector": "llm",
-        "source": "11_dg_program_themes/getting-started.md",
-        "prompt": "Does this document propose presenting the work to business stakeholders under the name 'data governance' rather than under an existing funded mandate or a named pain? Answer yes or no."
       }
     ]
   },

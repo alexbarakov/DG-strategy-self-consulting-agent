@@ -208,3 +208,33 @@ items: 20
 **Source.** `11_dg_program_themes/roles-and-operating-model.md`; `50_failure_catalog.md` — unfunded governance as the failure predictor.
 
 **Trap.** Producing selection criteria. The question assumes a people problem the evidence does not support.
+
+---
+
+### 21. The catalog is bought and nobody opens it. How do we raise adoption? `L3` `catalog`
+
+**Answer.** Not by filling it. Adoption is hostage to the same maturity the purchase was: a catalog earns traffic when the objects in it have owners, statuses and consequences, and until then it is a directory of things nobody is accountable for. Three moves in order: describe the critical perimeter properly instead of the estate broadly; make the certified status visible where people already choose a source, not only inside the catalog; and intercept creation — if nothing catches the person at the moment they build a new object, the catalog stays a place you visit deliberately, which nobody does twice.
+
+**Source.** `11_dg_program_themes/data-catalog.md` — value hostage to adjacent maturity; `10_ai_era_themes/certified-core-layer.md` — the reuse nudge and status visibility.
+
+**Trap.** A coverage campaign or an adoption KPI. Both measure the catalog, not the decision it was supposed to change.
+
+---
+
+### 22. Should the catalog run our review workflow, now that we have it? `L2` `catalog`
+
+**Answer.** No. Preparation, review and fixes belong in domain cabinets; the catalog shows public status. Mixing them turns it into a workflow tool it was never designed to be — a named failure in this base — and it also couples your process to a vendor's roadmap. Keep the catalog as the place trust is *published*, not the place it is *produced*.
+
+**Source.** `10_ai_era_themes/certified-core-layer.md` — running the operational process inside the catalog (day 3, slides p.119).
+
+**Trap.** "It has a workflow module, so we should use it." That is the vendor's argument, not yours.
+
+---
+
+### 23. What actually gets people into the catalog on day two? `L2` `catalog`
+
+**Answer.** Search that answers a question they already had. The strongest measured case in the field evidence is exactly that: one peer compared search duration via support chat against catalog search statistics, multiplied by request volume and analyst payroll, and got a green light for further investment. The mechanism underneath is that the catalog beat the chat — if asking a colleague is still faster, adoption is a training problem you cannot train your way out of.
+
+**Source.** `11_dg_program_themes/maturity-and-metrics.md` — the peer who measured (day 6, slides p.34); `11_dg_program_themes/data-catalog.md` — the legitimate no when chats suffice.
+
+**Trap.** Onboarding sessions. They move the number for a month.

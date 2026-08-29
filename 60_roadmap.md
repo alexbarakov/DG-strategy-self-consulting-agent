@@ -17,7 +17,7 @@ These are defects of framing rather than missing knowledge. They can be fixed no
 **A1. The dependency chain has no non-AI variant.**
 The central chain `core → semantic → context → AI accuracy → self-service` assumes a company with an AI ambition. Run against an insurer that has none, it is unusable — the strategy had to invent the equivalent (`identity → definitions → traceability → regulatory trust and cross-sell`) on the spot. Fix: state the general form of the chain (*foundation → meaning → provenance → the outcome your company actually buys*), then give two or three instantiations — AI-first tech company, regulated enterprise, cost-pressured retail. Touches: `README.md`, `30_graph/objects.yaml`, `skills/dg-strategy/SKILL.md`.
 
-**A2. The base never declares who it was written for.**
+**A2. The base never declares who it was written for.** *(Confirmed from outside the repo: readers from other sectors have independently named this as the defect that most affects them.)*
 Every number, war story and default assumes a large tech company with a managed platform, federated analytics and a budget problem. That is a legitimate scope — but it is currently implicit, so a reader from a bank silently receives advice calibrated for someone else. Fix: an explicit "who this base fits and who it does not" section in the README, plus a per-theme note where the advice is scope-bound. This is a half-day of work and the highest honesty-per-effort item on the list.
 
 **A3. The inverted constraint: budget yes, speed no.**
@@ -37,6 +37,12 @@ Both `maturity-and-metrics.md` and `bi-content-management.md` insist the two be 
 
 **A8. Key-person risk is everywhere in the evidence and named nowhere.**
 The single DWH engineer who is the only one who can rebuild the mart, the departed employee whose scripts still clean the broker files, the mart that lives in one person's head — the pattern recurs across the field material and exists as no object in the base: not a failure-catalog entry, not a diagnostic question, not a governance target. Fix: a failure-catalog entry in the ownership family plus a question in `52_questions.md`, since "what happens when this person leaves" is one of the cheapest diagnostics available and is currently absent. Found by golden-set item Nordwind Q9 (scored 7/10).
+
+**A9. No worked example of a populated catalog or glossary.**
+The base carries the selection method, the value conditions, the failure modes and the market pricing for catalogs — and not one filled-in example. No object card with real fields, no glossary entry with a real definition, owner and scope, no metric-store entry. The nearest thing is the object-card criteria list in the comparison workbook, which is a specification rather than an example, and a reader who has never seen a populated catalog cannot build one from a specification. Fix: one worked object card and one worked glossary entry, drawn from a real object with the identifying detail changed — **not generated**, since a fabricated glossary entry is indistinguishable from a real one and teaches exactly the wrong thing about how hard the real one is. This sits in Wave A by size and in Wave B by method.
+
+**A10. The field evidence is sector-skewed and does not say so.**
+The peer research behind most of this base is explicitly "20+ tech-company interviews", and the war stories come from marketplaces and technology platforms. A reader from manufacturing, pharma, leasing or the public sector gets examples from a world with different constraints — different approval speeds, different data dependence, different meaning of "the business". This is narrower than A2: A2 is about not declaring the intended reader, A10 is about the evidence base itself being narrow. Fix: a per-file note where the evidence is sector-bound, and — over time — collected rather than invented examples from at least one non-technology sector. Collected, because the "do not close by generation" rule below applies with full force here.
 
 ## Wave B — needs the author's own practice, not generation
 
@@ -68,4 +74,4 @@ These are real subject gaps. Each should be filled by interview, not by writing.
 
 ## Sequencing
 
-Wave A first — it is cheap, needs nothing new, and fixes the framing that currently mis-serves half the potential readers. Within Wave A, A7 and A8 are the smallest and were the most visible in the golden-set run; A6 needs a paragraph of thought rather than research. Wave C1 next, because it converts existing knowledge into executable form. Wave B only where the author has practice, in interview format, one topic at a time.
+Wave A first — it is cheap, needs nothing new, and fixes the framing that currently mis-serves half the potential readers. Within Wave A, A7 and A8 are the smallest and were the most visible in the golden-set run; A6 needs a paragraph of thought rather than research. A9 and A10 are the two that cannot be closed by writing — they need one real artefact and one non-technology case respectively, which makes them Wave-A in size and Wave-B in method. Wave C1 next, because it converts existing knowledge into executable form. Wave B only where the author has practice, in interview format, one topic at a time.

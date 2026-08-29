@@ -15,6 +15,8 @@
     ],
     "10_ai_era_themes/certified-core-layer.md": [
       "kestrel-12",
+      "meridian-21",
+      "meridian-22",
       "nordwind-15",
       "verdant-02",
       "verdant-11",
@@ -57,6 +59,8 @@
       "kestrel-16",
       "meridian-05",
       "meridian-07",
+      "meridian-21",
+      "meridian-23",
       "nordwind-10",
       "nordwind-20",
       "verdant-06"
@@ -88,7 +92,10 @@
       "nordwind-04"
     ],
     "11_dg_program_themes/domains-and-data-mesh.md": [
-      "verdant-17"
+      "verdant-17",
+      "verdant-21",
+      "verdant-22",
+      "verdant-23"
     ],
     "11_dg_program_themes/getting-started.md": [
       "helios-02",
@@ -131,6 +138,7 @@
       "meridian-13",
       "meridian-14",
       "meridian-16",
+      "meridian-23",
       "nordwind-17",
       "nordwind-18",
       "verdant-05",
@@ -174,6 +182,7 @@
       "meridian-10",
       "meridian-18",
       "nordwind-18",
+      "nordwind-23",
       "verdant-18"
     ],
     "52_questions.md": [
@@ -201,14 +210,17 @@
     "skills/dg-econ-effect/SKILL.md": [
       "helios-02",
       "helios-06",
-      "helios-18"
+      "helios-18",
+      "nordwind-23"
     ],
     "skills/dg-strategy/SKILL.md": [
       "kestrel-04",
       "kestrel-13",
-      "meridian-01"
+      "meridian-01",
+      "nordwind-21",
+      "nordwind-22"
     ]
   },
-  "items": 100,
+  "items": 109,
   "kb_root": "dg-board-kb"
 }

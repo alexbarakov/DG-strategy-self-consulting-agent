@@ -104,8 +104,8 @@ def main():
         items.extend(parse_file(f))
 
     problems = []
-    if len(items) != 100:
-        problems.append("expected 100 items, parsed %d" % len(items))
+    if len(items) < 100:
+        problems.append("expected at least 100 items, parsed %d" % len(items))
     for it in items:
         if it["tier"] == "L?":
             problems.append("%s has no tier tag" % it["id"])

@@ -158,6 +158,14 @@ This phase is content authoring, not engineering. It can lag Phases 1–2 withou
 
 ---
 
+## Two design decisions, taken
+
+Recorded here so they are not re-argued each time the skill is edited.
+
+**Where the opinion lives: in the knowledge base, not in the skill.** Four of the internal contradictions found in this repository were the skill and the base drifting apart on the same question. That class disappears by construction if a position is stated once. The cost — the skill is unusable without the repository cloned — is nominal, since every path in it is already relative. Consequence for future edits: a position added to the skill that also exists in a theme file is a defect, not a convenience.
+
+**One skill or a family: a family, with the dependency declared.** `dg-strategy` and `dg-econ-effect` stay separate because the economic model is not DG-specific and will be reused. The price is a discovery and dependency problem, and it had already produced a live bug: FORM shipped a document missing its required section 06 whenever `dg-econ-effect` was not installed, silently. The rule now is that a missing dependency is stated in the deliverable, not worked around. A third skill would need a dispatcher; two do not.
+
 ## Pruning pass — what was removed after the first run
 
 Applied the CDO judge's rationality dimension to the harness itself. Four things failed the reader test and are gone:
@@ -172,6 +180,19 @@ Applied the CDO judge's rationality dimension to the harness itself. Four things
 19 invariants → 17. 100 judgments per run → ~35. Two scoring systems → one. The harness now retires more than it adds, which is the test it applies to everything else.
 
 **Do not re-add these without a reason that did not exist before.** Each was removed with its argument recorded; re-adding one silently is how a harness grows back into ceremony.
+
+## Triage of the unchecked detectors
+
+Nine of seventeen invariants printed UNCHECKED on every run — more than half the file not working. Triaged rather than wired wholesale:
+
+| Invariant | Outcome |
+|---|---|
+| `DG-ROLE-01` — no role without recorded time | **mechanised** as `regex_require_if`: if roles are proposed anywhere, a time quantity must appear somewhere. Coarse — it cannot say *which* role lacks the hours — but it catches the document that names roles and never mentions time at all, which is the common case |
+| `CORE-NUM-02` — no target on an unmeasured baseline | **mechanised** as structural: `check_structure.py` already enforces that gap markers exist and are collected |
+| `DG-NAME-01` — does it go to business under the DG flag | **cut.** The CDO judge's naming corollary already makes this judgement on every deliverable |
+| `DG-ROI-04` — data quality as its own ROI category | **cut.** Fires so rarely that an unchecked entry cost more attention than the risk it covered |
+
+15 invariants, 10 enforced automatically (4 forbid, 2 require-if, 4 structural), 5 needing a classifier. Up from 8 of 19.
 
 ## What this deliberately does not measure
 

@@ -208,3 +208,33 @@ Asset-heavy 3PL, 12 000 people, near-zero data maturity, no incident, no regulat
 **Source.** `11_dg_program_themes/data-catalog.md` — Eckerson criteria and the recommended flow (day 4, slides p.33–34, 125); `12_templates/templates.md`.
 
 **Trap.** Naming a product. The KB contains vendor material only as marketing to be discounted.
+
+---
+
+### 21. What goes in a data strategy the board will actually read? `L3` `strategy`
+
+**Answer.** A Summary that can be read alone and stands as the whole argument — vision, the named problems, the solutions by stream, the goals, what you deliberately will not do, the effect, the decision you need from them, the first step and the cost of doing nothing. Then the sections, for the people who will execute or review it. Prose and bullets in the Summary, no tables: a table on the opening page reads as a report, and an argument assembled from cells does not survive being skimmed. Write the sections first and compress upward — the Summary is written last and is the hardest page.
+
+**Source.** `skills/dg-strategy/SKILL.md` — the two-part document and the Summary contents.
+
+**Trap.** Opening with context or a table of contents. The reader must meet the ask before the background.
+
+---
+
+### 22. How long should it be? `L2` `strategy`
+
+**Answer.** A Summary of one to two pages plus roughly a page per section — about nine or ten pages with eight sections, fewer if the structure is trimmed, and the structure should be trimmed for a company of this size before any interviewing starts. Length is not the variable that matters, though: an answer that must *inform* can be short, and an answer that must *convince* carries its supporting evidence. The Summary convinces; the sections inform.
+
+**Source.** `skills/dg-strategy/SKILL.md` — Phase 0 volume question and the section list.
+
+**Trap.** Fixing a page count first. It is the output of the structure decision, not an input to it.
+
+---
+
+### 23. The board asks for one number. What do we give them? `L4` `trap` `roi`
+
+**Answer.** Not a total. The shape of the effect, and one committed line — for most companies that is infrastructure saved by deleting redundant objects, because it needs no attribution argument and shows up in an invoice rather than a model. Everything else goes in as a range with its confidence tag, and the list of what must be measured to replace the estimate with a calculation goes in as the actionable part. A single number handed to a board becomes a promise by the third reader, and this base carries no defensible public governance ROI figure to hand over in the first place.
+
+**Source.** `skills/dg-econ-effect/SKILL.md` — the committed fraction and the precision list; `51_numbers.md` — no defensible public figure.
+
+**Trap.** Producing the number because they asked for one. That is the request the whole effect model exists to answer differently.
