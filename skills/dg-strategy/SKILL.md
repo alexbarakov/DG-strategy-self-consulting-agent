@@ -10,7 +10,7 @@ description: >
 
 # DG Strategy & Tactics — consult, build, audit
 
-Operating principle: **AI drafts — humans validate.** Every recommendation must be grounded in this repository's content (cite the file) or in the participant's own data; anything else is marked `[requires clarification]`. Never give generic consulting advice.
+Operating principle: **AI drafts — humans validate.** Every recommendation must be grounded in this repository's content (cite the file) or in the participant's own data; anything else is marked `[missing data]`. Never give generic consulting advice.
 
 Grounding map: `../../README.md` (repo entry point), `../../30_graph/objects.yaml` (themes, relations, kill-gate order), `../../10_ai_era_themes/` and `../../11_dg_program_themes/` (substance), `../../12_templates/templates.md` (workshop instruments), `../../40_sources.md` (citable sources).
 
@@ -24,7 +24,7 @@ Grounding map: `../../README.md` (repo entry point), `../../30_graph/objects.yam
 
 Routing: a document with the request → AUDIT by default; a question → CONSULT; an explicit ask to build → FORM. CONSULT escalates naturally — when the dialogue reveals the case is really a whole-program problem, offer to switch to AUDIT (if they have a strategy) or FORM (if they don't).
 
-**Every scenario ends with the same two stages — the CDO judge, then the bullshit judge (both below).** The CDO judge runs as a loop and fixes substance; the bullshit judge runs once at the end and fixes language. The user receives the already-corrected artifact plus a compact rework log, never a first draft with a list of complaints attached.
+**Every scenario ends with the same two stages — the CDO judge, then the bullshit judge (both below).** The CDO judge runs as a loop and fixes substance; the bullshit judge runs once at the end and fixes language. Scope differs by scenario and is stated here so it is not guessed: the CDO judge runs on every scenario; the bullshit judge runs on every **written artifact** — the FORM document, the AUDIT report, the CONSULT one-pager — and not on live dialogue, where rewriting your own chat turns is theatre. The user receives the already-corrected artifact plus a compact rework log, never a first draft with a list of complaints attached.
 
 ## Universal conventions (apply in every scenario)
 
@@ -38,7 +38,7 @@ Routing: a document with the request → AUDIT by default; a question → CONSUL
   Rules: never fill a gap with a plausible number; never soften it into a vague phrase ("improve quality") — a vague target is a hidden gap. Collect all such markers into a short **"What needs measuring"** list at the end of the deliverable, ordered by how much each blocks decisions. A strategy with five honest gaps is stronger than one with five invented numbers.
 
 - **Mid-flow document invitation.** As soon as context starts forming — after the case statement in CONSULT, after the first interview batch in FORM, at input collection in AUDIT — explicitly invite: *"If you have any existing documents — pain/landscape analyses, architecture notes, assessment results, prior strategies, survey exports — share them now; I will ground the work in them instead of re-asking."* Anything received is treated as participant data (quotable evidence), never re-asked.
-- **End-of-flow visualization offer.** At the end of every scenario offer to render the result as a single-file HTML page for sharing: CONSULT — decision one-pager (case, options compared, chosen path, next steps); AUDIT — scorecard radar, chain-break map, resequenced roadmap; FORM — diagnostic scorecard, stack-ranked roadmap timeline, kill-gates board. Plain self-contained HTML, no build step.
+- **Visualization: offered in CONSULT and AUDIT, automatic in FORM.** In CONSULT and AUDIT, offer to render the result as a single-file HTML page for sharing — CONSULT: a decision one-pager (case, options compared, chosen path, next steps); AUDIT: the scorecard, the chain-break map, the resequenced roadmap. In FORM there is nothing to offer: the deliverable ships in HTML **and** Markdown by default (see "Charts, confidence and formats"), and the FORM document carries exactly one chart — the AS-IS scorecard. Do not add a roadmap timeline or a kill-gates board to it; the year's shape lives in the metrics and the portfolio, where it carries numbers. Plain self-contained HTML, no build step, in every case.
 
 ---
 
@@ -81,7 +81,11 @@ The test is about the audience, not about a blacklist, and it cuts both ways: **
 
 **The fallback the judge offers instead of a verdict.** When a strategy fails this dimension badly, the fix is not trimming — it is the lean shape: one problem stated in one sentence, one domain, three to ten datasets, three roles, three automated checks, one-page documents, a weekly thirty-minute data office hour, and quarterly expansion to the next three datasets. A judge that only deletes is a judge nobody invites back; offer this as the replacement.
 
-**Output of the judge:** 5–8 findings, each with severity (`blocking` / `serious` / `worth fixing`), the exact quote or block it attacks, and what would make it pass. Plus one verdict line: *"In this shape I would / would not sign it, because…"*.
+**Output of the judge:** on the first pass, 5–8 findings — each with severity (`blocking` / `serious` / `worth fixing`), the exact quote or block it attacks, and what would make it pass. Later passes report only what they actually find: **the quota applies to pass 1 only**, because a judge required to produce five findings every time will invent them, and the loop could never terminate. A pass with nothing to report is the exit condition, not a failure of the judge.
+
+Plus one verdict line per pass: *"In this shape I would / would not sign it, because…"*.
+
+The two severity scales connect as follows: a dimension scored `blocking` must produce at least one `blocking` finding; a dimension scored `weak` produces `serious` or `worth fixing` findings. A `blocking` dimension with no `blocking` finding attached means the judge did not finish its job.
 
 **The loop (this is the point of the stage).** The judge runs *iteratively*, not once. The user sees the corrected result, not the first draft plus a list of complaints — a draft with known defects should never leave your hands.
 
@@ -91,9 +95,11 @@ The test is about the audience, not about a blacklist, and it cuts both ways: **
 4. **Repeat** until a pass produces no `blocking` findings and no new `serious` ones, or until **three passes** — whichever comes first. Three is a deliberate cap: past that the judge starts polishing prose, which is not what it is for.
 5. If a `blocking` finding survives three passes, it is not a defect of the draft — it is a real constraint of the situation. Promote it from the judge's list to the document's risk register or entry conditions, and say so plainly.
 
+**The cap counts iterations, not reviews.** If the *method itself* changes after the loop closed — a new dimension is added, a rule is corrected — re-running the judge is a new review against the new standard, numbered separately in the rework log. It does not violate the three-pass cap, because the cap exists to stop the judge polishing prose, not to stop it applying a rule that did not exist when the document was written.
+
 **What the user receives:** the corrected artifact, plus a compact **rework log** — a "was → became → what it closes" table covering the whole loop, not the raw findings of each pass. The log is evidence the work was stress-tested and doubles as the answer to "did you consider…". Keep the full per-pass findings only if the user asks for them.
 
-**Scenario scaling.** FORM — the full eight dimensions against the whole document, up to three passes. AUDIT — the same lens turned on your own report, usually one pass plus fixes (are findings prioritized, actionable, would the recipient know what to do on Monday, and does the remediation plan create more paperwork than it removes). CONSULT — a single short pass on the recommended option only: is it feasible for this team, is the first step concrete, what breaks it, and does the advice create an artefact nobody will read.
+**Scenario scaling.** FORM — the full eight dimensions against the whole document, up to three passes. AUDIT — the same lens turned on your own report, usually one pass plus fixes (are findings prioritized, actionable, would the recipient know what to do on Monday, and does the remediation plan create more paperwork than it removes). CONSULT — a single short pass on the recommended option only: is it feasible for this team, is the first step concrete, what breaks it, and does the advice create an artefact nobody will read. The bullshit pass applies to the written one-pager if one is produced, not to the dialogue itself.
 
 If the user is present, offer them the judge's findings first and let them answer the hard questions themselves — their answers are better material than your rework. If they are not, do the rework yourself and mark the assumptions you made.
 
@@ -141,7 +147,7 @@ Its job is to remove the consulting film: the layer of language that makes a doc
 4. **Give options, not verdicts.** 2–3 courses of action with trade-offs, each citing its KB grounding; recommend one and say why.
 5. **Judge the recommendation** (short version of the CDO-judge stage): is the chosen option feasible for *this* team with *its* resource, is the first step concrete enough to start tomorrow, what single thing breaks it? Fix what the judge finds before you present the option — a recommendation that dies on Monday is worse than no recommendation.
 6. **Converge to a decision.** Fix the chosen option, name the first concrete step, and hand over the matching workshop template from `../../12_templates/templates.md` if one applies.
-7. Offer the HTML one-pager; offer AUDIT/FORM if the case turned out bigger than a question.
+7. Offer the HTML one-pager (offered, not automatic — CONSULT often ends in a decision, not a document); offer AUDIT/FORM if the case turned out bigger than a question.
 
 **Deadline-constrained case.** When the case carries a hard external commitment ("promised to the board this quarter"), do not answer with "you are not ready" — that advice is never taken and the launch happens anyway, unprepared. Instead:
 - Check the commitment against the kill-gates and say plainly which are not passed.
@@ -162,7 +168,7 @@ Three opening questions, in order:
    - BI or AI → pair with the companion [BI+AI Strategy Builder](https://github.com/alexbarakov/bi-ai-strategy-builder) (its skill leads, this KB grounds the governance blocks).
    - D&A or mix → both repositories; this skill leads, the builder supplies BI/AI stream substance. Shared invariants (stack-rank, kill-gates, "AI drafts — humans validate") are identical in both by design — if they ever diverge, this KB wins for governance questions.
 2. **Confirm the content structure.** Show the section list (Summary, then 00 Context → 07 Risks & Kill-gates, then appendices) and let the user trim or reorder before any interviewing — a strategy for a 200-person company may not need all eight sections. The Summary is not optional: it is the only part some readers will see.
-3. **Volume.** Default — **compact**: a Summary plus roughly a page per section (≈6–8 pages of substance); options: a full wiki with every section expanded, or per-section delivery with review after each. Depth of diagnostic: **Lite** (≈15 min, category-level) or **Full** (45–60 min, factor-level).
+3. **Volume.** Default — **compact**: a Summary of 1–2 pages plus roughly a page per section — about 9–10 pages with eight sections, fewer if the user trims the list in question 2; options: a full wiki with every section expanded, or per-section delivery with review after each. Depth of diagnostic: **Lite** (≈15 min, category-level) or **Full** (45–60 min, factor-level).
 
 Reuse everything the user already has (survey, prior strategy, assessment) — do not re-ask. After the first interview batch, run the mid-flow document invitation (universal convention).
 
@@ -171,7 +177,7 @@ Reuse everything the user already has (survey, prior strategy, assessment) — d
 2. Team & tooling: DWH/BI/governance roles present; catalog, semantic layer, AI assistant status.
 3. Demand: user segments, self-service adoption, top-3 data pains.
 4. Foundation: certified-data share, DQ state, core-layer maturity.
-5. AI: what reached production; share of ad-hoc answerable with SQL + docs (field baseline: ~61%, see `11_dg_program_themes/../10_ai_era_themes/domain-knowledge-base.md`).
+5. AI: what reached production; share of ad-hoc answerable with SQL + docs (field baseline: ~61%, see `../../10_ai_era_themes/domain-knowledge-base.md`).
 6. Constraints: budget, risk appetite, governance capacity.
 7. 12-month ambition.
 
@@ -202,13 +208,13 @@ The default failure of strategy work is a target line drawn at "best practice" a
 
 **5. Say what the strategy will NOT do.** The document must carry an explicit non-goals section: which capabilities stay as-is, which initiatives are deliberately absent this horizon, and why. A stream that is consciously excluded — with the gate that would make it possible later — is a stronger artifact than a stream included "because it is the trend." This is also the honest answer to "and where is our AI?".
 
-**6. Prefer measurable modesty to inspiring vagueness.** "Raise the share of consumption on certified objects from 0% to 30%" beats "achieve data-driven culture". If a baseline is unknown, the target is `[requires clarification]` until measured — do not let an inspiring number into the document to fill the gap.
+**6. Prefer measurable modesty to inspiring vagueness.** "Raise the share of consumption on certified objects from 0% to 30%" beats "achieve data-driven culture". If a baseline is unknown, the target is `[missing data]` until measured — do not let an inspiring number into the document to fill the gap.
 
 **7. Rehearse the cut.** Ask directly: "if you lose a third of the resource mid-year, what dies?" The answer becomes the published freeze list. Strategies without a rehearsed cut do not survive the first budget review — they just fail silently and everywhere at once.
 
-### Phase 3 — strategy document (v4)
+### Phase 3 — the strategy document
 
-**Two parts, not four layers.** A **Summary** that opens the document and can be read alone, then the **strategy sections** — a flat numbered list, no artificial split between "reasoning" and "working blocks": both are the strategy. Appendices at the end hold evidence rather than argument.
+**Two parts.** A **Summary** that opens the document and can be read alone, then the **strategy sections** — a flat numbered list, no artificial split between "reasoning" and "working blocks": both are the strategy. Appendices at the end hold evidence rather than argument.
 
 | Part | Length | Who it serves |
 |---|---|---|
@@ -283,7 +289,7 @@ Assembly note: write the sections first (that is where the thinking happens), th
 
 Run **`dg-econ-effect`** in EMBEDDED mode after the portfolio and the operating model are drafted — the effect model needs the initiatives, the roles and the resourcing arithmetic on the page. If it changes the ordering of the portfolio, go back and change the portfolio; that is the point of running it before the risks rather than after everything.
 
-Then offer the HTML visualization (universal convention).
+The FORM deliverable ships as HTML and Markdown without being asked (universal convention).
 
 ### Initiative playbooks — how to execute what the portfolio proposes
 
@@ -312,7 +318,7 @@ Every initiative recommended in block 04 must ship with a "how": method (KB file
 | Skills & enablement | `skills-hub.md` | contribution flow + points scheme from the theme file | Agent Skills, MCP |
 | Program tracking | `dg-program-roadmap.md` | Excel tabs "Track Status of DG Program", "Program Mgmt" | Program Map 3.0 frame |
 
-Rule: a portfolio initiative without a playbook row is a red flag — either add the method or mark the initiative `[requires clarification]`.
+Rule: a portfolio initiative without a playbook row is a red flag — either add the method or mark the initiative `[missing data]`.
 
 ---
 
@@ -341,7 +347,7 @@ Output — **audit report**:
 3. Chain-break map: where their sequence violates the triad / kill-gates, and the resequenced order.
 4. Quick wins (Common-Sense DG list from `getting-started.md`).
 5. What to keep: explicitly name the strong parts — an audit that only criticizes gets ignored.
-6. **Self-review before handing over** — run the CDO-judge stage against your own report: are the findings prioritized, is each one actionable, would the recipient know what to do on Monday? Drop findings that survive as "true but useless".
+6. **Self-review before handing over** — run the CDO-judge stage against your own report: are the findings prioritized, is each one actionable, would the recipient know what to do on Monday? Drop findings that survive as "true but useless". Then run the bullshit pass on the report text, as on any written artifact.
 7. Offer the HTML visualization of the report (universal convention).
 
 ---
@@ -358,5 +364,5 @@ Output — **audit report**:
 
 ## Installation
 
-- **Claude Code**: copy or symlink `skills/dg-strategy/` into your project's `.claude/skills/` — the description above auto-triggers it. Keep the whole repository cloned so relative KB paths resolve.
-- **Any other agent**: paste this file as instructions and give the repository root as a knowledge source.
+- **Claude Code**: copy or symlink **both** `skills/dg-strategy/` and `skills/dg-econ-effect/` into your project's `.claude/skills/` — the descriptions auto-trigger them. Section 06 of every FORM document is produced by `dg-econ-effect`; without it installed, FORM is missing a required section. Keep the whole repository cloned so relative KB paths resolve.
+- **Any other agent**: paste this file *and* `skills/dg-econ-effect/SKILL.md` as instructions, and give the repository root as a knowledge source.

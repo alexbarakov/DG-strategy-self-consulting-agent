@@ -55,7 +55,8 @@ Top managers do not read a benefits wheel. They read two numbers: **an agreed es
 Build the model in that shape. It means:
 - Losses go in as a **range**, and you argue from the bottom of the range.
 - Costs go in as a range, and you argue from the top of it.
-- If the pessimistic-loss / optimistic-cost comparison still clears, you have a case. If it only clears in the middle, you have a discussion — say that plainly instead of showing the midpoint as the answer.
+- The comparison that decides it is therefore **lowest loss against highest cost** — the least flattering pairing available. If it still clears, you have a case. If it only clears in the middle of both ranges, you have a discussion, and you say so instead of showing the midpoint as the answer.
+- Note the wording trap: this is not an "optimistic cost" case. Optimistic framing is banned everywhere in this skill, including here — arguing from a low cost estimate is the same error as arguing from a high benefit estimate, dressed as prudence.
 
 ## The three methods
 
