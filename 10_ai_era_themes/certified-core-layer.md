@@ -88,7 +88,7 @@ Why it needs governance muscle: cheaper production means more objects — the Je
 - Quick win that makes the metric move early: pre-mark the objects that already qualify. "So the impact on our metric arrives faster." (course day 3, slides p.116; transcript)
 - Build per horizontal domain first (marketing was first), with the explicit contract that vertical teams downstream reuse those data products instead of rebuilding them; L1/L2 marts by criticality. (course day 5, transcript)
 - Sequencing lesson: certify **marts first, then reports, then metrics** — even though reports feel closer to the business and are the natural place a BI leader starts. (course day 3, transcript)
-- Naming warning: the word "certification" itself "smells of bureaucracy" to some audiences — consider another term before you brand the programme with it. (course day 3, transcript)
+- Naming: the course carried a warning that the word "certification" itself "smells of bureaucracy" to some audiences (course day 3, transcript). **The author's position since: the warning is withdrawn — "certification" is a normal word.** It names a status with a lifecycle, it needs no translation for business, and in the AI era it became a prerequisite rather than a ritual: an agent needs certified objects with good descriptions for the same reason a person does. The words that still cost buy-in are "governance" and "committee", not this one.
 
 ### Making the status impossible to miss
 
@@ -125,7 +125,6 @@ Why it needs governance muscle: cheaper production means more objects — the Je
 - **Badge inflation.** Every extra public status raises the user's cost of choosing a source; three is already generous. (course day 3, slides p.119)
 - **Running the operational process inside the catalog.** Preparation, review and fixes belong in domain cabinets; the catalog shows public status. Mixing them makes the catalog a workflow tool it was never designed to be. (course day 3, slides p.119)
 - **Handing the layer to data engineers with no product owner.** The most likely staffing outcome and the most likely failure mode. (course day 3, transcript)
-- **Branding the programme "certification" to an audience allergic to bureaucracy.** The word can cost you the buy-in before the content is heard. (course day 3, transcript)
 - **A partner scorecard nobody opens.** Metrics without a ritual that forces people to look at them are decoration. (course day 6, transcript)
 - **Leaving the reuse nudge unbuilt.** If nothing intercepts the person at the moment they create a new mart, reuse stays an aspiration. (course day 3, transcript)
 

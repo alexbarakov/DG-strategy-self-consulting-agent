@@ -110,7 +110,7 @@ Triage questions, not a score. From the diagnostic slides and the 20+ company in
 - **Writing goals you can't measure.** "Data transparency", "trust" — don't; use reuse rate, DQ metrics, search speed. "You can't and shouldn't try to do everything at once." (course day 2, slides p.57, p.61)
 - **Over-promising ROI to win the start.** The follow-up — "what share can you provably reduce?" — turns an approved program into a personal liability. (course day 6, transcript)
 - **Full decentralization first, governance later.** His own company "went immediately to maximum Wild West — governance activities never took root; we're still cleaning that up." (course day 2, transcript)
-- **Bureaucratic vocabulary.** Even "certification" "smells of bureaucracy" to some audiences — consider another term. (course day 3, transcript; day 5, transcript)
+- **Bureaucratic vocabulary.** "Governance" and "committee" are the words that cost buy-in; "data management sync" lands better and works identically. The course also warned about "certification", but **that warning has been withdrawn by the author — it is a normal word** and renaming it buys nothing (see `10_ai_era_themes/certified-core-layer.md`). (course day 3, transcript; day 5, transcript)
 
 ## First 90 days
 Only actions the author explicitly recommends. The *calendar* is inferred — he gives a flow, a stage-colouring and "this worked in 3 months" examples, never weeks.

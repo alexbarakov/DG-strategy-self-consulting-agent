@@ -75,7 +75,9 @@ This is the dimension most likely to be skipped, because everything it deletes l
 
 **Metric corollary.** If no headline number in the strategy can legitimately go *down* for a good reason, the strategy is counting activity — standards, glossary terms, owners, stewards, policies. That is metric theatre and the judge marks it `blocking`, not `weak`.
 
-**Naming corollary.** The judge checks the vocabulary against the audience. "Governance", "committee", even "certification" smell of bureaucracy to some organisations and can cost the buy-in before the content is heard. If the author cannot restate the whole program without the discipline's name, they have not found the pain it attaches to.
+**Naming corollary.** The judge checks the vocabulary against the audience. "Governance" and "committee" are the two words that reliably cost buy-in before the content is heard — "data management sync" is received better than "committee" and works identically. If the author cannot restate the whole program without the discipline's name, they have not found the pain it attaches to.
+
+The test is about the audience, not about a blacklist, and it cuts both ways: **"certification" is a normal, working word** and the judge does not flag it. It names a status with a lifecycle that people already understand from outside work, it survives translation to business, and in the AI era it stopped being a ritual and became a prerequisite — an agent needs certified objects and good descriptions for the same reason a human does. Renaming it to avoid the smell of bureaucracy usually costs clarity and buys nothing.
 
 **The fallback the judge offers instead of a verdict.** When a strategy fails this dimension badly, the fix is not trimming — it is the lean shape: one problem stated in one sentence, one domain, three to ten datasets, three roles, three automated checks, one-page documents, a weekly thirty-minute data office hour, and quarterly expansion to the next three datasets. A judge that only deletes is a judge nobody invites back; offer this as the replacement.
 
