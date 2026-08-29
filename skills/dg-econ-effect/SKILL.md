@@ -18,10 +18,10 @@ It is deliberately built to under-promise. The base material behind it is unusua
 | Trigger | Mode |
 |---|---|
 | "посчитай экономический эффект", "сколько это принесёт денег", "build the business case", "what's the ROI" | **STANDALONE** — full run, own deliverable |
-| Invoked by `dg-strategy` FORM after section 04 metrics are agreed | **EMBEDDED** — produces the `04.x Effect of the strategy` subsection only |
+| Invoked by `dg-strategy` FORM after the section 03 metric table is agreed | **EMBEDDED** — produces the `03.x Effect of the strategy` subsection only |
 | "проверь их бизнес-кейс", "is this ROI model defensible" | **CHALLENGE** — audit an existing model against the guards below |
 
-In EMBEDDED mode do not re-interview: the metrics, initiatives, owners and constraints are already established. Ask only for the economic inputs that section 04 does not carry.
+In EMBEDDED mode do not re-interview: the metrics, initiatives, owners and constraints are already established. Ask only for the economic inputs that section 03 does not carry.
 
 ## Step 0 — the disqualifying questions
 
@@ -46,7 +46,7 @@ Ask these before modelling anything. Two of them can end the run legitimately, a
 - **Accelerated decision-making specifically is closed permanently.** Attempts to measure it were worked over a decade ago; everyone who went deep stopped. Reinventing it burns credibility you will need later in the same meeting.
 - **Data quality is not its own petal.** It always resolves into revenue or cost. Draw that line yourself before finance draws it for you.
 
-Note the trap in the refusals: time-to-insight is a perfectly good *strategy* metric and a bad *money* metric. Keep it in section 04 as a goal; keep it out of the effect model as a revenue line.
+Note the trap in the refusals: time-to-insight is a perfectly good *strategy* metric and a bad *money* metric. Keep it in section 03 as a goal; keep it out of the effect model as a revenue line.
 
 ## The decision rule to model against
 
@@ -98,11 +98,11 @@ When the effect lands on someone else's metric, the share credited to your work 
 
 Fix the share upfront, in writing, with the people whose metric it is. An attribution share invented at presentation time is the fastest way to lose the room. Record it in the model as an explicit line — "attribution share: X%, agreed with N on DATE" — or, if it has not been agreed, as `[missing data]` with the name of the person who has to agree it.
 
-## The haircut ladder
+## The discount ladder
 
 Apply in order, and show the intermediate values rather than only the total. A model whose working is visible survives challenge; a model that shows only a total invites the challenger to attack the total.
 
-| # | Haircut | Typical | Why |
+| # | Downward adjustment | Typical | Why |
 |---|---|---|---|
 | 1 | Vendor → provable productivity | 23–26% → **5–7%** | the single largest source of inflation |
 | 2 | Productivity → realised output | further discount, stated explicitly | freed time is not production |
@@ -117,7 +117,7 @@ Apply in order, and show the intermediate values rather than only the total. A m
 - **Recompute the revenue side; do not polish the savings side.** The anti-case worth memorising: 10M direct-mail items a year, ~10% wrong or duplicate, ~$500k/yr gross saved at 50c an item — but only **$100k net** after $400k/yr of new process upkeep, against a $3M investment. **Thirty years' payback.** Bolting marketing's segmentation model onto the same savings line does not rescue it.
 - **Net, not gross.** Every benefit line carries the new process it creates. A model without an upkeep line is not finished.
 - **One record counted once.**
-- **No cell may contain a number whose provenance you cannot state.** If a figure came from a vendor calculator, label it `vendor` and show what it becomes after haircut 1.
+- **No cell may contain a number whose provenance you cannot state.** If a figure came from a vendor calculator, label it `vendor` and show what it becomes after adjustment 1.
 - **Do not model what the KB says nobody has measured.** Per-object certification cost, per-check DQ cost, verification cost of AI-generated metadata, token economics of agent scenarios, human-in-the-loop review burnout — all are named as unmeasured in `51_numbers.md`. If your model needs one of them, it is an assumption, and it goes in the precision list.
 - **Expect a modest total, and set the expectation before you present it.** The failure mode is not a small number; it is a sponsor who was led to expect a large one.
 
@@ -130,7 +130,7 @@ Every line in the model carries a tag:
 | `calculated` | derived from the company's own measured figures | may be committed |
 | `expert estimate` | your structured judgement on the company's real inputs | may be presented, may not be committed |
 | `benchmark` | someone else's published figure, structurally adapted | orientation only, never a total |
-| `vendor` | from a supplier's model | shown only alongside its haircut |
+| `vendor` | from a supplier's model | shown only alongside its discount |
 | `[missing data]` | the input does not exist yet | blocks the line; names the measurement |
 
 **The mandatory header on every standalone or embedded output:**
@@ -147,7 +147,7 @@ Immediately after the model, a **precision list**: each unmeasured input, the me
 
 1. **Verdict in three lines** — which zone, the range of the effect, and whether the min-loss / max-cost rule clears.
 2. **Model by method**, one table per method used, working shown line by line.
-3. **Haircut ladder** applied, with intermediate values.
+3. **Discount ladder** applied, with intermediate values.
 4. **Committed fraction** — what you are willing to write down, and why that line and not another.
 5. **Scenarios** — pessimistic and base only. No optimistic column: it never survives contact with finance and its presence makes the other two look like negotiating positions.
 6. **Precision list.**
@@ -155,7 +155,7 @@ Immediately after the model, a **precision list**: each unmeasured input, the me
 
 Two formats, as everywhere in this repo: HTML for reading, Markdown for editing.
 
-### Embedded in a strategy (`04.x`)
+### Embedded in a strategy (`03.x`)
 
 A compact subsection under the metrics, before the portfolio, containing:
 
@@ -169,7 +169,7 @@ A compact subsection under the metrics, before the portfolio, containing:
 | Precision list | what to measure, who owns it, how long |
 | Refused | the air lines, named |
 
-**Placement rule:** the effect subsection sits inside section 04, after the metric table and before the portfolio. It is an argument about the metrics, not a separate document — and it must not appear in the Summary as a headline number unless the number is `calculated`. An estimate promoted to the Summary becomes a promise by the time it reaches the third reader.
+**Placement rule:** the effect subsection sits inside section 03, after the metric table and before the portfolio. It is an argument about the metrics, not a separate document — and it must not appear in the Summary as a headline number unless the number is `calculated`. An estimate promoted to the Summary becomes a promise by the time it reaches the third reader.
 
 ## CHALLENGE mode — auditing someone else's model
 
