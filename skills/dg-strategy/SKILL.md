@@ -212,10 +212,24 @@ The default failure of strategy work is a target line drawn at "best practice" a
 | 01 | **AS-IS** | Calibration (what maturity level this company is actually entitled to, given decision-maker count, power users, data dependency and industry transformation risk), the maturity scorecard with confidence per score, the demand map by audience, and the named breaks in the dependency chain. | `20_dg_program_guide/maturity-*`, `52_questions.md`, `30_graph/objects.yaml` |
 | 02 | **TO-BE** | The bet stated in one paragraph, the ceiling for the year per moving category, which categories deliberately do not move and why, and the minimally sufficient target architecture. Not an AI vision unless the company has an AI ambition. | `30_graph/objects.yaml`, `11_dg_program_themes/` |
 | 03 | **Streams** | Three to six streams, each with why-now and the outcome of the year. A stream that cannot state its outcome is a wish. | `20_dg_program_guide/dg-program-roadmap.md` |
-| 04 | **Metrics & Goals** | Target metrics with baseline, year 1 / 2 / 3 values, the owning stream, and the risk haircut applied (dependency, capacity, adoption). Anti-metrics listed explicitly. Unmeasured baselines marked and excluded from commitments. **Metrics come before the portfolio**: an initiative earns its place by moving a named metric. | `51_numbers.md`, `20_dg_program_guide/metrics-*` |
+| 04 | **Metrics & Goals** | Target metrics with baseline, year 1 / 2 / 3 values, the owning stream, and the risk haircut applied (dependency, capacity, adoption). Anti-metrics listed explicitly. Unmeasured baselines marked and excluded from commitments. **Metrics come before the portfolio**: an initiative earns its place by moving a named metric. Closes with **04.x — the effect of the strategy** (see below). | `51_numbers.md`, `20_dg_program_guide/metrics-*`, `skills/dg-econ-effect/` |
 | 05 | **Initiatives Portfolio** | Streams break into projects. Each initiative is described in full, not as a table row: **goal**, **output** (what physically exists when it is done), **outcome** (which metric from section 04 it moves, from what to what, by when — tracked by year across the horizon), **owner role**, **prerequisites**, **effort**, **risk with its mitigation**, **wave**. Plus the published freeze order and the kill-gates. | `50_failure_catalog.md`, `12_templates/`, initiative playbooks |
 | 06 | **Operating Model** | The section the execution actually depends on. **Roles**: who, what they do, how much time, and *where that time is recorded* — a role without a line in someone's objectives is a wish. **Bodies**: composition, cadence, mandate, and explicitly what the body does *not* do. **Decision protocol**: how a dispute is raised, prepared, decided, recorded, and whether decisions are retroactive. **Interfaces** with existing structures (architecture boards, legal, functions that do not report to governance). **Resourcing arithmetic**: quotas versus new headcount, stated as numbers. **Degradation path**: what remains if the entry condition is not met. | `20_dg_program_guide/roles-and-operating-model.md`, `11_dg_program_themes/` |
 | 07 | **Risks & Kill-gates** | Risks that are specific to this company, each with the move that manages it. Generic risk registers ("lack of buy-in") are deleted by the bullshit judge. | `50_failure_catalog.md` |
+
+#### 04.x — Effect of the strategy
+
+A required closing subsection of section 04, produced by the **`dg-econ-effect`** skill in EMBEDDED mode. Do not write it freehand: it is the part of the document most likely to be attacked, and the skill exists because the honest version of it is counter-intuitive.
+
+It answers "how much money is this?" in the only shape a top manager reads — an agreed estimate of possible losses against the cost of preventing them, with the positive decision taken when the *minimal* losses exceed the *maximal* costs. It carries the mechanism per stream, a pessimistic and a base range (never an optimistic one), the attribution share and whether it was agreed with the metric owner, the fraction you are willing to commit, and the list of what must be measured to replace the estimate with a calculation.
+
+Three rules that override the general document conventions:
+
+- **Default confidence is `expert estimate`, and it is labelled as such at the top of the subsection** — not hedged in a footnote. The precision list that follows is the actionable part.
+- **An estimate never gets promoted into the Summary as a headline number.** Only a `calculated` figure may appear there. By the third reader an estimate in a summary has become a promise.
+- **The air benefits are refused by name in the document itself** — operational efficiency, innovation, accelerated decision-making, the whole indirect list — so that nobody adds them back between drafts. Time-to-insight stays a goal in the metric table and stays out of the money model.
+
+If the company does not decide in money at all (public sector, some regulated bodies), the subsection says so and the lever moves to compliance and the management vertical. That is a legitimate output, not a gap.
 
 ### Charts, confidence and formats
 
@@ -242,6 +256,8 @@ Low-confidence scores are visually distinct in the chart (hatched, outlined or g
 **Appendices**: the company portrait and the filled interview questionnaire (evidence of how the diagnosis was reached — the executing team does not need it on Monday, the reviewer checking your reasoning does); what needs measuring (the `[missing data]` list); the rework log from both judges; sources and method; the full scorecard if section 01 carried only its summary; and — when the run exposed them — the places where this knowledge base had no material, which is a deliverable in its own right.
 
 Assembly note: write the sections first (that is where the thinking happens), then compress upward. The Summary is written last and is the hardest page — if you cannot write it, the strategy is not yet a strategy. Never ship a document whose first page is a table of contents or a context section: the reader must meet the ask before the background.
+
+Run **`dg-econ-effect`** in EMBEDDED mode once the metric table in section 04 is agreed, and before writing the portfolio — the effect model sometimes reorders the portfolio, and it is cheaper to learn that before the initiatives are written out in full.
 
 Then offer the HTML visualization (universal convention).
 
