@@ -106,7 +106,7 @@ python3 evals/run.py --input <deliverable> --all
 
 Give an agent the repository and `questions.jsonl` with keys stripped. Collect one answer per item. Record: model, skill version, KB commit, date. Nothing else is allowed to vary between runs — that is the whole discipline of the loop.
 
-### B3. Judge — `70_golden_set/JUDGE.md`
+### B3. Judge — the protocol lives in `70_golden_set/RUN.md`
 
 Given the question, the key, and two answers labelled A and B with the order randomised per item: pick the better one or declare a tie, plus one line of reason. **A different model than the one that produced the candidate.** No numeric score — the reason absolute scoring was dropped is that it drifts between model versions and makes "8.78 → 8.6" uninterpretable.
 
@@ -139,7 +139,6 @@ The current set is too easy in three specific ways, and the harness inherits eve
 |---|---|---|
 | No near-traps → over-refusal invisible | ~10 items that look unanswerable and are answerable, spread across the five companies | small |
 | No multi-turn items | ~10 three-turn items where turn 3 tests consistency with turn 1 | medium |
-| No cross-file contradiction probes | ~8 items of the form "file A says X, file B says Y — which holds" | small, and this session showed seven real ones exist |
 | No "correct answer the sponsor does not want" items | ~5 items where the right move is to reject the premise and keep the room | medium, hardest to key |
 
 This phase is content authoring, not engineering. It can lag Phases 1–2 without blocking them.
@@ -158,6 +157,21 @@ This phase is content authoring, not engineering. It can lag Phases 1–2 withou
 | TTL | The set is reviewed when `check_rot.py` flags more than 15 items, or every six months, whichever comes first |
 
 ---
+
+## Pruning pass — what was removed after the first run
+
+Applied the CDO judge's rationality dimension to the harness itself. Four things failed the reader test and are gone:
+
+| Removed | Reason |
+|---|---|
+| Invariants `CORE-BUR-01`, `CORE-BUR-02` | duplicated dimension 8 of the CDO judge, which runs on every deliverable anyway |
+| Pairwise judging of all 100 items | the automated metrics separate 65 of them on their own. Judging is escalation-only now; `check_completeness.py --needs-judging` produces the list |
+| The holistic 0–10 rubric as a running metric | drifts between model versions, so a change in it cannot be read. Kept in `scores.md` as history, since its findings stand |
+| A planned golden-set item type for cross-file contradictions | duplicated a cheaper method — seven real contradictions were found by reading files against each other, with no eval involved |
+
+19 invariants → 17. 100 judgments per run → ~35. Two scoring systems → one. The harness now retires more than it adds, which is the test it applies to everything else.
+
+**Do not re-add these without a reason that did not exist before.** Each was removed with its argument recorded; re-adding one silently is how a harness grows back into ceremony.
 
 ## What this deliberately does not measure
 

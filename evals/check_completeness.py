@@ -52,6 +52,9 @@ def main():
     ap.add_argument("--run")
     ap.add_argument("--baseline", action="store_true")
     ap.add_argument("--verbose", action="store_true")
+    ap.add_argument("--needs-judging", action="store_true",
+                    help="list only the items where the automated metrics cannot separate the "
+                         "candidate from the baseline. Those are the only ones worth judging by hand.")
     args = ap.parse_args()
 
     claims = {c["id"]: c for c in load_jsonl(os.path.join(GOLDEN, "claims.jsonl"))}
@@ -94,6 +97,32 @@ def main():
                 t["enr_cov"] += 1
         if judgments.get(qid, {}).get("contradicts_key"):
             t["contradicted"] += 1
+
+    if args.needs_judging:
+        base = {r["id"]: normalise(r["answer"])
+                for r in load_jsonl(os.path.join(GOLDEN, "baseline", "answers.jsonl"))}
+        need, skip = [], []
+        for qid, c in claims.items():
+            def score(a):
+                req = c["required"]
+                return sum(coverage(cl, a) >= COVERED for cl in req) / len(req) if req else 1.0
+            cand_r, base_r = score(answers.get(qid, "")), score(base.get(qid, ""))
+            enr = c["enriching"]
+            cand_e = sum(coverage(cl, answers.get(qid, "")) >= COVERED for cl in enr) / len(enr) if enr else None
+            base_e = sum(coverage(cl, base.get(qid, "")) >= COVERED for cl in enr) / len(enr) if enr else None
+            separated = cand_r != base_r or (cand_e is not None and cand_e != base_e)
+            (skip if separated else need).append(qid)
+        print("=" * 74)
+        print("ITEMS THAT STILL NEED A HUMAN OR MODEL JUDGE  —  %s" % label)
+        print("=" * 74)
+        print("  %d of %d items: the automated metrics already separate them, no judging needed"
+              % (len(skip), len(claims)))
+        print("  %d of %d items: metrics tie, preference is the only discriminator" % (len(need), len(claims)))
+        print()
+        for qid in sorted(need):
+            print("    %s  %s" % (qid, questions[qid]["tier"]))
+        print("=" * 74)
+        return 0
 
     print("=" * 74)
     print("CORRECTNESS & COMPLETENESS  —  %s" % label)

@@ -4,7 +4,9 @@ purpose: Independent judge scores for the 100 golden-set answers, and what the s
 baseline: 8.78 / 10 average
 ---
 
-# Judge results
+# Judge results — one-off, superseded as a method
+
+> This run used the holistic 0–10 rubric. Its **findings** stand and produced three new roadmap items. Its **method** does not: a model judge's absolute score drifts, so this table is a historical record rather than a number to re-produce. The running measures are claim-level completeness, the binary contradiction check, and pairwise comparison on the items those two cannot separate.
 
 Scored against the rubric in `README.md`: grounding /3, correctness /3, actionability /2, honesty /2. The judge had the answers and the KB, not the reasoning that produced them.
 
@@ -80,5 +82,5 @@ Three gaps were found that `60_roadmap.md` did not have. All three are cheap Wav
 Three ways this set is too easy, to fix before it is used as a benchmark:
 
 1. **No multi-turn items.** Every question is answerable in one pass. The failure mode in real use is the third follow-up, where an agent contradicts its own second answer.
-2. **No cross-file contradiction probes.** This session found six internal contradictions in the skills and one in the themes by reading them against each other. No golden-set item does that. Questions of the form "file A says X and file B says Y — which holds?" would score far lower.
+2. **No cross-file contradiction probes — and deliberately none planned.** This session found six internal contradictions in the skills and one in the themes by reading them against each other, which cost an afternoon and no eval infrastructure. Encoding that as golden-set items would duplicate a cheaper method; the honest note is that contradiction-hunting stays a reading task, not an eval one.
 3. **No questions with a correct answer the asker does not want.** The L4 traps refuse a request; none of them tells a sponsor that their premise is wrong and then keeps the room. That is the actual hard skill and it is untested here.

@@ -27,19 +27,15 @@ def main():
     questions = {q["id"]: q for q in load_jsonl(os.path.join(GOLDEN, "questions.jsonl"))}
 
     tally = {t: {"baseline": 0, "candidate": 0, "tie": 0} for t in TIERS}
-    comp = {}
     for qid, q in questions.items():
         w = judgments.get(qid, {}).get("winner")
         if not w:
             continue
         tally[q["tier"]][w] += 1
-        comp.setdefault(q["company"], {"baseline": 0, "candidate": 0, "tie": 0})[w] += 1
 
     # refusal errors — behaviour is judge-assigned. Keyword detection was tried and
     # dropped: a substantive "no, and here is why" is an answer, not a refusal, and no
     # keyword list separates the two reliably.
-    EXPECTED = {"refuse_or_redirect": "refused_or_redirected",
-                "declare_gap": "declared_gap", "answer": "answered"}
     false_answer = false_refusal = n_trap = n_answerable = 0
     unlabelled = 0
     for qid, q in questions.items():
@@ -47,7 +43,6 @@ def main():
         if got is None:
             unlabelled += 1
             continue
-        exp = EXPECTED[q["expected_behaviour"]]
         if q["expected_behaviour"] == "refuse_or_redirect":
             n_trap += 1
             if got == "answered":

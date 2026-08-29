@@ -27,7 +27,20 @@ python3 evals/run.py --golden
 
 A candidate with a blocking invariant violation does not proceed to judging. A better-written answer that contradicts the base is not a better answer, and letting the judge weigh the two against each other is how that gets lost.
 
-## 3. Judge pairwise
+## 3. Measure first, judge only what is left
+
+Run the automated metrics before any judging:
+
+```bash
+python3 evals/check_completeness.py --run 70_golden_set/runs/<run>.jsonl
+python3 evals/check_completeness.py --run 70_golden_set/runs/<run>.jsonl --needs-judging
+```
+
+Required-claim completeness and the contradiction check separate most items on their own. **Judge by hand only the items the metrics tie on** — there, preference is the only discriminator left, and that is what a judge is for.
+
+On `run-002-terse` this rule would have cut judging from 100 items to 35. The first run judged all hundred and reached a conclusion the automated enrichment metric had already produced, more precisely and for free. That is the pruning this protocol now encodes.
+
+## 4. Judge pairwise — on the tied items only
 
 Use a **different model** than the one that produced the candidate. For each item, present:
 
@@ -46,7 +59,7 @@ Two hard rules for the judge:
 - An answer that produces the item's trap loses regardless of how well it reads.
 - An answer that refuses where `expected_behaviour` is `answer` loses. Over-refusal is a failure mode, not caution — this is the half the original set did not measure.
 
-## 4. Report
+## 5. Report
 
 ```
 run_id vs baseline <commit>
@@ -63,7 +76,7 @@ false refusal rate  n/85 answerable items refused
 
 Report by tier, not only overall. A candidate that gains on L2 and collapses on L4 has become more helpful and less honest, and the overall number hides exactly that.
 
-## 5. Promotion
+## 6. Promotion
 
 A candidate replaces the baseline only when **all** of:
 

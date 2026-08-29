@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "note": "Invariants the skills must never violate. Split into a reusable core pack and a DG-specific pack so the harness can be extracted to other skills without rewriting. Detectors: regex_forbid (pattern must not appear on a line unless an exemption word is on the same line), regex_require (pattern must appear somewhere), structural (handled by check_structure.py), llm (fixed binary classifier, not auto-run — reported as unchecked so it is never silently skipped).",
+  "note": "Invariants the skills must never violate. Split into a reusable core pack and a DG-specific pack so the harness can be extracted to other skills without rewriting. Detectors: regex_forbid (pattern must not appear on a line unless an exemption word is on the same line), regex_require (pattern must appear somewhere), structural (handled by check_structure.py), llm (fixed binary classifier, not auto-run — reported as unchecked so it is never silently skipped). Two invariants were removed after a pruning pass: CORE-BUR-01 (every artefact has a named reader) and CORE-BUR-02 (retires as much as it creates). Both duplicate dimension 8 of the CDO judge in skills/dg-strategy/SKILL.md, which runs on every deliverable anyway. Checking the same thing twice does not make it truer.",
   "packs": {
     "core": [
       {
@@ -73,22 +73,6 @@
         "severity": "serious",
         "detector": "structural",
         "source": "skills/dg-strategy/SKILL.md"
-      },
-      {
-        "id": "CORE-BUR-01",
-        "statement": "Every artefact proposed has a named reader and a decision that changes without it",
-        "severity": "serious",
-        "detector": "llm",
-        "source": "skills/dg-strategy/SKILL.md",
-        "prompt": "List every artefact this document proposes to create (policy, register, matrix, status, body, report). For each, does the document name who reads it and what decision changes if it does not exist? Answer with the count of artefacts failing that test."
-      },
-      {
-        "id": "CORE-BUR-02",
-        "statement": "The plan retires at least as many artefacts as it creates, or states the imbalance explicitly",
-        "severity": "serious",
-        "detector": "llm",
-        "source": "skills/dg-strategy/SKILL.md",
-        "prompt": "Does this document account for what it retires as well as what it creates? Answer yes or no."
       }
     ],
     "dg": [
