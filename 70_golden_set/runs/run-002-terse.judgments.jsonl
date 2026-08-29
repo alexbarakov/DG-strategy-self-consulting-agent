@@ -1,100 +1,100 @@
-{"id": "nordwind-01", "winner": "baseline", "reason": "drops the corollary that DG not serving goals may not be needed", "behaviour": "answered"}
-{"id": "nordwind-02", "winner": "baseline", "reason": "loses 'they live and they don't break', the memorable finding", "behaviour": "answered"}
-{"id": "nordwind-03", "winner": "tie", "reason": "equivalent, tighter", "behaviour": "answered"}
-{"id": "nordwind-04", "winner": "baseline", "reason": "states the punchline without why the custodian works", "behaviour": "answered"}
-{"id": "nordwind-05", "winner": "tie", "reason": "all three reasons survive compression", "behaviour": "answered"}
-{"id": "nordwind-06", "winner": "baseline", "reason": "loses 'that registry IS eighty percent of the governance required'", "behaviour": "answered"}
-{"id": "nordwind-07", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "nordwind-08", "winner": "baseline", "reason": "gap declared but the archetype and the 30-year anti-case are gone", "behaviour": "declared_gap"}
-{"id": "nordwind-09", "winner": "candidate", "reason": "punchier and equally actionable; baseline hedges with 'both'", "behaviour": "answered"}
-{"id": "nordwind-10", "winner": "baseline", "reason": "loses 'benefit often lower than the cost', the sharpest line", "behaviour": "answered"}
-{"id": "nordwind-11", "winner": "tie", "reason": "floor and warning both survive", "behaviour": "answered"}
-{"id": "nordwind-12", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "nordwind-13", "winner": "baseline", "reason": "loses 'chaos is survivable, 2-3 years' and the scoping consequence", "behaviour": "answered"}
-{"id": "nordwind-14", "winner": "baseline", "reason": "states the rule without the mechanism a CDO needs to act on it", "behaviour": "answered"}
-{"id": "nordwind-15", "winner": "baseline", "reason": "complete but loses the failure the ordering prevents", "behaviour": "answered"}
-{"id": "nordwind-16", "winner": "baseline", "reason": "drops 'data management sync' and the certification note", "behaviour": "answered"}
-{"id": "nordwind-17", "winner": "baseline", "reason": "loses 'only the direct economy is defensible' and the modest-total warning", "behaviour": "answered"}
-{"id": "nordwind-18", "winner": "baseline", "reason": "refuses correctly but offers no replacement structure", "behaviour": "refused_or_redirected"}
-{"id": "nordwind-19", "winner": "baseline", "reason": "refuses without naming the alternative artefact", "behaviour": "refused_or_redirected"}
-{"id": "nordwind-20", "winner": "baseline", "reason": "has the method, loses 'returns not-now before a shortlist'", "behaviour": "refused_or_redirected"}
-{"id": "kestrel-01", "winner": "tie", "reason": "equivalent, tighter", "behaviour": "answered"}
-{"id": "kestrel-02", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "kestrel-03", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "kestrel-04", "winner": "baseline", "reason": "says 'thin' without pointing at the roadmap entry", "behaviour": "answered"}
-{"id": "kestrel-05", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "kestrel-06", "winner": "candidate", "reason": "all four numbers survive; compression helps when numbers carry the answer", "behaviour": "answered"}
-{"id": "kestrel-07", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "kestrel-08", "winner": "baseline", "reason": "loses 'lost trust is not recoverable on a second attempt'", "behaviour": "answered"}
-{"id": "kestrel-09", "winner": "baseline", "reason": "loses the sales/revenue case that makes it concrete", "behaviour": "answered"}
-{"id": "kestrel-10", "winner": "baseline", "reason": "loses the ratchet, which is the mechanism", "behaviour": "answered"}
-{"id": "kestrel-11", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "kestrel-12", "winner": "baseline", "reason": "loses the AI-prerequisite reframe", "behaviour": "answered"}
-{"id": "kestrel-13", "winner": "baseline", "reason": "loses 'depth over breadth is defensible to a board'", "behaviour": "answered"}
-{"id": "kestrel-14", "winner": "baseline", "reason": "drops the audit-trail third point entirely", "behaviour": "answered"}
-{"id": "kestrel-15", "winner": "candidate", "reason": "equivalent and tighter", "behaviour": "answered"}
-{"id": "kestrel-16", "winner": "baseline", "reason": "loses the legitimate no from the field evidence", "behaviour": "answered"}
-{"id": "kestrel-17", "winner": "baseline", "reason": "loses the named unresolved dispute and the measurement worth taking", "behaviour": "answered"}
-{"id": "kestrel-18", "winner": "baseline", "reason": "refuses cleanly but does not show what is being refused", "behaviour": "refused_or_redirected"}
-{"id": "kestrel-19", "winner": "baseline", "reason": "loses the three public anchors", "behaviour": "refused_or_redirected"}
-{"id": "kestrel-20", "winner": "tie", "reason": "splits scope explicitly, tighter", "behaviour": "refused_or_redirected"}
-{"id": "meridian-01", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "meridian-02", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "meridian-03", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "meridian-04", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "meridian-05", "winner": "candidate", "reason": "equivalent and tighter", "behaviour": "answered"}
-{"id": "meridian-06", "winner": "baseline", "reason": "loses the performance-review test, which is the actionable part", "behaviour": "answered"}
-{"id": "meridian-07", "winner": "baseline", "reason": "loses 'writing off a purchased catalog is politically expensive'", "behaviour": "answered"}
-{"id": "meridian-08", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "meridian-09", "winner": "tie", "reason": "both flag the A4 gap", "behaviour": "declared_gap"}
-{"id": "meridian-10", "winner": "baseline", "reason": "loses what actually kills these projects", "behaviour": "declared_gap"}
-{"id": "meridian-11", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "meridian-12", "winner": "baseline", "reason": "loses 'alerting aimed at nobody is the same as no check'", "behaviour": "answered"}
-{"id": "meridian-13", "winner": "baseline", "reason": "loses the one peer who measured — the actionable half", "behaviour": "answered"}
-{"id": "meridian-14", "winner": "baseline", "reason": "loses the fintech-cut evidence and the structural defence", "behaviour": "answered"}
-{"id": "meridian-15", "winner": "baseline", "reason": "loses why a regulatory finding outranks the CDO title", "behaviour": "answered"}
-{"id": "meridian-16", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "meridian-17", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "meridian-18", "winner": "tie", "reason": "equivalent", "behaviour": "refused_or_redirected"}
-{"id": "meridian-19", "winner": "tie", "reason": "both refuse with the roadmap pointer", "behaviour": "refused_or_redirected"}
-{"id": "meridian-20", "winner": "baseline", "reason": "loses why the framing itself is the finding", "behaviour": "refused_or_redirected"}
-{"id": "verdant-01", "winner": "baseline", "reason": "loses why it is a funnel rather than a clean-up", "behaviour": "answered"}
-{"id": "verdant-02", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "verdant-03", "winner": "baseline", "reason": "quotes the run figures without flagging them as one company's single run", "behaviour": "answered"}
-{"id": "verdant-04", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "verdant-05", "winner": "candidate", "reason": "equivalent and tighter", "behaviour": "answered"}
-{"id": "verdant-06", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "verdant-07", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "verdant-08", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "verdant-09", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "verdant-10", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "verdant-11", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "verdant-12", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "verdant-13", "winner": "baseline", "reason": "loses the ratchet quote", "behaviour": "answered"}
-{"id": "verdant-14", "winner": "baseline", "reason": "loses the named tension between two KB rules and its resolution", "behaviour": "answered"}
-{"id": "verdant-15", "winner": "baseline", "reason": "loses the corollary that no catalog is not blocking certification", "behaviour": "answered"}
-{"id": "verdant-16", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "verdant-17", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "verdant-18", "winner": "tie", "reason": "equivalent", "behaviour": "refused_or_redirected"}
-{"id": "verdant-19", "winner": "baseline", "reason": "loses 'if politically required, keep it to one page'", "behaviour": "refused_or_redirected"}
-{"id": "verdant-20", "winner": "tie", "reason": "equivalent", "behaviour": "refused_or_redirected"}
-{"id": "helios-01", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "helios-02", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "helios-03", "winner": "baseline", "reason": "omits the twelve statements, which are the substance of the question", "behaviour": "answered"}
-{"id": "helios-04", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "helios-05", "winner": "tie", "reason": "equivalent honesty, tighter", "behaviour": "answered"}
-{"id": "helios-06", "winner": "baseline", "reason": "loses the eighteen-month lever, the only funded door", "behaviour": "answered"}
-{"id": "helios-07", "winner": "baseline", "reason": "loses the perimeter scoping detail", "behaviour": "answered"}
-{"id": "helios-08", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "helios-09", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "helios-10", "winner": "tie", "reason": "equivalent", "behaviour": "declared_gap"}
-{"id": "helios-11", "winner": "baseline", "reason": "loses 'same work, two audiences' — the reframe that makes it fundable", "behaviour": "answered"}
-{"id": "helios-12", "winner": "tie", "reason": "equivalent", "behaviour": "answered"}
-{"id": "helios-13", "winner": "baseline", "reason": "loses the stronger alternative move", "behaviour": "answered"}
-{"id": "helios-14", "winner": "baseline", "reason": "loses the warning that reconciling the whole register never ends", "behaviour": "answered"}
-{"id": "helios-15", "winner": "tie", "reason": "both admit the limit", "behaviour": "answered"}
-{"id": "helios-16", "winner": "baseline", "reason": "loses why reversing the order fails", "behaviour": "answered"}
-{"id": "helios-17", "winner": "baseline", "reason": "loses 'greying out most AI categories is itself the output'", "behaviour": "answered"}
-{"id": "helios-18", "winner": "tie", "reason": "equivalent", "behaviour": "refused_or_redirected"}
-{"id": "helios-19", "winner": "tie", "reason": "equivalent", "behaviour": "refused_or_redirected"}
-{"id": "helios-20", "winner": "baseline", "reason": "loses that five of eight gaps came from a Helios-shaped company", "behaviour": "refused_or_redirected"}
+{"id": "nordwind-01", "winner": "baseline", "reason": "drops the corollary that DG not serving goals may not be needed", "behaviour": "answered", "contradicts_key": false}
+{"id": "nordwind-02", "winner": "baseline", "reason": "loses 'they live and they don't break', the memorable finding", "behaviour": "answered", "contradicts_key": false}
+{"id": "nordwind-03", "winner": "tie", "reason": "equivalent, tighter", "behaviour": "answered", "contradicts_key": false}
+{"id": "nordwind-04", "winner": "baseline", "reason": "states the punchline without why the custodian works", "behaviour": "answered", "contradicts_key": false}
+{"id": "nordwind-05", "winner": "tie", "reason": "all three reasons survive compression", "behaviour": "answered", "contradicts_key": false}
+{"id": "nordwind-06", "winner": "baseline", "reason": "loses 'that registry IS eighty percent of the governance required'", "behaviour": "answered", "contradicts_key": false}
+{"id": "nordwind-07", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "nordwind-08", "winner": "baseline", "reason": "gap declared but the archetype and the 30-year anti-case are gone", "behaviour": "declared_gap", "contradicts_key": false}
+{"id": "nordwind-09", "winner": "candidate", "reason": "punchier and equally actionable; baseline hedges with 'both'", "behaviour": "answered", "contradicts_key": false, "contradiction_note": "narrows 'both, and the DG half is tractable' to the DG half alone; a simplification, not a contradiction"}
+{"id": "nordwind-10", "winner": "baseline", "reason": "loses 'benefit often lower than the cost', the sharpest line", "behaviour": "answered", "contradicts_key": false}
+{"id": "nordwind-11", "winner": "tie", "reason": "floor and warning both survive", "behaviour": "answered", "contradicts_key": false}
+{"id": "nordwind-12", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "nordwind-13", "winner": "baseline", "reason": "loses 'chaos is survivable, 2-3 years' and the scoping consequence", "behaviour": "answered", "contradicts_key": false}
+{"id": "nordwind-14", "winner": "baseline", "reason": "states the rule without the mechanism a CDO needs to act on it", "behaviour": "answered", "contradicts_key": false}
+{"id": "nordwind-15", "winner": "baseline", "reason": "complete but loses the failure the ordering prevents", "behaviour": "answered", "contradicts_key": false}
+{"id": "nordwind-16", "winner": "baseline", "reason": "drops 'data management sync' and the certification note", "behaviour": "answered", "contradicts_key": false}
+{"id": "nordwind-17", "winner": "baseline", "reason": "loses 'only the direct economy is defensible' and the modest-total warning", "behaviour": "answered", "contradicts_key": false}
+{"id": "nordwind-18", "winner": "baseline", "reason": "refuses correctly but offers no replacement structure", "behaviour": "refused_or_redirected", "contradicts_key": false}
+{"id": "nordwind-19", "winner": "baseline", "reason": "refuses without naming the alternative artefact", "behaviour": "refused_or_redirected", "contradicts_key": false}
+{"id": "nordwind-20", "winner": "baseline", "reason": "has the method, loses 'returns not-now before a shortlist'", "behaviour": "refused_or_redirected", "contradicts_key": false}
+{"id": "kestrel-01", "winner": "tie", "reason": "equivalent, tighter", "behaviour": "answered", "contradicts_key": false}
+{"id": "kestrel-02", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "kestrel-03", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "kestrel-04", "winner": "baseline", "reason": "says 'thin' without pointing at the roadmap entry", "behaviour": "answered", "contradicts_key": false}
+{"id": "kestrel-05", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "kestrel-06", "winner": "candidate", "reason": "all four numbers survive; compression helps when numbers carry the answer", "behaviour": "answered", "contradicts_key": false}
+{"id": "kestrel-07", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "kestrel-08", "winner": "baseline", "reason": "loses 'lost trust is not recoverable on a second attempt'", "behaviour": "answered", "contradicts_key": false}
+{"id": "kestrel-09", "winner": "baseline", "reason": "loses the sales/revenue case that makes it concrete", "behaviour": "answered", "contradicts_key": false}
+{"id": "kestrel-10", "winner": "baseline", "reason": "loses the ratchet, which is the mechanism", "behaviour": "answered", "contradicts_key": false}
+{"id": "kestrel-11", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "kestrel-12", "winner": "baseline", "reason": "loses the AI-prerequisite reframe", "behaviour": "answered", "contradicts_key": false}
+{"id": "kestrel-13", "winner": "baseline", "reason": "loses 'depth over breadth is defensible to a board'", "behaviour": "answered", "contradicts_key": false}
+{"id": "kestrel-14", "winner": "baseline", "reason": "drops the audit-trail third point entirely", "behaviour": "answered", "contradicts_key": false}
+{"id": "kestrel-15", "winner": "candidate", "reason": "equivalent and tighter", "behaviour": "answered", "contradicts_key": false}
+{"id": "kestrel-16", "winner": "baseline", "reason": "loses the legitimate no from the field evidence", "behaviour": "answered", "contradicts_key": false}
+{"id": "kestrel-17", "winner": "baseline", "reason": "loses the named unresolved dispute and the measurement worth taking", "behaviour": "answered", "contradicts_key": false}
+{"id": "kestrel-18", "winner": "baseline", "reason": "refuses cleanly but does not show what is being refused", "behaviour": "refused_or_redirected", "contradicts_key": false}
+{"id": "kestrel-19", "winner": "baseline", "reason": "loses the three public anchors", "behaviour": "refused_or_redirected", "contradicts_key": false}
+{"id": "kestrel-20", "winner": "tie", "reason": "splits scope explicitly, tighter", "behaviour": "refused_or_redirected", "contradicts_key": false}
+{"id": "meridian-01", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "meridian-02", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "meridian-03", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "meridian-04", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "meridian-05", "winner": "candidate", "reason": "equivalent and tighter", "behaviour": "answered", "contradicts_key": false}
+{"id": "meridian-06", "winner": "baseline", "reason": "loses the performance-review test, which is the actionable part", "behaviour": "answered", "contradicts_key": false}
+{"id": "meridian-07", "winner": "baseline", "reason": "loses 'writing off a purchased catalog is politically expensive'", "behaviour": "answered", "contradicts_key": false}
+{"id": "meridian-08", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "meridian-09", "winner": "tie", "reason": "both flag the A4 gap", "behaviour": "declared_gap", "contradicts_key": false}
+{"id": "meridian-10", "winner": "baseline", "reason": "loses what actually kills these projects", "behaviour": "declared_gap", "contradicts_key": false}
+{"id": "meridian-11", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "meridian-12", "winner": "baseline", "reason": "loses 'alerting aimed at nobody is the same as no check'", "behaviour": "answered", "contradicts_key": false}
+{"id": "meridian-13", "winner": "baseline", "reason": "loses the one peer who measured — the actionable half", "behaviour": "answered", "contradicts_key": false}
+{"id": "meridian-14", "winner": "baseline", "reason": "loses the fintech-cut evidence and the structural defence", "behaviour": "answered", "contradicts_key": false}
+{"id": "meridian-15", "winner": "baseline", "reason": "loses why a regulatory finding outranks the CDO title", "behaviour": "answered", "contradicts_key": false}
+{"id": "meridian-16", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "meridian-17", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "meridian-18", "winner": "tie", "reason": "equivalent", "behaviour": "refused_or_redirected", "contradicts_key": false}
+{"id": "meridian-19", "winner": "tie", "reason": "both refuse with the roadmap pointer", "behaviour": "refused_or_redirected", "contradicts_key": false}
+{"id": "meridian-20", "winner": "baseline", "reason": "loses why the framing itself is the finding", "behaviour": "refused_or_redirected", "contradicts_key": false}
+{"id": "verdant-01", "winner": "baseline", "reason": "loses why it is a funnel rather than a clean-up", "behaviour": "answered", "contradicts_key": false}
+{"id": "verdant-02", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "verdant-03", "winner": "baseline", "reason": "quotes the run figures without flagging them as one company's single run", "behaviour": "answered", "contradicts_key": false}
+{"id": "verdant-04", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "verdant-05", "winner": "candidate", "reason": "equivalent and tighter", "behaviour": "answered", "contradicts_key": false}
+{"id": "verdant-06", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "verdant-07", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "verdant-08", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "verdant-09", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "verdant-10", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "verdant-11", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "verdant-12", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "verdant-13", "winner": "baseline", "reason": "loses the ratchet quote", "behaviour": "answered", "contradicts_key": false}
+{"id": "verdant-14", "winner": "baseline", "reason": "loses the named tension between two KB rules and its resolution", "behaviour": "answered", "contradicts_key": false}
+{"id": "verdant-15", "winner": "baseline", "reason": "loses the corollary that no catalog is not blocking certification", "behaviour": "answered", "contradicts_key": false}
+{"id": "verdant-16", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "verdant-17", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "verdant-18", "winner": "tie", "reason": "equivalent", "behaviour": "refused_or_redirected", "contradicts_key": false}
+{"id": "verdant-19", "winner": "baseline", "reason": "loses 'if politically required, keep it to one page'", "behaviour": "refused_or_redirected", "contradicts_key": false}
+{"id": "verdant-20", "winner": "tie", "reason": "equivalent", "behaviour": "refused_or_redirected", "contradicts_key": false}
+{"id": "helios-01", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "helios-02", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "helios-03", "winner": "baseline", "reason": "omits the twelve statements, which are the substance of the question", "behaviour": "answered", "contradicts_key": false}
+{"id": "helios-04", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "helios-05", "winner": "tie", "reason": "equivalent honesty, tighter", "behaviour": "answered", "contradicts_key": false}
+{"id": "helios-06", "winner": "baseline", "reason": "loses the eighteen-month lever, the only funded door", "behaviour": "answered", "contradicts_key": false}
+{"id": "helios-07", "winner": "baseline", "reason": "loses the perimeter scoping detail", "behaviour": "answered", "contradicts_key": false}
+{"id": "helios-08", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "helios-09", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "helios-10", "winner": "tie", "reason": "equivalent", "behaviour": "declared_gap", "contradicts_key": false}
+{"id": "helios-11", "winner": "baseline", "reason": "loses 'same work, two audiences' — the reframe that makes it fundable", "behaviour": "answered", "contradicts_key": false}
+{"id": "helios-12", "winner": "tie", "reason": "equivalent", "behaviour": "answered", "contradicts_key": false}
+{"id": "helios-13", "winner": "baseline", "reason": "loses the stronger alternative move", "behaviour": "answered", "contradicts_key": false}
+{"id": "helios-14", "winner": "baseline", "reason": "loses the warning that reconciling the whole register never ends", "behaviour": "answered", "contradicts_key": false}
+{"id": "helios-15", "winner": "tie", "reason": "both admit the limit", "behaviour": "answered", "contradicts_key": false}
+{"id": "helios-16", "winner": "baseline", "reason": "loses why reversing the order fails", "behaviour": "answered", "contradicts_key": false}
+{"id": "helios-17", "winner": "baseline", "reason": "loses 'greying out most AI categories is itself the output'", "behaviour": "answered", "contradicts_key": false}
+{"id": "helios-18", "winner": "tie", "reason": "equivalent", "behaviour": "refused_or_redirected", "contradicts_key": false}
+{"id": "helios-19", "winner": "tie", "reason": "equivalent", "behaviour": "refused_or_redirected", "contradicts_key": false}
+{"id": "helios-20", "winner": "baseline", "reason": "loses that five of eight gaps came from a Helios-shaped company", "behaviour": "refused_or_redirected", "contradicts_key": false}

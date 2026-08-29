@@ -23,6 +23,31 @@ False answer rate 0/15 · false refusal rate 0/79 · loop A screen clean (96% ci
 
 **Promotion: rejected.** The rule is win ≥ loss on every tier. The candidate lost all four.
 
+### Correctness and completeness
+
+The pairwise result says which answer was preferred. It does not say whether the loser was wrong. The claim-level measure does, and it changes the conclusion.
+
+| | baseline | candidate | reading |
+|---|---|---|---|
+| Completeness — required claims | 97% | **96%** | inside the 3% measurement noise. Compression cost nothing essential |
+| Enrichment retained | 84% | **33%** | two thirds of the supporting material gone |
+| Correctness — no contradiction | 100% | **100%** | the candidate omits; it never contradicts |
+
+Per tier, enrichment is where the whole pairwise result lives:
+
+| tier | baseline enrichment | candidate enrichment | pairwise |
+|---|---|---|---|
+| L1 | 77% | 41% | 16 ties of 25 |
+| L2 | 82% | 40% | 19 ties of 35 |
+| L3 | 90% | **21%** | 5 ties of 25 |
+| L4 | 89% | **28%** | 7 ties of 15 |
+
+**The candidate lost without being wrong or incomplete.** Every required claim survived compression on every tier — L4 kept 100% of them. What it dropped was the enriching layer, and the drop is steepest exactly where the judge punished it hardest: L3 keeps a fifth of its enrichment and ties five times out of twenty-five.
+
+That reframes the earlier conclusion. Compression is not a correctness risk and not a completeness risk. It is a **persuasion** risk: the enriching claims are the evidence — *chaos is survivable for two or three years*, *the one peer who actually measured*, *a large fintech cut its entire DG team* — and an answer without them states the right conclusion with nothing behind it. A reader who already trusts you loses nothing. A sceptical CDO loses the reason to agree.
+
+So the length policy is keyed to audience rather than tier: an answer that must **inform** can be short; an answer that must **convince** carries its enrichment. That is a sharper rule than "L3 answers should be long", and it only became visible once the score was decomposed.
+
 ### What the shape says
 
 The interesting result is not that the candidate lost — it is *where*.
