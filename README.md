@@ -47,6 +47,7 @@ In every scenario the skill invites your existing documents (pain/landscape anal
 | `30_graph/graph.md` | Mermaid visual of the graph (renders on GitHub) |
 | `40_sources.md` | All external links with verification dates + the board's resource library |
 | `50_failure_catalog.md` | How DG programs actually die: 45 named failures in 7 families, with a symptom-triage table — start here when something feels wrong |
+| `70_golden_set/` | 100 grounded questions from five invented companies, with keys, traps and independent judge scores (baseline 8.78/10). A regression eval and a KB-coverage diagnostic — the low scores are a map of what the base is missing |
 | `51_numbers.md` | Every number in the KB (175 rows) with a reliability tag: `measured` / `benchmark` / `vendor` / `author-estimate` / `disputed` |
 | `52_questions.md` | Diagnostic question bank (81 questions) with what different answers mean — powers the CONSULT scenario |
 | `skills/dg-strategy/SKILL.md` | The strategy skill: CONSULT, FORM (build) and AUDIT (assess) modes |

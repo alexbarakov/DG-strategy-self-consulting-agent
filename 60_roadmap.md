@@ -6,7 +6,7 @@ source: gaps found by running the skill on a deliberately awkward case (regulate
 
 # Roadmap — what this knowledge base still needs
 
-This file exists because the KB was stress-tested rather than admired. A full FORM run against a regulated mid-size insurer with a legacy estate — the least comfortable case we could construct — surfaced eight areas where the base had no material and one structural assumption it never declared. What follows is the repair plan, ordered by whether it can be done from existing sources or needs the author's own practice.
+This file exists because the KB was stress-tested rather than admired. A full FORM run against a regulated mid-size insurer with a legacy estate — the least comfortable case we could construct — surfaced eight areas where the base had no material and one structural assumption it never declared. A second pass, the 100-question golden set in `70_golden_set/`, added three more Wave-A items and confirmed five of the existing ones by scoring below 7 on exactly the questions this file predicts will be weak. What follows is the repair plan, ordered by whether it can be done from existing sources or needs the author's own practice.
 
 The organizing principle stays the same as everywhere else here: **an honest gap beats a padded chapter**. Nothing on this list should be closed by generating plausible textbook content — that would destroy the one property that distinguishes this base from DMBOK.
 
@@ -28,6 +28,15 @@ The base teaches how to create governing bodies and how to avoid bureaucracy. It
 
 **A5. Regulatory lineage as its own use case.**
 Lineage is currently discussed through the catalog and through agents. The regulator's question — "show me where this number came from" — is a different requirement with a different acceptance criterion, and it is the single strongest budget lever a regulated company has. Fix: a subsection in `data-catalog.md` or a short standalone file, grounded in what the base already says about lineage plus the distinction between provenance-for-humans and provenance-for-audit.
+
+**A6. Accountability where consequence is impossible.**
+The whole roles model rests on time recorded in objectives, calibration, and the possibility that not doing the work costs something. In public-sector and tariff-regulated organisations none of that exists — nobody can be fired for slowness and objectives are not the currency. The only mechanism in the base that transfers is peer visibility (per-owner metrics shown in a standing monthly meeting). Fix: a short subsection in `roles-and-operating-model.md` on accountability without enforcement — visibility, external deadlines as a substitute for internal consequence, and an honest statement of where the model stops working. Found by golden-set item Helios Q15 (scored 6/10).
+
+**A7. Health score and DQ score are distinguished but never defined.**
+Both `maturity-and-metrics.md` and `bi-content-management.md` insist the two be kept apart in reporting, and neither defines either. An agent asked "what is a health score" assembles one from context. Fix: one paragraph each, in `bi-content-management.md`, with the input signals for health (usage, freshness, ownership, documentation, breakage history) and the boundary against DQ. Cheapest item on this list. Found by golden-set item Verdant Q5 (scored 7/10).
+
+**A8. Key-person risk is everywhere in the evidence and named nowhere.**
+The single DWH engineer who is the only one who can rebuild the mart, the departed employee whose scripts still clean the broker files, the mart that lives in one person's head — the pattern recurs across the field material and exists as no object in the base: not a failure-catalog entry, not a diagnostic question, not a governance target. Fix: a failure-catalog entry in the ownership family plus a question in `52_questions.md`, since "what happens when this person leaves" is one of the cheapest diagnostics available and is currently absent. Found by golden-set item Nordwind Q9 (scored 7/10).
 
 ## Wave B — needs the author's own practice, not generation
 
@@ -59,4 +68,4 @@ These are real subject gaps. Each should be filled by interview, not by writing.
 
 ## Sequencing
 
-Wave A first — it is cheap, needs nothing new, and fixes the framing that currently mis-serves half the potential readers. Wave C1 next, because it converts existing knowledge into executable form. Wave B only where the author has practice, in interview format, one topic at a time.
+Wave A first — it is cheap, needs nothing new, and fixes the framing that currently mis-serves half the potential readers. Within Wave A, A7 and A8 are the smallest and were the most visible in the golden-set run; A6 needs a paragraph of thought rather than research. Wave C1 next, because it converts existing knowledge into executable form. Wave B only where the author has practice, in interview format, one topic at a time.
