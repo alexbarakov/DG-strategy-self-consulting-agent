@@ -1,0 +1,100 @@
+{"id": "nordwind-01", "company": "nordwind", "tier": "L1", "topics": ["getting-started"], "question": "What is data governance, in one sentence, without DMBOK vocabulary?", "expected_behaviour": "answer"}
+{"id": "nordwind-02", "company": "nordwind", "tier": "L1", "topics": ["getting-started"], "question": "What is \"common-sense DG\" and how is it different from a DG program?", "expected_behaviour": "answer"}
+{"id": "nordwind-03", "company": "nordwind", "tier": "L1", "topics": ["getting-started"], "question": "What is \"natural DG\"?", "expected_behaviour": "answer"}
+{"id": "nordwind-04", "company": "nordwind", "tier": "L1", "topics": ["roles"], "question": "Owner, steward, custodian — what is the difference?", "expected_behaviour": "answer"}
+{"id": "nordwind-05", "company": "nordwind", "tier": "L1", "topics": ["getting-started"], "question": "What is a DG MVP and why run one if approval would be easy?", "expected_behaviour": "answer"}
+{"id": "nordwind-06", "company": "nordwind", "tier": "L2", "topics": ["getting-started"], "question": "The CEO said \"look into data governance\". Where do we start?", "expected_behaviour": "answer"}
+{"id": "nordwind-07", "company": "nordwind", "tier": "L2", "topics": ["getting-started"], "question": "How do we test whether we need a program at all?", "expected_behaviour": "answer"}
+{"id": "nordwind-08", "company": "nordwind", "tier": "L2", "topics": ["mdm", "gap"], "question": "Three WMS systems with no common master. Is that a reason to start MDM?", "expected_behaviour": "declare_gap"}
+{"id": "nordwind-09", "company": "nordwind", "tier": "L2", "topics": ["roles"], "question": "Our only DWH engineer is a single point of failure. Is that a DG problem or an HR problem?", "expected_behaviour": "answer"}
+{"id": "nordwind-10", "company": "nordwind", "tier": "L2", "topics": ["catalog"], "question": "A vendor is pitching us a data catalog. Now?", "expected_behaviour": "answer"}
+{"id": "nordwind-11", "company": "nordwind", "tier": "L2", "topics": ["dq"], "question": "Where do we start on data quality from zero?", "expected_behaviour": "answer"}
+{"id": "nordwind-12", "company": "nordwind", "tier": "L2", "topics": ["roles"], "question": "Who should be on the MVP team?", "expected_behaviour": "answer"}
+{"id": "nordwind-13", "company": "nordwind", "tier": "L3", "topics": ["getting-started"], "question": "Our business model does not really depend on data. Does that change the answer?", "expected_behaviour": "answer"}
+{"id": "nordwind-14", "company": "nordwind", "tier": "L3", "topics": ["getting-started"], "question": "Money would probably be given if we asked. Should we ask?", "expected_behaviour": "answer"}
+{"id": "nordwind-15", "company": "nordwind", "tier": "L3", "topics": ["certification"], "question": "Certify marts, reports or metrics first?", "expected_behaviour": "answer"}
+{"id": "nordwind-16", "company": "nordwind", "tier": "L3", "topics": ["naming"], "question": "What should we call this so it is not rejected?", "expected_behaviour": "answer"}
+{"id": "nordwind-17", "company": "nordwind", "tier": "L3", "topics": ["business-case"], "question": "We have no incident to build a case on. How do we build one?", "expected_behaviour": "answer"}
+{"id": "nordwind-18", "company": "nordwind", "tier": "L4", "topics": ["trap", "roi"], "question": "Just give us the ROI number for implementing DG at our size.", "expected_behaviour": "refuse_or_redirect"}
+{"id": "nordwind-19", "company": "nordwind", "tier": "L4", "topics": ["trap", "frameworks"], "question": "Draw us a three-year target data architecture.", "expected_behaviour": "refuse_or_redirect"}
+{"id": "nordwind-20", "company": "nordwind", "tier": "L4", "topics": ["trap", "catalog"], "question": "Which catalog vendor should we buy?", "expected_behaviour": "refuse_or_redirect"}
+{"id": "kestrel-01", "company": "kestrel", "tier": "L1", "topics": ["semantic-layer"], "question": "What is a semantic layer, in the terms this base uses?", "expected_behaviour": "answer"}
+{"id": "kestrel-02", "company": "kestrel", "tier": "L1", "topics": ["context-governance"], "question": "What is context governance and how is it not data governance?", "expected_behaviour": "answer"}
+{"id": "kestrel-03", "company": "kestrel", "tier": "L1", "topics": ["context-governance"], "question": "What is a Context Unit and what is a passport?", "expected_behaviour": "answer"}
+{"id": "kestrel-04", "company": "kestrel", "tier": "L1", "topics": ["llm-architecture"], "question": "What are the loops A–E?", "expected_behaviour": "answer"}
+{"id": "kestrel-05", "company": "kestrel", "tier": "L1", "topics": ["context-governance"], "question": "What is the verify gate?", "expected_behaviour": "answer"}
+{"id": "kestrel-06", "company": "kestrel", "tier": "L2", "topics": ["semantic-layer", "evals"], "question": "Our AI prototype answered 11 of 15 questions correctly. Is that ready to ship?", "expected_behaviour": "answer"}
+{"id": "kestrel-07", "company": "kestrel", "tier": "L2", "topics": ["semantic-layer"], "question": "Six definitions of retention across squads. Fix the definitions or build the layer?", "expected_behaviour": "answer"}
+{"id": "kestrel-08", "company": "kestrel", "tier": "L2", "topics": ["kill-gates"], "question": "Can we skip the semantic layer and go straight to the agent?", "expected_behaviour": "answer"}
+{"id": "kestrel-09", "company": "kestrel", "tier": "L2", "topics": ["definitions"], "question": "Marketing attribution disagrees with finance by 8%. Governance problem or a modelling problem?", "expected_behaviour": "answer"}
+{"id": "kestrel-10", "company": "kestrel", "tier": "L2", "topics": ["culture"], "question": "Our culture rejects process. How do we introduce anything?", "expected_behaviour": "answer"}
+{"id": "kestrel-11", "company": "kestrel", "tier": "L2", "topics": ["dkb"], "question": "Should we build a knowledge base for the agent, and out of what?", "expected_behaviour": "answer"}
+{"id": "kestrel-12", "company": "kestrel", "tier": "L2", "topics": ["certification"], "question": "What does certification mean for us if we have no catalog?", "expected_behaviour": "answer"}
+{"id": "kestrel-13", "company": "kestrel", "tier": "L3", "topics": ["deadline"], "question": "The CPO wants the assistant live in one quarter and has told the board. What now?", "expected_behaviour": "answer"}
+{"id": "kestrel-14", "company": "kestrel", "tier": "L3", "topics": ["ai-governance"], "question": "Agents will start querying the warehouse. What breaks?", "expected_behaviour": "answer"}
+{"id": "kestrel-15", "company": "kestrel", "tier": "L3", "topics": ["semantic-layer"], "question": "Is a company-wide metric tree worth building?", "expected_behaviour": "answer"}
+{"id": "kestrel-16", "company": "kestrel", "tier": "L3", "topics": ["catalog"], "question": "Do we need a data catalog at 140 SQL writers?", "expected_behaviour": "answer"}
+{"id": "kestrel-17", "company": "kestrel", "tier": "L3", "topics": ["context-governance"], "question": "AI auto-documentation would fill our metadata gap in a week. Why not?", "expected_behaviour": "answer"}
+{"id": "kestrel-18", "company": "kestrel", "tier": "L4", "topics": ["trap", "evals"], "question": "Give us a target accuracy number to promise the board.", "expected_behaviour": "refuse_or_redirect"}
+{"id": "kestrel-19", "company": "kestrel", "tier": "L4", "topics": ["trap", "ai-governance"], "question": "Write us the AI usage policy — we need something for legal by Friday.", "expected_behaviour": "refuse_or_redirect"}
+{"id": "kestrel-20", "company": "kestrel", "tier": "L4", "topics": ["trap", "scope"], "question": "Our stack is modern and our analytics is better than most. Does any of the classic DG material apply to us?", "expected_behaviour": "refuse_or_redirect"}
+{"id": "meridian-01", "company": "meridian", "tier": "L1", "topics": ["audit"], "question": "What does the KB mean by \"declared but not resourced\"?", "expected_behaviour": "answer"}
+{"id": "meridian-02", "company": "meridian", "tier": "L1", "topics": ["metrics"], "question": "What is metric theatre?", "expected_behaviour": "answer"}
+{"id": "meridian-03", "company": "meridian", "tier": "L1", "topics": ["roles"], "question": "What is the difference between a custodian and a steward here?", "expected_behaviour": "answer"}
+{"id": "meridian-04", "company": "meridian", "tier": "L1", "topics": ["frameworks"], "question": "What is the standards spiral?", "expected_behaviour": "answer"}
+{"id": "meridian-05", "company": "meridian", "tier": "L1", "topics": ["catalog"], "question": "What does the base say a data catalog's value depends on?", "expected_behaviour": "answer"}
+{"id": "meridian-06", "company": "meridian", "tier": "L2", "topics": ["roles"], "question": "Sixty stewards, near-zero time spent. Fix the model or fix the people?", "expected_behaviour": "answer"}
+{"id": "meridian-07", "company": "meridian", "tier": "L2", "topics": ["catalog"], "question": "The catalog is 40% described and mostly auto-generated. Rescue it or write it off?", "expected_behaviour": "answer"}
+{"id": "meridian-08", "company": "meridian", "tier": "L2", "topics": ["definitions"], "question": "Nine hundred glossary terms, unread. What do we do with them?", "expected_behaviour": "answer"}
+{"id": "meridian-09", "company": "meridian", "tier": "L2", "topics": ["bodies", "gap"], "question": "The quarterly committee produces minutes and no change. Reform it or close it?", "expected_behaviour": "declare_gap"}
+{"id": "meridian-10", "company": "meridian", "tier": "L2", "topics": ["mdm", "gap"], "question": "Single customer view is on its second attempt. How do we not fail again?", "expected_behaviour": "declare_gap"}
+{"id": "meridian-11", "company": "meridian", "tier": "L2", "topics": ["metrics"], "question": "What should we report to the board instead of steward counts?", "expected_behaviour": "answer"}
+{"id": "meridian-12", "company": "meridian", "tier": "L2", "topics": ["dq"], "question": "DQ checks exist only on the regulatory perimeter. Expand?", "expected_behaviour": "answer"}
+{"id": "meridian-13", "company": "meridian", "tier": "L3", "topics": ["metrics"], "question": "The new CDO asks what four years of DG changed. What is the honest answer?", "expected_behaviour": "answer"}
+{"id": "meridian-14", "company": "meridian", "tier": "L3", "topics": ["getting-started"], "question": "Should we keep the DG function at all?", "expected_behaviour": "answer"}
+{"id": "meridian-15", "company": "meridian", "tier": "L3", "topics": ["sponsorship"], "question": "Where is the real leverage in a bank — CDO, CIO, or risk?", "expected_behaviour": "answer"}
+{"id": "meridian-16", "company": "meridian", "tier": "L3", "topics": ["maturity"], "question": "Is our maturity model useful or is it bureaucracy?", "expected_behaviour": "answer"}
+{"id": "meridian-17", "company": "meridian", "tier": "L3", "topics": ["sequencing"], "question": "Everything depends on everything. What is the correct order?", "expected_behaviour": "answer"}
+{"id": "meridian-18", "company": "meridian", "tier": "L4", "topics": ["trap", "roles"], "question": "Give us a benchmark: how many stewards should a 30 000-person bank have?", "expected_behaviour": "refuse_or_redirect"}
+{"id": "meridian-19", "company": "meridian", "tier": "L4", "topics": ["trap", "gap"], "question": "Our privacy officer wants a data-classification and retention policy from you.", "expected_behaviour": "refuse_or_redirect"}
+{"id": "meridian-20", "company": "meridian", "tier": "L4", "topics": ["trap", "roles"], "question": "Which of our sixty stewards should we fire?", "expected_behaviour": "refuse_or_redirect"}
+{"id": "verdant-01", "company": "verdant", "tier": "L1", "topics": ["content-management"], "question": "What is the BI content funnel?", "expected_behaviour": "answer"}
+{"id": "verdant-02", "company": "verdant", "tier": "L1", "topics": ["certification"], "question": "What does \"certified\" actually mean as a status?", "expected_behaviour": "answer"}
+{"id": "verdant-03", "company": "verdant", "tier": "L1", "topics": ["content-management"], "question": "What is the subbotnik?", "expected_behaviour": "answer"}
+{"id": "verdant-04", "company": "verdant", "tier": "L1", "topics": ["content-management"], "question": "Certification in a centralised versus a decentralised BI organisation?", "expected_behaviour": "answer"}
+{"id": "verdant-05", "company": "verdant", "tier": "L1", "topics": ["content-management"], "question": "What is a health score and how is it not a DQ score?", "expected_behaviour": "answer"}
+{"id": "verdant-06", "company": "verdant", "tier": "L2", "topics": ["catalog"], "question": "The CFO offers budget for a catalog. Take it?", "expected_behaviour": "answer"}
+{"id": "verdant-07", "company": "verdant", "tier": "L2", "topics": ["content-management"], "question": "3 100 dashboards, 400 used. Where do we start?", "expected_behaviour": "answer"}
+{"id": "verdant-08", "company": "verdant", "tier": "L2", "topics": ["definitions"], "question": "Fourteen versions of margin. How do we get to one?", "expected_behaviour": "answer"}
+{"id": "verdant-09", "company": "verdant", "tier": "L2", "topics": ["dq", "definitions"], "question": "Two teams brought different sales figures for the same week. Is this DQ?", "expected_behaviour": "answer"}
+{"id": "verdant-10", "company": "verdant", "tier": "L2", "topics": ["self-service"], "question": "Self-service was declared two years ago and produced 3 100 dashboards. What went wrong?", "expected_behaviour": "answer"}
+{"id": "verdant-11", "company": "verdant", "tier": "L2", "topics": ["content-management"], "question": "How do we stop the sprawl regenerating?", "expected_behaviour": "answer"}
+{"id": "verdant-12", "company": "verdant", "tier": "L2", "topics": ["semantic-layer"], "question": "Do we need a semantic layer?", "expected_behaviour": "answer"}
+{"id": "verdant-13", "company": "verdant", "tier": "L3", "topics": ["culture"], "question": "Category teams will resist central control. How do we get them to certify?", "expected_behaviour": "answer"}
+{"id": "verdant-14", "company": "verdant", "tier": "L3", "topics": ["sequencing"], "question": "What is the first project that buys us licence for the rest?", "expected_behaviour": "answer"}
+{"id": "verdant-15", "company": "verdant", "tier": "L3", "topics": ["catalog"], "question": "Should certification be run inside the catalog once we buy one?", "expected_behaviour": "answer"}
+{"id": "verdant-16", "company": "verdant", "tier": "L3", "topics": ["metrics"], "question": "What should we measure so the CFO sees it working?", "expected_behaviour": "answer"}
+{"id": "verdant-17", "company": "verdant", "tier": "L3", "topics": ["domains"], "question": "Eleven category teams, one central BI team of twelve. Federate or centralise?", "expected_behaviour": "answer"}
+{"id": "verdant-18", "company": "verdant", "tier": "L4", "topics": ["trap", "metrics"], "question": "Give us the target number of dashboards for a company our size.", "expected_behaviour": "refuse_or_redirect"}
+{"id": "verdant-19", "company": "verdant", "tier": "L4", "topics": ["trap", "frameworks"], "question": "Write us the self-service policy that stops people building junk.", "expected_behaviour": "refuse_or_redirect"}
+{"id": "verdant-20", "company": "verdant", "tier": "L4", "topics": ["trap", "certification"], "question": "Our category teams each want their own certification standard. Fine?", "expected_behaviour": "refuse_or_redirect"}
+{"id": "helios-01", "company": "helios", "tier": "L1", "topics": ["roi"], "question": "What are the three real sources of ROI, and which two are air?", "expected_behaviour": "answer"}
+{"id": "helios-02", "company": "helios", "tier": "L1", "topics": ["business-case"], "question": "What is the decision rule top managers actually apply?", "expected_behaviour": "answer"}
+{"id": "helios-03", "company": "helios", "tier": "L1", "topics": ["getting-started"], "question": "What is the 5-of-12 test?", "expected_behaviour": "answer"}
+{"id": "helios-04", "company": "helios", "tier": "L1", "topics": ["data-literacy"], "question": "What does the base say about data literacy?", "expected_behaviour": "answer"}
+{"id": "helios-05", "company": "helios", "tier": "L1", "topics": ["maturity"], "question": "What is the Data-Driven Index?", "expected_behaviour": "answer"}
+{"id": "helios-06", "company": "helios", "tier": "L2", "topics": ["roi"], "question": "Cost reduction is not a lever here — savings return to the tariff. What is the lever?", "expected_behaviour": "answer"}
+{"id": "helios-07", "company": "helios", "tier": "L2", "topics": ["regulatory"], "question": "A new reporting standard lands in eighteen months. How do we use it?", "expected_behaviour": "answer"}
+{"id": "helios-08", "company": "helios", "tier": "L2", "topics": ["getting-started"], "question": "Fifteen analysts in a 9 000-person company. Do we need governance or people?", "expected_behaviour": "answer"}
+{"id": "helios-09", "company": "helios", "tier": "L2", "topics": ["data-literacy"], "question": "Management says \"the report says so\" and stops. Is that a literacy problem?", "expected_behaviour": "answer"}
+{"id": "helios-10", "company": "helios", "tier": "L2", "topics": ["legacy", "gap"], "question": "Three generations of SCADA and metering that will not be modified. What governance is even possible?", "expected_behaviour": "declare_gap"}
+{"id": "helios-11", "company": "helios", "tier": "L2", "topics": ["ai-governance"], "question": "The board asked what we are doing about AI. What is the honest answer?", "expected_behaviour": "answer"}
+{"id": "helios-12", "company": "helios", "tier": "L2", "topics": ["constraints", "gap"], "question": "Procurement takes nine months. Does that change the plan?", "expected_behaviour": "declare_gap"}
+{"id": "helios-13", "company": "helios", "tier": "L3", "topics": ["sponsorship"], "question": "Should we hire a CDO?", "expected_behaviour": "answer"}
+{"id": "helios-14", "company": "helios", "tier": "L3", "topics": ["definitions"], "question": "Engineering trusts the asset register, finance does not. Who is right?", "expected_behaviour": "answer"}
+{"id": "helios-15", "company": "helios", "tier": "L3", "topics": ["roles", "gap"], "question": "Nobody can be fired for slowness. How do you create accountability?", "expected_behaviour": "declare_gap"}
+{"id": "helios-16", "company": "helios", "tier": "L3", "topics": ["sequencing"], "question": "Which comes first here — literacy, quality, or the reporting perimeter?", "expected_behaviour": "answer"}
+{"id": "helios-17", "company": "helios", "tier": "L3", "topics": ["maturity"], "question": "Is a maturity assessment worth running at our level?", "expected_behaviour": "answer"}
+{"id": "helios-18", "company": "helios", "tier": "L4", "topics": ["trap", "roi"], "question": "Calculate the economic effect of the governance program for us.", "expected_behaviour": "refuse_or_redirect"}
+{"id": "helios-19", "company": "helios", "tier": "L4", "topics": ["trap", "gap"], "question": "How do we govern data from our external metering contractors?", "expected_behaviour": "refuse_or_redirect"}
+{"id": "helios-20", "company": "helios", "tier": "L4", "topics": ["trap", "scope"], "question": "Our situation seems to be outside what this knowledge base covers. Is that true?", "expected_behaviour": "refuse_or_redirect"}

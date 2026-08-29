@@ -95,7 +95,7 @@ Grocery chain, 45 000 people, 210 stores. 3 100 dashboards and 400 opened. Fourt
 
 **Answer.** Almost certainly not. Identical source data producing two numbers is a definitions and ownership failure, not a quality failure — and misdiagnosing it as DQ sends the fix to the wrong team and buys a checker that will pass. The tell is whether the two numbers reconcile once the filters, grain and allocation rules are laid side by side.
 
-**Source.** `11_dg_program_themes/data-quality.md` — quality resolving into definitions; `10_ai_era_themes/semantic-layer.md`.
+**Source.** `11_dg_program_themes/data-quality.md` — data quality resolves into revenue or cost, not into its own category; `10_ai_era_themes/semantic-layer.md`.
 
 **Trap.** Commissioning DQ checks on the sales mart.
 
@@ -105,7 +105,7 @@ Grocery chain, 45 000 people, 210 stores. 3 100 dashboards and 400 opened. Fourt
 
 **Answer.** Self-service without the layers beneath it is permission without a route. In the stack-rank, self-service and agentic interfaces come *last* — after ownership, trusted data and the content funnel — because the capability multiplies whatever exists underneath. Verdant declared the endpoint and skipped the sequence, so the capability multiplied ungoverned content.
 
-**Source.** `30_graph/objects.yaml` — stack-rank order; `10_ai_era_themes/bi-content-management.md`.
+**Source.** `README.md` — the stack-rank freeze order; `10_ai_era_themes/bi-content-management.md` — the content funnel.
 
 **Trap.** Concluding that self-service was a mistake. The order was.
 

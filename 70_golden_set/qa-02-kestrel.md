@@ -85,7 +85,7 @@ items: 20
 
 **Answer.** You can, and the base predicts what happens: the agent hallucinates business logic regardless of model quality, and the failure mode is invention rather than refusal. The stack-rank order is governance and ownership → trusted data → AI readiness → self-service and agentic interfaces last, and the instruction is explicit: build the layer before the agents, not after them. Lost trust in an assistant is not recoverable on a second attempt.
 
-**Source.** `30_graph/objects.yaml` — kill-gate order; `10_ai_era_themes/semantic-layer.md`.
+**Source.** `README.md` — the stack-rank freeze order and kill-gates; `10_ai_era_themes/semantic-layer.md` — build the layer before the agents.
 
 **Trap.** "We will add the layer later once the agent proves value." The agent's first wrong answer to a founder is the value it proves.
 
@@ -175,7 +175,7 @@ items: 20
 
 **Answer.** Because ~75% accuracy is exactly plausible enough to poison the layer if there is no gate. Machine output enters as candidate; a domain curator promotes it. The base also records this as its single live unresolved dispute: one camp says re-checking auto-generated docs costs about as much as doing the mapping by hand, the other says it does not make mistakes, and nobody has published a number — `51_numbers.md` names measuring it as the most useful measurement anyone reading the base could go and take.
 
-**Source.** `10_ai_era_themes/context-governance.md` — the 75% figure; `51_numbers.md` — verification cost of AI-generated metadata, unmeasured.
+**Source.** `10_ai_era_themes/context-governance.md` — accuracy of AI auto-documentation is ~75%, plausible enough to poison the layer without a gate; `51_numbers.md` — verification cost of AI-generated metadata, unmeasured.
 
 **Trap.** Shipping generated descriptions straight to verified because the samples read well.
 
@@ -185,7 +185,7 @@ items: 20
 
 **Answer.** Not from this base as a promise. The numbers it carries are field references, not commitments: ~40% without a governed route, 85–95% with a semantic layer, 21% → 95%+ in Anthropic's agent evals, 25% → 80% for a domain assistant without versus with filled domain context. All of them are tagged by reliability in `51_numbers.md` and none of them is a forecast for Kestrel's schema. What you can promise is a measured golden set with a stated false-accept rate by a stated date.
 
-**Source.** `51_numbers.md` — reliability tags; `10_ai_era_themes/semantic-layer.md`, `context-governance.md`.
+**Source.** `51_numbers.md` — reliability tags; `10_ai_era_themes/semantic-layer.md`, `10_ai_era_themes/context-governance.md`.
 
 **Trap.** Quoting 85–95% to a board. It is another company's number on another company's schema.
 

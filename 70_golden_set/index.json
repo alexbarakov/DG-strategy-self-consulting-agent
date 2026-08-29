@@ -1,0 +1,214 @@
+{
+  "by_file": {
+    "10_ai_era_themes/ai-governance.md": [
+      "kestrel-14",
+      "kestrel-19"
+    ],
+    "10_ai_era_themes/bi-content-management.md": [
+      "verdant-01",
+      "verdant-04",
+      "verdant-05",
+      "verdant-07",
+      "verdant-10",
+      "verdant-11",
+      "verdant-18"
+    ],
+    "10_ai_era_themes/certified-core-layer.md": [
+      "kestrel-12",
+      "nordwind-15",
+      "verdant-02",
+      "verdant-11",
+      "verdant-14",
+      "verdant-15",
+      "verdant-20"
+    ],
+    "10_ai_era_themes/context-governance.md": [
+      "kestrel-02",
+      "kestrel-03",
+      "kestrel-05",
+      "kestrel-06",
+      "kestrel-11",
+      "kestrel-17",
+      "kestrel-18",
+      "meridian-07"
+    ],
+    "10_ai_era_themes/domain-knowledge-base.md": [
+      "kestrel-12"
+    ],
+    "10_ai_era_themes/llm-assistant-architecture.md": [
+      "kestrel-04"
+    ],
+    "10_ai_era_themes/semantic-layer.md": [
+      "helios-11",
+      "helios-14",
+      "kestrel-01",
+      "kestrel-06",
+      "kestrel-07",
+      "kestrel-08",
+      "kestrel-09",
+      "kestrel-15",
+      "kestrel-18",
+      "meridian-08",
+      "verdant-08",
+      "verdant-09",
+      "verdant-12"
+    ],
+    "11_dg_program_themes/data-catalog.md": [
+      "kestrel-16",
+      "meridian-05",
+      "meridian-07",
+      "nordwind-10",
+      "nordwind-20",
+      "verdant-06"
+    ],
+    "11_dg_program_themes/data-literacy.md": [
+      "helios-04",
+      "helios-05",
+      "helios-09"
+    ],
+    "11_dg_program_themes/data-quality.md": [
+      "helios-10",
+      "helios-14",
+      "helios-19",
+      "meridian-12",
+      "nordwind-11",
+      "verdant-09"
+    ],
+    "11_dg_program_themes/dg-frameworks.md": [
+      "kestrel-19",
+      "meridian-04",
+      "nordwind-16",
+      "nordwind-19",
+      "verdant-19"
+    ],
+    "11_dg_program_themes/dg-kitchen-research.md": [
+      "kestrel-10",
+      "kestrel-20",
+      "meridian-03",
+      "nordwind-04"
+    ],
+    "11_dg_program_themes/domains-and-data-mesh.md": [
+      "verdant-17"
+    ],
+    "11_dg_program_themes/getting-started.md": [
+      "helios-02",
+      "helios-03",
+      "helios-07",
+      "helios-08",
+      "helios-12",
+      "helios-13",
+      "helios-16",
+      "kestrel-10",
+      "meridian-08",
+      "meridian-15",
+      "nordwind-01",
+      "nordwind-02",
+      "nordwind-03",
+      "nordwind-05",
+      "nordwind-06",
+      "nordwind-07",
+      "nordwind-08",
+      "nordwind-09",
+      "nordwind-11",
+      "nordwind-12",
+      "nordwind-13",
+      "nordwind-14",
+      "nordwind-16",
+      "nordwind-17",
+      "verdant-03",
+      "verdant-07",
+      "verdant-13",
+      "verdant-14"
+    ],
+    "11_dg_program_themes/maturity-and-metrics.md": [
+      "helios-01",
+      "helios-05",
+      "helios-06",
+      "helios-17",
+      "helios-18",
+      "meridian-02",
+      "meridian-11",
+      "meridian-13",
+      "meridian-14",
+      "meridian-16",
+      "nordwind-17",
+      "nordwind-18",
+      "verdant-05",
+      "verdant-16"
+    ],
+    "11_dg_program_themes/roles-and-operating-model.md": [
+      "helios-15",
+      "meridian-03",
+      "meridian-06",
+      "meridian-09",
+      "meridian-18",
+      "meridian-20",
+      "nordwind-04",
+      "verdant-13",
+      "verdant-17"
+    ],
+    "12_templates/templates.md": [
+      "nordwind-20"
+    ],
+    "30_graph/objects.yaml": [
+      "helios-11",
+      "meridian-17"
+    ],
+    "50_failure_catalog.md": [
+      "meridian-02",
+      "meridian-06",
+      "meridian-10",
+      "meridian-11",
+      "meridian-14",
+      "meridian-20",
+      "nordwind-08",
+      "nordwind-14",
+      "nordwind-15",
+      "nordwind-19",
+      "verdant-02",
+      "verdant-06"
+    ],
+    "51_numbers.md": [
+      "kestrel-17",
+      "kestrel-18",
+      "meridian-10",
+      "meridian-18",
+      "nordwind-18",
+      "verdant-18"
+    ],
+    "52_questions.md": [
+      "verdant-20"
+    ],
+    "60_roadmap.md": [
+      "helios-07",
+      "helios-10",
+      "helios-12",
+      "helios-19",
+      "helios-20",
+      "kestrel-20",
+      "meridian-09",
+      "meridian-10",
+      "meridian-19",
+      "nordwind-08"
+    ],
+    "README.md": [
+      "helios-16",
+      "helios-20",
+      "kestrel-08",
+      "meridian-17",
+      "verdant-10"
+    ],
+    "skills/dg-econ-effect/SKILL.md": [
+      "helios-02",
+      "helios-06",
+      "helios-18"
+    ],
+    "skills/dg-strategy/SKILL.md": [
+      "kestrel-04",
+      "kestrel-13",
+      "meridian-01"
+    ]
+  },
+  "items": 100,
+  "kb_root": "dg-board-kb"
+}

@@ -1,7 +1,7 @@
 ---
 type: plan
 purpose: Build and operate the A+B evaluation harness for the dg-strategy and dg-econ-effect skills
-status: proposed
+status: phases 0-1 built and passing; phase 2 scaffolded (baseline frozen, protocol written, judge not yet run); phase 3 open
 owner: aabarakov
 ---
 
@@ -27,6 +27,8 @@ Everything else depends on this, and none of it exists yet.
 | `70_golden_set/keys.jsonl` | The reference answers, split out so a candidate run can be given questions without keys |
 | `70_golden_set/index.json` | Reverse index: KB file → item ids that cite it. This is the rot detector |
 
+**Built.** 100 items parsed, tiers exactly as designed (L1=25, L2=35, L3=25, L4=15), index covers 25 KB files.
+
 `cites[]` is extracted from the existing `qa-*.md` files, not re-authored — every item already names its sources.
 
 **Output of the phase:** the set stops being prose and becomes data. Effort: a few hours, mostly parsing.
@@ -43,9 +45,11 @@ For every file reference in an output: the file exists at that path, and the cla
 
 Reports: `valid` / `file missing` / `claim not found`. The third class is the interesting one — it catches an answer that cites a real file for something the file does not say, which is the most convincing kind of wrong.
 
-### A2. Invariants — `evals/invariants.yaml` + `evals/check_invariants.py`
+### A2. Invariants — `evals/invariants.json` + `evals/check_invariants.py`
 
-The core of loop A. Each invariant: `id`, `statement`, `severity` (`blocking` / `serious`), `detector` (`regex` / `structural` / `llm`), `source` (the KB file that establishes it).
+The core of loop A. Each invariant: `id`, `statement`, `severity` (`blocking` / `serious`), `detector`, `source` (the KB file that establishes it). JSON rather than YAML: the harness is standard-library only and Python ships no YAML parser.
+
+**Built.** 19 invariants — 5 regex, 3 structural, 11 needing the classifier and reported as UNCHECKED on every run. A `--profile` switch was added that the plan did not anticipate: the file establishing a rule necessarily quotes what the rule forbids, so `skill` and `kb` profiles run structural checks only.
 
 Starter set, to be completed in this phase. These are extracted from positions the KB already states, not invented:
 

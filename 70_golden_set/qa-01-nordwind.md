@@ -115,7 +115,7 @@ Asset-heavy 3PL, 12 000 people, near-zero data maturity, no incident, no regulat
 
 **Answer.** With a floor, not a program: nulls, freshness, completeness on the objects finance actually uses. The KB's caution is that every check costs money and that four things matter more than DQ dashboards — cross-role agreed processes for defining DQ metrics, slogans from authoritative management, bad-data alerting aimed at named people, and energy focused on important data — otherwise you drown in heavy DQ bureaucracy.
 
-**Source.** `11_dg_program_themes/data-quality.md` — the four things more important than DQ dashboards (day 4, slides p.144); DQ floor in `getting-started.md`.
+**Source.** `11_dg_program_themes/data-quality.md` — the four things more important than DQ dashboards (day 4, slides p.144); `11_dg_program_themes/getting-started.md` — the DQ floor of nulls, freshness and completeness.
 
 **Trap.** Buying a DQ tool or writing a quality policy first.
 

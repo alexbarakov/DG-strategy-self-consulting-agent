@@ -1,0 +1,16 @@
+{
+  "frozen_on": "2026-08-29",
+  "kb_commit": "91ffff22",
+  "producer_model": "claude-opus-5",
+  "items": 100,
+  "judge_scores": {
+    "average": 8.78,
+    "by_tier": {
+      "L1": 8.36,
+      "L2": 8.86,
+      "L3": 9.08,
+      "L4": 8.8
+    }
+  },
+  "note": "This is not 'correct'. It is what we had on the date above. Loop B compares candidates against it pairwise; a candidate that wins on every tier and breaks no invariant replaces it."
+}

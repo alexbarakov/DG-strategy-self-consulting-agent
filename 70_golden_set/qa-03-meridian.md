@@ -175,7 +175,7 @@ items: 20
 
 **Answer.** Governance and ownership first, then trusted data, then AI readiness, then the BI content funnel, with self-service and agentic interfaces last — and kill-gates blocking launches until prerequisites hold. For Meridian specifically that means ownership with recorded time before catalog coverage, and definitions before the single customer view, because identity resolution without agreed definitions reproduces the 2022 failure with better tooling.
 
-**Source.** `30_graph/objects.yaml` — stack-rank and kill-gates; `README.md` — invariants.
+**Source.** `README.md` — the stack-rank freeze order and kill-gates; `30_graph/objects.yaml` — the triad and its relations.
 
 **Trap.** Running ownership, catalog, MDM and DQ in parallel because all four are urgent.
 

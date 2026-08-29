@@ -167,7 +167,7 @@ This company exists in the set to make the base fail where it is thin. Several a
 
 **Answer.** The reporting perimeter, because it is the only one with a date and a sponsor. Quality follows it — checks on the fields that go into the submission, alerting a named person. Literacy runs alongside as the cheapest version available: a shared vocabulary for the numbers management already uses, not a curriculum. Reversing this order means asking a company with no analytics culture to invest in capability before obligation, which the base's own entry gates say will not survive contact with the budget.
 
-**Source.** `30_graph/objects.yaml` — stack-rank; `11_dg_program_themes/getting-started.md` — attaching to funded initiatives.
+**Source.** `README.md` — the stack-rank freeze order; `11_dg_program_themes/getting-started.md` — attaching to funded initiatives.
 
 **Trap.** Literacy first because it is foundational. Foundational is not the same as fundable.
 
