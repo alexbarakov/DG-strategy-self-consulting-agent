@@ -131,7 +131,7 @@ The important part is how the low scores were read: nine items scored 7 or below
 
 ## Russian edition
 
-A derived Russian edition exists for readers who need the entry surface in Russian: the README, an overview per skill, and both worked examples. The themes, failure catalog, numbers registry, question bank, golden set and harness stay in English there — they are read by an agent rather than by a person, and translating 165 000 words for a reader they do not have would buy nothing. That edition carries a `DERIVED_FROM.json` stamp and a `check_sync.py` that reports drift against this repository, which is canonical.
+A derived Russian edition exists for readers who need the entry surface in Russian: the README, an overview per skill, and both worked examples. The themes, failure catalog, numbers registry, question bank, golden set and harness stay in English there — they are read by an agent rather than by a person, and translating 165 000 words for a reader they do not have would buy nothing. It lives at https://github.com/alexbarakov/dg-board-kb-ru and carries a `DERIVED_FROM.json` stamp plus a `check_sync.py` that reports drift against this repository, which is canonical.
 
 ## Caveats
 
