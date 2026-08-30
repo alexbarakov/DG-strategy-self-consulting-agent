@@ -2,346 +2,333 @@
 type: example
 kind: strategy
 company: Tairin
-note: invented company; output of a full FORM run, in the user's language by the skill's own convention
+note: invented company; output of a full FORM run. The Russian original is the primary artefact; this is the same run in English, kept in step with it.
 ---
 
-# Tairin — стратегия Data Governance
+# Tairin — Data Governance strategy
 
-Горизонт 12 месяцев с заглядыванием на 3 года. Собрано скиллом `dg-strategy` (FORM, скоуп DG) поверх базы знаний dg-board-kb. Пересматривается ежеквартально.
+A 12-month horizon with a three-year outlook. Produced by the `dg-strategy` skill (FORM, DG scope) on the dg-board-kb knowledge base. Revisited quarterly.
 
-Компания вымышлена для приёмочного прогона шаблона. Пробелы в фактуре помечены `[не хватает данных]`.
+The company is invented, for an acceptance run of the template. Gaps in the facts are marked `[missing data]`.
 
 ---
 
 # Summary
 
-## Видение
+## Vision
 
-Через год операционный менеджер тёмного склада получает ответ на свой вопрос сам, за минуту, и этот ответ совпадает с тем, что видит финансовый директор. Не потому, что появился ассистент, а потому, что под ним есть согласованные определения, владельцы и подтверждённое ядро отчётности. Ассистент — последний шаг, а не первый.
+A year from now the manager of a dark store gets the answer to their question themselves, in a minute, and that answer matches what the CFO sees. Not because an assistant appeared, but because underneath it sit agreed definitions, named owners and a confirmed core of reporting. The assistant is the last step, not the first.
 
-## Проблемы
+## Problems
 
-1. **Три определения выполненного заказа** — операции, финансы и маркетинг считают по-разному, расхождение до 4%, и спорят об этом ежемесячно.
-2. **60% ad-hoc-запросов — повторы**, аналитики отвечают на них заново, потому что ответ нигде не остаётся.
-3. **Вики на 400 страниц, половина протухла**, и никто не знает какая; доверие к ней ниже, чем к вопросу в чат.
-4. **Сертификации не существует** как понятия: в поиске выдаётся всё подряд, выбор источника — вопрос везения.
-5. **Вся инженерная ёмкость до конца года занята миграцией.** Двенадцать инженеров, десять месяцев, ноль слака.
+1. **Three definitions of a completed order** — operations, finance and marketing each count differently, divergence up to 4%, argued about monthly.
+2. **60% of ad-hoc requests are repeats** — analysts answer them again because the answer is not left anywhere.
+3. **A wiki of 400 pages, half of it stale**, and nobody knows which half; trust in it is lower than trust in asking in chat.
+4. **Certification does not exist** as a concept: search returns everything, and choosing a source is a matter of luck.
+5. **All engineering capacity is committed until year end.** Twelve engineers, ten months, zero slack.
 
-## Решения по стримам
+## Solutions by stream
 
-- **S1 · Определения** — реестр 25–40 ключевых метрик с владельцами и протокол разрешения спора. Проблема 1.
-- **S2 · Контекст для ответов** — база вопрос→ответ из истории саппорт-чата, заметки к аномалиям метрик. Проблемы 2 и 3.
-- **S3 · Сертификация ядра** — статус у витрин и дашбордов, ранжирование в поиске, песочницы вне выдачи. Проблемы 3 и 4.
-- **S4 · Роли без инженеров** — владельцы объектов из числа аналитиков, время в целях руководителей. Условие работы остальных трёх.
-- **S5 · AI-канал** — пилот ассистента на одном домене после прохождения гейтов. Мандат CEO.
+- **S1 · Definitions** — a registry of 25–40 key metrics with owners, and a dispute-resolution protocol. Problem 1.
+- **S2 · Context for answers** — a question→answer base mined from support-chat history, plus notes on metric anomalies. Problems 2 and 3.
+- **S3 · Core certification** — a status on marts and dashboards, ranking in search, sandboxes out of results. Problems 3 and 4.
+- **S4 · Roles without engineers** — object owners drawn from the analysts, with time recorded in their managers' objectives. The condition the other three run on.
+- **S5 · AI channel** — an assistant pilot on one domain after the gates are passed. The CEO's mandate.
 
-## Цели
+## Goals
 
-Формат: сейчас → год 1 → год 3.
+Format: now → year 1 → year 3.
 
-- Ключевые метрики с владельцем и утверждённой формулой: 0 из ~35 → 25–40 → все управленческие.
-- Расхождение по выполненному заказу между функциями: до 4% → ≤0.5% → 0.
-- Доля ad-hoc, закрытая без аналитика: `[не хватает данных]` → цель после замера → большинство повторов.
-- Потребление на сертифицированных объектах: 0% → ≥50% → ≥80%.
-- Точность ассистента на пилотном домене: нет → измерена на голден-сете → выше порога допуска.
-- Зрелость, среднее по 9 категориям: 2.1 → 2.6 → 3.0.
+- Key metrics with an owner and an approved formula: 0 of ~35 → 25–40 → all management metrics.
+- Divergence on completed orders between functions: up to 4% → ≤0.5% → 0.
+- Share of ad-hoc closed without an analyst: `[missing data]` → target after measurement → the majority of repeats.
+- Consumption on certified objects: 0% → ≥50% → ≥80%.
+- Assistant accuracy on the pilot domain: none → measured on a golden set → above the stated threshold.
+- Maturity, average across 9 categories: 2.1 → 2.6 → 3.0.
 
-## Чего не делаем
+## What we deliberately do not do
 
-- **Не покупаем каталог** — вернёмся, когда роли работают в трёх доменах.
-- **Не строим семантический слой в этом году** — вернёмся, когда определения зафиксированы и у них есть владельцы.
-- **Не запускаем ассистента широко** — только пилот на одном домене, и только после гейтов.
-- **Не трогаем ничего, что требует инженерной ёмкости** — она занята миграцией, и это не обсуждается.
-- **Не ждём конца миграции** — три из пяти стримов её не касаются вовсе.
+- **We do not buy a catalog** — we return to it when roles work in three domains.
+- **We do not build a semantic layer this year** — we return when definitions are fixed and have owners.
+- **We do not launch the assistant broadly** — a pilot on one domain only, and only after the gates.
+- **We touch nothing that requires engineering capacity** — it is committed to the migration, and that is not negotiable.
+- **We do not wait for the migration to finish** — three of five streams do not touch it at all.
 
-## Эффект
+## Effect
 
-Ведущая зона — экономия затрат: аналитическое время, уходящее в повторы, и инфраструктура, освобождаемая гигиеной. Выручка не заявляется. В обязательство берётся одна строка — сокращение доли повторных ad-hoc после запуска базы вопрос→ответ, и то после замера бейзлайна. Остальное экспертная оценка, детали в разделе 06.
+The leading zone is cost saving: analyst time lost to repeats, and infrastructure freed by hygiene. Revenue is not claimed. One line goes into the commitment — the reduction in repeat ad-hoc after the question→answer base ships, and only after the baseline is measured. Everything else is an expert estimate; details in section 06.
 
-## Что нужно от вас
+## What we need from you
 
-**Директор по операциям берёт на себя определения.** Не согласование — арбитраж: когда операции и финансы расходятся, решение принимает он, письменно, с фиксацией области применения. Срок — первый месяц.
+**The COO takes ownership of definitions.** Not sign-off — arbitration: when operations and finance disagree, they decide, in writing, recording where each definition applies. Deadline: the first month.
 
-Это единственная роль, чьё решение обе стороны примут без эскалации к CEO. Если её нет, стрим `S1` не стартует, а вместе с ним падают `S2` и `S5`: ассистент, обученный на трёх определениях одной метрики, воспроизводит спор быстрее, чем люди.
+This is the only role whose decision both sides will accept without escalating to the CEO. Without it stream `S1` does not start, and `S2` and `S5` fall with it: an assistant trained on three definitions of one metric reproduces the argument faster than people do.
 
-## Первый шаг и цена бездействия
+## First step and the cost of doing nothing
 
-Два действия в первый месяц: разговор с директором по операциям об арбитраже и выгрузка истории саппорт-чата за год для оценки доли повторов. Второе не требует ничьего согласия и даёт бейзлайн, без которого половина целей — прочерк.
+Two actions in the first month: the conversation with the COO about arbitration, and a year's export of support-chat history to size the share of repeats. The second requires nobody's agreement and produces the baseline without which half the goals are a dash.
 
-Бездействие: ассистент запускается к концу года по мандату CEO, отвечает на трёх определениях и теряет доверие 340 операционных менеджеров за первый месяц; вернуть его второй попыткой не получится. Аналитики продолжают тратить большую часть времени на повторы. Миграция заканчивается, и компания получает новую платформу с прежним беспорядком в определениях.
+Doing nothing: the assistant ships by year end on the CEO's mandate, answers on three definitions, and loses the trust of 340 operations managers in its first month — which a second attempt does not recover. Analysts keep spending most of their time on repeats. The migration finishes and the company gets a new platform with the old mess in its definitions.
 
 ---
 
-# 00 · Контекст
+# 00 · Context
 
-## Внешний
+## External
 
-Доставка и тёмные склады — бизнес операционных решений в реальном времени: где не хватает курьеров, какой SKU выпадает, где юнит-экономика съедена промо. Данные здесь не отчётность, а операционный инструмент, и решение принимает менеджер склада, а не аналитик.
+Delivery and dark stores is a business of real-time operational decisions: where couriers are short, which SKU is dropping out, where unit economics have been eaten by promotions. Data here is not reporting but an operating instrument, and the decision is taken by a store manager rather than an analyst.
 
-Отрасль вошла в фазу, где преимущество даёт не наличие аналитики, а её доступность на нижнем уровне управления. Конкуренты в том же положении: у всех есть склад данных и дашборды, ни у кого нет самообслуживания, работающего для линейного менеджера.
+The industry has entered a phase where the advantage comes not from having analytics but from its availability at the lowest level of management. Competitors are in the same position: everyone has a warehouse and dashboards, nobody has self-service that works for a line manager.
 
-Два тренда меняют, что стоит делать. Первый: производство governance-документации подешевело до нуля, поэтому политики перестали быть проектом, а узким местом стало исполнение. Второй: агенты пришли не революцией, а просачиванием — они уже пишут SQL и разбирают данные, и вопрос не в том, запускать ли ассистента, а в том, на чём он будет отвечать. Демо работает у всех; на реальной схеме точность около 40%, и режим отказа — выдумывание, а не молчание.
+Two trends change what is worth doing. First, producing governance documentation has fallen to zero cost, so policies stopped being a project and the bottleneck moved to execution. Second, agents arrived not as a revolution but by seepage — they already write SQL and pick apart data, so the question is not whether to launch an assistant but what it will answer on. The demo works for everyone; on a real schema accuracy is around 40%, and the failure mode is invention rather than silence.
 
-## Внутренний
+## Internal
 
-Пять проблем, каждая с механизмом и частотой.
+Five problems, each with a mechanism and a frequency.
 
-**Выполненный заказ считается тремя способами.** Операции считают по факту вручения, финансы по факту списания, маркетинг по факту подтверждения. Расхождение доходит до 4% и всплывает на каждом месячном обзоре: тридцать минут обсуждения того, чья цифра верна, вместо обсуждения самой цифры. Арбитра нет, поэтому спор воспроизводится.
+**A completed order is counted three ways.** Operations count on handover, finance on settlement, marketing on confirmation. The divergence reaches 4% and surfaces at every monthly review: thirty minutes spent on whose number is right instead of on the number. There is no arbiter, so the argument reproduces.
 
-**Повторы съедают аналитиков.** Оценочно около 60% ad-hoc-запросов — вариации уже отвеченного, но ответ нигде не остаётся: он живёт в личном чате аналитика с менеджером. Точная доля не измерена `[не хватает данных]`. Механизм простой — нет места, куда ответ ложится, поэтому вопрос задаётся заново следующим человеком.
+**Repeats consume the analysts.** Roughly 60% of ad-hoc requests are variations on something already answered, but the answer is not left anywhere — it lives in a private chat between an analyst and a manager. The precise share is unmeasured `[missing data]`. The mechanism is simple: there is no place for an answer to land, so the next person asks again.
 
-**Вики протухла наполовину, и неизвестно какая половина.** 400 страниц без владельцев и без даты пересмотра. Менеджер, обжёгшийся один раз, больше туда не ходит и пишет в чат — что и создаёт поток из предыдущего абзаца.
+**The wiki is half stale, and which half is unknown.** 400 pages without owners and without review dates. A manager burned once does not go back and writes in chat instead — which produces the flow described above.
 
-**Сертификации не существует.** В поиске по данным выдаётся всё: продовые витрины, песочницы, чьи-то эксперименты. Выбор источника — вопрос везения, и два человека, спросившие одно и то же, получают разные числа законным образом.
+**Certification does not exist.** Data search returns everything: production marts, sandboxes, somebody's experiments. Choosing a source is a matter of luck, and two people asking the same question get different numbers legitimately.
 
-**Инженерной ёмкости нет до конца года.** Двенадцать дата-инженеров, все на миграции склада в лейкхаус: восемнадцать месяцев позади, около десяти впереди. Это не приоритет, который можно сдвинуть, — это обязательство перед всей компанией.
+**There is no engineering capacity until year end.** Twelve data engineers, all on the warehouse migration to a lakehouse: eighteen months behind, around ten ahead. This is not a priority that can be moved — it is a commitment to the whole company.
 
-Последнее и определяет форму стратегии: **связывающее ограничение здесь не деньги и не согласования, а инженерные руки**. Значит всё, что требует инженера, откладывается по определению, а стратегия строится из того, что делают аналитики, кураторы и владельцы объектов. Соблазн подождать конца миграции сильный и ошибочный: компании доходят до точки консолидации и начинают думать задним числом, а новая платформа с прежними определениями — это тот же беспорядок на более дорогом железе.
+The last one determines the shape of the strategy: **the binding constraint here is neither money nor approvals but engineering hands.** So anything requiring an engineer is deferred by definition, and the strategy is built from what analysts, curators and object owners can do. The temptation to wait for the migration to end is strong and wrong: companies reach the consolidation point and start thinking retroactively, and a new platform with the old definitions is the same mess on more expensive hardware.
 
 ---
 
 # 01 · AS-IS
 
-Менеджмент — 340 руководителей складов плюс функции; power users — около 55 аналитиков; зависимость бизнеса от данных высокая; вероятность отраслевой трансформации высокая. Оправданный долгосрочный уровень — **3.0**. Цель года — **2.6** по правилу «+1 уровень в год» там, где есть исполнитель. Три категории не двигаются: везде, где нужен инженер.
+Management is 340 store managers plus functions; power users are around 55 analysts; business dependence on data is high; the likelihood of industry transformation is high. The justified long-term level is **3.0**. The target for the year is **2.6**, on the "+1 level a year" rule wherever an executor exists. Three categories do not move: everywhere an engineer is needed.
 
-`█` текущий уровень · `▒` прирост за год · `·` не берём
+`█` current level · `▒` gain this year · `·` not taken
 
-| Категория | Сейчас | Цель | Профиль (0–4) | Уверенность |
+| Category | Now | Target | Profile (0–4) | Confidence |
 |---|---|---|---|---|
-| Извлечение ценности | 3 | 3 | `██████████████████████████████····` | высокая |
-| Безопасность данных | 3 | 3 | `██████████████████████████████····` | средняя |
-| Знание своих данных | 2 | 3 | `████████████████████▒▒▒▒▒▒▒▒▒▒····` | высокая |
-| Analytics governance | 2 | 3 | `████████████████████▒▒▒▒▒▒▒▒▒▒····` | высокая |
-| Вовлечение людей | 2 | 3 | `████████████████████▒▒▒▒▒▒▒▒▒▒····` | средняя |
-| Стратегическое лидерство | 2 | 2 | `████████████████████··············` | средняя |
-| Data governance | 1 | 2 | `██████████▒▒▒▒▒▒▒▒▒▒··············` | высокая |
-| Управление качеством | 2 | 2 | `████████████████████··············` | **низкая** |
-| Архитектура данных | 2 | 2 | `████████████████████··············` | высокая |
+| Getting value | 3 | 3 | `██████████████████████████████····` | high |
+| Data security | 3 | 3 | `██████████████████████████████····` | medium |
+| Knowing your data | 2 | 3 | `████████████████████▒▒▒▒▒▒▒▒▒▒····` | high |
+| Analytics governance | 2 | 3 | `████████████████████▒▒▒▒▒▒▒▒▒▒····` | high |
+| People engagement | 2 | 3 | `████████████████████▒▒▒▒▒▒▒▒▒▒····` | medium |
+| Strategic leadership | 2 | 2 | `████████████████████··············` | medium |
+| Data governance | 1 | 2 | `██████████▒▒▒▒▒▒▒▒▒▒··············` | high |
+| Quality management | 2 | 2 | `████████████████████··············` | **low** |
+| Data architecture | 2 | 2 | `████████████████████··············` | high |
 
-Уверенность высокая означает выгрузку или счёт, средняя — слова участников, низкая — вывод по косвенным признакам. Низкая одна: покрытие DQ-проверками известно только на платёжном контуре, и цель по категории не ставится до инвентаризации.
+High confidence means an export or a count, medium means participants' word, low means inference from adjacent facts. There is one low: DQ coverage is known only on the payment perimeter, and no target is set for that category until an inventory is taken.
 
-Спрос распределён благоприятно, и это редкость. CEO хочет ассистента и готов дать мандат. Операционные менеджеры хотят ответов и готовы пользоваться чем угодно, что работает. Аналитики хотят избавиться от повторов — самый мотивированный участник программы, потому что выигрывает лично. Финансы хотят одну цифру. Против только календарь: инженеры заняты.
+Demand is distributed favourably, which is rare. The CEO wants an assistant and will give a mandate. Operations managers want answers and will use anything that works. Analysts want to be rid of repeats — the most motivated participant in the programme, because they gain personally. Finance wants one number. Only the calendar is against: the engineers are busy.
 
-**Разрывы цепочки.** Базовая цепочка базы знаний применима без адаптации: `ядро → семантика → контекст → точность агента → self-service`. Три разрыва названы. Ядро не сертифицировано, поэтому «выбери правильный источник» не имеет ответа. Семантика отсутствует, и три определения одной метрики — её симптом. Контекста нет вовсе: ни базы вопрос→ответ, ни заметок к аномалиям, поэтому агент, спрошенный «почему упало», выдумает. Стратегия — план ремонта этих трёх разрывов, а не программа покрытия фреймворка.
+**Chain breaks.** The knowledge base's core chain applies without adaptation: `core → semantic → context → agent accuracy → self-service`. Three breaks are named. The core is not certified, so "pick the right source" has no answer. Semantics are absent, and three definitions of one metric are the symptom. There is no context at all — neither a question→answer base nor anomaly notes — so an agent asked "why did it drop" will invent. The strategy is the repair plan for those three, not a coverage plan for a framework.
 
 ---
 
 # 02 · TO-BE
 
-Ставка: **чинить цепочку снизу, но только теми руками, которые свободны**. Ядро, определения и контекст — работа аналитиков и кураторов, не инженеров, и потому выполнима внутри миграции, а не после неё. Ассистент собирается последним и на пилоте.
+The bet: **repair the chain from the bottom, but only with the hands that are free.** Core, definitions and context are analyst and curator work rather than engineering, and therefore feasible inside the migration rather than after it. The assistant is assembled last and as a pilot.
 
-Потолок года по движущимся категориям — уровень 3 там, где исполнитель есть, и текущий уровень там, где нужен инженер. Три категории заморожены сознательно. Архитектура данных не двигается: она сейчас и есть миграция, и вмешательство в неё — вмешательство в чужое обязательство. Управление качеством не двигается за пределы платёжного контура: расширение проверок требует инженерной работы. Стратегическое лидерство остаётся на 2: его сдвиг требует времени CEO, а оно потрачено на мандат по ассистенту, и это разумный размен.
+The ceiling for the year on moving categories is level 3 where an executor exists, and the current level where an engineer is needed. Three categories are frozen deliberately. Data architecture does not move: right now it *is* the migration, and interfering with it means interfering with somebody else's commitment. Quality management does not move beyond the payment perimeter: extending checks requires engineering work. Strategic leadership stays at 2 — moving it requires CEO time, and that time has been spent on the assistant mandate, which is a reasonable trade.
 
-Целевая архитектура минимально достаточна: реестр 25–40 определений с владельцами вместо семантического слоя; база вопрос→ответ, собранная из истории чата, вместо каталога; статус на витринах и дашбордах с ранжированием в поиске вместо портала; ассистент на одном домене вместо платформы. Операционная модель — раздел 05.
+The target architecture is minimally sufficient: a registry of 25–40 definitions with owners instead of a semantic layer; a question→answer base assembled from chat history instead of a catalog; a status on marts and dashboards with ranking in search instead of a portal; an assistant on one domain instead of a platform. Operating model — section 05.
 
-## Стримы изменений
+## Streams of change
 
-Пять направлений. Стрим — направление изменения со своим результатом года; проекты внутри перечислены в разделе 04.
+Five directions. A stream is a direction of change with an outcome of its own; the projects inside are listed in section 04.
 
-**S1 · Определения.** Меняет то, что у 25–40 ключевых метрик появляется владелец, утверждённая формула и зафиксированная область применения, а у спора — письменный арбитраж. Обоснование: это первая проблема и одновременно пререквизит двух других стримов — ассистент на трёх определениях воспроизводит спор быстрее людей, а сертификация без согласованной метрики сертифицирует разногласие. Не требует ни одного инженера. Результат года: 25–40 метрик с владельцем и формулой, расхождение по выполненному заказу ≤0.5%.
+**S1 · Definitions.** Changes the fact that 25–40 key metrics acquire an owner, an approved formula and a recorded scope of application, and a dispute acquires written arbitration. Justification: this is the first problem and simultaneously the prerequisite of two other streams — an assistant on three definitions reproduces the argument faster than people, and certification without an agreed metric certifies the disagreement. Requires not one engineer. Outcome of the year: 25–40 metrics with owner and formula, divergence on completed orders ≤0.5%.
 
-**S2 · Контекст для ответов.** Меняет то, что ответ на типовой вопрос остаётся в системе, а не в личном чате. Обоснование: 60% ad-hoc — повторы, и это самый дешёвый источник и экономии, и точности агента; полевые данные говорят, что база вопрос→ответ из истории саппорта — сильнейший ускоритель точности, а заметки к аномалиям — единственное, что мешает агенту выдумать причину падения. Работа кураторская, инженерной ёмкости не требует. Результат года: собрана и верифицирована база типовых вопросов, аномалии ключевых метрик комментируются.
+**S2 · Context for answers.** Changes the fact that the answer to a typical question stays in the system rather than in a private chat. Justification: 60% of ad-hoc are repeats, which makes this the cheapest source of both saving and agent accuracy; the field evidence says a question→answer base mined from support history is the strongest accuracy booster, and anomaly notes are the only thing preventing an agent from inventing a cause for a drop. Curatorial work; no engineering capacity required. Outcome of the year: a verified base of typical questions, anomalies on key metrics commented.
 
-**S3 · Сертификация ядра.** Меняет то, что у витрин и дашбордов появляется публичный статус, а поиск ведёт к сертифицированному первым. Обоснование: без этого «выбери правильный источник» не имеет ответа, и любой ассистент наследует ту же лотерею. Сертификация в AI-эру перестала быть ритуалом и стала пререквизитом — агент навигирует к сертифицированным объектам, и сертификация предполагает те самые описания, которые ему нужны. Порядок: витрины, затем отчёты, затем метрики. Результат года: ядро подтверждено, потребление на сертифицированных объектах ≥50%.
+**S3 · Core certification.** Changes the fact that marts and dashboards acquire a public status, and search leads to the certified one first. Justification: without it "pick the right source" has no answer, and any assistant inherits the same lottery. In the AI era certification stopped being a ritual and became a prerequisite — the agent navigates to certified objects, and certification presupposes exactly the descriptions it needs. Order: marts, then reports, then metrics. Outcome of the year: the core is confirmed, consumption on certified objects ≥50%.
 
-**S4 · Роли без инженеров.** Меняет то, что у объектов ядра появляются названные владельцы с закреплённым временем — из числа аналитиков, которые и так эти объекты поддерживают. Обоснование: три стрима выше производят артефакты, у которых должен быть хозяин, иначе они протухнут ровно как вики; кураторская модель работает, стюардская в одиночку — нет. Результат года: у объектов ядра есть владельцы с записанным временем.
+**S4 · Roles without engineers.** Changes the fact that core objects acquire named owners with recorded time — drawn from the analysts who already maintain those objects. Justification: the three streams above produce artefacts that must have a keeper, or they will go stale exactly as the wiki did; the custodian model works, the steward-alone model does not. Outcome of the year: core objects have owners with recorded time.
 
-**S5 · AI-канал.** Меняет то, что операционный менеджер получает ответ сам. Обоснование: это мандат CEO, и его нельзя ни игнорировать, ни исполнить широко — поэтому пилот на одном домене после прохождения гейтов, с измеренной точностью и объявленной долей ложных срабатываний. Стрим последний в порядке не из осторожности, а потому что его качество целиком определяется тремя предыдущими. Результат года: пилот работает на одном домене, точность измерена на голден-сете.
-
----
-
-# 03 · Метрики и цели
-
-Метрики стоят перед портфелем: инициатива получает право на существование, когда двигает названную метрику.
-
-| Метрика | Стрим | Сейчас | Год 1 | Год 2 | Год 3 | Поправка на риск |
-|---|---|---|---|---|---|---|
-| Метрики с владельцем и формулой | `S1` | 0 из ~35 | 25–40 | +операционные | все управленческие | требует арбитра; это политика, а не методика |
-| Расхождение по выполненному заказу | `S1` | до 4% | ≤0.5% | 0 | 0 | **может законно падать и расти** — единственная двусторонняя метрика набора |
-| Доля ad-hoc, закрытая без аналитика | `S2` | `[не хватает данных]` | цель после замера | — | большинство повторов | бейзлайн не измерен, в коммит не идёт |
-| Верифицированных пар вопрос→ответ | `S2` | 0 | 150–300 | +домены | покрытие типовых | адопшн: курирование конкурирует с ad-hoc-очередью |
-| Потребление на сертифицированных объектах | `S3` | 0% | ≥50% | ≥70% | ≥80% | требует ранжирования в поиске — единственная точка, где нужен инженер |
-| Объекты ядра с владельцем и временем | `S4` | 0% | 80% | 90% | 90% | действительна только при закреплении времени в целях руководителей |
-| Точность ассистента на пилотном домене | `S5` | нет | измерена на голден-сете | выше порога | расширение доменов | зависит от `S1`–`S3`; до них измерять нечего |
-| Зрелость, среднее по 9 категориям | все | 2.1 | 2.6 | 2.8 | 3.0 | потолок при нулевой инженерной ёмкости |
-
-Анти-метрики: число страниц в вики, число сертифицированных объектов, число запросов к ассистенту. Все три растут независимо от пользы.
-
-Четыре метрики выше — счётчики, способные только расти; они названы прокси вслух, потому что непомеченный прокси это вежливая форма метрического театра. Двусторонняя в наборе одна — расхождение по выполненному заказу; к ней добавится доля ad-hoc, как только появится бейзлайн. Две цели без замера помечены и в коммит не идут.
+**S5 · AI channel.** Changes the fact that an operations manager gets the answer themselves. Justification: this is the CEO's mandate, and it can be neither ignored nor executed broadly — hence a pilot on one domain after the gates, with measured accuracy and a stated false-answer rate. The stream is last in order not out of caution but because its quality is entirely determined by the three before it. Outcome of the year: the pilot works on one domain, accuracy measured on a golden set.
 
 ---
 
-# 04 · Портфель инициатив
+# 03 · Metrics and goals
 
-Каждая инициатива принадлежит одному стриму. Output — что физически существует по завершении; outcome — какая метрика из раздела 03 двигается и насколько, по годам.
+Metrics come before the portfolio: an initiative earns its place when it moves a named metric.
 
-| # | Инициатива | Output | Outcome по годам | Владелец · пререквизит | Трудоёмкость · волна | Риск и управление |
+| Metric | Stream | Now | Year 1 | Year 2 | Year 3 | Downward adjustment for risk |
 |---|---|---|---|---|---|---|
-| 1 | **Арбитраж определений** `S1` | Назначенный арбитр; письменный протокол — как спор поднимается, готовится, решается и фиксируется; правило об отсутствии обратной силы | **1:** разблокирует инициативы 2, 5 и 7 — без него их outcome равен нулю. **2–3:** измеряется временем разрешения спора, не числом решений | Директор по операциям · его согласие есть условие входа всей стратегии | Низкая по часам, высокая по политическому весу · первый месяц | Арбитр согласится и не будет решать. Контроль: спор старше двух недель эскалируется к CEO автоматически |
-| 2 | **Реестр ключевых определений** `S1` | Реестр 25–40 метрик: формула, владелец, область применения; разведённые операционное и финансовое определения там, где они действительно разные | **1:** 0 → 25–40 определений с владельцем; расхождение по выполненному заказу до 4% → ≤0.5%. **2:** операционные метрики. **3:** все управленческие | Аналитик-методолог, владелец каждого определения — человек из функции · инициатива 1 | Средняя по работе, высокая по переговорам · H1 | Функции не примут чужое определение. Не принуждать: развести два определения явно и зафиксировать, где какое применяется |
-| 3 | **База вопрос→ответ из истории чата** `S2` | Выгрузка года переписки; 150–300 верифицированных пар «типовой вопрос → витрина, метрика, оговорка, ссылка»; процесс пополнения из текущего потока | **1:** 0 → 150–300 пар; замер доли повторов даёт бейзлайн для метрики ad-hoc. **2–3:** покрытие типовых вопросов, доля повторов падает | Руководитель аналитики; верификация — владельцы определений · выгрузка чата, согласований не требует | Средняя, целиком аналитическая · H1 | Машинная генерация пар выглядит убедительно и врёт: точность автодокументирования около 75%. Пара входит как кандидат, верифицирует человек |
-| 4 | **Заметки к аномалиям метрик** `S2` | Комментарии к отклонениям ключевых метрик; правило, что аномалия без объяснения висит в списке до закрытия | **1:** аномалии ключевых метрик комментируются. **2–3:** доля самообъяснённых отклонений растёт | Владельцы метрик из инициативы 2 · инициатива 2 | Низкая, но постоянная · H2 | Заметки перестанут писать через месяц. Привязка к владельцу метрики и видимость незакрытых в еженедельном списке |
-| 5 | **Сертификация витрин и дашбордов** `S3` | Три статуса — кандидат, сертифицирован, деградировал; статус на витринах ядра, затем на отчётах; карточки объектов вместо страниц вики | **1:** потребление на сертифицированных 0% → ≥50%. **2:** ≥70%. **3:** ≥80% | Руководитель BI; подтверждение — владельцы объектов · инициатива 1 для метрик, для витрин пререквизитов нет | Средняя · H1 | Сертификация как событие, а не статус с жизненным циклом — тогда через полгода всё протухнет как вики. Дата пересмотра обязательна в карточке |
-| 6 | **Ранжирование и очистка поиска** `S3` | Сертифицированные первыми в выдаче; песочницы скрыты из поиска; перехват при создании нового объекта | **1:** закрепляет результат инициативы 5 — без перехвата потребление откатывается. **2–3:** рост числа объектов остановлен | Платформенная команда · **единственная инициатива, требующая инженера** — окно после миграции или размен внутри неё | Низкая технически, высокая по доступности ресурса · H2, условно | Ресурса не будет. Тогда статус остаётся видимым в карточке объекта, а ранжирование переносится за горизонт года — это ослабляет, но не отменяет стрим |
-| 7 | **Владельцы объектов ядра** `S4` | Реестр объектов ядра с владельцами из числа аналитиков; строка про поддержку объекта в целях их руководителей; дата пересмотра у каждого объекта | **1:** 0% → 80% объектов ядра с владельцем и временем. **2–3:** 90% при росте портфеля | Руководитель аналитики; время согласуется с руководителями функций · инициатива 1 | Средняя, переговорная · H1 | Владельцы назначены, время не закреплено — тогда это документ, а не роль. Проверка: что произойдёт на калибровке, если человек не поддерживал объект |
-| 8 | **Пилот ассистента на одном домене** `S5` | Голден-сет вопросов домена; измеренная точность и доля ложных ответов; ассистент, доступный менеджерам одного домена; объявленный порог допуска | **1:** точность измерена, пилот работает. **2:** выше порога, второй домен. **3:** расширение доменов | Продукт-оунер аналитики и руководитель BI · инициативы 2, 3, 5 пройдены | Высокая · H2 | Запуск по мандату до готовности гейтов. Потерянное доверие 340 менеджеров не возвращается второй попыткой — гейты объявлены CEO письменно до старта |
+| Metrics with owner and formula | `S1` | 0 of ~35 | 25–40 | +operational | all management metrics | requires an arbiter; this is politics, not method |
+| Divergence on completed orders | `S1` | up to 4% | ≤0.5% | 0 | 0 | **can legitimately fall and rise** — the only two-way metric in the set |
+| Share of ad-hoc closed without an analyst | `S2` | `[missing data]` | target after measurement | — | the majority of repeats | baseline unmeasured; not committed |
+| Verified question→answer pairs | `S2` | 0 | 150–300 | +domains | coverage of typical questions | adoption: curation competes with the ad-hoc queue |
+| Consumption on certified objects | `S3` | 0% | ≥50% | ≥70% | ≥80% | needs search ranking — the single point where an engineer is required |
+| Core objects with owner and time | `S4` | 0% | 80% | 90% | 90% | valid only if time is recorded in managers' objectives |
+| Assistant accuracy on the pilot domain | `S5` | none | measured on a golden set | above threshold | more domains | depends on `S1`–`S3`; before them there is nothing to measure |
+| Maturity, average across 9 categories | all | 2.1 | 2.6 | 2.8 | 3.0 | the ceiling at zero engineering capacity |
 
-## Порядок заморозки
+Anti-metrics: number of wiki pages, number of certified objects, number of assistant queries. All three grow independently of usefulness.
 
-`S1` не морозится → `S2` дешевле всех и даёт бейзлайн → `S4` → `S3` → `S5` морозится первым, несмотря на мандат. При потере трети ресурса замораживаются инициативы 4, 6 и 8, а сертификация сужается с витрин и отчётов до одних витрин. Порядок опубликован заранее — иначе при сокращении срежут определения и роли как «не дающие результата», а они и есть условие всего остального.
+Four of the metrics above are counters that can only rise; they are labelled proxies out loud, because an unlabelled proxy is the polite version of metric theatre. There is one two-way metric in the set — divergence on completed orders; the share of ad-hoc joins it as soon as a baseline exists. Two goals without measurement are marked and are not committed.
 
-Оговорка: правило «`S1` не морозится» действует после решения из Summary. До него это не защищённый приоритет, а незакрытая развилка.
+---
+
+# 04 · Initiatives portfolio
+
+Each initiative belongs to one stream. Output is what physically exists when it is done; outcome is which metric from section 03 moves and by how much, by year.
+
+| # | Initiative | Output | Outcome by year | Owner · prerequisite | Effort · wave | Risk and how it is managed |
+|---|---|---|---|---|---|---|
+| 1 | **Definition arbitration** `S1` | A named arbiter; a written protocol — how a dispute is raised, prepared, decided and recorded; the no-retroactivity rule | **1:** unblocks initiatives 2, 5 and 7 — without it their outcome is zero. **2–3:** measured by time to resolve a dispute, not by number of decisions | COO · their agreement is the entry condition of the whole strategy | Low in hours, high in political weight · first month | The arbiter agrees and does not decide. Control: a dispute older than two weeks escalates to the CEO automatically |
+| 2 | **Registry of key definitions** `S1` | A registry of 25–40 metrics: formula, owner, scope of application; operational and financial definitions separated where they genuinely differ | **1:** 0 → 25–40 definitions with an owner; divergence on completed orders from up to 4% → ≤0.5%. **2:** operational metrics. **3:** all management metrics | Methodology analyst; each definition owned by a person from the function · initiative 1 | Medium in work, high in negotiation · H1 | Functions will not accept someone else's definition. Do not compel: separate the two explicitly and record where each applies |
+| 3 | **Question→answer base from chat history** `S2` | A year's export of correspondence; 150–300 verified pairs of "typical question → mart, metric, caveat, link"; a process for adding from the current flow | **1:** 0 → 150–300 pairs; measuring the share of repeats produces the baseline for the ad-hoc metric. **2–3:** coverage of typical questions, share of repeats falls | Head of analytics; verification by definition owners · the chat export, which needs nobody's approval | Medium, entirely analytical · H1 | Machine-generated pairs look convincing and lie: auto-documentation accuracy is around 75%. A pair enters as a candidate; a human verifies |
+| 4 | **Notes on metric anomalies** `S2` | Comments on deviations in key metrics; a rule that an unexplained anomaly stays on the list until closed | **1:** anomalies on key metrics are commented. **2–3:** the share of self-explained deviations rises | Metric owners from initiative 2 · initiative 2 | Low but continuous · H2 | People stop writing notes after a month. Tied to the metric owner, with unclosed items visible in the weekly list |
+| 5 | **Certification of marts and dashboards** `S3` | Three statuses — candidate, certified, degraded; status on core marts, then on reports; object cards instead of wiki pages | **1:** consumption on certified 0% → ≥50%. **2:** ≥70%. **3:** ≥80% | Head of BI; confirmation by object owners · initiative 1 for metrics; for marts, no prerequisite | Medium · H1 | Certification as an event rather than a status with a lifecycle — then in six months it goes stale exactly as the wiki did. A review date in the card is mandatory |
+| 6 | **Search ranking and clean-up** `S3` | Certified first in results; sandboxes hidden from search; interception at the moment a new object is created | **1:** locks in the result of initiative 5 — without interception, consumption reverts. **2–3:** growth in object count stopped | Platform team · **the only initiative requiring an engineer** — a window after the migration or a trade inside it | Low technically, high on resource availability · H2, conditional | The resource will not appear. Then the status stays visible on the object card and ranking moves beyond the horizon — which weakens the stream but does not cancel it |
+| 7 | **Owners of core objects** `S4` | A registry of core objects with owners from among the analysts; a line about object upkeep in their managers' objectives; a review date on every object | **1:** 0% → 80% of core objects with an owner and time. **2–3:** 90% as the portfolio grows | Head of analytics; time agreed with function heads · initiative 1 | Medium, negotiation-heavy · H1 | Owners named, time not recorded — then it is a document, not a role. Test: what happens at calibration if the person did not maintain the object |
+| 8 | **Assistant pilot on one domain** `S5` | A golden set of domain questions; measured accuracy and false-answer rate; an assistant available to managers of one domain; a stated acceptance threshold | **1:** accuracy measured, pilot running. **2:** above threshold, a second domain. **3:** more domains | Analytics product owner and head of BI · initiatives 2, 3, 5 passed | High · H2 | Launch on the mandate before the gates are ready. The lost trust of 340 managers does not return on a second attempt — the gates are signed off by the CEO in writing before work starts |
+
+## Freeze order
+
+`S1` does not freeze → `S2` is the cheapest and produces the baseline → `S4` → `S3` → `S5` freezes first, mandate notwithstanding. On losing a third of the resource, initiatives 4, 6 and 8 freeze and certification narrows from marts and reports to marts alone. The order is published in advance — otherwise a cut removes definitions and roles as "not producing results", when they are the condition of everything else.
+
+Caveat: the rule "`S1` does not freeze" applies after the decision in the Summary. Before it, this is not a protected priority but an open fork.
 
 ## Kill-gates
 
-Ассистент не выходит за пределы пилотного домена, пока точность не измерена на голден-сете и порог не объявлен. Не покупаем каталог, пока роли не работают в трёх доменах. Не строим семантический слой, пока определения не зафиксированы и не имеют владельцев. Не расширяем DQ за платёжный контур, пока нет инженерной ёмкости. Не добавляем метрику в реестр без владельца.
+The assistant does not leave the pilot domain until accuracy is measured on a golden set and the threshold is stated. We do not buy a catalog until roles work in three domains. We do not build a semantic layer until definitions are fixed and owned. We do not extend DQ beyond the payment perimeter while there is no engineering capacity. We do not add a metric to the registry without an owner.
 
 ---
 
-# 05 · Операционная модель
+# 05 · Operating model
 
-## Роли
+## Roles
 
-**Арбитр определений** — директор по операциям. Разрешение споров между функциями, письменная фиксация области применения. Около 2 часов в месяц, записано в его целях как условие запуска ассистента, которого он же хочет.
+**Definition arbiter** — the COO. Resolves disputes between functions and records the scope of application in writing. About 2 hours a month, recorded in their objectives as the condition for launching the assistant they themselves want.
 
-**Владелец определения** — методолог из функции, которой метрика принадлежит. Формула, область применения, защита определения при споре. Нагрузка по факту спора, не постоянная.
+**Definition owner** — a methodologist from the function the metric belongs to. Formula, scope, defence of the definition in a dispute. Load arises with disputes; not continuous.
 
-**Владелец объекта ядра** — аналитик, который и так эту витрину поддерживает. Описание, актуальность, дата пересмотра, реакция на инциденты. Около 8% времени, строка в целях его руководителя, а не его собственных, потому что время выделяет руководитель.
+**Core object owner** — the analyst who already maintains that mart. Description, currency, review date, incident response. About 8% of their time, as a line in their *manager's* objectives rather than their own, because the manager allocates the time.
 
-**Куратор контекста** — аналитик на ротации, по одному на домен. Верификация пар вопрос→ответ, ведение заметок к аномалиям. Около 4 часов в неделю в течение квартала, затем ротация.
+**Context curator** — an analyst on rotation, one per domain. Verifies question→answer pairs and keeps anomaly notes. About 4 hours a week for a quarter, then rotation.
 
-Модель кураторская: ответственность несёт тот, кто и так поддерживает объект. Ни одна роль не требует дата-инженера — это ограничение, из которого выведена вся конструкция.
+The model is custodial: responsibility sits with whoever already maintains the object. Not one role requires a data engineer — the constraint from which the whole construction is derived.
 
-## Органы
+## Bodies
 
-Отдельного совета не создаётся. Вместо него — существующий еженедельный синк руководителей аналитики, которому добавляется двадцать минут на спорные определения и незакрытые аномалии. Причина не в экономии: новый орган в компании, где все заняты миграцией, не соберётся, а собравшись — превратится в статус-отчёт.
+No separate council is created. Instead, the existing weekly analytics-leads sync gains twenty minutes for disputed definitions and unclosed anomalies. The reason is not economy: a new body in a company where everyone is on the migration will not convene, and having convened, will turn into a status report.
 
-Чего этот слот не делает: не слушает статусы по миграции, не согласовывает архитектуру, не утверждает планы команд. Если через два квартала он наполнился отчётами, слот закрывается, а арбитраж уходит напрямую к директору по операциям.
+What that slot does not do: it does not listen to migration status, does not approve architecture, does not sign off team plans. If in two quarters it has filled with reports, the slot closes and arbitration goes directly to the COO.
 
-## Протокол решений
+## Decision protocol
 
-Спор об определении поднимается в реестр любым участником. Куратор готовит кейс: два определения, кто применяет каждое, цена расхождения в деньгах или в часах. Решение принимается на ближайшем синке и фиксируется с датой, владельцем и областью применения. Обратной силы нет — выпущенная отчётность не пересчитывается, иначе каждый спор тянет ретроспективу и споры перестают поднимать. Спор старше двух недель эскалируется к CEO автоматически: это защита от арбитра, который согласился и не решает.
+A definition dispute is raised into the registry by any participant. The curator prepares the case: two definitions, who applies each, the cost of the divergence in money or in hours. The decision is taken at the next sync and recorded with a date, an owner and a scope of application. There is no retroactivity — issued reporting is not recomputed, otherwise every dispute drags a retrospective behind it and disputes stop being raised. A dispute older than two weeks escalates to the CEO automatically: that is the protection against an arbiter who agreed and does not decide.
 
-## Интерфейсы
+## Interfaces
 
-Программа миграции — не интерфейс, а граница. Стратегия построена так, чтобы её не касаться, и единственная инициатива, требующая инженера, помечена условной и вынесена во вторую волну. Продуктовые команды — потребители сертифицированного ядра; синхронизация нужна только по дате, когда статус становится видимым в их инструментах. Финансовая функция — сторона в споре об определениях, а не заказчик governance.
+The migration programme is not an interface but a boundary. The strategy is built so as not to touch it, and the single initiative requiring an engineer is marked conditional and pushed to the second wave. Product teams are consumers of the certified core; synchronisation is needed only on the date the status becomes visible in their tools. Finance is a party to the definitions dispute, not a customer of governance.
 
-## Ресурсы и артефакты
+## Resources and artefacts
 
-Новых ставок нет: работа закрывается квотами внутри аналитики. Дефицитна инженерная ёмкость, а не деньги и не согласования, поэтому вся конструкция выбрана по критерию «выполнимо аналитиками».
+No new headcount: the work is covered by time quotas inside analytics. Engineering capacity is scarce, not money and not approvals, so the whole construction was selected on the criterion "feasible by analysts".
 
-Возражение «это бюрократия» отбивается арифметикой. Убирается: вики на 400 страниц, половина которой протухла, заменяется карточками объектов с датой пересмотра; песочницы уходят из поиска; ad-hoc-повторы уходят в базу вопрос→ответ. Создаётся: один реестр определений, одностраничный протокол разрешения спора, база пар вопрос→ответ. Всё остальное живёт в инструментах: статус на объекте, дата пересмотра, обязательное поле владельца. Политики не пишутся вовсе — производство текстов стоит нуль, узкое место в поиске читателя, а артефакт без названного читателя в эту стратегию не входит.
+The objection "this is bureaucracy" is answered with arithmetic. Removed: a 400-page wiki, half of it stale, replaced by object cards with review dates; sandboxes leave search; ad-hoc repeats move into the question→answer base. Created: one definitions registry, a one-page dispute protocol, a base of question→answer pairs. Everything else lives in tools: status on the object, review date, mandatory owner field. No policies are written at all — producing text costs nothing, the bottleneck is finding a reader, and an artefact without a named reader does not enter this strategy.
 
-Обучение адресное: одностраничная инструкция владельцу объекта и разбор двух реальных споров на синке как учебный кейс. Массового обучения нет — рутина должна быть встроена в инструменты, а не выучена.
+Enablement is targeted: a one-page instruction for object owners and a walkthrough of two real disputes at the sync as a teaching case. There is no mass training — the routine has to be built into the tools rather than learned.
 
-## Путь деградации
+## Degradation path
 
-Если арбитраж не согласован, `S1` не стартует, а `S2` и `S5` теряют пререквизит. Остаются `S3` и `S4`: сертификация витрин и владельцы объектов — работа, не требующая ни арбитра, ни инженера. Документ переименовывается в программу гигиены аналитического контента и перестаёт называться стратегией DG, а мандат CEO по ассистенту возвращается ему с письменным объяснением, почему запуск отложен. Это не запасной план, а честная граница.
-
----
-
-# 06 · Оценка эффекта от реализации стратегии
-
-> **Экспертная оценка.** Структура эффекта и порядок величин рабочие; конкретные суммы требуют точного расчёта на данных компании. Ниже перечислено, что нужно измерить и кто владеет каждой цифрой. Ни одна строка не вынесена в Summary заголовочной цифрой и ни одна не годится в OKR до замера.
-
-Из трёх реальных зон ведущая здесь — экономия затрат. Регуляторного риска нет. Рост выручки теоретически есть через качество операционных решений, но метрика принадлежит операциям, атрибуция не согласована, и в модели эта строка весит ноль.
-
-Правление читает две цифры: согласованную оценку возможных потерь против стоимости предотвращения, и положительное решение принимается, когда минимальные потери превышают максимальные затраты. Затраты известны точно и малы: новых ставок нет, всё сводится к квотам времени аналитиков — 8% у владельцев объектов, 4 часа в неделю у кураторов, 2 часа в месяц у арбитра. Верхняя граница считается из ФОТ аналитики `[не хватает данных: стоимость часа аналитика]`.
-
-Механизм по стримам разный. `S2` даёт основную строку: доля повторных ad-hoc, умноженная на среднее время ответа и на стоимость часа аналитика. Это же единственная строка с прямой экономикой и потому кандидат в обязательство. `S3` даёт инфраструктуру и расчётные окна, освобождаемые выводом песочниц из продоподобных папок, плюс снятое время на выбор источника. `S1` даёт цену расхождения: тридцать минут месячного обзора на спор о цифре плюс перевыпуски отчётности. `S4` эффекта не даёт и не должен — это пререквизит. `S5` эффекта в первый год не даёт: пилот на одном домене окупается доверием, а не часами.
-
-Ведущий метод — трудосбережение, и это неудобно, потому что именно он чаще всего врёт. Три обязательные поправки. Вендорские проценты производительности не используются вовсе — считаем от собственного замера повторов, а не от чужой модели. Сэкономленное время не конвертируется в выпуск автоматически: аналитик, освободившийся от повторов, не производит на столько же больше, и финансовая функция сделает эту поправку, если её не сделать первым. И доказуемой стоит считать долю порядка 5–7% от заявленного эффекта, а не весь.
-
-Диапазон двусторонний. В пессимистичном сценарии арбитраж не согласован, база вопрос→ответ собрана наполовину, ранжирование в поиске не получило инженера — эффект положительный, но малый: сертификация витрин и снятые песочницы. В базовом определения зафиксированы, база пар работает, потребление сместилось на сертифицированное — эффект кратно выше, и ведущая часть в нём это высвобожденное аналитическое время. Оптимистичного сценария нет намеренно: он не переживает контакта с финансами.
-
-В обязательство берётся одна строка — **сокращение доли повторных ad-hoc**, и то после замера бейзлайна. Она выбрана не как самая крупная, а как единственная, где цепочка от действия к эффекту не требует спора об атрибуции: пара вопрос→ответ либо закрыла запрос без аналитика, либо нет. Решение о фиксируемой доле принято здесь, до встречи, а не на встрече.
-
-Заменить оценку расчётом можно пятью замерами, четыре из которых — работа на две недели:
-
-- доля повторов в ad-hoc за год — руководитель аналитики, выгрузка чата; знаменатель главной строки и бейзлайн для метрики раздела 03;
-- среднее время ответа на типовой запрос — руководитель аналитики, хронометраж выборки;
-- стоимость часа аналитика — HR и финансы;
-- инфраструктура и расчётные окна под песочницами — платформенная команда;
-- цена расхождения по выполненному заказу: сколько перевыпусков отчётности и сколько времени обзоров за год — финансовая функция, и это ближе к переговорам, чем к замеру.
-
-Исключены и не вернутся: операционная эффективность как отдельная статья, инновационность, ускорение принятия решений — последнее закрыто в отрасли десятилетие назад. Time-to-insight остаётся целью в метриках и в денежную модель не входит. Качество данных не самостоятельная статья: оно сводится к выручке или затратам, и эту линию проводим сами, пока её не провела финансовая функция.
+If arbitration is not agreed, `S1` does not start and `S2` and `S5` lose their prerequisite. What remains is `S3` and `S4`: certifying marts and naming object owners, work that needs neither an arbiter nor an engineer. The document is renamed to a programme of analytical content hygiene and stops being called a DG strategy, and the CEO's assistant mandate is returned with a written explanation of why the launch is deferred. This is not a fallback plan but an honest boundary.
 
 ---
 
-# 07 · Риски
+# 06 · Effect of the strategy
 
-**Ассистент запустят по мандату до готовности гейтов.** Самый вероятный сценарий провала: мандат CEO существует, срок объявлен, гейты неформальны. Управление: гейты фиксируются письменно и подписываются CEO до старта работ, а не предъявляются в декабре как причина срыва.
+> **Expert estimate.** The structure of the effect and the orders of magnitude are working; specific sums require a precise calculation on the company's data. Below is what must be measured and who owns each figure. No line from here appears in the Summary as a headline number, and none is fit for an OKR before measurement.
 
-**Арбитр согласится и не будет решать.** Согласие получить легко, решения принимать неприятно. Управление: спор старше двух недель эскалируется автоматически, и это записано в протоколе, а не оставлено на инициативу куратора.
+Of the three real zones the leading one here is cost saving. There is no regulatory risk. Revenue growth exists in theory through the quality of operational decisions, but the metric belongs to operations, attribution is not agreed, and in the model that line weighs zero.
 
-**Кураторы контекста утонут в текущей очереди.** Верификация пар конкурирует с ad-hoc, и ad-hoc всегда срочнее. Управление: ротация квартальная, объём в часах записан в целях руководителя, и первые пары собираются из истории, а не из потока.
+The board reads two numbers: an agreed estimate of possible losses against the cost of preventing them, and a positive decision is taken when minimal losses exceed maximal costs. Costs are known precisely and are small: no new headcount, everything reduces to analyst time quotas — 8% for object owners, 4 hours a week for curators, 2 hours a month for the arbiter. The upper bound is computed from the analytics payroll `[missing data: cost of an analyst-hour]`.
 
-**Ранжирование в поиске не получит инженера.** Вероятность высокая — это единственная инициатива, зависящая от занятого ресурса. Управление: статус остаётся видимым в карточке объекта, ранжирование переносится за горизонт, стрим ослабляется, но не отменяется.
+The mechanism differs by stream. `S2` provides the main line: the share of repeat ad-hoc multiplied by average time to answer and by the cost of an analyst-hour. It is also the only line with direct economics and therefore the candidate for the commitment. `S3` provides infrastructure and compute windows freed by removing sandboxes from production-like folders, plus the time no longer spent choosing a source. `S1` provides the cost of divergence: thirty minutes of the monthly review spent arguing about a number, plus reissued reporting. `S4` provides no effect and should not — it is a prerequisite. `S5` provides no effect in year one: a pilot on one domain pays back in trust, not in hours.
 
-**Миграция сдвинется вправо и заберёт остатки внимания.** Управление: три из пяти стримов её не касаются вовсе, и это проверялось при их отборе — стратегия сознательно построена как независимая от календаря миграции.
+The leading method is labour saving, which is awkward, because that is the method that most often lies. Three mandatory corrections. Vendor productivity percentages are not used at all — we compute from our own measurement of repeats rather than from someone else's model. Saved time does not convert into output automatically: an analyst freed from repeats does not produce proportionally more, and finance will make that correction if it is not made first. And the defensible share is on the order of 5–7% of the claimed effect, not all of it.
 
-**Определения зафиксируют и не будут применять.** Реестр есть, а отчёты считают по-старому. Управление: сертификация витрины требует ссылки на определение из реестра, то есть проверка встроена в статус, а не оставлена дисциплине.
+The range is two-sided. In the pessimistic scenario arbitration is not agreed, the question→answer base is half-built, and search ranking gets no engineer — the effect is positive but small: certified marts and removed sandboxes. In the base case definitions are fixed, the pair base works, consumption has shifted to certified content — the effect is several times larger, and its leading part is freed analyst time. There is no optimistic scenario, deliberately: it does not survive contact with finance.
 
-## Пересмотр
+One line goes into the commitment — **the reduction in repeat ad-hoc**, and only after the baseline is measured. It is chosen not as the largest but as the only one where the chain from action to effect requires no argument about attribution: a question→answer pair either closed the request without an analyst or it did not. The decision on the committed fraction was taken here, before the meeting, not in it.
 
-Стратегия пересматривается ежеквартально, с обязательным ответом на три вопроса: что заморожено, какой из пяти замеров закрыт, и сдвинулась ли дата освобождения инженерной ёмкости. Документ без заявленного следующего пересмотра тихо заменяют, а не обновляют.
+The estimate can be replaced by a calculation with five measurements, four of which are two weeks of work:
+
+- share of repeats in ad-hoc over a year — head of analytics, from the chat export; the denominator of the main line and the baseline for the metric in section 03;
+- average time to answer a typical request — head of analytics, timing a sample;
+- cost of an analyst-hour — HR and finance;
+- infrastructure and compute windows under the sandboxes — platform team;
+- cost of divergence on completed orders: how many reissues of reporting and how much review time a year — finance, and this is closer to negotiation than to measurement.
+
+Excluded and not returning: operational efficiency as a line of its own, innovation, accelerated decision-making — the last was closed in the industry a decade ago. Time-to-insight stays a goal in the metrics and does not enter the money model. Data quality is not an independent line of effect: it resolves into revenue or cost, and we draw that line ourselves before finance draws it.
 
 ---
 
-# Приложения
+# 07 · Risks
 
-## Портрет компании и ответы интервью
+**The assistant is launched on the mandate before the gates are ready.** The most likely failure: the CEO's mandate exists, the date is announced, the gates are informal. Managed by fixing the gates in writing and having the CEO sign them off before work starts, rather than producing them in December as the reason for a miss.
 
-**Tairin** — оператор доставки и тёмных складов: 340 точек в 12 городах, около 4.5 млн заказов в месяц, 6 200 сотрудников. Собственное приложение, собственная курьерская сеть, ассортимент из 6 000 SKU.
+**The arbiter agrees and does not decide.** Agreement is easy to obtain; decisions are unpleasant to take. Managed by automatic escalation of any dispute older than two weeks, written into the protocol rather than left to a curator's initiative.
 
-| Вопрос | Ответ |
-|---|---|
-| Тип стратегии, структура, объём | DG · Summary + разделы 00–07 · HTML + MD · диагностика Lite. **Почему DG, а не AI:** мандат на ассистента есть, но его качество целиком определяется определениями, ядром и контекстом, а это DG-работа. |
-| Масштаб и орг-модель | 6 200 сотрудников, 12 городов. Аналитика централизована: 55 аналитиков в одном подразделении, BI-команда 9 человек, дата-инженеров 12. |
-| Ландшафт | Миграция склада в лейкхаус: 18 месяцев позади, ~10 впереди. dbt используется, семантического слоя нет. Каталога нет; вики на 400 страниц, половина протухла. Сертификации нет как понятия. |
-| Боли | Три определения выполненного заказа, расхождение до 4%. ~60% ad-hoc — повторы. В поиске выдаётся всё подряд. Вся инженерная ёмкость занята миграцией. |
-| Фундамент | DQ-проверки только на платёжном контуре. Ad-hoc-поток измерен по числу запросов, но не по доле повторов. |
-| Ограничения | Деньги есть, согласования быстрые, **инженерных рук нет до конца года**. |
-| Культура и власть | Плоская, быстрая, инженерная. Слово governance нейтрально — им просто не пользовались. Реальный вес у директора по операциям: 340 складов подчиняются ему. |
-| Амбиция | CEO: ассистент для операционных менеджеров к концу года. Аналитика: перестать отвечать на одни и те же вопросы. |
+**Context curators drown in the current queue.** Verifying pairs competes with ad-hoc, and ad-hoc is always more urgent. Managed by quarterly rotation, hours recorded in the manager's objectives, and by mining the first pairs from history rather than from the live flow.
 
-## Что нужно измерить для диагностики
+**Search ranking gets no engineer.** High likelihood — it is the only initiative dependent on the committed resource. Managed by keeping the status visible on the object card, moving ranking beyond the horizon, and weakening rather than cancelling the stream.
 
-1. **Доля повторов в ad-hoc-потоке.** Источник: выгрузка истории саппорт-чата за год. Блокирует главную строку эффекта и одну цель раздела 03. Не требует ничьего согласия — первое действие первого месяца.
-2. **Среднее время ответа на типовой запрос.** Источник: хронометраж выборки. Блокирует перевод сэкономленного времени в деньги.
-3. **Покрытие DQ-проверками вне платёжного контура.** Единственная оценка низкой уверенности в скоркарте.
-4. **Дата освобождения инженерной ёмкости.** Источник: руководитель миграции. Определяет, попадает ли инициатива 6 в горизонт года вообще.
-5. **Цена расхождения по выполненному заказу.** Источник: финансовая функция. Ближе к переговорам, чем к замеру.
+**The migration slips right and absorbs what attention remains.** Managed by construction: three of five streams do not touch it, and that was checked when they were selected — the strategy is deliberately independent of the migration calendar.
 
-## Журнал доработки
+**Definitions are fixed and not applied.** The registry exists and reports still compute the old way. Managed by making certification of a mart require a reference to a definition from the registry — the check is built into the status rather than left to discipline.
 
-CDO-судья отработал три прохода; девятое измерение — позиция раздела — применено впервые.
+## Revision
 
-| Проход | Было | Стало | Закрывает |
+The strategy is revisited quarterly, with a mandatory answer to three questions: what has been frozen, which of the five measurements is closed, and whether the date engineering capacity frees up has moved. A document without a stated next revision gets quietly replaced rather than updated.
+
+---
+
+# Appendices
+
+Company portrait and interview answers: [tairin-company.md](tairin-company.md). The same run in Russian, including the rework log and the list of what this knowledge base had no material for: [tairin-strategy.md](tairin-strategy.md).
+
+## What needs measuring for the diagnosis
+
+1. **Share of repeats in the ad-hoc flow.** Source: a year's export of support-chat history. Blocks the main effect line and one goal in section 03. Needs nobody's agreement — the first action of the first month.
+2. **Average time to answer a typical request.** Source: timing a sample. Blocks converting saved time into money.
+3. **DQ coverage outside the payment perimeter.** The single low-confidence score in the scorecard.
+4. **The date engineering capacity frees up.** Source: the migration lead. Determines whether initiative 6 falls inside the year's horizon at all.
+5. **Cost of divergence on completed orders.** Source: finance. Closer to negotiation than to measurement.
+
+## Rework log
+
+The CDO judge ran three passes; the ninth dimension — the position a section takes — was applied for the first time.
+
+| Pass | Was | Became | Closes |
 |---|---|---|---|
-| 1 | Ассистент стоял в первой волне вслед за мандатом CEO | Пилот вынесен в H2 за гейты; мандат отвечается письменной фиксацией условий, а не сроком | порядок · blocking |
-| 1 | Стратегия предполагала инженерную работу в четырёх инициативах | Оставлена одна, помечена условной; вся конструкция пересобрана под аналитиков и кураторов | реализуемость · blocking |
-| 2 | Раздел 02 описывал целевое состояние и не занимал сторону | Ставка сформулирована явно: чинить цепочку снизу, но только свободными руками; названы три замороженные категории и причина каждой | **позиция** |
-| 2 | Риск «арбитр согласится и не будет решать» отсутствовал | Добавлен вместе с механизмом: автоматическая эскалация спора старше двух недель | честность рисков |
-| 3 | Метрики набора могли только расти | Добавлена двусторонняя — расхождение по выполненному заказу; остальные названы прокси вслух | рациональность · metric theatre |
+| 1 | The assistant sat in the first wave, following the CEO's mandate | The pilot moved to H2 behind gates; the mandate is answered by fixing conditions in writing rather than by a date | order · blocking |
+| 1 | The strategy assumed engineering work in four initiatives | One remains, marked conditional; the whole construction was rebuilt around analysts and curators | feasibility · blocking |
+| 2 | Section 02 described a target state and took no side | The bet is stated explicitly — repair the chain from the bottom, but only with free hands; three frozen categories named with a reason each | **position** |
+| 2 | The risk "the arbiter agrees and does not decide" was absent | Added together with its mechanism: automatic escalation of a dispute older than two weeks | risk honesty |
+| 3 | Every metric in the set could only rise | A two-way metric added — divergence on completed orders; the rest labelled proxies out loud | rationality · metric theatre |
 
-**Остановка цикла:** проход 3 не дал новых блокирующих находок.
+**Loop stopped:** pass 3 produced no new blocking findings.
 
-**Что судья не закрыл.** Претензия «пилот на одном домене не докажет масштабируемость» верна и неустранима: доказать масштабируемость можно только масштабированием, а оно за гейтами. Переведена из списка судьи в ограничения — периметр года сознательно узок, и это записано.
+**What the judge did not close.** The objection "a pilot on one domain will not prove scalability" is correct and unresolvable: scalability can only be proven by scaling, and scaling is behind the gates. Moved from the judge's list into the strategy's constraints — the year's perimeter is deliberately narrow, and that is written down.
 
-**Проход bullshit-судьи.** Убраны безакторные конструкции, усилители без чисел, парные абстракции и формулировки-намерения вместо инициатив с владельцем.
+**Bullshit judge pass.** Removed actorless constructions, intensifiers without numbers, paired abstractions, and aspirations standing in for initiatives with an owner.
 
-## Где база знаний не ответила
+## Where the knowledge base had no answer
 
-| Тема | Что было нужно | Что есть в базе |
+| Topic | What was needed | What the base has |
 |---|---|---|
-| Governance во время платформенной миграции | как вести программу, когда вся инженерная ёмкость занята на год | нет; база предполагает доступный инженерный ресурс |
-| Экономика трудосбережения аналитиков | метод, устойчивый к «сэкономленное время не конвертируется» | есть предупреждение и коэффициент 5–7%, метода нет |
-| Курирование контекста как роль | нагрузка, ротация, выгорание проверяющего | роль названа, нормирование отсутствует |
-| Голден-сет для ассистента | как собрать, сколько вопросов, какой порог допуска | принцип есть, процедура — нет |
+| Governance during a platform migration | how to run a programme when all engineering capacity is committed for a year | nothing; the base assumes available engineering resource |
+| Economics of analyst labour saving | a method robust to "saved time does not convert" | a warning and the 5–7% coefficient; no method |
+| Context curation as a role | load, rotation, reviewer burnout | the role is named; there is no sizing |
+| A golden set for an assistant | how to assemble it, how many questions, what acceptance threshold | the principle exists, the procedure does not |
 
-**Что сработало без натяжки:** цепочка `ядро → семантика → контекст → точность агента → self-service` применилась без адаптации — первый прогон, где это так; кураторская модель; отказ от каталога и семантического слоя как от преждевременных; база вопрос→ответ из истории чата; порядок сертификации витрины → отчёты → метрики.
+**What worked without strain:** the chain `core → semantic → context → agent accuracy → self-service` applied without adaptation — the first run where that is true; the custodian model; refusing the catalog and the semantic layer as premature; the question→answer base from chat history; the certification order marts → reports → metrics.
 
 ---
 
-*Сгенерировано скиллом dg-strategy (FORM · DG) поверх [dg-board-kb](https://github.com/alexbarakov/dg-board-kb). Компания вымышлена; прогон приёмочный — проверяется спецификация: 6–8 страниц без приложений, минимум таблиц, портфель таблицей, контекст двумя половинами, стримы с обоснованием, отточенность слов.*
+*Produced by the dg-strategy skill (FORM · DG) on [dg-board-kb](https://github.com/alexbarakov/dg-board-kb). The company is invented; this was an acceptance run against the specification: 6–8 pages excluding appendices, minimum tables, portfolio always a table, context in two halves, streams with justification, word precision.*

@@ -2,377 +2,360 @@
 type: example
 kind: strategy
 company: Alverta Insurance Group
-note: invented company; output of a full FORM run, in the user's language by the skill's own convention
+note: invented company; output of a full FORM run. The Russian original is the primary artefact; this is the same run in English.
 ---
 
-# Alverta Insurance Group — стратегия Data Governance
+# Alverta Insurance Group — Data Governance strategy
 
-Горизонт 12 месяцев с заглядыванием на 3 года. Собрано скиллом `dg-strategy` (FORM, скоуп DG) поверх базы знаний dg-board-kb.
-Компания вымышлена для проверки процедуры. Пробелы в фактуре помечены `[не хватает данных]`.
+A 12-month horizon with a three-year outlook. Produced by the `dg-strategy` skill (FORM, DG scope) on the dg-board-kb knowledge base.
+
+The company is invented, and deliberately chosen as an awkward test: a regulated industry, a legacy estate, a failed MDM attempt. Gaps in the facts are marked `[missing data]`.
 
 ---
 
 # Summary
 
-## Видение
+## Vision
 
-Через год про клиента и про цифру в регуляторном отчёте можно доказать, откуда они взялись. Не везде — на узком периметре, но до конца: розница одной страны и контур регуляторной отчётности. Единый взгляд на клиента и ответ надзору — это не две программы, как считает правление, а одна: обе упираются в идентичность и владельцев определений.
+A year from now, both the customer and the number in the regulatory report can be proven — where they came from. Not everywhere, but on a narrow perimeter and all the way through: retail in one country, and the regulatory reporting contour. A single view of the customer and an answer to the supervisor are not two programmes, as the board believes, but one: both rest on identity and on owners of definitions.
 
-## Проблемы
+## Problems
 
-1. **Нет идентичности клиента** — четыре записи в четырёх системах, три отчёта с разными цифрами.
-2. **Нет владельца определений** — актуарии и BI расходятся в убыточности, арбитра нет.
-3. **Нет прослеживаемости** — замечание надзора уже получено.
-4. **Совет-театр** — три года протоколов, занимающих место работающего органа.
-5. **Контентный навес** — 2 400 отчётов при 300 используемых.
+1. **No customer identity** — four records in four systems, three reports with different numbers.
+2. **No owner of definitions** — actuaries and BI disagree on loss ratio; there is no arbiter.
+3. **No traceability** — a supervisory finding has already been received.
+4. **A theatre council** — three years of minutes occupying the place a working body would take.
+5. **Content overhang** — 2 400 reports against 300 in use.
 
-## Решения по стримам
+## Solutions by stream
 
-- **S1 · Роли с часами** — переучреждение совета, реестр владельцев с закреплённым временем. Проблема 4, разблокирует остальное.
-- **S2 · Идентичность** — разрешение идентичности розничного физлица одной страны. Проблема 1.
-- **S3 · Определения** — реестр 30–50 метрик с владельцами и протокол разрешения спора. Проблема 2.
-- **S4 · Прослеживаемость** — трассировка полей отчёта, входной контроль брокерских файлов, DQ на контуре. Проблема 3.
-- **S5 · Гигиена** — инвентаризация, архивация, подтверждение ядра. Проблема 5.
+- **S1 · Roles with hours** — re-founding the council; a registry of owners with recorded time. Problem 4; unblocks the rest.
+- **S2 · Identity** — identity resolution for retail individuals in one country. Problem 1.
+- **S3 · Definitions** — a registry of 30–50 metrics with owners and a dispute-resolution protocol. Problem 2.
+- **S4 · Traceability** — tracing report fields, intake control on broker files, DQ on the key contour. Problem 3.
+- **S5 · Hygiene** — inventory, archiving, confirmation of the core. Problem 5.
 
-## Цели
+## Goals
 
-Формат: сейчас → год 1 → год 3.
+Format: now → year 1 → year 3.
 
-- Объекты регуляторного контура с владельцем и закреплённым временем: 0% → 90% → 90% (потолок периметра).
-- Определения с владельцем и утверждённой формулой: 0 из ~40 → 30–50 → все управленческие и регуляторные.
-- Поля регуляторного отчёта, прослеживаемые до источника: `[не хватает данных]` → 100% периметра замечания → весь регуляторный контур.
-- Розничные физлица с разрешённой идентичностью: 0% → одна страна → четыре страны.
-- Отчёты, архивировано неиспользуемых: 0% → ≥60% → процесс непрерывный.
-- Зрелость, среднее по 9 категориям: 1.4 → 2.0 → 3.0.
+- Regulatory-contour objects with an owner and recorded time: 0% → 90% → 90% (the perimeter's ceiling).
+- Definitions with an owner and an approved formula: 0 of ~40 → 30–50 → all management and regulatory metrics.
+- Report fields traceable to source: `[missing data]` → 100% of the finding's perimeter → the whole regulatory contour.
+- Retail individuals with resolved identity: 0% → one country → four countries.
+- Unused reports archived: 0% → ≥60% → a continuous process.
+- Maturity, average across 9 categories: 1.4 → 2.0 → 3.0.
 
-## Чего не делаем
+## What we deliberately do not do
 
-Каждый отказ снимается своим гейтом, а не пересмотром настроения.
+Every refusal is lifted by its own gate, not by a change of mood.
 
-- **Не покупаем каталог данных** (обсуждается третий год) — вернёмся, когда роли работают в трёх доменах.
-- **Не делаем полный MDM** с золотой записью для всех линий — вернёмся, когда контур на рознице принят линиями.
-- **Не трогаем архитектуру и легаси** — решение о выводе мейнфрейма лежит вне горизонта.
-- **Не заявляем AI как цель года** — вернёмся, когда идентичность и определения работают.
-- **Не переписываем политики** — производство текстов стоит нуль, узкое место в исполнении.
+- **We do not buy a data catalog** (discussed for three years) — we return when roles work in three domains.
+- **We do not do full MDM** with a golden record for all lines — we return when the retail contour is accepted by the lines.
+- **We do not touch architecture or legacy** — the decision to retire the mainframe sits outside the horizon.
+- **We do not declare AI a goal for the year** — we return when identity and definitions work.
+- **We do not rewrite policies** — producing text costs nothing; the bottleneck is execution.
 
-## Эффект
+## Effect
 
-Ведущая зона — регуляторный риск: замечание уже получено, событие произошло и его не надо прогнозировать. Вторая — экономия затрат. Выручка через кросс-продажи идёт по чужой метрике и в модели весит ноль, пока не согласована доля атрибуции. Затраты известны точнее эффекта: новых ставок нет, всё сводится к квотам времени.
+The leading zone is regulatory risk: the finding has already been received, so the event has happened and does not need forecasting. Second is cost saving. Revenue through cross-sell runs on someone else's metric and weighs zero in the model until an attribution share is agreed. Costs are known more precisely than the effect: no new headcount, everything reduces to time quotas.
 
-В обязательство берётся одна строка — инфраструктурная экономия от архивации отчётности. Остальное — экспертная оценка, требующая точного расчёта; семь замеров с владельцами перечислены в разделе 06.
+One line goes into the commitment — the infrastructure saving from archiving reports. The rest is an expert estimate requiring precise calculation; seven measurements with named owners are listed in section 06.
 
-## Что нужно от вас
+## What we need from you
 
-**Директор по рискам берёт председательство в переучреждённом совете.** Повестка: споры об определениях и приоритизация; статус-отчёты отменяются. Срок — первый месяц.
+**The Chief Risk Officer takes the chair of the re-founded council.** Agenda: disputes about definitions and prioritisation; status reporting is abolished. Deadline: the first month.
 
-Это единственная роль с рычагом: замечание получено, требовать может только она. **Если решения нет** — стратегия сокращается до S4 и S5 и переименовывается; строить идентичность без держателя мандата значит повторить 2022 год. Взамен он получает документированный ответ надзору, прослеживаемость, снимающую личный риск на следующей проверке, и право приоритизировать работы с данными — сейчас оно размазано по архитектурному комитету.
+This is the only role with leverage: the supervisory finding has been received, and only that role can demand. **If the decision is not taken**, the strategy shrinks to S4 and S5 and is renamed; building identity without a mandate holder means repeating 2022. In return they get a documented answer to the supervisor, traceability that removes personal exposure at the next inspection, and the right to prioritise data work — which today is smeared across the architecture committee.
 
-## Первый шаг и цена бездействия
+## First step and the cost of doing nothing
 
-Два действия в первый месяц, остальное ждёт их результата: разговор с директором по рискам о председательстве и техническая разведка — достижима ли прослеживаемость через мейнфрейм, где лежит 40% портфеля.
+Two actions in the first month, with everything else waiting on their result: the conversation with the CRO about the chair, and a technical reconnaissance — is traceability achievable through the mainframe, which carries 40% of the book.
 
-Бездействие: второе замечание надзора по тому же поводу переводит разговор в «в какой срок исправите» со сроками, которые назначаем не мы; программа кросс-продаж стартует на данных, где показатели посчитают, но не докажут; трёхнедельный аврал закрытия повторяется каждый квартал и растёт вместе с портфелем.
+Doing nothing: a second supervisory finding on the same subject turns the conversation into "by when will you fix it", on dates we do not set; the cross-sell programme starts on data where the numbers can be computed but not proven; and the three-week close firefight repeats every quarter and grows with the book.
 
 ---
 
-# 00 · Контекст
+# 00 · Context
 
-## Внешний
+## External
 
-Страхование построено на данных: тариф, резерв, убыточность. При этом отраслевая норма — данные, размазанные по системам разных поколений, и конкуренты находятся в том же положении. Выигрывает тот, кто раньше соберёт идентичность клиента.
+Insurance is built on data: pricing, reserving, loss ratio. And yet the industry norm is data smeared across systems of different generations. Competitors are in the same position; the winner is whoever assembles identity first.
 
-Надзор давит на прослеживаемость сильнее, чем на точность: вопрос «объясните, откуда цифра» приходит раньше вопроса «докажите, что она верна». Это меняет приоритет — доказуемость важнее чистоты.
+The supervisor presses harder on traceability than on accuracy: "explain where this number came from" arrives before "prove that it is right". That changes the priority — provability outranks cleanliness.
 
-Производство governance-документации подешевело до нуля, поэтому узкое место сместилось на исполнение: политики перестали быть проектом. Каталоги перестали быть входным билетом — их покупка стала устойчивым способом не отвечать на вопрос о ролях. AI компанию пока не касается, но задаёт срок: чем позже собран фундамент, тем дороже вход, когда правление спросит про агентов.
+Producing governance documentation has fallen to zero cost, so the bottleneck moved to execution and policies stopped being a project. Catalogs stopped being the entry ticket — buying one has become a durable way of not answering the question about roles. AI does not touch the company yet, but it sets a clock: the later the foundation is assembled, the more expensive the entry when the board asks about agents.
 
-## Внутренний
+## Internal
 
-Четыре проблемы, каждая с механизмом и частотой.
+Four problems, each with a mechanism and a frequency.
 
-**Клиент не един.** Один человек существует четырьмя записями в четырёх системах, и сопоставляет их человек вручную. Ломается это на каждом расчёте кросс-продаж: три отчёта дают три разные цифры, потому что каждый аналитик сопоставляет по-своему. Правление видит расхождение ежемесячно и перестало обсуждать саму метрику.
+**The customer is not one customer.** One person exists as four records in four systems, and a human reconciles them by hand. This breaks on every cross-sell calculation: three reports give three numbers, because each analyst matches records their own way. The board sees the divergence monthly and has stopped discussing the metric itself.
 
-**У определений нет владельца.** Актуарии и BI считают убыточность по-разному, и расхождение воспроизводится каждый цикл, потому что нет человека, чьё определение считается верным. Спор возникает не от незнания, а от отсутствия арбитра.
+**Definitions have no owner.** Actuaries and BI compute loss ratio differently, and the divergence reproduces every cycle because there is no person whose definition counts. The dispute arises not from ignorance but from the absence of an arbiter.
 
-**Цифра не связана с источником.** Поле регуляторного отчёта нельзя показать проверяющему цепочкой до происхождения. Это уже стоило замечания надзора — то есть событие произошло, а не прогнозируется. Квартальное закрытие идёт три недели аврала, потому что сверка делается вручную.
+**The number is not connected to its source.** A field in the regulatory report cannot be shown to an inspector as a chain back to origin. This has already cost a supervisory finding — an event, not a forecast. The quarterly close runs three weeks of firefighting because reconciliation is manual.
 
-**Совет существует и ничего не меняет.** DG Council три года ведёт протоколы. Он не бесполезен — он вреден: занимает политическое место, куда встал бы работающий орган, и любое предложение создать новый читается как дубль.
+**The council exists and changes nothing.** The DG Council has kept minutes for three years. It is not merely useless — it is harmful: it occupies the political space a working body would take, and any proposal to create a new one reads as a duplicate.
 
-Пятое, менее болезненное, но дешёвое в исправлении: 2 400 отчётов, из которых открывается около 300.
+A fifth, less painful and cheap to fix: 2 400 reports of which roughly 300 are opened.
 
-Ограничение, определяющее форму решения: **дефицитен не бюджет, а темп согласований**. Всё идёт через архитектурный комитет. Значит оптимизируем число согласований, а не стоимость. И легаси не уйдёт — 40% портфеля живёт на мейнфрейме минимум пять лет, поэтому любой план, начинающийся словами «после вывода легаси», это план на потом.
+The constraint that determines the shape of the solution: **what is scarce is not budget but approval throughput.** Everything goes through the architecture committee. So we optimise the number of approvals rather than the cost. And the legacy will not go away — 40% of the book lives on a mainframe for at least five more years, so any plan beginning "after the legacy is retired" is a plan for later.
 
 ---
 
 # 01 · AS-IS
 
-Менеджмент — сотни принимающих решения, power users — около 140, зависимость бизнеса от данных высокая, вероятность отраслевой трансформации умеренно высокая. Оправданный долгосрочный уровень — **3.0**. Цель года — **2.0**, по правилу «+1 уровень в год» на тех категориях, где есть и ресурс, и мандат. Три категории из девяти не двигаются вовсе. Цель 3.0 за год недостижима не из-за денег, а из-за темпа согласований.
+Management is hundreds of decision-makers; power users number around 140; business dependence on data is high; the likelihood of an industry data transformation is moderately high. The justified long-term level is **3.0**. The target for the year is **2.0**, on the "+1 level a year" rule for categories where both resource and mandate exist. A target of 3.0 in a year is unreachable — not because of money, but because of approval throughput.
 
-`█` текущий уровень · `▒` прирост за год · `·` не берём
+`█` current level · `▒` gain this year · `·` not taken
 
-| Категория | Сейчас | Цель | Профиль (0–4) | Уверенность |
+| Category | Now | Target | Profile (0–4) | Confidence |
 |---|---|---|---|---|
-| Безопасность данных | 3 | 3 | `██████████████████████████████····` | высокая |
-| Извлечение ценности | 2 | 2 | `████████████████████··············` | средняя |
-| Стратегическое лидерство | 2 | 3 | `████████████████████▒▒▒▒▒▒▒▒▒▒····` | средняя |
-| Знание своих данных | 1 | 2 | `██████████▒▒▒▒▒▒▒▒▒▒··············` | высокая |
-| Вовлечение людей | 1 | 2 | `██████████▒▒▒▒▒▒▒▒▒▒··············` | высокая |
-| Analytics governance | 1 | 2 | `██████████▒▒▒▒▒▒▒▒▒▒··············` | высокая |
-| Data governance | 1 | 2 | `██████████▒▒▒▒▒▒▒▒▒▒··············` | высокая |
-| Управление качеством | 1 | 2 | `██████████▒▒▒▒▒▒▒▒▒▒··············` | **низкая** |
-| Архитектура данных | 1 | 1 | `██████████························` | средняя |
+| Data security | 3 | 3 | `██████████████████████████████····` | high |
+| Getting value | 2 | 2 | `████████████████████··············` | medium |
+| Strategic leadership | 2 | 3 | `████████████████████▒▒▒▒▒▒▒▒▒▒····` | medium |
+| Knowing your data | 1 | 2 | `██████████▒▒▒▒▒▒▒▒▒▒··············` | high |
+| People engagement | 1 | 2 | `██████████▒▒▒▒▒▒▒▒▒▒··············` | high |
+| Analytics governance | 1 | 2 | `██████████▒▒▒▒▒▒▒▒▒▒··············` | high |
+| Data governance | 1 | 2 | `██████████▒▒▒▒▒▒▒▒▒▒··············` | high |
+| Quality management | 1 | 2 | `██████████▒▒▒▒▒▒▒▒▒▒··············` | **low** |
+| Data architecture | 1 | 1 | `██████████························` | medium |
 
-Уверенность высокая означает выгрузку или счёт, средняя — слова участников, низкая — вывод по косвенным признакам. Оценка низкой уверенности одна: покрытие DQ-проверками известно только там, где его потребовал регулятор, и цель по этой категории не ставится до замера.
+High confidence means an export or a count, medium means participants' word, low means inference from adjacent facts. There is one low score: DQ coverage is known only where the regulator demanded it, and no target is set for that category until it is measured.
 
-Спрос на изменения распределён неравномерно, и это определяет, на кого опираться. Правление хочет кросс-продажи и получает три отчёта с разными цифрами. Риск и комплаенс живут в квартальном аврале и уже получили замечание — самый мотивированный потребитель governance в компании. Актуарии не считают себя частью проблемы: «это у BI что-то не так». Линии бизнеса боли не чувствуют, их локальные отчёты работают, — поэтому программа не может строиться на их доброй воле.
+Demand is uneven, and that determines whom to lean on. The board wants cross-sell and receives three reports with different numbers. Risk and compliance live in a quarterly firefight and have already taken a finding — the most motivated consumer of governance in the company. Actuaries do not consider themselves part of the problem: "it is BI that has something wrong". Business lines feel no pain, their local reports work — so the programme cannot be built on their goodwill.
 
-> **Оговорка к методу.** Базовая цепочка базы знаний — `ядро → семантика → контекст → точность агента → self-service` — написана под компанию с AI-амбицией. У Alverta её нет. Работающий аналог: `идентичность → определения → прослеживаемость → доверие регулятора и кросс-продажи`.
+> **A caveat on method.** The knowledge base's core chain — `core → semantic → context → agent accuracy → self-service` — is written for a company with an AI ambition. Alverta has none. The working analogue is `identity → definitions → traceability → regulatory trust and cross-sell`.
 
 ---
 
 # 02 · TO-BE
 
-Ставка одна: **узко и до конца вместо широко и наполовину**. Одна цепочка от опознанного клиента до прослеживаемой цифры, работающая на рознице одной страны и на контуре регуляторной отчётности. Потолок года по каждой движущейся категории — уровень 2, то есть «работает на ключевом периметре», а не «работает везде»; ожидание «везде» в компании с тремя поколениями систем недостижимо ни за какие деньги в горизонте года.
+The bet: **narrow and finished rather than broad and half-done.** One chain from an identified customer to a traceable number, working for retail in one country and for the regulatory contour.
 
-Три категории из девяти остаются на месте сознательно. Безопасность держится режимом и в опеке не нуждается. Извлечение ценности — актуарная функция сильна сама по себе. Архитектура заморожена вопреки соблазну: легаси в горизонте не уходит, а попытка «сначала навести порядок в системах» съест год согласований и не даст ни одного результата.
+The ceiling for the year on each moving category is level 2 — "works on the key perimeter", not "works everywhere". The expectation of "everywhere" in a company with three generations of systems is unreachable at any price within a year.
 
-Целевая архитектура минимально достаточна: слой идентичности на рознице с прослеживаемым правилом вместо полного MDM, реестр 30–50 определений вместо глоссария на 340 терминов, прослеживаемость на периметре замечания, сертифицированное ядро из ~300 используемых отчётов. Операционная модель — раздел 05.
+Three categories of nine stay where they are, deliberately. Security holds on its regime and needs no attention. Getting value — the actuarial function is strong. Architecture is frozen against the temptation: the legacy does not leave within the horizon, and an attempt to "clean up the systems first" will consume a year of approvals.
 
-## Стримы изменений
+The target architecture is minimally sufficient: an identity layer for retail (identity resolution with a traceable rule, not full MDM); a registry of 30–50 key definitions instead of a 340-term glossary; traceability on the finding's perimeter; a certified core of the ~300 reports actually in use. Operating model — section 05.
 
-Пять направлений. Стрим — не проект, а направление изменения со своим результатом года; проекты живут внутри и перечислены в разделе 04.
+## Streams of change
 
-**S1 · Роли с часами.** Меняет то, что у объектов регуляторного и клиентского контура появляются названные владельцы с закреплённым временем, а совет получает мандат вместо повестки. Обоснование: без владельцев не работает ни один следующий стрим — реестр без человека это документ, проверка без адресата это шум. Плюс совет-театр обнуляет доверие к теме, и пока он в таком виде, любое предложение читается как ещё один протокол. Результат года: у ключевых объектов и определений есть владельцы с записанным временем.
-
-**S2 · Идентичность.** Меняет то, что кросс-продажи считаются одним способом. Обоснование: это прямая задача правления и первая из четырёх проблем; при этом попытка 2022 года умерла на согласовании золотой записи между линиями, поэтому периметр сознательно сужен до розницы одной страны — не потому что этого достаточно, а потому что более широкий периметр уже один раз не финишировал. Результат года: розница одной страны считается единообразно.
-
-**S3 · Определения.** Меняет то, что у 30–50 ключевых метрик появляется владелец и утверждённая формула, а у спора актуарии↔BI — письменный протокол разрешения. Обоснование: вторая проблема воспроизводится каждый цикл, и её нельзя закрыть вычислением — нужен арбитр. Дешевле любого другого стрима и разблокирует прослеживаемость там, где определение оспаривается. Результат года: 30–50 метрик с владельцем и формулой.
-
-**S4 · Прослеживаемость.** Меняет то, что цифры регуляторного отчёта связаны с источником доказуемой цепочкой. Обоснование: единственный стрим с внешним дедлайном — замечание надзора уже получено, и это превращает работу из аргумента в обязательство. Он же несёт главную техническую неопределённость: глубина трассировки через мейнфрейм неизвестна до разведки. Результат года: поля периметра замечания прослеживаемы.
-
-**S5 · Гигиена.** Меняет то, что ядро отчётности подтверждено, а неиспользуемое выведено. Обоснование: 2 400 объектов против 300 используемых — дешёвая видимая победа, не требующая ни мандата, ни согласований, и единственная строка с прямой экономикой. Стартует независимо от всего остального, поэтому даёт ранний результат, покупающий доверие к дорогим стримам. Результат года: ядро подтверждено, остальное архивировано.
+| Stream | Why now | Outcome of the year |
+|---|---|---|
+| **S1 · Roles with hours** | nothing downstream works without owners; the theatre council zeroes out trust in the topic | key objects and definitions have named owners with recorded time |
+| **S2 · Identity** | a board ask; break 1 | cross-sell is computed one way for retail in one country |
+| **S3 · Definitions** | break 2; removes the actuary–BI conflict | 30–50 metrics with an owner and an approved formula |
+| **S4 · Traceability** | break 3; the supervisory finding has already arrived | the regulatory report's numbers are traceable to source |
+| **S5 · Hygiene** | 2 400 reports against 300 in use; a cheap visible win | the core is confirmed, the rest archived |
 
 ---
 
-# 03 · Метрики и цели
+# 03 · Metrics and goals
 
-Метрики стоят перед портфелем сознательно: инициатива получает право на существование, когда двигает названную метрику.
+Metrics come before the portfolio: an initiative earns its place when it moves a named metric.
 
-| Метрика | Стрим | Сейчас | Год 1 | Год 2 | Год 3 | Поправка на риск |
+| Metric | Stream | Now | Year 1 | Year 2 | Year 3 | Downward adjustment for risk |
 |---|---|---|---|---|---|---|
-| Объекты контура с владельцем и закреплённым временем | `S1` | 0% | 90% | 90% | 90% | цель действительна только при закреплении времени в целях руководителей |
-| Определения с владельцем и формулой | `S3` | 0 из ~40 | 30–50 | +корп. линия | все управленческие и регуляторные | требует разрешения конфликта актуарии↔BI — это политика, не методика |
-| Поля отчёта, прослеживаемые до источника | `S4` | `[не хватает данных]` | 100% периметра замечания | +смежные отчёты | весь регуляторный контур | часть полей приходит из мейнфрейма |
-| Длительность квартального закрытия | `S4` | ~3 недели аврала | сокращение, цель после замера | — | норма без аврала | бейзлайн не формализован |
-| Розничные физлица с разрешённой идентичностью | `S2` | 0% | одна страна `[не хватает данных]` | четыре страны | +корпоратив и здоровье | юридическая развязка по поглощённой компании |
-| Расхождений в отчётах правления за квартал | `S3` | 3 версии одной цифры | ≤1 | 0 | 0 | **единственная метрика, которая может законно падать** |
-| Архивировано неиспользуемых отчётов | `S5` | 0% | ≥60% | непрерывно | непрерывно | архивация встречает сопротивление владельцев |
-| DQ-покрытие ключевого контура | `S4` | `[не хватает данных]` | цель после инвентаризации | — | — | оценка низкой уверенности в скоркарте |
-| Зрелость, среднее по 9 категориям | все | 1.4 | 2.0 | 2.5 | 3.0 | +1 уровень в год — потолок при текущем темпе согласований |
+| Contour objects with owner and recorded time | `S1` | 0% | 90% | 90% | 90% (ceiling) | valid only if time is recorded in managers' objectives |
+| Definitions with owner and formula | `S3` | 0 of ~40 | 30–50 | +corporate line | all management and regulatory | requires resolving the actuary–BI conflict — politics, not method |
+| Report fields traceable to source | `S4` | `[missing data]` | 100% of the finding's perimeter | +adjacent reports | the whole regulatory contour | some fields come from the mainframe |
+| Duration of quarterly close | `S4` | ~3 weeks of firefighting | reduction, target after measurement | — | normal, without firefighting | baseline not formalised |
+| Retail individuals with resolved identity | `S2` | 0% | one country `[missing data]` | four countries | +corporate and health | legal clearance on the acquired company |
+| Divergences in board reports per quarter | `S3` | 3 versions of one number | ≤1 | 0 | 0 | **the only metric in the set that can legitimately fall** |
+| Unused reports archived | `S5` | 0% | ≥60% | continuous | continuous | archiving meets owner resistance |
+| DQ coverage of the key contour | `S4` | `[missing data]` | target after inventory | — | — | the low-confidence score in the scorecard |
+| Maturity, average across 9 categories | all | 1.4 | 2.0 | 2.5 | 3.0 | +1 level a year is the ceiling at current approval throughput |
 
-Анти-метрики, которыми отчитываться нельзя: число терминов в глоссарии, число заседаний совета, процент заполненности метаданных. Провал 2022-го отчитывался именно ими.
+Anti-metrics that may not be reported: number of glossary terms, number of council meetings, percentage of metadata completeness. The 2022 failure reported on exactly those.
 
-Пять метрик выше — счётчики, способные только расти. Они оставлены как индикаторы покрытия периметра, но названы прокси вслух: непомеченный прокси это вежливая форма метрического театра. Метрика, которая может законно упасть, в наборе одна; при следующем пересмотре к ней добавляются длительность закрытия и время разрешения спора, как только у них появится бейзлайн. Три цели без замера помечены и в коммит не идут до первого измерения.
+Five of the metrics above are counters that can only rise. They are kept as indicators of perimeter coverage but labelled proxies out loud: an unlabelled proxy is the polite version of metric theatre. There is one metric that can legitimately fall; at the next revision the close duration and time-to-resolve-a-dispute join it, as soon as they have baselines. Three goals without measurement are marked and are not committed.
 
 ---
 
-# 04 · Портфель инициатив
+# 04 · Initiatives portfolio
 
-Каждая инициатива принадлежит одному стриму. Output — что физически существует по завершении; outcome — какая метрика из раздела 03 двигается и насколько, по годам.
+Each initiative belongs to one stream. Output is what physically exists when it is done; outcome is which metric from section 03 moves and by how much, by year.
 
-| # | Инициатива | Output | Outcome по годам | Владелец · пререквизит | Трудоёмкость · волна | Риск и управление |
+| # | Initiative | Output | Outcome by year | Owner · prerequisite | Effort · wave | Risk and how it is managed |
 |---|---|---|---|---|---|---|
-| 1 | **Переучреждение совета** `S1` | Приказ о смене председателя; повестка из споров об определениях и приоритизации; отменённый формат статус-отчётов; проведённое первое заседание | **1:** разблокирует инициативы 2 и 4 — без него их outcome равен нулю. **2–3:** орган работает как арбитраж, измеряется временем разрешения спора, не числом заседаний | Директор по рискам как председатель, секретарь — руководитель платформы · его согласие есть условие входа всей стратегии | Низкая по часам, высокая по политическому весу · первый месяц | Сменится вывеска, а не поведение. Контроль: если статус-отчёты вернулись, орган снова стал театром |
-| 2 | **Реестр владельцев контура** `S1` | Реестр объектов с владельцами; строка про governance в целях их руководителей; обязательное поле владельца в инструменте — объект без владельца попадает в еженедельный список к секретарю | **1:** объекты контура с владельцем и временем 0% → 90%. **2–3:** удержание 90% при росте портфеля; расширение на смежные контуры не планируется | Руководитель платформы, время согласуется через совет · инициатива 1 | Средняя · H1 | Владельцы назначены, время не закреплено — тогда это документ, а не роль. Проверка: что произойдёт на калибровке, если человек не делал эту работу |
-| 3 | **Разрешение идентичности розничного физлица** `S2` | Правило сопоставления записей, прослеживаемое и объяснимое человеку; работающий контур на рознице одной страны; документированное решение, что это не золотая запись для всех линий | **1:** розница одной страны, целевой процент после пилота `[не хватает данных]`. **2:** четыре страны. **3:** корпоратив и здоровье, только после подтверждения линиями | Архитектор клиентского домена и куратор от розницы · инициатива 2 и юридическая развязка по поглощённой компании | Высокая, самая тяжёлая в портфеле · H1–H2 | Читается как второй MDM. Снимается отличием: одна страна, одна линия, пилот вместо программы, согласование между линиями за горизонтом года |
-| 4 | **Реестр ключевых определений** `S3` | Реестр 30–50 метрик правления и регуляторной отчётности с формулой, владельцем и областью применения; письменный протокол разрешения спора; разведённые актуарное и управленческое определения | **1:** 0 → 30–50 определений с владельцем. **2:** корпоративная линия. **3:** все управленческие и регуляторные метрики | Совет как арбитраж, ведение на платформе, владелец определения — человек из домена · инициатива 1 | Средняя по работе, высокая по переговорам · H1 | Актуарии не примут чужое определение. Не принуждать: развести два определения явно и зафиксировать, где какое применяется |
-| 5 | **Прослеживаемость регуляторного отчёта** `S4` | Трассировка полей отчёта до источника на периметре замечания; описанный сценарий для полей из легаси; материал, который показывают проверяющему | **1:** 100% полей периметра — цель условная до разведки. **2:** смежные отчёты. **3:** весь регуляторный контур | Руководитель регуляторной отчётности и инженер сопровождения легаси · техническая разведка глубины через мейнфрейм | Неизвестна до разведки, главная неопределённость портфеля · H1–H2 | Мейнфрейм не отдаёт нужную глубину. Тогда периметр сужается до полей вне легаси, и это проговаривается с надзором заранее |
-| 6 | **Входной контроль брокерских файлов** `S4` | Контракт качества в договоре с брокером; автоматическая проверка файла на приёме; процедура возврата некондиционного файла | **1:** контроль на приёме работает, метрика после инвентаризации. **2–3:** доля возвратов падает — сигнал, что контракт работает на стороне брокеров | Владелец брокерского канала и платформа · пререквизитов нет | Средняя, основная часть договорная · H2 | Брокеры не примут контракт. Поэтапный ввод: сначала предупреждение, потом отказ |
-| 7 | **Инвентаризация и архивация отчётности** `S5` | Инвентаризация 2 400 отчётов по использованию; архивированное неиспользуемое; подтверждённое ядро из ~300 | **1:** архивировано ≥60% неиспользуемого. **2–3:** непрерывный процесс, рост числа объектов остановлен | Платформа, подтверждение ядра за владельцами отчётов · пререквизитов нет, стартует независимо | Низкая технически, средняя по сопротивлению · H1 | Сопротивление владельцев. Перенос в архив вместо удаления и право вернуть за один клик |
-| 8 | **DQ-проверки ключевого контура** `S4` | Проверки на объектах контура; процесс разбора инцидентов с названным владельцем | **1:** покрытие контура, цель после инвентаризации `[не хватает данных]`. **2–3:** доля инцидентов, найденных до бизнеса | Владельцы объектов из инициативы 2 · инициатива 2, без владельцев проверки некому разбирать | Средняя · H2 | Поток инцидентов без разбора обесценивает проверки — поэтому после реестра владельцев, а не параллельно |
+| 1 | **Re-founding the council** `S1` | An order changing the chair; an agenda of definition disputes and prioritisation; the status-report format abolished; the first meeting held | **1:** unblocks initiatives 2 and 4 — without it their outcome is zero. **2–3:** the body works as arbitration, measured by time to resolve a dispute | CRO as chair, secretary the head of the data platform · their agreement is the entry condition of the whole strategy | Low in hours, high in political weight · first month | The sign changes, the behaviour does not. Control: if status reports return, the body is theatre again |
+| 2 | **Registry of contour owners** `S1` | A registry of objects with owners; a governance line in their managers' objectives; the owner field mandatory in the tool — an object without an owner appears in the secretary's weekly list | **1:** contour objects with owner and time 0% → 90%. **2–3:** holding 90% as the portfolio grows; no expansion to adjacent contours planned | Head of the data platform, time agreed through the council · initiative 1 | Medium · H1 | Owners named, time not recorded — then it is a document, not a role. Test: what happens at calibration if the person did no governance work |
+| 3 | **Identity resolution for retail individuals** `S2` | A record-matching rule, traceable and explicable to a human; a working contour for retail in one country; a documented decision that this is not a golden record for all lines | **1:** retail in one country, target percentage after the pilot `[missing data]`. **2:** four countries. **3:** corporate and health, only after the lines confirm | Customer-domain data architect and a retail-line curator · initiative 2 and legal clearance on the acquired company | High, the heaviest in the portfolio · H1–H2 | Reads as a second MDM. Removed by the explicit difference: one country, one line, a pilot rather than a programme, cross-line agreement pushed beyond the year |
+| 4 | **Registry of key definitions** `S3` | A registry of 30–50 board and regulatory metrics with formula, owner and scope; a written dispute-resolution protocol; actuarial and management definitions separated where they genuinely differ | **1:** 0 → 30–50 definitions with an owner. **2:** the corporate line. **3:** all management and regulatory metrics | The council as arbitration, registry kept by the platform, each definition owned by a person from the domain · initiative 1 | Medium in work, high in negotiation · H1 | Actuaries will not accept someone else's definition. Do not compel: separate the two explicitly and record where each applies |
+| 5 | **Traceability of the regulatory report** `S4` | Tracing report fields to source on the finding's perimeter; a described scenario for fields coming from legacy; material to show an inspector | **1:** 100% of the perimeter's fields — conditional until reconnaissance. **2:** adjacent reports. **3:** the whole regulatory contour | Head of regulatory reporting and a legacy support engineer · technical reconnaissance of depth through the mainframe | Unknown until reconnaissance; the portfolio's main uncertainty · H1–H2 | The mainframe does not yield the required depth. Then the perimeter narrows to non-legacy fields, and this is stated to the supervisor in advance rather than discovered at inspection |
+| 6 | **Intake control on broker files** `S4` | A quality contract in the broker agreement; an automatic file check on intake; a return procedure for non-conforming files | **1:** intake control works, metric after inventory. **2–3:** the return rate falls — the signal that the contract works on the brokers' side | Broker channel owner and the platform · no prerequisites | Medium; mostly contractual · H2 | Brokers will not accept a quality contract. Phased introduction: warning first, rejection later |
+| 7 | **Inventory and archiving of reporting** `S5` | An inventory of 2 400 reports by usage; the unused archived; a confirmed and marked core of ~300 | **1:** ≥60% of unused archived. **2–3:** a continuous process, growth in object count stopped | The platform; core confirmation by report owners · no prerequisites, starts independently | Low technically, medium on resistance · H1 | Owner resistance. Move to archive rather than delete, with one-click restore |
+| 8 | **DQ checks on the key contour** `S4` | Checks on contour objects; an incident-handling process with a named owner | **1:** contour coverage, target after inventory `[missing data]`. **2–3:** share of incidents found before the business finds them | Object owners from initiative 2 · initiative 2, without owners there is nobody to triage | Medium · H2 | A stream of unhandled incidents devalues the checks — hence after the owner registry rather than alongside it |
 
-Отдельного регламента передачи владения нет намеренно: у него не было бы читателя, а правило в инструменте делает документ ненужным.
+## Freeze order
 
-## Порядок заморозки
+`S1` does not freeze → `S4` is protected by an external deadline → `S3` → `S2` → `S5` freezes first. On losing a third of the resource, initiatives 6, 7 and 8 freeze and the identity perimeter narrows from a country's retail to one line. The order is published in advance — otherwise a cut removes roles as "not producing results".
 
-`S1` не морозится → `S4` защищён внешним дедлайном → `S3` → `S2` → `S5` морозится первым. При потере трети ресурса замораживаются инициативы 6, 7 и 8, а периметр идентичности сужается с розницы страны до одной линии. Порядок опубликован заранее — иначе при сокращении срежут роли как «не приносящие результата».
-
-Оговорка: правило «`S1` не морозится» действует после решения из Summary. До него роли не защищённый приоритет, а незакрытая развилка — закреплять время попросту не у кого.
+Caveat: the rule "`S1` does not freeze" applies after the decision in the Summary. Before it, roles are not a protected priority but an open fork — there is simply nobody whose time to record.
 
 ## Kill-gates
 
-Не покупаем каталог, пока роли `S1` не работают в трёх доменах. Не расширяем идентичность на корпоратив и здоровье, пока розничный контур не подтверждён юридически и не принят линиями. Не добавляем метрику в реестр без владельца. Не запускаем сплошное DQ-покрытие — только регуляторный и клиентский контур. И ни одна инициатива не идёт под флагом Data Governance.
+We do not buy a catalog until `S1` roles work in three domains. We do not extend identity to corporate and health until the retail contour is legally confirmed and accepted by the lines. We do not add a metric to the registry without an owner. We do not launch blanket DQ coverage — only the regulatory and customer contours. And no initiative goes under the flag of Data Governance.
 
 ---
 
-# 05 · Операционная модель
+# 05 · Operating model
 
-Раздел, от которого зависит, случится ли всё перечисленное выше.
+The section on which everything above depends.
 
-## Роли
+## Roles
 
-**Председатель совета** — директор по рискам. Арбитраж споров об определениях, приоритизация, эскалация к правлению. Около 4 часов в месяц, записано в его целях как ответ на замечание надзора.
+**Council chair** — the CRO. Arbitration of definition disputes, prioritisation, escalation to the board. About 4 hours a month, recorded in their objectives as the answer to the supervisory finding.
 
-**Владелец объекта** — тот, кто и так создаёт и поддерживает объект: инженер или аналитик. Описание, качество, актуальность, реакция на инциденты. Около 10% времени, строка в целях его руководителя, а не его собственных, потому что время выделяет руководитель.
+**Object owner (custodian)** — whoever already creates and maintains the object, engineer or analyst. Description, quality, currency, incident response. About 10% of their time, as a line in their manager's objectives.
 
-**Владелец определения** — предметный эксперт домена. Формула метрики, область применения, защита определения на совете. Нагрузка не постоянная, возникает по факту спора.
+**Definition owner** — a domain subject expert. The metric's formula, its scope, defending the definition at the council. Load arises with disputes; not continuous.
 
-**Секретарь совета** — руководитель платформы данных. Ведение реестров, подготовка спорных кейсов, контроль исполнения решений. Около 8 часов в месяц, часть основной роли.
+**Council secretary** — head of the data platform. Keeps the registries, prepares disputed cases, tracks decisions. About 8 hours a month, part of the main role.
 
-**Инженер сопровождения легаси** — из команды мейнфрейма. Техническая разведка и трассировка полей по инициативе 5, объём после разведки.
+**Legacy support engineer** — from the mainframe team. Technical reconnaissance and field tracing under initiative 5; sizing after reconnaissance.
 
-Модель кураторская, а не стюардская: ответственность несёт тот, кто и так поддерживает объект. За бизнесом остаётся приёмка определений и разрешение споров, а не операционная работа. Роль без строки в чьих-то целях остаётся пожеланием, поэтому время указано у каждой.
+The model is custodial rather than stewardship-based: responsibility sits with whoever already maintains the object. The business retains acceptance of definitions and resolution of disputes — not operational work. A role without a line in someone's objectives stays a wish, so time is stated for each.
 
-## Органы
+## Bodies
 
-Совет переучреждается, а не создаётся заново. Состав: председатель — директор по рискам, секретарь — руководитель платформы, по одному представителю от розницы, корпоратива, актуариев, комплаенса и ИТ. Раз в месяц вместо квартала, шестьдесят минут. Мандат: разрешение споров об определениях, приоритизация работ, снятие блокировок.
+The council is re-founded rather than created. Composition: chair the CRO; secretary the head of the platform; one representative each from retail, corporate, actuarial, compliance and IT. Monthly rather than quarterly, sixty minutes. Mandate: resolving definition disputes, prioritising work, removing blockers.
 
-Чего совет не делает: не слушает статус-отчёты, не согласовывает архитектуру, не утверждает планы команд, не ведёт протоколы ради протоколов. Отмена статус-отчётов не косметика — именно они три года заполняли время вместо решений.
+What the council does not do: it does not listen to status reports, does not approve architecture, does not sign off team plans, does not keep minutes for their own sake. Abolishing status reports is not cosmetic — they are precisely what filled three years with time instead of decisions.
 
-Новый орган рядом со старым читался бы как дубль и делил бы и без того слабый мандат. Поэтому существующий совет меняет председателя и повестку; если через два квартала он снова наполнился отчётами, его закрывают, а функцию арбитража передают напрямую председателю.
+A new body beside the old one reads as a duplicate and splits an already weak mandate. So the existing council changes its chair and its agenda; if in two quarters it has filled with reports again, it is closed and arbitration passes directly to the chair.
 
-## Протокол решений
+## Decision protocol
 
-Спор об определении поднимается любым участником в реестр. Секретарь готовит кейс: два определения, кто применяет каждое, цена расхождения. Совет решает на ближайшем заседании, решение фиксируется в реестре с датой, владельцем и областью применения. Обратной силы нет — ранее выпущенная отчётность не пересчитывается. Без этого правила каждый спор тянет ретроспективу, и споры перестают поднимать.
+A definition dispute is raised into the registry by any participant. The secretary prepares the case: two definitions, who applies each, the cost of the divergence. The council decides at the next meeting, and the decision is recorded with a date, an owner and a scope. There is no retroactivity — previously issued reporting is not recomputed. Without that rule every dispute drags a retrospective behind it and disputes stop being raised.
 
-## Интерфейсы
+## Interfaces
 
-Архитектурный комитет — главный ограничитель темпа. Инициативы упакованы в два существующих мандата, ответ надзору и кросс-продажи, и не заводятся как новая программа. Это политическая конструкция, а не обход процедуры. Правовая функция и DPO — блокирующая зависимость инициативы 3, вынесенная в пререквизит, а не в ход работы. Актуарная функция governance не подчиняется и не должна: интерфейс через реестр определений и арбитраж, а не через требования. Программа кросс-продаж — потребитель результата инициативы 3, синхронизация по срокам нужна, чтобы она не стартовала раньше, чем появится идентичность.
+The architecture committee is the main throughput constraint. The workaround: initiatives are packaged into two existing mandates — the supervisory answer and cross-sell — and are not opened as a new programme. This is a political construction, not a way around procedure. Legal and the DPO are a blocking dependency for initiative 3, placed in the prerequisites rather than in the work. The actuarial function does not report to governance and should not: the interface is the definitions registry and arbitration, not requirements. The cross-sell programme is a consumer of initiative 3's output; the two are synchronised on dates so that it does not start before identity exists.
 
-## Ресурсы и артефакты
+## Resources and artefacts
 
-Новых ставок нет: работа закрывается квотами внутри существующих команд. Дефицитен темп согласований, а не бюджет, поэтому ресурсное решение здесь дешевле типового, а политическое дороже.
+No new headcount: the work is covered by quotas inside existing teams. What is scarce is approval throughput, not budget, so the resourcing decision here is cheaper than in a typical case and the political one is dearer.
 
-Возражение «это бюрократия» отбивается арифметикой, а не заверениями. Убирается: около 2 100 неиспользуемых отчётов, глоссарий на 340 терминов, обновлявшийся два года назад, формат статус-отчётов на совете, квартальный ритуал. Создаётся: два реестра, одностраничный протокол разрешения спора, одностраничная инструкция владельцу объекта, контракт качества в договоре с брокером. Всё остальное живёт в инструментах, а не в документах — обязательное поле владельца, автоматическая проверка брокерского файла, DQ-проверки на контуре. Политики не переписываются: производство governance-текстов стоит нуль, узкое место в поиске читателя, а артефакт без названного читателя в эту стратегию не входит.
+The objection "this is bureaucracy" is answered with arithmetic. Removed: ~2 100 unused reports; a 340-term glossary last updated two years ago, replaced by a registry of 30–50 live definitions; the council's status-report format; a quarterly ritual replaced by a shorter monthly one with decisions instead of presentations. Created: two registries, a one-page dispute protocol, a one-page instruction for object owners, a quality contract in the broker agreement. Everything else lives in tools rather than documents: the mandatory owner field, the automatic broker-file check, DQ checks on the contour. Policies are not rewritten: producing governance text costs nothing, the bottleneck is finding a reader, and an artefact without a named reader does not enter this strategy.
 
-Поддерживающий трек — гигиена и DQ на контуре — идёт непрерывно во всех подразделениях; исследовательский, то есть идентичность, огорожен пилотом одной страны. Обучение минимальное и адресное: одностраничная инструкция владельцу и разбор двух реальных споров на совете как учебный кейс. Массового обучения нет, потому что governance-рутина должна быть встроена в инструменты, а не выучена.
+The sustaining track — hygiene and DQ on the contour — runs continuously across units; the exploratory one, identity, is fenced into a one-country pilot. Enablement is minimal and targeted: a one-page instruction for object owners and a walkthrough of two real definition disputes at the council as a teaching case. There is no mass training — the governance routine has to be built into the tools rather than learned.
 
-## Путь деградации
+## Degradation path
 
-Если председательство не согласовано, стрим `S1` не стартует, а инициативы 2, 3 и 4 теряют пререквизит. Остаются `S4`, который держится регуляторным дедлайном, и `S5`, которому мандат не нужен. Документ переименовывается в программу ответа надзору и гигиены отчётности и перестаёт называться стратегией DG. Это не запасной план, а честная граница: без держателя мандата остального не бывает.
-
----
-
-# 06 · Оценка эффекта от реализации стратегии
-
-> **Экспертная оценка.** Структура эффекта и порядок величин рабочие; конкретные суммы требуют точного расчёта на данных компании. Ниже перечислено, что именно нужно измерить и кто владеет каждой цифрой. Ни одна строка отсюда не вынесена в Summary заголовочной цифрой и ни одна не годится в OKR до замера.
-
-Из трёх реальных зон — рост выручки, экономия затрат, снижение регуляторного риска — ведущая у Alverta третья, и это редкая удача: замечание получено, событие произошло, прогнозировать его не надо. Вторая по весу — экономия затрат. Выручка через кросс-продажи присутствует, но идёт по чужой метрике, и в модели она весит ноль, пока не согласована доля атрибуции.
-
-Правление читает не колесо выгод, а две цифры: согласованную оценку возможных потерь против стоимости их предотвращения. Положительное решение принимается, когда минимальные потери превышают максимальные затраты, поэтому потери берутся по нижней границе, а затраты по верхней. Затраты известны точнее эффекта, и это сильная сторона: новых ставок нет, стоимость сводится к квотам времени плюс работы по инициативе 5, объём которых неизвестен до разведки. Верхняя граница считается из ФОТ и оценивается в месяцы FTE, не в десятки `[не хватает данных: стоимость часа по ролям]`.
-
-Механизм по стримам разный. `S4` даёт стоимость второго замечания по тому же поводу, умноженную на вероятность его получить без прослеживаемости, плюс сокращение трёхнедельного аврала. `S5` — инфраструктуру, лицензии и расчётные окна, освобождённые выводом 2 100 отчётов; это самая надёжная строка модели. Входной контроль брокерских файлов даёт долю некондиционных файлов, умноженную на стоимость ручного разбора, и снимает операционный риск зависимости от ушедшего сотрудника. `S3` — стоимость расхождения актуарии↔BI: переделки, перевыпуск отчётности, время правления на разбор трёх версий одной цифры. `S2` даёт uplift кросс-продаж, но метрика принадлежит чужой программе. У `S1` эффекта нет и не должно быть — это пререквизит остальных строк.
-
-Ведущий метод — бизнес-кейсы и высвобожденная прибыль, выбранный по доступности, а не по величине результата: метод очищенной записи требует подушевой экономики, которой нет, метод трудосбережений — каталога, отсечённого kill-gate'ом. Он же работает там, где «дайте денег на data governance» не проходит: денег на governance не просят, прицепляются к тому, что уже финансируется.
-
-Диапазон двусторонний. В пессимистичном сценарии прослеживаемость через мейнфрейм недостижима, периметр сужен, атрибуция не согласована, и засчитывается только гигиена с входным контролем — эффект положительный, но малый. В базовом прослеживаемость закрыта на периметре замечания, второе замечание не получено, определения перестали расходиться — эффект кратно выше, и ведущая его часть не деньги, а неполученный регуляторный ущерб. Оптимистичного сценария в модели нет намеренно: он не переживает контакта с финансами, а его присутствие превращает два остальных в переговорную позицию.
-
-Понижающих поправок пять. Вендорский процент не применяется — вендорская модель не используется, каталог не покупается. Производительность не конвертируется в выпуск: высвобожденные человеко-часы риска и комплаенса не становятся результатом автоматически. Атрибуция обнуляет строку кросс-продаж до согласования. Адопшн сдвигает старт — гигиена со второго квартала, прослеживаемость после разведки. Зависимости обнуляют `S2` целиком, пока не снята юридическая блокировка.
-
-В обязательство берётся одна строка — инфраструктурная экономия от архивации отчётности. Единственная, где экономика прямая и не требует спора об атрибуции: выведенные объекты перестают потреблять ресурс, и это видно в счёте, а не в модели. Всё остальное присутствует как оценка и в коммит не идёт. Решение о фиксируемой доле принято здесь, до встречи, а не на встрече: доля, названная в ответ на давление в комнате, — обещание, за которое потом отвечают лично.
-
-Заменить оценку расчётом можно семью замерами, шесть из которых — работа на две недели:
-
-- стоимость второго замечания надзора: штраф, ремедиация, время менеджмента — директор по рискам и правовая функция; разблокирует ведущую строку модели;
-- хронометраж квартального закрытия по ролям — руководитель регуляторной отчётности, один цикл;
-- инфраструктурная стоимость 2 100 отчётов — платформа; разблокирует фиксируемую строку, до замера остающуюся оценкой;
-- доля некондиционных брокерских файлов и стоимость ручного разбора — владелец канала;
-- число перевыпусков отчётности за год как цена расхождения определений — секретарь совета после инициативы 4;
-- стоимость часа по ролям — HR и финансы; знаменатель всей модели;
-- доля атрибуции кросс-продаж — владелец программы; это переговоры, а не замер.
-
-Список того, что можно поручить на этой неделе, важнее любой цифры в нём.
-
-Исключены и не вернутся: операционная эффективность, инновационность, ускорение принятия решений — последнее закрыто в отрасли десятилетие назад, и переоткрытие сжигает доверие, которое понадобится в той же встрече. Туда же экономия на аудиторах и юристах и ускоренный онбординг. Всё правдоподобно, ничего не покупается. Time-to-insight остаётся целью в метриках и в денежную модель не входит. Качество данных не самостоятельная статья эффекта: оно сводится к выручке или затратам, и эту линию проводим сами, пока её не провела финансовая функция.
+If the chair is not agreed, stream `S1` does not start and initiatives 2, 3 and 4 lose their prerequisite. What remains is `S4`, held by the regulatory deadline, and `S5`, which needs no mandate. The document is renamed to a programme of supervisory response and reporting hygiene and stops being called a DG strategy. This is not a fallback plan but an honest boundary: without a mandate holder the rest does not happen.
 
 ---
 
-# 07 · Риски
+# 06 · Effect of the strategy
 
-**«Это второй MDM».** Отличие проговаривается первым: не золотая запись для всех линий, а идентичность на рознице одной страны; не четырнадцать месяцев до результата, а пилот. Провал 2022-го разбирается вслух, а не замалчивается.
+> **Expert estimate.** The structure of the effect and the orders of magnitude are working; specific sums require a precise calculation on the company's data. Below is what must be measured and who owns each figure. No line from here appears in the Summary as a headline number, and none is fit for an OKR before measurement.
 
-**Совет останется театром.** Условие входа — председательство директора по рискам и повестка без статус-отчётов. Не согласовано — работает путь деградации из раздела 05.
+Of the three real zones the leading one is **regulatory risk**, and that is a rare piece of luck: the finding has been received, so the event has happened and does not need forecasting. Second by weight is **cost saving**. **Revenue growth** through cross-sell is present but runs through another programme and another metric, so in the model it lives only with an agreed attribution share, which does not exist yet.
 
-**Актуарии не примут чужое определение.** Не заставлять: развести актуарное и управленческое определения явно, назвать владельца каждого, зафиксировать область применения.
+The board reads two numbers: an agreed estimate of possible losses against the cost of preventing them, with the positive decision taken when minimal losses exceed maximal costs. So losses are taken at the bottom of the range and costs at the top. The year's costs are known more precisely than the effect, which is a strength: **no new headcount**, the cost reduces to time quotas inside existing teams (~10% of an object owner's time, 4 hours a month for the chair, 8 for the secretary) plus the work under initiative 5, whose size is unknown until reconnaissance. The upper bound is computed from payroll and sits in months of FTE, not tens `[missing data: cost of an hour by role]`.
 
-**Мейнфрейм не отдаёт прослеживаемость.** `[не хватает данных]` — техническая разведка до фиксации цели. При худшем сценарии периметр сужается до полей вне легаси, и это проговаривается с надзором заранее.
+The mechanism differs by stream. `S4` provides the cost of a second finding on the same subject multiplied by the probability of receiving it without traceability, plus the reduction of the three-week close firefight. `S5` provides infrastructure, licences and compute windows freed by retiring 2 100 reports — the most reliable line in the model. Broker intake control provides the share of non-conforming files multiplied by the cost of manual handling, and removes the operational risk of depending on a departed employee. `S3` provides the cost of the actuary–BI divergence: rework, reissued reporting, board time spent on three versions of one number. `S2` provides cross-sell uplift, but the metric belongs to another programme. `S1` provides no effect and should not — it is the prerequisite of the others.
 
-**Юридическая блокировка по данным поглощённой компании.** Правовая проработка вынесена в пререквизит инициативы 3. Если развязки нет, идентичность строится без CRM поглощённой компании, с явной потерей полноты.
+The leading method is **business cases and freed profit**, chosen for availability rather than size of result: the cleansed-record method requires per-record economics we do not have, and the labour-saving method requires a catalog cut off by a kill-gate. It also works where "give us money for data governance" does not pass: we do not ask for money for governance, we attach to what is already funded.
 
-**Согласовательный темп съедает год.** Упаковка в существующие мандаты плюс квартальный обзор с явным вопросом «что заморозили».
+The range is two-sided. In the pessimistic scenario traceability through the mainframe is unreachable, the perimeter is narrowed, attribution is not agreed, and only hygiene and intake control count — the effect is positive but small. In the base case traceability closes on the finding's perimeter, a second finding is not received, definitions stop diverging — the effect is several times larger, and its leading part is not money but regulatory damage not incurred. There is no optimistic scenario, deliberately: it does not survive contact with finance, and its presence turns the other two into negotiating positions.
 
-## Пересмотр
+Five downward adjustments apply. Vendor percentages are not used — no vendor model is in play and no catalog is being bought. Productivity does not convert into output: freed hours in risk and compliance do not become results automatically. Attribution zeroes the cross-sell line until it is agreed. Adoption shifts the start — hygiene from the second quarter, traceability after reconnaissance. Dependencies zero `S2` entirely until legal clearance is obtained.
 
-Стратегия пересматривается после каждого цикла поставки, то есть раз в квартал, с обязательным ответом на два вопроса: что заморожено и какой из семи замеров закрыт. Документ без заявленного следующего пересмотра тихо заменяют, а не обновляют.
+One line goes into the commitment — **the infrastructure saving from archiving reporting**. The only one where the economics is direct and requires no argument about attribution: retired objects stop consuming resource, and that shows up in an invoice rather than in a model. Everything else is present as an estimate and is not committed. The decision on the committed fraction was taken here, before the meeting, not in it: a fraction named under pressure in the room is a promise somebody answers for personally.
 
+The estimate can be replaced by a calculation with seven measurements, six of which are two weeks of work:
+
+- cost of a second supervisory finding — fine, remediation, management time — CRO and legal; unblocks the leading line of the model;
+- timing of the quarterly close by role — head of regulatory reporting, one cycle;
+- infrastructure cost of the 2 100 reports — the platform; unblocks the committed line, which until measured remains an estimate;
+- share of non-conforming broker files and the cost of manual handling — broker channel owner;
+- number of reporting reissues a year as the price of definition divergence — council secretary, after initiative 4;
+- cost of an hour by role — HR and finance; the denominator of the whole model;
+- cross-sell attribution share — the cross-sell programme owner; this is negotiation, not measurement.
+
+The list of what can be assigned this week matters more than any figure in it.
+
+Excluded and not returning: operational efficiency, innovation, accelerated decision-making — the last was closed in the industry a decade ago, and reopening it burns credibility needed later in the same meeting. Likewise savings on auditors and lawyers and faster onboarding. All plausible, none purchasable. Time-to-insight stays a goal in the metrics and does not enter the money model. Data quality is not an independent line of effect: it resolves into revenue or cost, and we draw that line ourselves before finance draws it.
 
 ---
 
-# Приложения
+# 07 · Risks
 
-## Портрет компании и ответы интервью
+**"This is a second MDM."** The difference is stated first: not a golden record for all lines but identity for retail in one country; not fourteen months to a result but a pilot. The 2022 failure is discussed aloud rather than hidden.
 
-**Alverta** — универсальный страховщик среднего размера в четырёх европейских странах. Три линии: розничное non-life (авто, имущество, путешествия), корпоративное страхование среднего бизнеса, растущий блок здоровья. Продажи примерно поровну через собственный digital-канал и сеть из ~900 независимых брокеров.
+**The council stays theatre.** The entry condition is the CRO in the chair and an agenda without status reports. Not agreed — the degradation path in section 05 applies.
 
-| Вопрос | Ответ |
-|---|---|
-| Тип стратегии, структура, объём | DG · Summary + разделы 00–07 · HTML + MD · диагностика Lite. **Почему DG, а не D&A:** обе задачи правления упираются в идентичность, определения и происхождение цифр. AI-амбиции нет. |
-| Масштаб и орг-модель | 6 800 сотрудников, 4 страны, ~900 в ИТ и данных. Платформа 35 человек. Аналитики разобщены: 60 актуариев со своими инструментами, 45 бизнес-аналитиков, 20 в риске, 15 в маркетинге. |
-| Ландшафт | Три поколения систем: две легаси-системы полисного администрирования (одна на мейнфрейме, 40% портфеля), современная для нового бизнеса, отдельная система урегулирования, неинтегрированная CRM из поглощения. DWH классический. BI: 2 400 отчётов, открывается ~300. Каталога нет. Семантического слоя нет. Глоссарий в SharePoint: 340 терминов, обновлялся два года назад. |
-| Боли | Клиент не един (четыре записи); регуляторное закрытие — три недели аврала и полученное замечание; актуарии и BI расходятся в убыточности; брокерский канал чистится скриптами ушедшего сотрудника. |
-| Фундамент | 4.1 млн полисов, ~380 тыс. случаев в год. Сертификации нет как понятия. DQ только там, где потребовал регулятор. MDM 2022: 14 месяцев, встал на согласовании golden record, закрыт тихо. |
-| Ограничения | Бюджет есть, скорости нет: всё через архитектурный комитет. Персональные и медданные под жёстким режимом. Поглощённая компания юридически отдельна. Слово governance скомпрометировано. |
-| Культура и власть | Иерархия, коллегиальность, медленно. DG Council три года ведёт протоколы и ничего не меняет. Реальный вес у директора по рискам — регуляторный рычаг. CIO поддерживает риторически. |
-| Амбиция | Правление: единый клиент под кросс-продажи. Директор по рискам: прослеживаемость. Связать эти задачи — работа стратегии. |
+**Actuaries will not accept someone else's definition.** Do not compel: separate the actuarial and management definitions explicitly, name an owner for each, record the scope.
 
-## Что нужно измерить для диагностики
+**The mainframe does not yield traceability.** `[missing data]` — technical reconnaissance before any target is fixed. In the worst case the perimeter narrows to non-legacy fields, and that is stated to the supervisor in advance.
 
-1. **Глубина прослеживаемости через легаси.** Достижима ли трассировка поля до источника для 40% портфеля на мейнфрейме. Источник: техническая разведка командой сопровождения, 2–3 недели. Блокирует цель инициативы 5 и разговор с надзором.
-2. **Юридическая развязка по данным поглощённой компании.** Можно ли объединять клиентские данные до юридического слияния. Источник: правовая функция и DPO. Блокирует полноту идентичности.
-3. **Покрытие DQ-проверками вне регуляторного контура.** Единственная оценка низкой уверенности в скоркарте. Источник: инвентаризация проверок. Блокирует постановку цели по категории.
-4. **Бейзлайн регуляторного закрытия.** Сколько человеко-часов и на что. Источник: хронометраж одного цикла. Блокирует измеримую цель по сокращению аврала.
-5. **Реальное число расхождений определений.** Три метрики или тридцать. Источник: сверка на выборке отчётов правления. Блокирует объём реестра — «30–50» это оценка, не расчёт.
+**Legal blocking on the acquired company's data.** Legal work is a prerequisite of initiative 3. Without clearance, identity is built without the acquired company's CRM, with an explicit loss of completeness.
 
-## Журнал доработки
+**Approval throughput consumes the year.** Packaging into existing mandates, plus a quarterly review with the explicit question "what was frozen".
 
-CDO-судья отработал четыре прохода: на первой редакции, после правок, на перестроенной структуре и по измерению рациональности.
+## Revision
 
-| Проход | Было | Стало | Закрывает |
+The strategy is revisited after each delivery cycle — quarterly — with a mandatory answer to two questions: what has been frozen, and which of the seven measurements is closed. A document without a stated next revision gets quietly replaced rather than updated.
+
+---
+
+# Appendices
+
+Company portrait and interview answers: [alverta-company.md](alverta-company.md). The same run in Russian, including the full rework log: [alverta-strategy.md](alverta-strategy.md).
+
+## What needs measuring for the diagnosis
+
+1. **Depth of traceability through legacy.** Is field-to-source tracing achievable for the 40% of the book on the mainframe? Source: technical reconnaissance by the support team, 2–3 weeks. Blocks initiative 5's target and the conversation with the supervisor.
+2. **Legal clearance on the acquired company's data.** May customer data be combined before the legal merger? Source: legal and the DPO. Blocks the completeness of identity.
+3. **DQ coverage outside the regulatory contour.** The single low-confidence score in the scorecard.
+4. **Baseline of the regulatory close.** How many person-hours and on what. Source: timing one cycle.
+5. **The real number of definition divergences.** Three metrics or thirty. Source: reconciliation on a sample of board reports. "30–50" is an estimate, not a calculation.
+
+## Rework log
+
+The CDO judge ran four passes: on the first draft, after the fixes, on the restructured document, and on the rationality dimension.
+
+| Pass | Was | Became | Closes |
 |---|---|---|---|
-| 1 | Идентичность по всем четырём странам — конструкция, умершая в 2022-м | Пилот на одной стране; согласование между линиями вне горизонта | реализуемость (blocking) |
-| 1 | «100% полей прослеживаемы» без проверки достижимости через мейнфрейм | Цель условная; техническая разведка в пререквизиты | сложность (blocking) |
-| 1 | «Переучреждение совета» одной строкой | Инициатива с output, владельцем, риском и датой первого заседания | конкретность |
-| 1 | Прослеживаемость жёстко зависит от реестра определений | Обходной путь: старт с полей, где определение не оспаривается | порядок |
-| 2 | Ключевое решение лежало в рисках на последних страницах | Вынесено в Summary с именем роли и сроком | защитимость (blocking) |
-| 2 | У держателя мандата просили нагрузку, не назвав выигрыш | Добавлено, что он получает взамен | защитимость |
-| 3 | Freeze-лист утверждал «роли не морозятся», хотя роли зависят от непринятого решения | Оговорка: правило действует после решения из Summary | порядок (дефект от правки прохода 2) |
-| 3 | Операционная модель — четыре абзаца общих принципов | Роли с временем и местом закрепления, состав и антимандат совета, протокол решений, интерфейсы, путь деградации | реализуемость |
-| 4 | Регламент передачи владения при уходе сотрудника — артефакт без читателя | Правило перенесено в инструмент: обязательное поле владельца, объект без владельца попадает в еженедельный список | рациональность |
-| 4 | Все метрики — счётчики, способные только расти | Добавлена метрика, которая может законно падать; остальные названы прокси вслух | рациональность (metric theatre) |
-| 4 | Баланс «создаём / убираем» нигде не подсчитан, хотя это единственный ответ на «это бюрократия» | Раздел «Баланс артефактов» в операционной модели | рациональность |
+| 1 | Identity across all four countries — the construction that died in 2022 | A pilot in one country; cross-line agreement outside the horizon | feasibility · blocking |
+| 1 | "100% of fields traceable" without checking achievability through the mainframe | Target made conditional; technical reconnaissance moved into prerequisites | complexity · blocking |
+| 1 | "Re-found the council" as a single line | An initiative with output, owner, risk and a date for the first meeting | concreteness |
+| 1 | Traceability hard-dependent on the definitions registry | A bypass: start with fields whose definition is not disputed | order |
+| 2 | The key decision sat in the risks on the last pages | Moved into the Summary with the role named and a deadline | defensibility · blocking |
+| 2 | The mandate holder was asked for effort without being told the gain | Added what they receive in return | defensibility |
+| 3 | The freeze list asserted "roles never freeze" although roles depend on an undecided condition | A caveat: the rule applies after the decision in the Summary | order · a defect introduced by pass 2 |
+| 3 | The operating model was four paragraphs of general principle | Roles with time and where it is recorded, the council's composition and anti-mandate, the decision protocol, interfaces, degradation path | feasibility |
+| 4 | A handover regulation for departing owners — an artefact with no reader | The rule moved into the tool: mandatory owner field, ownerless objects surface weekly | rationality |
+| 4 | Every metric was a counter that could only rise | A metric that can legitimately fall was added; the rest labelled proxies out loud | rationality · metric theatre |
+| 4 | The create-versus-retire balance was nowhere counted, though it is the only answer to "this is bureaucracy" | An artefact-balance passage in the operating model | rationality |
 
-**Остановка цикла:** проход 4 не дал новых блокирующих находок.
+**Loop stopped:** pass 4 produced no new blocking findings.
 
-**Что судья не закрыл.** Претензия «идентичность без участия линий даст неполную картину» пережила три прохода. Она верна и неустранима в горизонте: полная картина требует согласования, которое уже убило программу. Переведена из списка судьи в ограничения стратегии — периметр года сознательно неполон, и это записано, а не замаскировано.
+**What the judge did not close.** The objection "identity without the lines' participation will give an incomplete picture" survived every pass. It is correct and unresolvable within the horizon: a complete picture requires the agreement that already killed the programme once. Moved from the judge's list into the strategy's constraints — the year's perimeter is deliberately incomplete, and that is written down rather than disguised.
 
-**Проход bullshit-судьи.** Убраны безакторные конструкции, пустые усилители без чисел, парные абстракции, консалтерские зачины, формулировки-намерения вместо инициатив с владельцем.
+**Bullshit judge pass.** Removed actorless constructions, intensifiers without numbers, paired abstractions, consulting throat-clearing, and aspirations standing in for initiatives with an owner.
 
-## Где база знаний не ответила
+## Where the knowledge base had no answer
 
-Отдельный тип пробелов: не «не хватает фактов о компании», а «в базе нет материала по теме».
+A separate class of gap: not "facts about the company are missing" but "the base has no material on the topic".
 
-| Тема | Что было нужно | Что есть в базе |
+| Topic | What was needed | What the base has |
 |---|---|---|
-| MDM и разрешение идентичности | метод для крупнейшей инициативы стратегии | упоминания в контексте других тем; отдельного файла нет |
-| Приватность, PII, медданные | режимы обработки, классификация, ограничения на объединение | практически ничего |
-| Retention и жизненный цикл | юридическая сторона хранения и удаления | есть архивация как гигиена; юридического слоя нет |
-| Регуляторная прослеживаемость | что требует надзор, как строится доказуемая цепочка | lineage через каталог и агентов; регуляторный ракурс не раскрыт |
-| Легаси-эстейт | governance поверх систем, которые нельзя изменить | нет; база предполагает управляемую платформу |
-| Внешние поставщики данных | контроль качества данных сотен контрагентов | нет; контракты описаны для внутренних потоков |
-| «Бюджет есть, скорости нет» | программа при ограничении по темпу согласований | инвертировано: материал построен на «денег не дадут» |
-| Мёртвый орган управления | как оживить или похоронить существующий совет | есть, как создавать; сценария реанимации нет |
+| MDM and identity resolution | a method for the largest initiative in the strategy | mentions in the context of other topics; no dedicated file |
+| Privacy, PII, health data | processing regimes, classification, limits on combining | almost nothing |
+| Retention and lifecycle | the legal side of storage and deletion | archiving as hygiene; no legal layer |
+| Regulatory traceability | what the supervisor requires, how a provable chain is built | lineage through the catalog and through agents; the regulatory angle is not developed |
+| Legacy estate | governance over systems that cannot be changed | nothing; the base assumes a manageable platform |
+| External data suppliers | quality control over hundreds of counterparties | nothing; contracts are described for internal flows |
+| "Budget yes, speed no" | a programme under an approval-throughput constraint | inverted: the material is built on "they will not give you money" |
+| A dead governing body | how to revive or bury an existing council | how to create one; no revival scenario |
 
-**Что сработало без натяжки:** кураторская модель против стюардской, отказ от каталога как первого шага, анти-метрики, раздел «чего не делаем», репетиция секвестра, приём «не идти под флагом DG». Ядро базы универсально, отраслевая обвязка — нет.
+**What worked without strain:** the custodian model against stewardship, refusing the catalog as a first step, anti-metrics, the "what we do not do" section, rehearsing the cut, and the move of not going under the DG flag. The core of the base is universal; its industry wrapping is not.
 
 ---
 
-*Сгенерировано скиллом dg-strategy (FORM · DG) поверх [dg-board-kb](https://github.com/alexbarakov/dg-board-kb). Компания вымышлена и выбрана как намеренно неудобный тест: регулируемая отрасль, легаси, MDM-боль. Применены анти-оптимизм-пасс, цикл CDO-судьи и проход bullshit-судьи.*
+*Produced by the dg-strategy skill (FORM · DG) on [dg-board-kb](https://github.com/alexbarakov/dg-board-kb). The company is invented and deliberately chosen as an awkward test: a regulated industry, a legacy estate, MDM pain. The anti-optimism pass, the CDO-judge loop and the bullshit-judge pass were applied.*

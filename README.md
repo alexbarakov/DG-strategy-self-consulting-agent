@@ -129,6 +129,10 @@ On top of both loops sits a **hard rule**: `evals/check_forbidden.py` turns each
 
 The important part is how the low scores were read: nine items scored 7 or below, and in eight of those the answer was as good as the base allows. **The score measured the knowledge base, not the answering** — and those nine became entries in `60_roadmap.md`.
 
+## Russian edition
+
+A derived Russian edition exists for readers who need the entry surface in Russian: the README, an overview per skill, and both worked examples. The themes, failure catalog, numbers registry, question bank, golden set and harness stay in English there — they are read by an agent rather than by a person, and translating 165 000 words for a reader they do not have would buy nothing. That edition carries a `DERIVED_FROM.json` stamp and a `check_sync.py` that reports drift against this repository, which is canonical.
+
 ## Caveats
 
 - **Statuses in `objects.yaml` mirror the live board as of 2026-08-25**; the board evolves (Skills Hub is being reframed as "Agents/skill governance"; DKB and Core Layer child hexagons were removed).

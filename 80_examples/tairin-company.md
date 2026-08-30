@@ -5,21 +5,21 @@ company: Tairin
 note: invented company; the input half of a worked FORM run
 ---
 
-# Портрет компании и ответы интервью
+# Company portrait and interview answers
 
-**Tairin** — оператор доставки и тёмных складов: 340 точек в 12 городах, около 4.5 млн заказов в месяц, 6 200 сотрудников. Собственное приложение, собственная курьерская сеть, ассортимент из 6 000 SKU.
+**Tairin** — a delivery and dark-store operator: 340 locations in 12 cities, around 4.5M orders a month, 6 200 employees. Own app, own courier network, an assortment of 6 000 SKUs.
 
-| Вопрос | Ответ |
+| Question | Answer |
 |---|---|
-| Тип стратегии, структура, объём | DG · Summary + разделы 00–07 · HTML + MD · диагностика Lite. **Почему DG, а не AI:** мандат на ассистента есть, но его качество целиком определяется определениями, ядром и контекстом, а это DG-работа. |
-| Масштаб и орг-модель | 6 200 сотрудников, 12 городов. Аналитика централизована: 55 аналитиков в одном подразделении, BI-команда 9 человек, дата-инженеров 12. |
-| Ландшафт | Миграция склада в лейкхаус: 18 месяцев позади, ~10 впереди. dbt используется, семантического слоя нет. Каталога нет; вики на 400 страниц, половина протухла. Сертификации нет как понятия. |
-| Боли | Три определения выполненного заказа, расхождение до 4%. ~60% ad-hoc — повторы. В поиске выдаётся всё подряд. Вся инженерная ёмкость занята миграцией. |
-| Фундамент | DQ-проверки только на платёжном контуре. Ad-hoc-поток измерен по числу запросов, но не по доле повторов. |
-| Ограничения | Деньги есть, согласования быстрые, **инженерных рук нет до конца года**. |
-| Культура и власть | Плоская, быстрая, инженерная. Слово governance нейтрально — им просто не пользовались. Реальный вес у директора по операциям: 340 складов подчиняются ему. |
-| Амбиция | CEO: ассистент для операционных менеджеров к концу года. Аналитика: перестать отвечать на одни и те же вопросы. |
+| Strategy type, structure, volume | DG · Summary + sections 00–07 · HTML + MD · Lite diagnostic. **Why DG and not AI:** the assistant mandate exists, but its quality is entirely determined by definitions, a certified core and context — and that is governance work. |
+| Scale and org model | 6 200 employees, 12 cities. Analytics is centralised: 55 analysts in one unit, a BI team of 9, 12 data engineers. |
+| Landscape | Warehouse migration to a lakehouse: 18 months done, ~10 remaining. dbt in use, no semantic layer. No catalog; a wiki of 400 pages, half of it stale. Certification does not exist as a concept. |
+| Pains | Three definitions of a completed order, divergence up to 4%. ~60% of ad-hoc requests are repeats. Search returns everything indiscriminately. All engineering capacity is committed to the migration. |
+| Foundation | DQ checks on the payment perimeter only. The ad-hoc flow is counted by request volume but not by share of repeats. |
+| Constraints | Money is available, approvals are fast, **there are no engineering hands until the end of the year**. |
+| Culture and power | Flat, fast, engineer-led. The word governance is neutral — it simply has not been used. Real leverage sits with the COO: 340 stores report to them. |
+| Ambition | CEO: an assistant for operations managers by year end. Analytics: stop answering the same questions. |
 
 ---
 
-Стратегия, построенная на этом портрете: [tairin-strategy.md](tairin-strategy.md)
+The strategy built on this portrait: [tairin-strategy.md](tairin-strategy.md) · [in Russian](tairin-company.md)

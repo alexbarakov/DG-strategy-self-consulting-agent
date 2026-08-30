@@ -5,21 +5,21 @@ company: Alverta Insurance Group
 note: invented company; the input half of a worked FORM run
 ---
 
-# Портрет компании и ответы интервью
+# Company portrait and interview answers
 
-**Alverta** — универсальный страховщик среднего размера в четырёх европейских странах. Три линии: розничное non-life (авто, имущество, путешествия), корпоративное страхование среднего бизнеса, растущий блок здоровья. Продажи примерно поровну через собственный digital-канал и сеть из ~900 независимых брокеров.
+**Alverta** — a mid-size composite insurer operating in four European countries. Three lines: retail non-life (motor, property, travel), corporate mid-market, and a growing health book. Sales split roughly evenly between its own digital channel and a network of ~900 independent brokers.
 
-| Вопрос | Ответ |
+| Question | Answer |
 |---|---|
-| Тип стратегии, структура, объём | DG · Summary + разделы 00–07 · HTML + MD · диагностика Lite. **Почему DG, а не D&A:** обе задачи правления упираются в идентичность, определения и происхождение цифр. AI-амбиции нет. |
-| Масштаб и орг-модель | 6 800 сотрудников, 4 страны, ~900 в ИТ и данных. Платформа 35 человек. Аналитики разобщены: 60 актуариев со своими инструментами, 45 бизнес-аналитиков, 20 в риске, 15 в маркетинге. |
-| Ландшафт | Три поколения систем: две легаси-системы полисного администрирования (одна на мейнфрейме, 40% портфеля), современная для нового бизнеса, отдельная система урегулирования, неинтегрированная CRM из поглощения. DWH классический. BI: 2 400 отчётов, открывается ~300. Каталога нет. Семантического слоя нет. Глоссарий в SharePoint: 340 терминов, обновлялся два года назад. |
-| Боли | Клиент не един (четыре записи); регуляторное закрытие — три недели аврала и полученное замечание; актуарии и BI расходятся в убыточности; брокерский канал чистится скриптами ушедшего сотрудника. |
-| Фундамент | 4.1 млн полисов, ~380 тыс. случаев в год. Сертификации нет как понятия. DQ только там, где потребовал регулятор. MDM 2022: 14 месяцев, встал на согласовании golden record, закрыт тихо. |
-| Ограничения | Бюджет есть, скорости нет: всё через архитектурный комитет. Персональные и медданные под жёстким режимом. Поглощённая компания юридически отдельна. Слово governance скомпрометировано. |
-| Культура и власть | Иерархия, коллегиальность, медленно. DG Council три года ведёт протоколы и ничего не меняет. Реальный вес у директора по рискам — регуляторный рычаг. CIO поддерживает риторически. |
-| Амбиция | Правление: единый клиент под кросс-продажи. Директор по рискам: прослеживаемость. Связать эти задачи — работа стратегии. |
+| Strategy type, structure, volume | DG · Summary + sections 00–07 · HTML + MD · Lite diagnostic. **Why DG and not D&A:** both board asks rest on identity, definitions and the provenance of numbers. There is no AI ambition. |
+| Scale and org model | 6 800 employees, 4 countries, ~900 in IT and data. A platform team of 35. Analysts are fragmented: 60 actuaries with their own tooling, 45 business analysts, 20 in risk, 15 in marketing. |
+| Landscape | Three generations of systems: two legacy policy administration platforms (one on a mainframe carrying 40% of the book), a modern one for new business, a separate claims system, and an unintegrated CRM from an acquisition. A classic warehouse. BI: 2 400 reports, ~300 opened. No catalog. No semantic layer. A SharePoint glossary of 340 terms, last updated two years ago. |
+| Pains | The customer is not one customer (four records). Regulatory close is three weeks of firefighting and has already drawn a supervisory finding. Actuaries and BI disagree on loss ratio. The broker channel is cleaned by scripts written by an employee who has left. |
+| Foundation | 4.1M policies, ~380k claims a year. Certification does not exist as a concept. DQ checks only where the regulator demanded them. An MDM attempt in 2022: 14 months, stalled on golden-record agreement, closed quietly. |
+| Constraints | Money exists, speed does not: everything goes through an architecture committee. Personal and health data under a strict regime. The acquired company is legally separate. The word governance is compromised internally. |
+| Culture and power | Hierarchical, consensual, slow. A DG Council has kept minutes for three years and changed nothing. Real leverage sits with the Chief Risk Officer — the regulatory lever. |
+| Ambition | The board wants a single customer view for cross-sell. The CRO wants traceability. Connecting those two asks is the work of the strategy. |
 
 ---
 
-Стратегия, построенная на этом портрете: [alverta-strategy.md](alverta-strategy.md)
+The strategy built on this portrait: [alverta-strategy.md](alverta-strategy.md) · [in Russian](alverta-company.md)
